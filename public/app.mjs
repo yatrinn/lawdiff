@@ -6,6 +6,8 @@ import {
   evaluateAddress,
   validateRulePack,
   validDate,
+  evaluateCondition,
+  factsFor,
 } from "./engine.mjs";
 const $ = (s) => document.querySelector(s);
 let report = null,
@@ -230,6 +232,32 @@ function renderBuildingList() {
     '<p class="empty-list">No sample addresses match your search.</p>'
   );
 }
+function renderCondition(node, facts) {
+  const evaluated = evaluateCondition(node, facts),
+    state =
+      evaluated.value === null ? "missing" : evaluated.value ? "met" : "unmet",
+    label = { missing: "Needs evidence", met: "Met", unmet: "Not met" }[state];
+  if (typeof node === "boolean")
+    return `<p>${node ? "No additional condition." : "Condition excluded."}</p>`;
+  const children = node.all || node.any || (node.not ? [node.not] : null);
+  if (children) {
+    if (!children.length)
+      return "<p>No additional building condition in this extracted rule.</p>";
+    return `<div class="condition-group"><div class="condition-group-heading"><span>${node.all ? "All of these" : node.any ? "Any of these" : "The following must be false"}</span><span class="condition-state ${state}">${label}</span></div>${children.map((n) => renderCondition(n, facts)).join("")}</div>`;
+  }
+  const op = {
+    eq: "equals",
+    neq: "does not equal",
+    lt: "before / below",
+    lte: "on or before / at most",
+    gt: "after / above",
+    gte: "on or after / at least",
+    in: "is one of",
+    exists: "is known",
+  }[node.op];
+  const value = facts[node.field];
+  return `<div class="condition-leaf"><span class="condition-status-dot ${state}" aria-label="${label}"></span><div><strong>${h(FACTS[node.field] || node.field)}</strong><span>${value == null ? "Not supplied" : h(value)} · ${h(op)} ${node.op === "exists" ? "" : h(Array.isArray(node.value) ? node.value.join(", ") : node.value)}</span></div></div>`;
+}
 function renderEvidence(a) {
   if (!a) return "<p>No address selected.</p>";
   const rows = evaluations(a).filter(
@@ -263,13 +291,13 @@ function renderEvidence(a) {
                 .slice(0, 260),
             )}</div><button class="text-button" data-source="${source.doc_id}">Read ${source.doc_id}</button>`
           : ""
-      }</div></div><div class="reason-step"><span class="step-number">2</span><div><h4>Compile and check the interpretation</h4><p>The extraction pipeline will produce executable conditions with exact source spans. No applicability claim is made until a rule pack is loaded.</p></div></div><div class="reason-step"><span class="step-number">3</span><div><h4>Resolve only what the facts support</h4><p>${a.geography ? "The legal city is grounded in a geographic match." : "The postal city has not been accepted as the legal jurisdiction."} Missing owner and occupancy information remains unknown.</p></div></div>`
+      }</div></div><div class="reason-step"><span class="step-number">2</span><div><h4>Compile and check the interpretation</h4><p>The extraction pipeline will produce executable conditions with exact source spans. No applicability claim is made until a rule pack is loaded.</p></div></div><div class="reason-step"><span class="step-number">3</span><div><h4>Resolve only what the facts support</h4><p>${a.geography?.legal_city ? "The legal city is grounded in a geographic match." : "The postal city has not been accepted as the legal jurisdiction."} Missing owner and occupancy information remains unknown.</p></div></div>`
     );
   }
   if (rows.length > 1)
     out += `<select class="rule-select" id="rule-select" aria-label="Select applicable rule">${rows.map((r) => `<option value="${h(r.team_rule_id)}" ${r.team_rule_id === ruleId ? "selected" : ""}>${h(r.rule.title)} — ${labels[r.result]}</option>`).join("")}</select>`;
   out += `<div class="reason-step"><span class="step-number">1</span><div><h4>${h(row.rule.title)}</h4><p>${h(row.rule.requirement)}</p><div class="quote">“${h(row.rule.quoted_span)}”</div><button class="text-button" data-source="${h(row.rule.source_doc_id)}">${h(row.rule.citation)} · View source</button></div></div>`;
-  out += `<div class="reason-step"><span class="step-number">2</span><div><h4>Coverage against this building</h4><p>${row.trace.length ? row.trace.map((t) => `${h(FACTS[t.field] || t.field)}: ${h(t.value ?? "unknown")} ${t.result === null ? "— needs evidence" : t.result ? "— condition met" : "— condition not met"}`).join("<br>") : "No additional building condition in this extracted rule."}</p></div></div>`;
+  out += `<div class="reason-step"><span class="step-number">2</span><div><h4>Coverage against this building</h4>${row.missing.includes("legal jurisdiction") ? "<p>The legal city must be established before local coverage can be evaluated.</p>" : renderCondition(row.rule.coverage_conditions, factsFor(a, evidenceValues(a), asOf))}</div></div>`;
   out += `<div class="reason-step"><span class="step-number">3</span><div><h4>${labels[row.result]} · ${displayDate(asOf)}</h4><p>${h(row.explanation)}</p>${row.conflict_flag ? "<p><strong>Possible interaction with another rule. Human review required.</strong></p>" : ""}${row.missing.length ? `<div class="quote">Needs: ${row.missing.map((f) => h(FACTS[f] || f)).join(", ")}</div>` : ""}</div></div>`;
   const editable = row.missing.filter((f) => FACTS[f]);
   if (editable.length)
@@ -297,7 +325,7 @@ function openSource(id) {
     sourceHTML = sourceHTML.replace(h(quote), "<mark>" + h(quote) + "</mark>");
   $("#source-title").textContent = `${s.doc_id} · ${s.jurisdictions}`;
   $("#source-content").innerHTML =
-    `<h2>The original record.</h2><p class="muted">Retrieved ${h(s.retrieved_at || "date not supplied")} · ${h(s.source_type)}</p><p><a href="${h(/^https?:\/\//.test(s.url) ? s.url : "#")}" target="_blank" rel="noopener noreferrer">Open original source</a></p>${s.text ? `<pre>${sourceHTML}</pre>` : '<p class="notice">No usable text is available in the downloaded starter pack. This source has not been used to support an extracted rule.</p>'}<p class="small muted">File SHA-256: ${h(s.download_sha256 || "unavailable")}</p>`;
+    `<h2>${s.source_capture === "web_tool_text" ? "The captured source excerpt." : s.doc_id === "O001" ? "The organizer’s test case." : "The captured source text."}</h2><p class="muted">Retrieved ${h(s.retrieved_at || "date not supplied")} · ${h(s.source_type)}</p>${s.capture_scope ? `<p class="small muted">${h(s.capture_scope)}</p>` : ""}<p><a href="${h(/^https?:\/\//.test(s.url) ? s.url : "#")}" target="_blank" rel="noopener noreferrer">Open original source</a></p>${s.text ? `<pre>${sourceHTML}</pre>` : '<p class="notice">No usable text is available in the downloaded starter pack. This source has not been used to support an extracted rule.</p>'}<p class="small muted">Captured-text SHA-256: ${h(s.download_sha256 || "unavailable")}</p>`;
   $("#source-dialog").showModal();
   $("#source-content mark")?.scrollIntoView({ block: "center" });
 }
@@ -794,4 +822,5 @@ try {
 } catch (err) {
   $("#workspace").innerHTML =
     `<div class="initial-state"><h2>We could not open this collection.</h2><p class="muted">${h(err.message)}</p><button class="button" id="retry-load">Try again</button></div>`;
+  $("#retry-load").onclick = () => location.reload();
 }

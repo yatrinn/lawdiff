@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:02,522
+LawDiff separates interpretation from execution.
+
+2
+00:00:02,522 --> 00:00:08,575
+Codex read the supplied source texts and produced structured candidate rules, with
+
+3
+00:00:08,575 --> 00:00:10,593
+the extraction method recorded.
+
+4
+00:00:10,593 --> 00:00:16,646
+The public demo runs those candidates through one shared rule engine; browser
+
+5
+00:00:16,646 --> 00:00:20,681
+answers and submission exports use the same logic.
+
+6
+00:00:20,681 --> 00:00:26,735
+Schema checks, exact source-span checks, calendar validation, and targeted tests catch structural
+
+7
+00:00:26,735 --> 00:00:27,239
+errors.
+
+8
+00:00:27,239 --> 00:00:30,770
+Three-valued logic preserves missing facts without guessing.
+
+9
+00:00:30,770 --> 00:00:35,814
+City rules require geographic evidence, not a matching postal label.
+
+10
+00:00:35,814 --> 00:00:41,363
+Evidence added in the browser stays separate from the original sample.
+
+11
+00:00:41,363 --> 00:00:47,416
+A separate API compiler is implemented, but this presentation does not claim
+
+12
+00:00:47,416 --> 00:00:49,434
+an unperformed API run.
+
+13
+00:00:49,434 --> 00:00:55,487
+The remaining hard problem is legal interpretation: traceability supports review; it does
+
+14
+00:00:55,487 --> 00:00:56,1000
+not certify correctness.

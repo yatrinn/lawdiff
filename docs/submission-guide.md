@@ -8,7 +8,7 @@ Die in den bereitgestellten Eventangaben genannte Abgabe ist **Sonntag, 4. Oktob
 
 | Feld | Einzutragender Wert |
 |---|---|
-| Öffentliche Demo | `[[PUBLIC_DEMO_URL]]` |
+| Öffentliche Demo | `[https://yatrinn.github.io/lawdiff/]` |
 | Öffentliches Repository | `[[PUBLIC_REPOSITORY_URL]]` |
 | Demo-Video | `[[DEMO_VIDEO_LINK]]` |
 | Technik-Video | `[[TECH_VIDEO_LINK]]` |

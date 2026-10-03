@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:02,591
+My name is Yannik Trinn.
+
+2
+00:00:02,591 --> 00:00:08,809
+I’m competing solo and serve on the federal board of Studieren ohne
+
+3
+00:00:08,809 --> 00:00:13,991
+Grenzen, which supports access to education in the Global South.
+
+4
+00:00:13,991 --> 00:00:17,618
+This project is my independent hackathon entry.
+
+5
+00:00:17,618 --> 00:00:23,836
+I used AI extensively across product planning, coding, extraction, and testing, and
+
+6
+00:00:23,836 --> 00:00:27,464
+I am responsible for what I present.
+
+7
+00:00:27,464 --> 00:00:33,682
+With LawDiff, I want people to see how an answer was reached,
+
+8
+00:00:33,682 --> 00:00:38,345
+which source supports it, and what is still missing.
+
+9
+00:00:38,345 --> 00:00:44,564
+The ambition is a useful product with a clear interface and an
+
+10
+00:00:44,564 --> 00:00:46,118
+honest technical foundation.
+
+11
+00:00:46,118 --> 00:00:51,300
+Its next step is expert review and a focused pilot.
+
+12
+00:00:51,300 --> 00:00:57,000
+I’m looking for critical feedback and people who understand this workflow.

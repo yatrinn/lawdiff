@@ -2955,3 +2955,58 @@ html[data-theme="dark"] .field-card {
     top: calc(var(--plane) * 65px);
   }
 }
+.condition-group {
+  border-left: 1px solid var(--line);
+  padding: 8px 0 3px 10px;
+  margin: 7px 0;
+}
+.condition-group-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 9px;
+}
+.condition-state {
+  font-size: 9px;
+  white-space: nowrap;
+}
+.condition-state.met {
+  color: var(--blue);
+}
+.condition-state.missing {
+  color: var(--amber);
+}
+.condition-leaf {
+  display: flex;
+  gap: 8px;
+  padding: 7px 0;
+}
+.condition-leaf strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.condition-leaf span:last-child {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+  display: block;
+}
+.condition-status-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #aab0b9;
+}
+.condition-status-dot.met {
+  background: var(--blue);
+}
+.condition-status-dot.missing {
+  background: #d5a557;
+}

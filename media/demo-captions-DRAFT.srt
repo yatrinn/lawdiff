@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:01,527
+One law changes.
+
+2
+00:00:01,527 --> 00:00:03,562
+Which buildings need attention?
+
+3
+00:00:03,562 --> 00:00:05,089
+This is LawDiff.
+
+4
+00:00:05,089 --> 00:00:09,670
+Each mark represents one address in the supplied sample.
+
+5
+00:00:09,670 --> 00:00:15,777
+New Jersey’s FAIR Act is enacted, but it is not yet effective
+
+6
+00:00:15,777 --> 00:00:17,304
+on this date.
+
+7
+00:00:17,304 --> 00:00:23,411
+Move to July 2027: its extracted statewide rule now covers the 140
+
+8
+00:00:23,411 --> 00:00:24,938
+New Jersey addresses.
+
+9
+00:00:24,938 --> 00:00:30,536
+Open the original source to see where the requirement comes from.
+
+10
+00:00:30,536 --> 00:00:36,643
+Now a separate Los Angeles case: the building year alone cannot answer
+
+11
+00:00:36,643 --> 00:00:38,170
+an occupancy-date condition.
+
+12
+00:00:38,170 --> 00:00:41,732
+I add a clearly labeled hypothetical date.
+
+13
+00:00:41,732 --> 00:00:45,804
+That branch resolves; other exemption questions stay unresolved.
+
+14
+00:00:45,804 --> 00:00:51,911
+Finally, the rights card shares the original-data result and its sources, without
+
+15
+00:00:51,911 --> 00:00:53,438
+exporting my simulation.
+
+16
+00:00:53,438 --> 00:00:54,964
+See what changed.
+
+17
+00:00:54,964 --> 00:00:57,000
+See what is missing.

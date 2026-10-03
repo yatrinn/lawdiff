@@ -1,7 +1,7 @@
 # LawDiff — Method note
 
 **RealPage Rental Housing Law Navigator · Hack-Nation 7 · Yannik Trinn, solo**
-Repository: `[[PUBLIC_REPOSITORY_URL]]` · Demo: `[[PUBLIC_DEMO_URL]]`
+Repository: `[[PUBLIC_REPOSITORY_URL]]` · Demo: `[https://yatrinn.github.io/lawdiff/]`
 
 **Scope.** LawDiff evaluates source-grounded rule candidates against the supplied 500-address sample across California, New Jersey and Massachusetts. The default query date is 2026-10-01. The interface connects a change, its address-level effects, the supporting passage and any missing evidence. It is a research prototype, not legal advice or a compliance certification.
 

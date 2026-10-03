@@ -10,3 +10,5 @@ artifacts/
 .DS_Store
 
 data/geocode-cache/
+__pycache__/
+*.pyc
