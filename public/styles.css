@@ -2658,7 +2658,7 @@ html[data-theme="dark"] .field-card {
     gap: 9px;
   }
   .header-actions {
-    display: none;
+    display: flex;
   }
   .cluster-dots {
     gap: 3px;
@@ -2675,6 +2675,45 @@ html[data-theme="dark"] .field-card {
   }
   .page-heading h1 {
     font-size: 27px;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 52px 42px;
+    height: 94px;
+    gap: 0;
+    padding: 0 16px;
+  }
+  .topbar .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .topbar nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: space-between;
+    height: 42px;
+    gap: 12px;
+    margin: 0;
+  }
+  .topbar .nav-button {
+    font-size: 12px;
+    height: 42px;
+  }
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 12px;
+  }
+  .search-trigger {
+    font-size: 12px;
+    gap: 0;
+    padding: 8px;
+  }
+  .search-trigger kbd {
+    display: none;
   }
 }
 @media print {

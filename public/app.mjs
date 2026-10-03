@@ -245,13 +245,14 @@ function renderCondition(node, facts) {
       return "<p>No additional building condition in this extracted rule.</p>";
     return `<div class="condition-group"><div class="condition-group-heading"><span>${node.all ? "All of these" : node.any ? "Any of these" : "The following must be false"}</span><span class="condition-state ${state}">${label}</span></div>${children.map((n) => renderCondition(n, facts)).join("")}</div>`;
   }
+  const dateComparison = validDate(node.value);
   const op = {
     eq: "equals",
     neq: "does not equal",
-    lt: "before / below",
-    lte: "on or before / at most",
-    gt: "after / above",
-    gte: "on or after / at least",
+    lt: dateComparison ? "before" : "less than",
+    lte: dateComparison ? "on or before" : "at most",
+    gt: dateComparison ? "after" : "more than",
+    gte: dateComparison ? "on or after" : "at least",
     in: "is one of",
     exists: "is known",
   }[node.op];
@@ -391,6 +392,7 @@ function showRights() {
   url.searchParams.set("address", a.address_id);
   url.searchParams.set("date", asOf);
   url.searchParams.set("card", "1");
+  url.searchParams.set("lang", rightsLang);
   $("#rights-content").innerHTML =
     `<div class="rights-toolbar"><p class="muted">${es ? "Un lugar. Sus reglas." : "One place. Its rules."}</p><div class="segmented"><button data-lang="en" class="${!es ? "selected" : ""}">EN</button><button data-lang="es" class="${es ? "selected" : ""}">ES</button></div></div><article class="rights-wallet"><div class="wallet-brand">${icon("layers", 25)} LawDiff <span>${es ? "TARJETA DE DERECHOS" : "RIGHTS CARD"}</span></div><h2>${h(a.street_address.toLowerCase())}</h2><p>${h(cityLabel(a))}, ${a.state}</p><div class="wallet-date">${es ? "Fecha de evaluación" : "Evaluated as of"} ${asOf}</div><div class="wallet-summary">${
       cats
@@ -760,6 +762,7 @@ try {
     : scope()[0]?.address_id;
   if (params.has("address")) view = "address";
   if (validDate(params.get("date"))) asOf = params.get("date");
+  rightsLang = params.get("lang") === "es" ? "es" : "en";
   render();
   if (params.get("card") === "1") showRights();
   fetch("./data/validation.json")

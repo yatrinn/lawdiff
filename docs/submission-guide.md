@@ -4,18 +4,18 @@
 
 Die in den bereitgestellten Eventangaben genannte Abgabe ist **Sonntag, 4. Oktober 2026, 15:00 Uhr Europe/Berlin**. Ziel: **beide Einreichungen bis 14:00 Uhr abgeschlossen**. Die angekündigte Nachfrist ist kein eingeplanter Puffer. Das Google-Formular bezeichnet die Einreichung als endgültig und schließt erneute Einreichungen aus.
 
-## Links vor der Abgabe vervollständigen
+## Links für die Abgabe
 
 | Feld | Einzutragender Wert |
 |---|---|
-| Öffentliche Demo | `[https://yatrinn.github.io/lawdiff/]` |
-| Öffentliches Repository | `[[PUBLIC_REPOSITORY_URL]]` |
-| Demo-Video | `[[DEMO_VIDEO_LINK]]` |
-| Technik-Video | `[[TECH_VIDEO_LINK]]` |
-| Team-Video | `[[TEAM_VIDEO_LINK]]` |
+| Öffentliche Demo | https://yatrinn.github.io/lawdiff/ |
+| Öffentliches Repository | https://github.com/yatrinn/lawdiff |
+| Demo-Video | https://yatrinn.github.io/lawdiff/media/lawdiff-demo.mp4 |
+| Technik-Video | https://yatrinn.github.io/lawdiff/media/lawdiff-tech.mp4 |
+| Team-Video | Noch aufzunehmen: persönliches Teamvideo von Yannik |
 | Kontaktadresse | Die tatsächlich zur Teilnahme verwendete E-Mail-Adresse |
 
-Diese Platzhalter dürfen nicht im endgültigen Formular oder README bleiben. Ein Link auf `127.0.0.1` ist keine öffentliche Demo.
+Demo- und Technikfilm sind jeweils 56 Sekunden lang, mit eingeblendeten englischen Erklärungen und ohne Ton. Der Demofilm verwendet echte UI-Aufnahmen; der Technikfilm zeigt Architekturdiagramme. Die Dateien liegen zusätzlich unter `media/` für den direkten Upload. Das persönliche Teamvideo fehlt noch.
 
 ## Dokumentierter Zwischenstand
 
@@ -45,7 +45,7 @@ Bei Zeitverlust werden Zusatzfunktionen gekürzt. Quellenprüfungen, Dateikonsis
 1. **Öffentliche Demo:** Startseite, T3-Vergleich, Adressansicht, Quellen und Integrity funktionieren ohne Anmeldung. Die Demo ist ein Forschungsprototyp, keine Rechtsberatung oder Konformitätsbescheinigung.
 2. **Öffentliches Repository:** Code, README, reproduzierbarer Start, Datenherkunft, bekannte Grenzen und Lizenzhinweise. Der eigene Code kann unter der verlangten MIT-Lizenz stehen; fremde Quellen und Abhängigkeiten behalten ihre eigenen Hinweise.
 3. **Challenge-Dateien:** `submission/rules.json`, `submission/lookups.json`, `submission/changes.json`. Alle Dateien werden aus demselben Regelpaket und dem unveränderten Sample erzeugt. Browser-Simulationen gelangen nicht in den Sample-Export.
-4. **Methodennotiz:** `docs/method-note.md`, bei Bedarf als einseitiges PDF exportieren. Die Notiz beschreibt den tatsächlichen Extraktionsweg und die aktuellen Lücken.
+4. **Methodennotiz:** `submission/method-note.pdf` (eine Seite); bearbeitbarer Text in `docs/method-note.md`. Die Notiz beschreibt den tatsächlichen Extraktionsweg und die aktuellen Lücken.
 5. **Drei Videos:** Demo, Technik und Team, jeweils höchstens 60 Sekunden. Ziel 55–58 Sekunden. Dateien und zugängliche Links bereithalten: Der Formulartext nennt Links, die sichtbaren Felder verlangen Uploads.
 6. **Echtes Teamfoto:** Ein aktuelles Foto von Yannik. Kein erzeugtes Porträt und keine erfundenen Teammitglieder.
 7. **Prüfbeleg:** Tatsächliche Testausgabe und Extraktionsaudit mit der eingereichten Version abgleichen. Interne Tests werden nicht als offizieller Jury-Score bezeichnet.

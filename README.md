@@ -2,7 +2,7 @@
 
 **Every address. Every layer. Every change.**
 
-[Open the live demo](https://yatrinn.github.io/lawdiff/) · [Submission guide](docs/submission-guide.md)
+[Open the live demo](https://yatrinn.github.io/lawdiff/) · [Demo film](https://yatrinn.github.io/lawdiff/media/lawdiff-demo.mp4) · [Technical film](https://yatrinn.github.io/lawdiff/media/lawdiff-tech.mp4) · [Pitch deck](presentation/lawdiff-pitch.pdf) · [Submission guide](docs/submission-guide.md)
 
 A source-grounded housing-law change desk for the RealPage challenge at Hack-Nation 7. Explore the supplied 500-address sample, move through five change cases, inspect executable coverage conditions and exact source quotations, and share an English/Spanish rights card.
 

@@ -1,0 +1,29 @@
+1
+00:00:00,000 --> 00:00:09,000
+Codex read captured sources and created candidate rules.
+The shipped records were not produced by an external API batch.
+
+2
+00:00:09,000 --> 00:00:18,000
+Captured files carry hashes. Primary and supplemental quotations
+must occur verbatim in their referenced source texts.
+
+3
+00:00:18,000 --> 00:00:28,000
+One JavaScript engine serves browser answers and submission exports.
+It evaluates a restricted rule language. Runtime makes no model calls.
+
+4
+00:00:28,000 --> 00:00:38,000
+Missing evidence remains unknown unless another condition decides it.
+Calendar checks distinguish effective dates from pending proposals.
+
+5
+00:00:38,000 --> 00:00:48,000
+Regression tests challenge source tampering, jurisdiction mismatches,
+malformed conditions, calendar boundaries and geographic provenance.
+
+6
+00:00:48,000 --> 00:00:56,000
+475 sample addresses have matched legal cities; 25 remain unresolved.
+Exact quotations support review. They do not prove legal interpretation.

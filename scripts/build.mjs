@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
+import { readFile, writeFile, mkdir, cp, rm, access } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { validateRulePack } from "../public/engine.mjs";
 const root = new URL("../", import.meta.url),
@@ -42,6 +42,19 @@ await writeFile(
 await rm(new URL("dist/", root), { recursive: true, force: true });
 await mkdir(new URL("dist/", root));
 await cp(new URL("public/", root), new URL("dist/", root), { recursive: true });
+for (const file of [
+  "media/lawdiff-demo.mp4",
+  "media/lawdiff-tech.mp4",
+  "presentation/lawdiff-pitch.pdf",
+  "presentation/lawdiff-pitch.pptx",
+  "submission/method-note.pdf",
+]) {
+  const source = new URL(file, root);
+  try { await access(source); } catch { continue; }
+  const target = new URL(`dist/${file}`, root);
+  await mkdir(new URL(".", target), { recursive: true });
+  await cp(source, target);
+}
 console.log(
   `Built static site: ${pack.rules.length} rules, ${pack.rules.length + extra} checked quotations.`,
 );
