@@ -42,6 +42,22 @@ await writeFile(
 await rm(new URL("dist/", root), { recursive: true, force: true });
 await mkdir(new URL("dist/", root));
 await cp(new URL("public/", root), new URL("dist/", root), { recursive: true });
+// One revision across the module graph and data prevents a stale cached file
+// from being combined with the next published version.
+const browserFiles = [
+  "app.mjs", "engine.mjs", "exporter.mjs", "visuals.mjs", "styles.css",
+  "vendor/qrcode.js", "data/catalog.json", "data/rule-pack.json", "data/validation.json",
+];
+const revisionHash = createHash("sha256");
+for (const file of browserFiles) revisionHash.update(await readFile(new URL(`dist/${file}`, root)));
+const revision = revisionHash.digest("hex").slice(0, 16);
+for (const file of ["index.html", "app.mjs", "engine.mjs", "exporter.mjs", "visuals.mjs"]) {
+  const target = new URL(`dist/${file}`, root);
+  const content = await readFile(target, "utf8");
+  const versioned = content.replace(/(["'])\.\/((?:data\/|vendor\/)?[\w-]+\.(?:mjs|js|css|json))\1/g,
+    (match, quote, asset) => browserFiles.includes(asset) ? `${quote}./${asset}?v=${revision}${quote}` : match);
+  await writeFile(target, versioned);
+}
 for (const file of [
   "media/lawdiff-demo.mp4",
   "media/lawdiff-tech.mp4",
