@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.vercel/
+data/starter/
+data/cache/
+artifacts/
+.DS_Store
+
+data/geocode-cache/

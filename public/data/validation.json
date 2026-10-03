@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-10-03T20:15:46.241Z",
+  "rules": 58,
+  "primary_quotes": 58,
+  "supplemental_quotes": 94,
+  "addresses": 500,
+  "geocoded": 475,
+  "source_texts": 54,
+  "official_score": null,
+  "legal_review": false,
+  "pack_sha256": "c58a712fdba36a5e78ed1f99f652f8e2f6abaf3a6d1a8d65401df7bff7f91b6a",
+  "checks": [
+    "Rule structure and executable conditions",
+    "Primary and supplementary exact source spans",
+    "Real calendar dates",
+    "Unique address and rule identifiers",
+    "Referenced rule identifiers"
+  ]
+}

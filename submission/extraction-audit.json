@@ -1,0 +1,68 @@
+{
+  "method": "codex_assisted_extraction",
+  "generated_at": "2026-10-03T20:14:02.915Z",
+  "legal_review": false,
+  "audit": [
+    {
+      "scope": "california",
+      "method": "codex_assisted_extraction",
+      "rules": 30,
+      "external_api_batch": false,
+      "artifact_sha256": "7de2baed67aeb0c14748744947bddb7ee9ae9a79c2d7d9338656b4bf97e43d89"
+    },
+    {
+      "scope": "nj-ma",
+      "method": "codex_assisted_extraction",
+      "rules": 27,
+      "external_api_batch": false,
+      "artifact_sha256": "a5b934386c421f3c89560167350a56b64778d3bf7236d8d20cf389740830b844"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "ma-no-active-municipal-rent-cap",
+      "jurisdiction": "MA",
+      "category": "rent_increase_limits",
+      "finding_type": "no_rule",
+      "requirement": "The supplied Chapter40P §4 generally prohibits municipal rentcontrol, with a narrowly conditioned voluntary exception. No active numeric rent cap for Boston or Cambridge is established in this pack.",
+      "source_doc_id": "D048",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40P/Section4",
+      "quoted_span": "Section 4. No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:\n(a) after six months from the date of the initial adoption of rent control regulation by a particular city or town, compliance on the part of property owners as to the rent control regulation or any subsequently adopted rent control regulation shall be entirely voluntary and uncoerced, and the property of a person or entity declining to have his or its property subjected to such regulation shall be wholly unaffected by any aspect of the rent control regulation or any subsequently adopted rent control regulation;\n(b) such regulation may not include the regulation of occupancy, services, evictions, condominium conversion or the removal of properties from such regulation, nor may such regulation apply to any rental unit that is owned by a person or entity owning less than ten rental units or that has a fair market rent exceeding $400; and\n(c) a municipality adopting such regulation shall compensate owners of rent controlled units for each unit in the amount of the difference between the unit's fair market rent and the unit's below market, rent controlled rent, with such compensation coming from the municipality's general funds, so that the cost of any rent control shall be borne by all taxpayers of a municipality and not by the owners of regulated units only.\n",
+      "retrieved_at": "2026-10-01T22:36Z",
+      "scope_note": "Not a positive cap record. T5 failedballot emptyresult follows supplied changefixture, not Chapter40P as proof of litigation outcome."
+    },
+    {
+      "finding_id": "nj-no-state-numeric-cap",
+      "jurisdiction": "NJ",
+      "category": "rent_increase_limits",
+      "finding_type": "no_rule",
+      "requirement": "No statewide numerical rent cap is established by this official source; local ordinances and unconscionability protection remain relevant.",
+      "source_doc_id": "D067",
+      "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
+      "quoted_span": " The State of New Jersey has no laws that establish, govern or control rents. Municipalities \nmay pass an ordinance establishing rent control or rent leveling. Locally created boards enforce \nthese ordinances. Rent control ordinances have been upheld as a val id exercise of the municipal \npolice power where there is a housing shortage (Iganamort v. Borough of Fort Lee , 120 N.J. \nSuper. 286 (1973); Helmsley v. Borough of Fort Lee, 78 N.J. 200 (1978); Orange Taxpayers \nCouncil, Inc. v. City of Orange, 83 N.J. 246 (1980)) \n",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "finding_id": "jersey-city-local-cap-unresolved",
+      "jurisdiction": "Jersey City, NJ",
+      "category": "rent_increase_limits",
+      "finding_type": "source_gap",
+      "requirement": "Official page establishes local rentcontrol and exempts1–4unit properties but does not provide the formula or all coverageconditions; no formula is invented.",
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "quoted_span": "The Office of Landlord Tenant Relations administers and enforces the\nRent Control Ordinance, Chapter 260\nof the Jersey City Municipal Code and provides education, information and referrals to city residents in connection with landlord/tenant issues.\n",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "finding_id": "boston-h3744-not-enacted",
+      "jurisdiction": "Boston, MA",
+      "category": "rent_increase_limits",
+      "finding_type": "no_rule",
+      "requirement": "The supplied193rd-session H.3744 petition sought authority for Boston rent stabilization; its final displayed action accompanied a study order on September9,2024. This source does not enact a Boston rent cap.",
+      "source_doc_id": "D011",
+      "source_url": "https://malegislature.gov/Bills/193/H3744",
+      "quoted_span": "9/9/2024\nHouse\nAccompanied a study order, see\nH5035\n",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ]
+}

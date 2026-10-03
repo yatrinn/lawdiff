@@ -1,0 +1,13 @@
+[
+  {
+    "doc_id": "O001",
+    "jurisdictions": "CA, NJ, MA",
+    "url": "https://drive.google.com/drive/folders/14TT6AEH8TStzoT5c5fZ45Bt4grODsowR",
+    "source_type": "organizer test specification \u2014 not a legal authority",
+    "capture": "supplemental",
+    "retrieved_at": "2026-10-03",
+    "text": "[\n {\n  \"test_id\": \"T1\",\n  \"title\": \"California AB 325 / SB 763 takes effect\",\n  \"type\": \"as_of\",\n  \"rule_ids\": [\n   \"CA-ALG-01\"\n  ],\n  \"as_of_before\": \"2025-12-31\",\n  \"as_of_after\": \"2026-01-02\",\n  \"states\": [\n   \"CA\"\n  ],\n  \"expected_behavior\": \"not_yet_effective before, applies after, for every CA address.\"\n },\n {\n  \"test_id\": \"T2\",\n  \"title\": \"Hoboken vs Jersey City local algorithmic bans\",\n  \"type\": \"boundary\",\n  \"rule_ids\": [\n   \"HOB-ALG-01\",\n   \"JC-ALG-01\"\n  ],\n  \"as_of\": \"2026-10-01\",\n  \"expected_behavior\": \"HOB-ALG-01 only for Hoboken addresses; JC-ALG-01 only for Jersey City addresses; neither for Newark.\"\n },\n {\n  \"test_id\": \"T3\",\n  \"title\": \"NJ FAIR Act: enacted, not yet effective; possible preemption\",\n  \"type\": \"as_of\",\n  \"rule_ids\": [\n   \"NJ-ALG-01\"\n  ],\n  \"as_of_before\": \"2026-10-01\",\n  \"as_of_after\": \"2027-07-02\",\n  \"states\": [\n   \"NJ\"\n  ],\n  \"conflict_with\": [\n   \"JC-ALG-01\",\n   \"HOB-ALG-01\"\n  ],\n  \"expected_behavior\": \"not_yet_effective on 2026-10-01, applies on 2027-07-02 for every NJ address; Jersey City and Hoboken addresses carry a conflict flag for human review.\"\n },\n {\n  \"test_id\": \"T4\",\n  \"title\": \"Massachusetts pending bills S.2983 and H.5222\",\n  \"type\": \"pending\",\n  \"rule_ids\": [\n   \"MA-ALG-P1\",\n   \"MA-ALG-P2\"\n  ],\n  \"as_of\": \"2026-10-01\",\n  \"states\": [\n   \"MA\"\n  ],\n  \"expected_behavior\": \"Reported as pending (not in force) for every Boston and Cambridge address; affected set = all MA addresses if enacted.\"\n },\n {\n  \"test_id\": \"T5\",\n  \"title\": \"Massachusetts rent-control ballot question struck\",\n  \"type\": \"negative\",\n  \"rule_ids\": [\n   \"MA-RENT-P1\"\n  ],\n  \"as_of\": \"2026-10-01\",\n  \"states\": [\n   \"MA\"\n  ],\n  \"expected_behavior\": \"No rent cap reported for any Boston or Cambridge address; IP 25-21 recorded as failed. Affected set is empty.\"\n }\n]",
+    "available": true,
+    "download_sha256": "f22b82ebc8e783d13e690fc39cb52879380da8df91a23ef8677388a767d0d97f"
+  }
+]

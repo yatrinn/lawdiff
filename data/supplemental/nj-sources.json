@@ -1,0 +1,66 @@
+[
+  {
+    "doc_id": "S001",
+    "jurisdictions": "Hoboken, NJ",
+    "url": "https://ecode360.com/46249538",
+    "title": "Hoboken Municipal Code, Chapter158, ArticleII §158-2",
+    "source_type": "official",
+    "source_capture": "web_tool_text",
+    "capture": "web_tool_text",
+    "capture_scope": "Selected ArticleII legal text read through the web tool; navigation removed. This is not a downloaded HTML capture.",
+    "retrieved_at": "2026-10-03T20:08:28.896458Z",
+    "available": true,
+    "status": "ok",
+    "text": "Article II Algorithmic Rent Fixing in Rental Housing Market\n[Adopted 7-9-2025 by Ord. No. B-781]\n§ 158-2 Algorithmic rent fixing in rental housing market prohibited.\nA.\nProhibited conduct. Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.\nFor purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors.\nFor purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.\nB.\nEnforcement.\nEnforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.\nC.\nPenalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\nPenalties as prescribed under N.J.S.A. 40:49-5; or\nBy a fine not exceeding $2,000; or\nBy a period of community service not exceeding 90 days.\n",
+    "sha256": "698fd6d8feeb2632243e052fdef6922aee2b7603cf77f01d5f461ad7b6b32d16",
+    "sha256_scope": "captured_web_tool_text_not_original_html_or_pdf_bytes",
+    "supplemental": true,
+    "text_file": null,
+    "publisher": "General Code / eCode360 official municipal code publisher",
+    "related_starter_doc_ids": [
+      "D034"
+    ]
+  },
+  {
+    "doc_id": "S002",
+    "jurisdictions": "Jersey City, NJ",
+    "url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+    "title": "Jersey City Ordinance25-076, adopted July16,2025",
+    "source_type": "official",
+    "source_capture": "web_tool_text",
+    "capture": "web_tool_text",
+    "capture_scope": "Selected operative amendment and adoption/approval excerpts from the web tool PDF text; not a complete PDF transcript.",
+    "retrieved_at": "2026-10-03T20:08:28.896458Z",
+    "available": true,
+    "status": "ok",
+    "text": "Ordinance of the City of Jersey City, N.J.\nOrd. 25-076\nAN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12\n(PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE\nCODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or\notherwise exchange anything of value in return for or otherwise utilize the services of a Service\nProvider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to\nany aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\nAdopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted\nby the Municipal Council at its meeting on Jul 16 2025\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 2025\n",
+    "sha256": "93d9e55263acdcd3eb066d3291241eb1520c0add05f3ca8c1c644db16f302600",
+    "sha256_scope": "captured_web_tool_text_not_original_html_or_pdf_bytes",
+    "supplemental": true,
+    "text_file": null,
+    "discovery_url": "https://cityofjerseycity.civicweb.net/document/435240/",
+    "discovery_note": "Linked as Ord.25-076 in July16,2025 official council minutes, item4.3 (adopted9-0)."
+  },
+  {
+    "doc_id": "S003",
+    "jurisdictions": "Jersey City, NJ",
+    "url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+    "title": "Jersey City Ordinance25-057 definitions, adopted May21,2025",
+    "source_type": "official",
+    "source_capture": "web_tool_text",
+    "capture": "web_tool_text",
+    "capture_scope": "Selected definitions, original operative text and adoption/approval excerpts from web tool PDF text. The operative prohibition is read with S002 amendment, not treated as the latest unamended version.",
+    "retrieved_at": "2026-10-03T20:08:28.896458Z",
+    "available": true,
+    "status": "ok",
+    "text": "Ordinance of the City of Jersey City, N.J.\nOrd. 25-057\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor\ninformation from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply\nlevels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a\nperson’s primary residence; and does not include inpatient medical care, licensed long-term care, and detention or\ncorrectional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or\nunincorporated organization that owns real property and leases such property or any portion thereof in the form of a\nresidential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\nAdopted on second and final reading after hearing on May 21 2025\nDate to Mayor: May 22 2025\nApproved: May 22 2025\n",
+    "sha256": "e416109a1ea6a3d0e21d72d79574402797d9c86e82fe96962938502ebed91f60",
+    "sha256_scope": "captured_web_tool_text_not_original_html_or_pdf_bytes",
+    "supplemental": true,
+    "text_file": null,
+    "related_starter_doc_ids": [
+      "D035",
+      "D037"
+    ]
+  }
+]
