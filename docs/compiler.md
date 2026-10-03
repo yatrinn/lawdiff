@@ -2,7 +2,7 @@
 
 `scripts/compile.mjs` is a reproducible extraction entry point using the Anthropic Messages API through Node's native `fetch`. It reads the local source catalog, asks the configured model for structured candidates, validates those candidates and saves a **separate** review artifact. It never replaces the public/reviewed rule pack.
 
-**Execution status:** the CLI, dry run and local synthetic validation checks have been exercised. No API key was provided and **no live external extraction run has been performed**. The existing Codex-assisted extraction pack has separate provenance; it must not be relabelled as this pipeline's output.
+**Execution status:** the CLI, dry run and local synthetic validation checks have been exercised. No Anthropic API key was provided and **no live Anthropic extraction run has been performed**. The separately executed Codex CLI alternative is documented in [codex-extraction.md](codex-extraction.md). The existing Codex-assisted extraction pack has separate provenance; it must not be relabelled as this pipeline's output.
 
 ## Start without credentials or spending
 
@@ -48,7 +48,7 @@ node scripts/compile.mjs --dry-run --source D065,D066,D069 --limit 3
 Inputs:
 
 - `public/data/catalog.json`: source ID, jurisdiction, source URL, retrieval time, snapshot date and captured source text.
-- `data/starter/schema/rule_record.schema.json`: organizer rule record format.
+- `data/schema/rule_record.schema.json`: organizer rule record format.
 - `public/engine.mjs`: supported facts and the shared executable rule validator.
 
 Outputs after a real run:

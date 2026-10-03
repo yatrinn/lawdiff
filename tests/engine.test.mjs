@@ -45,6 +45,24 @@ test('empty all/any groups preserve their logical identities', () => {
   assert.equal(evaluateCondition({ any: [] }, {}).value, false);
 });
 
+test('residential use does not infer a primary residence or a fee collector license', () => {
+  const facts = factsFor(address, {}, '2026-10-01');
+  for (const field of ['primary_residence', 'inpatient_medical_care', 'licensed_long_term_care', 'detention_or_correctional_facility', 'fee_charger_is_landlord', 'fee_charger_is_landlord_agent', 'fee_charger_nj_real_estate_licensee']) {
+    validateCondition({ field, op: 'eq', value: false });
+    assert.equal(evaluateCondition({ field, op: 'eq', value: false }, facts).value, null);
+  }
+  const collector = { any: [{ field: 'fee_charger_is_landlord', op: 'eq', value: true }, { field: 'fee_charger_nj_real_estate_licensee', op: 'eq', value: false }] };
+  assert.equal(evaluateCondition(collector, facts).value, null);
+  assert.equal(evaluateCondition(collector, {...facts, fee_charger_is_landlord: true}).value, true);
+  assert.equal(evaluateCondition(collector, {...facts, fee_charger_is_landlord: false, fee_charger_nj_real_estate_licensee: true}).value, false);
+  const actorScope = { any: [
+    { field: 'fee_charger_is_landlord', op: 'eq', value: true },
+    { all: [{ field: 'fee_charger_is_landlord_agent', op: 'eq', value: true }, { field: 'fee_charger_nj_real_estate_licensee', op: 'eq', value: false }] },
+  ] };
+  assert.equal(evaluateCondition(actorScope, {fee_charger_is_landlord: false, fee_charger_nj_real_estate_licensee: false}).value, null);
+  assert.equal(evaluateCondition(actorScope, {fee_charger_is_landlord: false, fee_charger_is_landlord_agent: false, fee_charger_nj_real_estate_licensee: false}).value, false);
+});
+
 test('condition validation rejects arbitrary operators, unknown fields and unbounded trees', () => {
   assert.throws(() => validateCondition({ field: 'units', op: 'eval', value: 'process.exit()' }));
   assert.throws(() => validateCondition({ field: '__proto__', op: 'eq', value: true }));

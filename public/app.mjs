@@ -13,6 +13,8 @@ const $ = (s) => document.querySelector(s);
 let report = null,
   rightsLang = "en",
   playTimer = null;
+let extractionRun = null,
+  extractionRunState = "idle";
 let catalog,
   pack,
   view = "changes",
@@ -151,6 +153,7 @@ function render() {
   $("#footer-meta").textContent =
     `${catalog.stats.addresses} sample addresses · Source snapshot ${catalog.snapshot}`;
   bindContent();
+  if (view === "integrity" && extractionRunState === "idle") loadExtractionRun();
 }
 function renderChanges() {
   const c = selectedCase(),
@@ -310,8 +313,102 @@ function renderEvidence(a) {
 function renderSources() {
   return `<div class="page-heading"><div><span class="eyebrow">THE SOURCE COLLECTION</span><h1>Every answer has a source.</h1><p class="muted" style="margin-top:16px">${catalog.stats.availableTexts} available texts from ${catalog.stats.sourceRecords} source records. Gaps are part of the record.</p></div><button class="button" id="download-sources">Export manifest</button></div><div class="table-scroll"><table class="source-table"><thead><tr><th>DOCUMENT</th><th>JURISDICTION</th><th>ORIGINAL SOURCE</th><th>AVAILABILITY</th><th></th></tr></thead><tbody>${catalog.sources.map((s) => `<tr><td>${h(s.doc_id)}</td><td>${h(s.jurisdictions)}</td><td class="source-url">${h(s.url)}</td><td><span class="status-pill ${s.available ? "" : "neutral"}">${s.available ? "Text available" : s.capture === "yes" ? "Text unavailable" : "Link only"}</span></td><td><button class="text-button" data-source="${h(s.doc_id)}">Inspect</button></td></tr>`).join("")}</tbody></table></div>`;
 }
+function checkedExtractionRun(value) {
+  const count = (v) => {
+    const n = Array.isArray(v) ? v.length : v;
+    if (!Number.isSafeInteger(n) || n < 0) throw Error("Invalid run count.");
+    return n;
+  };
+  const validStatuses = ["completed_machine_validation", "completed_with_review_items"];
+  if (!value || !validStatuses.includes(value.status) ||
+      typeof value.model !== "string" || !value.model.trim() ||
+      !Array.isArray(value.sources) || !value.sources.length ||
+      !Array.isArray(value.limitations) || value.limitations.some((s) => typeof s !== "string") ||
+      typeof value.duration_seconds !== "number" || !Number.isFinite(value.duration_seconds) || value.duration_seconds < 0)
+    throw Error("Incomplete extraction run record.");
+  const started = Date.parse(value.started_at), finished = Date.parse(value.finished_at);
+  if (typeof value.started_at !== "string" || typeof value.finished_at !== "string" ||
+      !Number.isFinite(started) || !Number.isFinite(finished) || finished < started)
+    throw Error("Invalid run timestamps.");
+  const accepted = count(value.accepted_rule_count), requests = count(value.requests_sent);
+  const sources = value.sources.map((source) => {
+    if (!source || typeof source.source_doc_id !== "string" || !source.source_doc_id ||
+        typeof source.source_sha256 !== "string" || !/^[a-f0-9]{64}$/i.test(source.source_sha256) ||
+        !["validated_candidates", "cache_hit", "failed_requires_review"].includes(source.status))
+      throw Error("Invalid source provenance.");
+    const acceptedRules = count(source.accepted_rules), issueCount = count(source.review_issues);
+    if (source.status === "failed_requires_review" && acceptedRules !== 0)
+      throw Error("A failed source cannot claim accepted candidates.");
+    return { ...source, acceptedRules, issueCount };
+  });
+  if (new Set(sources.map((s) => s.source_doc_id)).size !== sources.length ||
+      sources.reduce((sum, source) => sum + source.acceptedRules, 0) !== accepted)
+    throw Error("Run totals do not reconcile.");
+  const hasFailedSources = sources.some((s) => s.status === "failed_requires_review");
+  const hasReviewItems = hasFailedSources || sources.some((s) => s.issueCount > 0);
+  if (value.status === "completed_machine_validation" && hasReviewItems)
+    throw Error("Run status contradicts its source results.");
+  // Downloads stay inside this project's data directory. No URL from a run
+  // record may send a visitor to an external origin or execute script content.
+  let candidateUrl = null;
+  if (typeof value.candidate_pack_url === "string") {
+    const url = new URL(value.candidate_pack_url, location.href);
+    const expected = new URL("./data/extraction-candidates.json", location.href);
+    if (url.origin === expected.origin && url.pathname === expected.pathname && !url.hash)
+      candidateUrl = expected.href;
+  }
+  return { ...value, sources, accepted, requests, hasFailedSources, hasReviewItems, candidateUrl };
+}
+async function loadExtractionRun() {
+  extractionRunState = "loading";
+  try {
+    const response = await fetch("./data/extraction-run.json");
+    if (response.status === 404) {
+      extractionRunState = "absent";
+      return;
+    }
+    if (!response.ok) throw Error("The saved extraction run is unavailable.");
+    extractionRun = checkedExtractionRun(await response.json());
+    extractionRunState = "ready";
+  } catch {
+    extractionRun = null;
+    extractionRunState = "unavailable";
+  }
+  if (view === "integrity") render();
+}
+function renderExtractionRun() {
+  if (extractionRunState === "unavailable")
+    return `<aside class="extraction-run-unavailable" role="status">${icon("document", 18)}<div><strong>Extraction record unavailable</strong><p>The separate run record could not be loaded or its totals could not be verified. No run result is claimed.</p></div></aside>`;
+  if (!extractionRun) return "";
+  const run = extractionRun;
+  const failed = run.sources.every((s) => s.status === "failed_requires_review");
+  const review = run.status === "completed_with_review_items" || run.hasReviewItems || run.accepted === 0;
+  const state = failed ? "failed" : review ? "review" : "validated";
+  const status = failed ? "Extraction failed" : run.hasFailedSources ? "Completed with failed sources" : review ? "Review items remain" : "Machine checks complete";
+  const seconds = run.duration_seconds;
+  const duration = seconds < 60 ? `${Number(seconds.toFixed(1))}s` : `${Math.floor(seconds / 60)}m ${Math.floor(seconds % 60)}s`;
+  const formatTime = (stamp) => new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "medium", timeStyle: "medium", timeZone: "UTC",
+  }).format(new Date(stamp)) + " UTC";
+  const loadedPack = pack.method === "codex_assisted_extraction"
+    ? `The ${pack.rules.length} Codex-assisted records loaded in this workspace remain a separate pack.`
+    : `The ${pack.rules.length} records currently loaded in this workspace remain a separate pack.`;
+  return `<section class="extraction-run-card" data-run-state="${state}" aria-labelledby="extraction-run-heading">
+    <div class="extraction-run-heading"><div><span class="eyebrow">AUTOMATIC EXTRACTION</span><h3 id="extraction-run-heading">A run you can inspect.</h3></div><span class="extraction-run-status">${icon(failed ? "close" : review ? "document" : "check", 15)}${status}</span></div>
+    <p class="extraction-run-context">${loadedPack} Any candidates from this recorded compiler run require review before they can replace the loaded records.</p>
+    <ol class="extraction-run-flow" aria-label="Recorded extraction workflow"><li><span class="extraction-flow-number">01</span><strong>Source</strong><span>${run.sources.length} recorded ${run.sources.length === 1 ? "input" : "inputs"}</span></li><li><span class="extraction-flow-number">02</span><strong>Model</strong><span>${h(run.model)}</span></li><li><span class="extraction-flow-number">03</span><strong>Validate</strong><span>Machine checks</span></li><li><span class="extraction-flow-number">04</span><strong>Review</strong><span>Human review required</span></li></ol>
+    <div class="extraction-run-metrics"><div><strong>${run.accepted}</strong><span>${run.accepted === 1 ? "candidate passed checks" : "candidates passed checks"}</span></div><div><strong>${run.requests}</strong><span>model requests sent</span></div><div><strong>${duration}</strong><span>recorded runtime</span></div></div>
+    <details class="extraction-run-provenance"><summary>Sources and run details<span>${run.sources.length} ${run.sources.length === 1 ? "source" : "sources"}</span></summary><dl class="extraction-run-times"><div><dt>Started</dt><dd>${h(formatTime(run.started_at))}</dd></div><div><dt>Finished</dt><dd>${h(formatTime(run.finished_at))}</dd></div></dl><div class="extraction-run-sources">${run.sources.map((source) => {
+      const label = source.status === "failed_requires_review" ? "Failed · review required" : source.acceptedRules === 0 ? "Review only" : source.status === "cache_hit" ? "Cached result" : "Candidates validated";
+      const canOpen = catalog.sources.some((s) => s.doc_id === source.source_doc_id);
+      return `<div class="extraction-run-source" data-source-status="${source.status}"><div>${canOpen ? `<button class="text-button" data-source="${h(source.source_doc_id)}">${h(source.source_doc_id)} ${icon("document", 13)}</button>` : `<strong>${h(source.source_doc_id)}</strong>`}<span>${label}</span></div><p>${source.acceptedRules} ${source.acceptedRules === 1 ? "candidate" : "candidates"} passed checks${source.issueCount ? ` · ${source.issueCount} review ${source.issueCount === 1 ? "issue" : "issues"}` : ""}</p><code title="Source SHA-256">${h(source.source_sha256)}</code></div>`;
+    }).join("")}</div></details>
+    ${run.limitations.length ? `<ul class="extraction-run-limitations">${run.limitations.map((item) => `<li>${h(item)}</li>`).join("")}</ul>` : ""}
+    <div class="extraction-run-footer"><span>Source matches and machine checks do not establish legal correctness.</span>${run.candidateUrl && run.accepted > 0 ? `<a class="button extraction-run-download" href="${h(run.candidateUrl)}" download="extraction-candidates.json">${icon("download", 15)}Download candidates</a>` : ""}</div>
+  </section>`;
+}
 function renderIntegrity() {
-  return `<div class="page-heading"><div><span class="eyebrow">BUILT TO BE CHECKED</span><h1>Confidence needs evidence.</h1><p class="muted" style="margin-top:16px">What has been processed, what has been checked, and what remains unresolved.</p></div></div><div class="integrity-cards"><div class="integrity-card"><span class="eyebrow">EXTRACTED RULES</span><strong>${pack.rules.length}</strong><p>${pack.rules.length ? "Loaded rules passed source-span and structural checks. This does not establish legal correctness." : "Extraction has not run. No benchmark score or rule coverage is claimed."}</p></div><div class="integrity-card"><span class="eyebrow">SOURCE TEXTS</span><strong>${catalog.stats.availableTexts}<span class="muted" style="font-size:20px"> / ${catalog.stats.sourceRecords}</span></strong><p>Available text, as distinct from link-only or unavailable sources.</p></div><div class="integrity-card"><span class="eyebrow">LEGAL CITY MATCHES</span><strong>${catalog.stats.geocoded}<span class="muted" style="font-size:20px"> / 500</span></strong><p>Postal labels are not automatically treated as legal city boundaries.</p></div></div><div class="integrity-content">${report ? `<h3>Checks on this build</h3><div class="validation-list">${report.checks.map((c) => `<div class="validation-row"><span>${h(c)}</span><strong>Passed</strong></div>`).join("")}</div><p>${report.primary_quotes + report.supplemental_quotes} exact quotations checked. These checks establish source presence and structure, not independent legal validation.</p>` : ""}<h3>Official scoring</h3><p>${catalog.organizerScoringAvailable ? "An organizer scoring file is present. Results must be generated and inspected before being reported." : "The downloaded participant package contains no score.py or development answer key. We cannot report an official score. Internal tests are separate from organizer evaluation."}</p><h3>What a source match establishes</h3><p>The quoted passage occurs in the supplied document. Whether it supports the interpretation is a separate question. Reproducible execution does not make an incorrect interpretation correct.</p><h3>Changes and local evidence</h3><p>Time comparisons use the supplied building facts, not reconstructed historical building records. Evidence you add is stored only in this browser and excluded from the unmodified sample export.</p><h3>Known gaps</h3><p>Ownership, some construction years, unit counts and certificate-of-occupancy dates are not included for all buildings. A possible conflict is flagged for review rather than silently resolved.</p><div class="evidence-actions"><button class="button" id="download-audit">Export extraction audit</button><button class="button" id="download-changes">Export change cases</button><button class="button" id="download-lookups" ${pack.rules.length ? "" : "disabled"}>Export sample lookups</button></div></div>`;
+  return `<div class="page-heading"><div><span class="eyebrow">BUILT TO BE CHECKED</span><h1>Confidence needs evidence.</h1><p class="muted" style="margin-top:16px">What has been processed, what has been checked, and what remains unresolved.</p></div></div><div class="integrity-cards"><div class="integrity-card"><span class="eyebrow">EXTRACTED RULES</span><strong>${pack.rules.length}</strong><p>${pack.rules.length ? "Loaded rules passed source-span and structural checks. This does not establish legal correctness." : "Extraction has not run. No benchmark score or rule coverage is claimed."}</p></div><div class="integrity-card"><span class="eyebrow">SOURCE TEXTS</span><strong>${catalog.stats.availableTexts}<span class="muted" style="font-size:20px"> / ${catalog.stats.sourceRecords}</span></strong><p>Available text, as distinct from link-only or unavailable sources.</p></div><div class="integrity-card"><span class="eyebrow">LEGAL CITY MATCHES</span><strong>${catalog.stats.geocoded}<span class="muted" style="font-size:20px"> / 500</span></strong><p>Postal labels are not automatically treated as legal city boundaries.</p></div></div><div class="integrity-content">${renderExtractionRun()}${report ? `<h3>Checks on this build</h3><div class="validation-list">${report.checks.map((c) => `<div class="validation-row"><span>${h(c)}</span><strong>Passed</strong></div>`).join("")}</div><p>${report.primary_quotes + report.supplemental_quotes} exact quotations checked. These checks establish source presence and structure, not independent legal validation.</p>` : ""}<h3>Official scoring</h3><p>${catalog.organizerScoringAvailable ? "An organizer scoring file is present. Results must be generated and inspected before being reported." : "The downloaded participant package contains no score.py or development answer key. We cannot report an official score. Internal tests are separate from organizer evaluation."}</p><h3>What a source match establishes</h3><p>The quoted passage occurs in the supplied document. Whether it supports the interpretation is a separate question. Reproducible execution does not make an incorrect interpretation correct.</p><h3>Changes and local evidence</h3><p>Time comparisons use the supplied building facts, not reconstructed historical building records. Evidence you add is stored only in this browser and excluded from the unmodified sample export.</p><h3>Known gaps</h3><p>Ownership, some construction years, unit counts and certificate-of-occupancy dates are not included for all buildings. A possible conflict is flagged for review rather than silently resolved.</p><div class="evidence-actions"><button class="button" id="download-audit">Export extraction audit</button><button class="button" id="download-changes">Export change cases</button><button class="button" id="download-lookups" ${pack.rules.length ? "" : "disabled"}>Export sample lookups</button></div></div>`;
 }
 function openSource(id) {
   const s = catalog.sources.find((s) => s.doc_id === id);

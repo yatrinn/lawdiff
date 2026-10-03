@@ -32,19 +32,19 @@ One law changes. Which buildings need attention? This is LawDiff. Each mark repr
 
 ### Sprechtext
 
-LawDiff separates interpretation from execution. Codex read the supplied source texts and produced structured candidate rules, with the extraction method recorded. The public demo runs those candidates through one shared rule engine; browser answers and submission exports use the same logic. Schema checks, exact source-span checks, calendar validation, and targeted tests catch structural errors. Three-valued logic preserves missing facts without guessing. City rules require geographic evidence, not a matching postal label. Evidence added in the browser stays separate from the original sample. A separate API compiler is implemented, but this presentation does not claim an unperformed API run. The remaining hard problem is legal interpretation: traceability supports review; it does not certify correctness.
+LawDiff separates interpretation from execution. Codex read the supplied source texts and produced structured candidate rules, with the extraction method recorded. The public demo runs those candidates through one shared rule engine; browser answers and submission exports use the same logic. Schema checks, exact source-span checks, calendar validation, and targeted tests catch structural errors. Three-valued logic preserves missing facts without guessing. City rules require geographic evidence, not a matching postal label. Evidence added in the browser stays separate from the original sample. A separate automated Codex CLI run is recorded with source hashes, candidate output, and open review questions. The remaining hard problem is legal interpretation: traceability supports review; it does not certify correctness.
 
 ### Bildregie
 
 | Zeit | Aktion |
 |---|---|
-| 0–12 s | Originaltext und extrahierten Kandidaten nebeneinander zeigen; Methode `codex_assisted_extraction` lesbar |
+| 0–12 s | Den echten CLI-Lauf und seine Kandidaten zeigen; vom separat erstellten 58-Regel-Paket unterscheiden |
 | 12–23 s | Einfaches Diagramm: Quelle → Regelpaket → gemeinsame Engine → Oberfläche und Exporte |
 | 23–35 s | Echte Prüfungen: Zitatmanipulation, ungültiges Datum und Drei-Werte-Logik |
 | 35–46 s | Fehlender Gebäudefakt und getrennte Simulationsdaten in der Anwendung |
 | 46–58 s | Audit-/Integrity-Ansicht; verbleibende Quellen- und Interpretationslücken |
 
-**Wenn später ein echter API-Lauf erfolgt:** Den entsprechenden Satz erst nach Sichtung des Protokolls ersetzen durch „The separate API compiler also processed the source shown here; the audit records that run.“ Dazu genau den belegten Lauf zeigen. Keine Erfolgsquote oder Laufzeit ohne Messung ergänzen.
+**Nachweis:** `public/data/extraction-run.json` und `extraction-candidates.json` dokumentieren den tatsächlichen automatischen CLI-Lauf. Nur dessen gemessene Werte nennen. Der alternative Anthropic-Compiler wurde nicht ausgeführt.
 
 ## 3. Team
 

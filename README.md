@@ -29,7 +29,9 @@ Open http://127.0.0.1:4317. Deploy the project to Vercel using the included conf
 
 ## Architecture and truthfulness
 
-The shipped rule records were extracted by Codex from captured source texts, with exact-span and structural checks. This is **Codex-assisted extraction**, not a completed external Anthropic API batch or independent legal review. `scripts/compile.mjs` provides a separate reproducible, budget-limited Anthropic pipeline for additional candidate extraction. It requires credentials and explicitly supplied model prices. See [compiler documentation](docs/compiler.md).
+The shipped rule records were extracted by Codex from captured source texts, with exact-span and structural checks. This is **Codex-assisted extraction**, not an external Anthropic batch or independent legal review. The separate **automated Codex CLI pipeline has now been executed**: its recorded source hashes, model, timings, review items and candidate output are available in the app's Integrity view and [`public/data/extraction-run.json`](public/data/extraction-run.json). It demonstrates candidate extraction; it does not relabel the original 58 records as this batch's output. See [reproduction instructions](docs/codex-extraction.md).
+
+`scripts/compile.mjs` also provides an alternative budget-limited Anthropic pipeline. That alternative has not been live-run and requires credentials and explicitly supplied model prices. See [Anthropic compiler documentation](docs/compiler.md).
 
 A single JavaScript rule engine powers the browser and submission export. It uses three-valued coverage logic: missing evidence remains unknown unless another condition already decides the result. It checks legal jurisdiction, effective dates, explicit precedence and possible conflicts. Runtime evaluation makes no model calls. Determinism does not prove that an extracted interpretation is legally correct.
 

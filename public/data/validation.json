@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-03T20:48:00.181Z",
+  "generated_at": "2026-10-03T23:53:15.136Z",
   "rules": 58,
   "primary_quotes": 58,
-  "supplemental_quotes": 94,
+  "supplemental_quotes": 135,
   "addresses": 500,
   "geocoded": 475,
   "source_texts": 54,
   "official_score": null,
   "legal_review": false,
-  "pack_sha256": "c58a712fdba36a5e78ed1f99f652f8e2f6abaf3a6d1a8d65401df7bff7f91b6a",
+  "pack_sha256": "99c6e227aa22d36b5c2dec3b84ed248ead9c7abeec91ca7ae88e52d1220e0b3d",
   "checks": [
     "Rule structure and executable conditions",
     "Primary and supplementary exact source spans",

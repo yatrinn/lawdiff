@@ -11,6 +11,8 @@ target = root.parent / "LawDiff-Abgabepaket.zip"
 files = {}
 for name in ("rules.json", "lookups.json", "changes.json", "extraction-audit.json", "method-note.pdf"):
     files[name] = root / "submission" / name
+for name in ("extraction-run.json", "extraction-candidates.json"):
+    files[f"pipeline/{name}"] = root / "public/data" / name
 for name in ("lawdiff-demo.mp4", "lawdiff-tech.mp4", "VIDEO_NOTES.md", "TECH_VIDEO_NOTES.md"):
     files[f"media/{name}"] = root / "media" / name
 for path in (root / "media").glob("lawdiff-*.srt"):

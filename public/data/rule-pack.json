@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-03T20:14:02.915Z",
+  "generated_at": "2026-10-03T23:47:31.855Z",
   "method": "codex_assisted_extraction",
   "interpretation_review": "Not independently legally validated",
   "rules": [
@@ -53,8 +53,8 @@
       "category": "rent_increase_limits",
       "status": "in_force",
       "title": "Tenant Protection Act rent cap",
-      "requirement": "Covered continuing tenancies are limited to the lower of 5% plus regional CPI or 10% over 12 months, with no more than two increases. Initial rent after all prior tenants leave is outside this cap; statutory exemptions and stronger local controls require separate review.",
-      "requirement_es": "Los arrendamientos continuos cubiertos tienen un límite anual equivalente al menor valor entre el 5% más el IPC regional y el 10%, con un máximo de dos aumentos. El alquiler inicial tras la salida de todos los inquilinos anteriores y las exenciones requieren un análisis aparte.",
+      "requirement": "Covered continuing tenancies are limited to the lower of 5% plus regional CPI or 10% over 12 months, with no more than two increases; initial rent after all prior tenants leave, statutory exemptions and stronger local controls require separate review. Excess-rent demands or collections can lead to excess-rent damages, injunctions and discretionary fees; willful conduct, oppression, fraud or malice can support damages up to three times the excess rent.",
+      "requirement_es": "Los arrendamientos continuos cubiertos tienen un límite de 12 meses equivalente al menor valor entre el 5% más el IPC regional y el 10%, con un máximo de dos aumentos; el alquiler inicial tras la salida de todos los inquilinos, las exenciones y los controles locales más protectores requieren revisión aparte. Exigir o cobrar alquiler excesivo puede dar lugar a daños por el exceso, medidas judiciales y honorarios discrecionales; la conducta deliberada, opresiva, fraudulenta o maliciosa puede justificar daños de hasta tres veces el exceso.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "min(5% + CPI, 10%) / 12 months",
       "coverage_conditions": {
@@ -174,6 +174,11 @@
           "field": "end_date",
           "doc_id": "D024",
           "quote": "(o) This section shall remain in effect until January 1, 2030, and as of that date is repealed."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D024",
+          "quote": "(k) (1) An owner who demands, accepts, receives, or retains any payment of rent in excess of the maximum rent allowed by this section shall be liable in a civil action to the tenant from whom those payments are demanded, accepted, received, or retained for all of the following:\n(A) Injunctive relief.\n(B) Damages in the amount by which any payment demanded, accepted, received, or retained exceeds the\nmaximum allowable rent.\n(C) In the court’s discretion, reasonable attorney’s fees and costs.\n(D) Upon a showing that the owner has acted willfully or with oppression, fraud, or malice, damages up to three times the amount by which any payment demanded, accepted, received, or retained exceeds the maximum allowable rent.\n(2) The Attorney General, in the name of the people of the State of California, and the city attorney or county counsel in the jurisdiction in which the rental unit is located, in the name of the city or county, may do both of the following:\n(A) Enforce the provisions of this section.\n(B) Seek injunctive relief based on violations of this section.\n(3) In an action pursuant to this\nsubdivision for injunctive relief, it shall be presumed that a tenant suffers irreparable harm through violation of this section.\n(4) An action pursuant to this subdivision shall not be brought after the date that is three years from the date on which the cause of action accrued."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -188,7 +193,15 @@
         "separately_alienable": "A property-specific legal title fact; unit count is not used as proof.",
         "certificate_age_years": "Derived only from a supplied certificate date and query date.",
         "mobilehome": "The source has specific mobilehome exceptions; absent facts are unknown."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "A tenant may seek excess-rent damages and injunctive relief; fees and costs are discretionary; up to three times excess-rent damages requires willfulness, oppression, fraud or malice. Authorized public officials may enforce or seek injunctions; the quoted subsection specifies a three-year limitations period.",
+        "citation": "Cal. Civ. Code § 1947.12(k)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "Do not treat treble damages as automatic, calculate a total award, or infer that every rent increase violates the cap."
+      },
+      "penalty": "A tenant may seek excess-rent damages and injunctive relief; fees and costs are discretionary; up to three times excess-rent damages requires willfulness, oppression, fraud or malice. Authorized public officials may enforce or seek injunctions; the quoted subsection specifies a three-year limitations period.",
+      "penalty_scope_note": "Do not treat treble damages as automatic, calculate a total award, or infer that every rent increase violates the cap."
     },
     {
       "team_rule_id": "CA-JC-01",
@@ -197,8 +210,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Tenant Protection Act just cause",
-      "requirement": "Covered tenancies require a stated just cause after every tenant has continuously occupied for at least 12 months or one tenant for at least 24 months. A qualifying no-fault termination also requires one month of relocation assistance or a final-month rent waiver.",
-      "requirement_es": "Los arrendamientos cubiertos requieren una causa justificada cuando todos los inquilinos llevan al menos 12 meses o uno lleva al menos 24 meses. Una terminación sin culpa que reúna los requisitos exige ayuda de reubicación de un mes o la exención del último mes de alquiler.",
+      "requirement": "Covered tenancies require stated just cause after every tenant has continuously occupied for at least 12 months or one tenant for at least 24 months; a qualifying no-fault termination also requires one month of relocation assistance or a final-month rent waiver. Noncompliance voids the termination notice; materially unlawful attempts to recover possession can lead to actual damages, discretionary fees, and, for willfulness, oppression, fraud or malice, up to three times actual damages and possible punitive damages.",
+      "requirement_es": "Los arrendamientos cubiertos requieren causa justificada cuando todos los inquilinos llevan al menos 12 meses o uno lleva al menos 24 meses; una terminación sin culpa que reúna los requisitos también exige ayuda de un mes o la exención del último mes de alquiler. El incumplimiento invalida el aviso de terminación; los intentos de recuperar la posesión en infracción sustancial pueden generar daños reales y honorarios discrecionales, y, si existe conducta deliberada, opresiva, fraudulenta o maliciosa, hasta tres veces los daños reales y posibles daños punitivos.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "12 months all tenants / 24 months one tenant",
       "coverage_conditions": {
@@ -376,6 +389,11 @@
           "field": "transient_hotel",
           "doc_id": "D023",
           "quote": "(1) Transient and tourist hotel occupancy as defined in subdivision (b) of Section 1940."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D023",
+          "quote": "(g) An owner’s failure to comply with any provision of this section shall render the\nwritten termination notice void.\n(h) (1) An owner who attempts to recover possession of a rental unit in material violation of this section shall be liable to the tenant in a civil action for all of the following:\n(A) Actual damages.\n(B) In the court’s discretion, reasonable attorney’s fees and costs.\n(C) Upon a showing that the owner has acted willfully or with oppression, fraud, or malice, up to three times the actual damages. An award may also be entered for punitive damages for the benefit of the tenant against the owner.\n(2) The Attorney General, in the name of the people of the State of California, and the city attorney or county counsel in the jurisdiction in\nwhich the rental unit is located, in the name of the city or county, may seek injunctive relief based on violations of this section."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -389,7 +407,15 @@
         "caveat": "Current extraction targets supplied multifamily properties. Single-family owner-residence exemptions require more detailed review before using this record outside that sample.",
         "owner_occupied": "Same continuous owner-occupied duplex definition as CA-RENT-01.",
         "transient_hotel": "For this record ONLY this means transient/tourist hotel occupancy under Civil Code1940(b); a short fixed-term residential lease alone is not this exemption."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Noncompliance renders the written termination notice void. Materially unlawful attempts to recover possession trigger actual damages, discretionary fees and costs, conditional up-to-treble damages and possible punitive damages; specified public officials may seek injunctions.",
+        "citation": "Cal. Civ. Code § 1946.2(g)–(h)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "Material violation and the heightened-conduct condition must be established; no award is computed from building data."
+      },
+      "penalty": "Noncompliance renders the written termination notice void. Materially unlawful attempts to recover possession trigger actual damages, discretionary fees and costs, conditional up-to-treble damages and possible punitive damages; specified public officials may seek injunctions.",
+      "penalty_scope_note": "Material violation and the heightened-conduct condition must be established; no award is computed from building data."
     },
     {
       "team_rule_id": "CA-DEP-01",
@@ -398,8 +424,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Standard security deposit ceiling",
-      "requirement": "For security newly collected or demanded on or after July 1, 2024, the ordinary ceiling is one month of rent, excluding the first month. The qualifying small-landlord exception, advance-rent provision and requested-alteration provision must be considered separately.",
-      "requirement_es": "Para una fianza cobrada o exigida desde el 1 de julio de 2024, el límite ordinario es un mes de alquiler, aparte del primer mes. Deben revisarse por separado la excepción para pequeños propietarios y las disposiciones sobre alquiler anticipado y modificaciones solicitadas.",
+      "requirement": "For security newly collected or demanded on or after July 1, 2024, the ordinary ceiling is one month of rent, excluding the first month; the qualifying small-landlord exception, advance-rent provision and requested-alteration provision require separate review. Bad-faith claims or retention of security can result in actual damages plus statutory damages up to twice the security.",
+      "requirement_es": "Para una fianza cobrada o exigida desde el 1 de julio de 2024, el límite ordinario es un mes de alquiler, aparte del primer mes; deben revisarse por separado la excepción para pequeños propietarios y las disposiciones sobre alquiler anticipado y modificaciones solicitadas. Reclamar o retener la fianza de mala fe puede generar daños reales más una indemnización legal de hasta el doble de la fianza.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "1 month rent",
       "coverage_conditions": {
@@ -479,6 +505,11 @@
           "field": "effective_date",
           "doc_id": "D025",
           "quote": "(6) This subdivision shall not apply to a security collected or demanded by the landlord before July 1, 2024."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D025",
+          "quote": "(m) The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section, or the bad faith demand of replacement of security in violation of subdivision (k), may subject the landlord or the landlord’s successors in interest to statutory damages of up to twice the amount of the security, in addition to actual damages. The court may award damages for bad faith whenever the facts warrant that award,\nregardless of whether the injured party has specifically requested relief. In an action under this section, the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed or the authority pursuant to this section to demand additional security deposits."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -489,7 +520,13 @@
       "review_status": "source_span_checked_not_legally_validated",
       "coverage_scope": {
         "units": "A supplied property with more than four rental units excludes the no-more-than-four-units small-landlord exception. It does not prove the absence of other transaction-specific exceptions."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Bad-faith claims or retention of security, or bad-faith replacement demands contrary to subdivision (k), may support statutory damages up to twice the security in addition to actual damages; this requires bad faith, not merely an unknown exemption.",
+        "citation": "Cal. Civ. Code § 1950.5(m)",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "Bad-faith claims or retention of security, or bad-faith replacement demands contrary to subdivision (k), may support statutory damages up to twice the security in addition to actual damages; this requires bad faith, not merely an unknown exemption."
     },
     {
       "team_rule_id": "CA-DEP-02",
@@ -498,8 +535,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Qualified small-landlord deposit ceiling",
-      "requirement": "A qualifying natural-person or all-natural-person LLC landlord owning no more than two properties and four rental units in total may collect up to two months of rent as security. This exception does not apply to a service-member applicant.",
-      "requirement_es": "Un propietario que sea persona física o una LLC compuesta solo por personas físicas, con un máximo de dos propiedades y cuatro viviendas de alquiler en total, puede exigir hasta dos meses de fianza. La excepción no se aplica a solicitantes militares.",
+      "requirement": "A qualifying natural-person or all-natural-person LLC landlord owning no more than two properties and four rental units in total may collect up to two months of rent as security, except from a service-member applicant. Bad-faith claims or retention of security can result in actual damages plus statutory damages up to twice the security.",
+      "requirement_es": "Un propietario que sea persona física o una LLC compuesta solo por personas físicas, con un máximo de dos propiedades y cuatro viviendas de alquiler en total, puede exigir hasta dos meses de fianza, salvo a solicitantes militares. Reclamar o retener la fianza de mala fe puede generar daños reales más una indemnización legal de hasta el doble de la fianza.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "2 months rent if qualified",
       "coverage_conditions": {
@@ -548,6 +585,11 @@
           "field": "service_member",
           "doc_id": "D025",
           "quote": "(B) Subparagraph (A) shall not apply if the prospective tenant is a service member. A landlord shall not refuse to enter into a rental agreement for residential property with a prospective tenant who is a service member because this subparagraph prohibits the landlord from demanding or receiving a greater amount of security than that which is established in paragraph (1). For purposes of this subparagraph, “service member” has the same meaning as in Section 400 of the Military and Veterans Code."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D025",
+          "quote": "(m) The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section, or the bad faith demand of replacement of security in violation of subdivision (k), may subject the landlord or the landlord’s successors in interest to statutory damages of up to twice the amount of the security, in addition to actual damages. The court may award damages for bad faith whenever the facts warrant that award,\nregardless of whether the injured party has specifically requested relief. In an action under this section, the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed or the authority pursuant to this section to demand additional security deposits."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -558,7 +600,13 @@
       "review_status": "source_span_checked_not_legally_validated",
       "coverage_scope": {
         "owner_type": "family_trust means the statutory family-trust definition, not every trust."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Bad-faith claims or retention of security, or bad-faith replacement demands contrary to subdivision (k), may support statutory damages up to twice the security in addition to actual damages; this requires bad faith, not merely an unknown exemption.",
+        "citation": "Cal. Civ. Code § 1950.5(m)",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "Bad-faith claims or retention of security, or bad-faith replacement demands contrary to subdivision (k), may support statutory damages up to twice the security in addition to actual damages; this requires bad faith, not merely an unknown exemption."
     },
     {
       "team_rule_id": "CA-DEP-03",
@@ -567,8 +615,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Return and itemize the deposit within 21 days",
-      "requirement": "Within 21 calendar days after the tenant vacates, provide an itemized statement of deductions and return any remaining security. The statute specifies receipts, photographs, permitted deductions and return methods.",
-      "requirement_es": "Dentro de los 21 días naturales siguientes a la desocupación, debe entregarse un desglose de deducciones y devolverse la fianza restante. La ley detalla justificantes, fotografías, deducciones permitidas y métodos de devolución.",
+      "requirement": "Within 21 calendar days after the tenant vacates, provide an itemized statement and return remaining security, following the statutory receipt, photograph, deduction and return-method requirements. Bad-faith failure to follow the return/accounting subdivision forfeits claims against the security; bad-faith retention may also trigger actual damages plus statutory damages up to twice the security.",
+      "requirement_es": "Dentro de los 21 días naturales siguientes a la desocupación, debe entregarse un desglose y devolverse la fianza restante conforme a los requisitos sobre justificantes, fotografías, deducciones y métodos de devolución. El incumplimiento de mala fe de las reglas de devolución y rendición de cuentas impide reclamar importes de la fianza; retenerla de mala fe también puede generar daños reales más una indemnización legal de hasta el doble de la fianza.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "21 calendar days",
       "coverage_conditions": {
@@ -582,7 +630,18 @@
       "source_doc_id": "D025",
       "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5",
       "quoted_span": "(h) (1) No later than 21 calendar days after the tenant has vacated the premises, but not earlier than the time that either the landlord or the tenant provides a notice to terminate the tenancy under Section 1946 or 1946.1, Section 1161 of the Code of Civil Procedure, or not earlier than 60 calendar days prior to\nthe expiration of a fixed-term lease, the landlord shall furnish the tenant, a copy of an itemized statement indicating the basis for, and the amount of, any security received and the disposition of the security, and shall return any remaining portion of the security to the tenant as follows:",
-      "source_evidence": [],
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D025",
+          "quote": "(7) The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this\nsubdivision."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D025",
+          "quote": "(m) The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section, or the bad faith demand of replacement of security in violation of subdivision (k), may subject the landlord or the landlord’s successors in interest to statutory damages of up to twice the amount of the security, in addition to actual damages. The court may award damages for bad faith whenever the facts warrant that award,\nregardless of whether the injured party has specifically requested relief. In an action under this section, the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed or the authority pursuant to this section to demand additional security deposits."
+        }
+      ],
       "retrieved_at": "2026-10-01T22:35Z",
       "confidence": null,
       "conflict_flag": false,
@@ -591,7 +650,13 @@
       "review_status": "source_span_checked_not_legally_validated",
       "field_provenance": {
         "effective_date": "Date of supplied amended version, not original enactment of the 21-day rule."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Bad-faith noncompliance with the return/accounting subdivision removes the landlord’s entitlement to claim any security; bad-faith claims/retention may also support actual damages plus statutory damages up to twice the security.",
+        "citation": "Cal. Civ. Code § 1950.5(h)(7), (m)",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "Bad-faith noncompliance with the return/accounting subdivision removes the landlord’s entitlement to claim any security; bad-faith claims/retention may also support actual damages plus statutory damages up to twice the security."
     },
     {
       "team_rule_id": "CA-FEE-01",
@@ -600,8 +665,8 @@
       "category": "application_screening_fees",
       "status": "in_force",
       "title": "Screening fees: actual cost and indexed ceiling",
-      "requirement": "A screening fee may not exceed actual out-of-pocket costs plus reasonable processing time, or the $30 statutory base adjusted with CPI from January 1, 1998. The corpus does not establish one authoritative statewide 2026 dollar figure.",
-      "requirement_es": "La tarifa de evaluación no puede superar los costes efectivos más un tiempo razonable de tramitación, ni la base legal de 30 dólares ajustada por el IPC desde el 1 de enero de 1998. El corpus no establece una cifra estatal única y autorizada para 2026.",
+      "requirement": "A screening fee may not exceed actual out-of-pocket costs plus reasonable processing time, or the $30 statutory base adjusted with CPI from January 1, 1998; the corpus does not establish one authoritative statewide 2026 dollar figure. If no personal-reference check is performed or no consumer credit report is obtained, return any screening money unused for authorized purposes.",
+      "requirement_es": "La tarifa de evaluación no puede superar los costes efectivos más un tiempo razonable de tramitación, ni la base legal de 30 dólares ajustada por el IPC desde el 1 de enero de 1998; el corpus no establece una cifra estatal única y autorizada para 2026. Si no se comprueban referencias personales o no se obtiene un informe de crédito, debe devolverse toda parte de la tarifa no utilizada para fines autorizados.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "Actual cost; $30 base indexed to CPI",
       "coverage_conditions": {
@@ -615,7 +680,13 @@
       "source_doc_id": "D026",
       "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
       "quoted_span": "(b) The amount of the application screening fee shall not be greater than the actual\nout-of-pocket costs of gathering information concerning the applicant, including, but not limited to, the cost of using a tenant screening service or a consumer credit reporting service, and the reasonable value of time spent by the landlord or their agent in obtaining information on the applicant. In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant. The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998.",
-      "source_evidence": [],
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D026",
+          "quote": "(e) If the landlord or their agent does\nnot perform a personal reference check or does not obtain a consumer credit report, the landlord or their agent shall return any amount of the screening fee that is not used for the purposes authorized by this section to the applicant."
+        }
+      ],
       "retrieved_at": "2026-10-01T22:35Z",
       "confidence": null,
       "conflict_flag": false,
@@ -624,7 +695,13 @@
       "review_status": "source_span_checked_not_legally_validated",
       "field_provenance": {
         "effective_date": "Effective date of supplied amended statutory version."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Unused screening money must be returned if the landlord does not perform a personal-reference check or obtain a consumer credit report. The captured section does not provide a separate monetary penalty schedule.",
+        "citation": "Cal. Civ. Code § 1950.6(e)",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "Unused screening money must be returned if the landlord does not perform a personal-reference check or obtain a consumer credit report. The captured section does not provide a separate monetary penalty schedule."
     },
     {
       "team_rule_id": "CA-FEE-02",
@@ -663,8 +740,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "No discrimination based on lawful income source",
-      "requirement": "Housing providers may not discriminate based on a protected characteristic, including lawful source of income. In subsidized housing, income criteria must use the tenant-paid rent portion and applicants must be offered qualifying alternative ability-to-pay evidence in place of credit history.",
-      "requirement_es": "Los proveedores de vivienda no pueden discriminar por características protegidas, incluida la fuente lícita de ingresos. Con subsidios, los criterios deben considerar la parte del alquiler que paga el inquilino y ofrecer pruebas alternativas de capacidad de pago en lugar del historial crediticio.",
+      "requirement": "Housing providers may not discriminate based on a protected characteristic, including lawful source of income; subsidized-housing criteria must use the tenant-paid rent portion and offer qualifying alternative ability-to-pay evidence in place of credit history. Available discrimination remedies include out-of-pocket and emotional-distress damages, access to denied housing, injunctions, civil penalties or punitive damages, and attorney’s fees.",
+      "requirement_es": "Los proveedores de vivienda no pueden discriminar por características protegidas, incluida la fuente lícita de ingresos; con subsidios, los criterios deben considerar la parte del alquiler que paga el inquilino y ofrecer pruebas alternativas de capacidad de pago en lugar del historial crediticio. Entre los posibles remedios por discriminación figuran pérdidas económicas, acceso a la vivienda denegada, daños emocionales, medidas judiciales, sanciones civiles o daños punitivos y honorarios de abogado.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -683,6 +760,11 @@
           "field": "subsidy_rules",
           "doc_id": "D027",
           "quote": "(o) (1) In instances in which there is a government rent subsidy, to do either of the following:\n(A) Use a financial or income standard in assessing eligibility for the rental of housing that is not based on the portion of the rent to be paid by the tenant.\n(B) (i) Use a person’s credit history as part of the application process for a rental accommodation without offering the applicant the option, at the applicant’s discretion, of providing lawful, verifiable alternative evidence of the applicant’s reasonable ability to pay\nthe portion of the rent to be paid by the tenant, including, but not limited to, government benefit payments, pay records, and bank statements.\n(ii) If the applicant elects to provide lawful, verifiable alternative evidence of the applicant’s\nreasonable ability to pay pursuant to clause (i), the housing provider shall do both of the following:\n(I) Provide the applicant reasonable time to respond with that alternative evidence.\n(II) Reasonably consider that alternative evidence in lieu of the person’s credit history in determining whether to offer the rental accommodation to the applicant."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D016",
+          "quote": "Available Remedies\nState law provides for a variety of remedies for victims of housing discrimination, including:\nRecovery of out-of-pocket losses\nAn injunction prohibiting the unlawful practice\nAccess to housing that the landlord denied you\nDamages for emotional distress\nCivil penalties or punitive damages\nAttorney’s fees"
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -690,7 +772,15 @@
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "source_span_checked_not_legally_validated"
+      "review_status": "source_span_checked_not_legally_validated",
+      "penalties_remedies": {
+        "summary": "CRD lists recovery of out-of-pocket losses, injunctions, access to denied housing, emotional-distress damages, civil penalties or punitive damages, and attorney’s fees as available housing-discrimination remedies; the captured overview does not state monetary levels.",
+        "citation": "California CRD Housing overview, Available Remedies (FEHA)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "General FEHA remedies; no fixed award or penalty amount is supplied by this overview."
+      },
+      "penalty": "CRD lists recovery of out-of-pocket losses, injunctions, access to denied housing, emotional-distress damages, civil penalties or punitive damages, and attorney’s fees as available housing-discrimination remedies; the captured overview does not state monetary levels.",
+      "penalty_scope_note": "General FEHA remedies; no fixed award or penalty amount is supplied by this overview."
     },
     {
       "team_rule_id": "CA-SCREEN-02",
@@ -699,8 +789,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Criminal-history screening must be limited",
-      "requirement": "Do not consider arrests without convictions, sealed or expunged records, or juvenile matters, and do not impose blanket criminal-history bans. A conviction-based denial must relate directly to tenant suitability or health and safety.",
-      "requirement_es": "No deben considerarse detenciones sin condena, antecedentes sellados o eliminados ni asuntos de menores; tampoco se permiten prohibiciones generales. Una denegación basada en una condena debe relacionarse directamente con la idoneidad del inquilino o la seguridad.",
+      "requirement": "Do not consider arrests without convictions, sealed or expunged records, or juvenile matters, impose blanket criminal-history bans, or deny based on a conviction unrelated to tenant suitability or health and safety. Available discrimination remedies include out-of-pocket and emotional-distress damages, access to denied housing, injunctions, civil penalties or punitive damages, and attorney’s fees.",
+      "requirement_es": "No deben considerarse detenciones sin condena, antecedentes sellados o eliminados ni asuntos de menores, imponerse prohibiciones generales o denegarse vivienda por una condena ajena a la idoneidad del inquilino o la seguridad. Entre los posibles remedios por discriminación figuran pérdidas económicas, acceso a la vivienda denegada, daños emocionales, medidas judiciales, sanciones civiles o daños punitivos y honorarios de abogado.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -714,13 +804,27 @@
       "source_doc_id": "D016",
       "source_url": "https://calcivilrights.ca.gov/housing/",
       "quoted_span": "Yes.  Generally, a housing provider may check the criminal history of an applicant, but there are some limitations. Housing  providers cannot consider some types of criminal history including arrests that did not lead to a conviction, records that are sealed or expunged, or records or matters processed in the juvenile justice system. Housing providers are also prohibited from having “blanket bans” of all people with a criminal history.\nIf a housing provider intends to deny someone’s application based on a criminal conviction, it must be directly-related to someone’s ability to be a good tenant and to not be a threat to the health and safety of others and the property. In determining whether a criminal conviction is directly-related, a housing provider should consider the nature and severity of the crime and the amount of time that has passed since the criminal conduct occurred.",
-      "source_evidence": [],
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D016",
+          "quote": "Available Remedies\nState law provides for a variety of remedies for victims of housing discrimination, including:\nRecovery of out-of-pocket losses\nAn injunction prohibiting the unlawful practice\nAccess to housing that the landlord denied you\nDamages for emotional distress\nCivil penalties or punitive damages\nAttorney’s fees"
+        }
+      ],
       "retrieved_at": "2026-10-01T22:35Z",
       "confidence": null,
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "source_span_checked_not_legally_validated"
+      "review_status": "source_span_checked_not_legally_validated",
+      "penalties_remedies": {
+        "summary": "CRD lists recovery of out-of-pocket losses, injunctions, access to denied housing, emotional-distress damages, civil penalties or punitive damages, and attorney’s fees as available housing-discrimination remedies; the captured overview does not state monetary levels.",
+        "citation": "California CRD Housing overview, Available Remedies (FEHA)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "General FEHA remedies; no fixed award or penalty amount is supplied by this overview."
+      },
+      "penalty": "CRD lists recovery of out-of-pocket losses, injunctions, access to denied housing, emotional-distress damages, civil penalties or punitive damages, and attorney’s fees as available housing-discrimination remedies; the captured overview does not state monetary levels.",
+      "penalty_scope_note": "General FEHA remedies; no fixed award or penalty amount is supplied by this overview."
     },
     {
       "team_rule_id": "LA-RENT-01",
@@ -1084,8 +1188,8 @@
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "Algorithmic rental recommendations using competitor data",
-      "requirement": "Sale or use of algorithmic devices using nonpublic competitor rental data to recommend rents or manage residential occupancy is prohibited.",
-      "requirement_es": "Se prohíbe vender o usar dispositivos algorítmicos que utilicen datos no públicos de alquileres de competidores para recomendar rentas o gestionar la ocupación residencial.",
+      "requirement": "Sale or use of algorithmic devices using nonpublic competitor rental data to recommend rents or manage residential occupancy is prohibited. A tenant or the City Attorney may bring a civil action over an alleged violation; the captured announcement does not state a monetary penalty.",
+      "requirement_es": "Se prohíbe vender o usar dispositivos algorítmicos que utilicen datos no públicos de alquileres de competidores para recomendar rentas o gestionar la ocupación residencial. Un inquilino o la Abogacía de la Ciudad puede presentar una acción civil por una presunta infracción; el anuncio capturado no indica una sanción monetaria.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1099,13 +1203,25 @@
       "source_doc_id": "D081",
       "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
       "quoted_span": "adding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.\nThe term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit.",
-      "source_evidence": [],
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D081",
+          "quote": "The term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit. The law prohibits the sale or use of such algorithmic devices and allows a tenant or the City Attorney to bring a civil action if they believe an entity is in violation of the law."
+        }
+      ],
       "retrieved_at": "2026-10-01T22:37Z",
       "confidence": null,
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "source_span_checked_not_legally_validated"
+      "review_status": "source_span_checked_not_legally_validated",
+      "penalties_remedies": {
+        "summary": "A tenant or the City Attorney may bring a civil action for an alleged violation; the supplied announcement does not specify recoverable monetary amounts.",
+        "citation": "SF Rent Ordinance § 37.10C; official Rent Board announcement",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "A tenant or the City Attorney may bring a civil action for an alleged violation; the supplied announcement does not specify recoverable monetary amounts."
     },
     {
       "team_rule_id": "SF-RENT-01",
@@ -1251,8 +1367,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Just cause also protects many rent-cap-exempt units",
-      "requirement": "A covered tenancy requires a listed just cause as the dominant eviction motive. Expiration of the rental agreement or change in ownership alone is insufficient; many units exempt from rent-increase limits remain covered.",
-      "requirement_es": "Un arrendamiento cubierto exige una causa justificada enumerada como motivo principal del desalojo. El vencimiento del contrato o el cambio de propietario no bastan; muchas viviendas exentas de límites de aumento siguen protegidas.",
+      "requirement": "A covered tenancy requires a listed just cause as the dominant eviction motive; expiration of the rental agreement or a change in ownership alone is insufficient, and many rent-cap-exempt units remain covered. An unlawful eviction or attempt may expose the landlord to civil or criminal liability; the captured overview does not state a penalty amount.",
+      "requirement_es": "Un arrendamiento cubierto exige una causa justificada enumerada como motivo principal del desalojo; el vencimiento del contrato o el cambio de propietario no bastan, y muchas viviendas exentas de límites de aumento siguen cubiertas. Un desalojo ilícito o su intento puede generar responsabilidad civil o penal para el propietario; el resumen capturado no indica una cuantía sancionadora.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1273,6 +1389,11 @@
           "field": "certificate_of_occupancy",
           "doc_id": "D079",
           "quote": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D079",
+          "quote": "Since evictions are complex proceedings, landlords should proceed with caution and seek the advice of an attorney before asking a tenant to move or attempting an eviction. If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability. While we cannot provide legal advice or refer you to individual attorneys, staff will be glad to direct you to appropriate resources for advice and assistance. A list of resources is available through the"
         }
       ],
       "retrieved_at": "2026-10-01T22:37Z",
@@ -1283,7 +1404,13 @@
       "review_status": "source_span_checked_not_legally_validated",
       "coverage_scope": {
         "local_just_cause_exempt": "Review the Rent Ordinance eviction coverage, which is broader than rent-cap coverage. Certificate after June13,1979 is not by itself an eviction exemption."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "The official overview warns that unlawful evictions or attempts may create substantial civil and/or criminal liability; no dollar amount or specific multiplier appears in the captured overview.",
+        "citation": "SF Rent Board Topic 201, Overview of Just Cause Evictions",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "The official overview warns that unlawful evictions or attempts may create substantial civil and/or criminal liability; no dollar amount or specific multiplier appears in the captured overview."
     },
     {
       "team_rule_id": "BERK-RENT-01",
@@ -1628,8 +1755,8 @@
       "category": "application_screening_fees",
       "status": "in_force",
       "title": "Screening-fee rights disclosure",
-      "requirement": "Before taking a screening fee, a Berkeley housing owner must clearly disclose the applicant’s fee rights and maximum cap. Nonrefundable renewal or roommate-change fees for existing tenants are prohibited.",
-      "requirement_es": "Antes de cobrar una tarifa de evaluación, el propietario debe informar claramente de los derechos y del límite máximo. Se prohíben las tarifas no reembolsables por renovación o cambio de compañero de vivienda para inquilinos actuales.",
+      "requirement": "Before taking a screening fee, a Berkeley housing owner must clearly disclose the applicant’s fee rights and maximum cap; nonrefundable renewal or roommate-change fees for existing tenants are prohibited. Conflicting lease terms are unenforceable, and unused screening-fee amounts must be refunded.",
+      "requirement_es": "Antes de cobrar una tarifa de evaluación, el propietario debe informar claramente de los derechos y del límite máximo; se prohíben las tarifas no reembolsables por renovación o cambio de compañero de vivienda para inquilinos actuales. Las cláusulas contractuales contrarias son inexigibles y deben devolverse los importes de evaluación no utilizados.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1653,6 +1780,16 @@
           "field": "scope",
           "doc_id": "D005",
           "quote": "Chapter 13.78 applies to all residential rental agreements regardless of any contractual language in any rental agreement or lease to the contrary."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D005",
+          "quote": "The “Tenant Screening Fee Rights Statement” shall mean the following statement or a substantially similar statement:\n\"Pursuant to California law you have tenant screening fee rights, including the right to a copy of your consumer credit report if one is obtained with your screening fee, a refund of any unused portion of the fee and a receipt of the costs of the screening. For more information about your rights, please visit [URL to be provided by City].\""
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D005",
+          "quote": "Applicability to Existing Rental Agreements (BMC 13.78.018)\nChapter 13.78 applies to all residential rental agreements regardless of any contractual language in any rental agreement or lease to the contrary. Any provision of an existing rental agreement or lease that violates the provisions of this chapter are unenforceable."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -1660,7 +1797,13 @@
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "source_span_checked_not_legally_validated"
+      "review_status": "source_span_checked_not_legally_validated",
+      "penalties_remedies": {
+        "summary": "Chapter 13.78 applies despite contrary lease language and makes violating terms unenforceable. The official fee-rights statement includes a refund of any unused screening fee; the captured page gives no separate fine schedule.",
+        "citation": "BMC § 13.78.018; official Tenant Screening Fee Rights Statement",
+        "review_status": "source_span_checked_not_legally_validated"
+      },
+      "penalty": "Chapter 13.78 applies despite contrary lease language and makes violating terms unenforceable. The official fee-rights statement includes a refund of any unused screening fee; the captured page gives no separate fine schedule."
     },
     {
       "team_rule_id": "BERK-SCREEN-01",
@@ -1669,8 +1812,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Fair Chance Access to Housing",
-      "requirement": "Covered housing providers may not ask about or use criminal history in rental advertising, applications, selection or decisions. Limited exceptions apply; criminal-history action requires written notice plus an opportunity to respond.",
-      "requirement_es": "Los proveedores cubiertos no pueden preguntar ni usar antecedentes penales en anuncios, solicitudes, selección o decisiones de alquiler. Hay excepciones limitadas; las medidas basadas en antecedentes exigen aviso escrito y oportunidad de respuesta.",
+      "requirement": "Covered housing providers may not ask about or use criminal history in rental advertising, applications, selection or decisions except within limited exceptions, and criminal-history action requires written notice and an opportunity to respond. Violations can bring $1,000–$10,000 administrative fines per violation and civil relief including actual damages or three times one month’s rent, punitive damages, fees and injunctions.",
+      "requirement_es": "Los proveedores cubiertos no pueden preguntar ni usar antecedentes penales en anuncios, solicitudes, selección o decisiones salvo excepciones limitadas, y las medidas basadas en antecedentes requieren aviso escrito y oportunidad de respuesta. Las infracciones pueden generar multas administrativas de 1.000 a 10.000 dólares por infracción y remedios civiles, incluidos daños reales o tres veces un mes de alquiler, daños punitivos, honorarios y medidas judiciales.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1696,6 +1839,11 @@
           "field": "notice",
           "doc_id": "D003",
           "quote": "If a landlord takes any action against an applicant or tenant based on criminal history (such as refusing to offer a lease, refusing to add a family member, etc.), the landlord is required to provide the applicant/tenant with written notice and an opportunity to respond."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D003",
+          "quote": "Civil Penalties\nAny landlord found to be in violation of the Ordinance shall be subject to administrative fines of at least $1,000 and up to $10,000 per violation, civil damages including actual damages or three times the amount of one month's rent, punitive damages, attorneys' fees and costs, and injunctive relief."
         }
       ],
       "retrieved_at": "2026-10-01T22:35Z",
@@ -1706,7 +1854,15 @@
       "review_status": "source_span_checked_not_legally_validated",
       "coverage_scope": {
         "unit_fair_chance_exempt": "Requires exemption review; owner and unit count are missing in Berkeley sample."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "The official overview specifies administrative fines from $1,000 to $10,000 per violation and civil damages including actual damages or three times one month’s rent, punitive damages, attorney’s fees and costs, and injunctive relief.",
+        "citation": "BMC Chapter 13.106, official Fair Chance overview, Civil Penalties",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "The three-month-rent alternative is not three times actual damages; eligibility and adjudication remain case-specific."
+      },
+      "penalty": "The official overview specifies administrative fines from $1,000 to $10,000 per violation and civil damages including actual damages or three times one month’s rent, punitive damages, attorney’s fees and costs, and injunctive relief.",
+      "penalty_scope_note": "The three-month-rent alternative is not three times actual damages; eligibility and adjudication remain case-specific."
     },
     {
       "team_rule_id": "BERK-ALG-01",
@@ -1715,8 +1871,8 @@
       "category": "algorithmic_rent_setting",
       "status": "in_force",
       "title": "Coordinated rental pricing algorithms",
-      "requirement": "Selling or using coordinated pricing algorithms that use recent nonpublic competitor data to recommend rents or occupancy for Berkeley homes is prohibited. Defined research, aggregated reporting and affordable-housing tools are excluded.",
-      "requirement_es": "Se prohíbe vender o usar algoritmos coordinados con datos recientes no públicos de competidores para recomendar alquileres u ocupación en Berkeley. Se excluyen ciertas herramientas de investigación, informes agregados y vivienda asequible.",
+      "requirement": "Selling or using coordinated pricing algorithms that use recent nonpublic competitor data to recommend rents or occupancy for Berkeley homes is prohibited, subject to defined research, aggregated-reporting and affordable-housing exclusions. Civil penalties may reach $1,000 per violation, with each month and dwelling unit counted separately for landlord use; the City Attorney may sue over sale or use and an aggrieved tenant over use, with damages, injunctions and prevailing-party fees available.",
+      "requirement_es": "Se prohíbe vender o usar algoritmos coordinados con datos recientes no públicos de competidores para recomendar alquileres u ocupación en Berkeley, con exclusiones definidas para investigación, informes agregados y vivienda asequible. Las sanciones civiles pueden llegar a 1.000 dólares por infracción, contando por separado cada mes y vivienda en el uso por el propietario; la Abogacía de la Ciudad puede demandar por venta o uso y un inquilino afectado por uso, con daños, medidas judiciales y honorarios para la parte vencedora.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1745,6 +1901,16 @@
           "field": "data_age",
           "doc_id": "D001",
           "quote": "B. “Competitor Data” means information that is not available to the general public \nconcerning actual rent prices, occupancy rates, lease start and end dates, and similar \ndata regarding a property other than a property that is owned or managed by the landlord \nwho is the recipient or user of the generated recommendation, when such data is less \nthan 90 days old."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D001",
+          "quote": "B. It shall be unlawful for a landlord to use a coordinated pricing algorithm described \nin subsection A when setting rents or occupancy levels for residential dwelling units in \nthe City of Berkeley. Each separate month that a violation exists or continues, and each \nseparate residential dwelling unit for which the landlord used the coordinated pricing \nalgorithm, shall constitute a separate and distinct violation. "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D001",
+          "quote": "A. The City Attorney may file a civil action for violations of section 13.63.030, \nsubsections A and/or B, for damages, injunctive relief, restitution/return of illegal profits, \nand/or civil penalties of up to $1,000 per violation. The court shall award reasonable \nattorney’s fees and costs to the City Attorney if the City Attorney is the prevailing party \nin such a civil action. \nB. An aggrieved tenant may file a civil action for violations of section 13.63.030, \nsubsection B, for injunctive relief, money damages, and/or civil penalties of up to $1,000 \nper violation. The court shall award reasonable attorney’s fees and costs to the tenant if \nthe tenant is the prevailing party in such a civil action. A lease provision that limits a \nprevailing tenant from obtaining attorneys’ fees shall not be enforceable against a \ntenant’s claim for attorneys’ fees that arises under this subsection 13.63.040(B). "
         }
       ],
       "retrieved_at": "2026-10-01T22:44Z",
@@ -1756,7 +1922,15 @@
       "field_provenance": {
         "status": "Participant guide identifies enacted Berkeley ban; captured ordinance was passed to print, and final adoption/status should be independently checked.",
         "effective_date": "Unresolved: do not infer March1 or January from captured text."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "The City Attorney may sue over §13.63.030(A) and/or (B) for damages, injunctions, restitution/illegal profits and/or civil penalties up to $1,000 per violation. An aggrieved tenant may sue over subsection (B) for injunctions, money damages and/or up to $1,000 per violation. Prevailing City Attorney/tenant fees and costs are mandatory; each separate month and dwelling unit in the landlord-use provision is a distinct violation.",
+        "citation": "BMC §§ 13.63.030(B), 13.63.040(A)–(B)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "The commencement date and final adoption evidence remain unresolved exactly as recorded in field_provenance; do not infer a penalty total or apply these provisions before verified commencement."
+      },
+      "penalty": "The City Attorney may sue over §13.63.030(A) and/or (B) for damages, injunctions, restitution/illegal profits and/or civil penalties up to $1,000 per violation. An aggrieved tenant may sue over subsection (B) for injunctions, money damages and/or up to $1,000 per violation. Prevailing City Attorney/tenant fees and costs are mandatory; each separate month and dwelling unit in the landlord-use provision is a distinct violation.",
+      "penalty_scope_note": "The commencement date and final adoption evidence remain unresolved exactly as recorded in field_provenance; do not infer a penalty total or apply these provisions before verified commencement."
     },
     {
       "team_rule_id": "SD-JC-01",
@@ -1765,8 +1939,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Residential tenant protections",
-      "requirement": "Covered tenancies may not be terminated without an enumerated at-fault or no-fault just cause. Coverage excludes specified short tenancies, facilities, subsidy arrangements, owner occupancy and newer construction.",
-      "requirement_es": "Los arrendamientos cubiertos no pueden terminarse sin una causa enumerada con o sin culpa. Se excluyen determinados contratos cortos, centros, subsidios, ocupación del propietario y construcciones nuevas.",
+      "requirement": "Covered tenancies may not be terminated without enumerated at-fault or no-fault just cause, subject to exclusions for specified short tenancies, facilities, subsidy arrangements, owner occupancy and newer construction. A wrongful attempt or actual recovery of possession can result in damages of at least three times actual economic loss; noncompliance voids required termination notices.",
+      "requirement_es": "Los arrendamientos cubiertos solo pueden terminarse por causas enumeradas con o sin culpa, con exclusiones para determinados contratos cortos, centros, subsidios, ocupación del propietario y construcciones nuevas. El intento o la recuperación ilícita de la posesión puede generar daños de al menos tres veces la pérdida económica real; el incumplimiento invalida los avisos de terminación exigidos.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1815,6 +1989,26 @@
           "field": "tenancy_short_term",
           "doc_id": "D073",
           "quote": "Tenancy means the lawful right or entitlement of a tenant to continuously use or \noccupy a residential rental property for more than 30 days. A tenancy does not \ninclude a lease for a fixed-term of three months or less, including any extensions or \nrenewals of that lease for a fixed-term of three months or less."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "§98.0709 Remedies \n(a) A tenant claiming a violation of this Division may file an action against a \nlandlord in a court of competent jurisdiction. \n \n(b) A tenant may seek injunctive relief, equitable relief, and money damages, \nincluding punitive damages, in a civil action against a landlord for a violation \nof this Division.  "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "(c) A tenant may raise, as an affirmative defense, any violation or noncompliance \nwith this Division in any action by a landlord to recover possession of a \nresidential rental property. \n \n(d) Any attempt by a landlord to recover possession of a residential rental \nproperty or any actual recovery of possession of a residential rental property \nin violation of this Division shall render the landlord liable to the tenant in a \ncivil action for wrongful eviction for damages of not less than three times the \nactual economic damages. "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "(f) In the court's discretion, a landlord who attempts to recover possession of a \nresidential rental property in material violation of this Division shall be liable \nto the tenant in a civil action for reasonable attorney’s fees and costs. \n \n(g) The remedies under section 98.0709 are cumulative and may be used in \naddition to any other remedies in this Division or at law, statute, or ordinance. \n \n(h) The City may enforce this Division under Chapter 1, Article 2 of this Code, \nincluding civil and criminal remedies. "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "§98.0710 Failure to Comply with Division \nIn addition to other remedies applicable to landlord’s failure to comply with this \nDivision, a landlord’s failure to comply with any provision of this Division shall \nrender void any notice of termination required by this Division.  "
         }
       ],
       "retrieved_at": "2026-10-01T22:37Z",
@@ -1829,7 +2023,15 @@
       },
       "field_provenance": {
         "effective_date": "Date of amended source version; ordinance originally effective June24,2023."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "Tenants may seek injunctions, equitable relief, money/punitive damages, and raise noncompliance as a defense. Wrongful attempts or actual recovery of possession trigger at least three times actual economic damages; fees for materially unlawful attempts are discretionary. Noncompliance voids required termination notices.",
+        "citation": "SDMC §§ 98.0709(a)–(d), (f)–(h), 98.0710",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "The multiplier applies to wrongful eviction economic damages; a source-backed rule applying to a building does not establish a violation."
+      },
+      "penalty": "Tenants may seek injunctions, equitable relief, money/punitive damages, and raise noncompliance as a defense. Wrongful attempts or actual recovery of possession trigger at least three times actual economic damages; fees for materially unlawful attempts are discretionary. Noncompliance voids required termination notices.",
+      "penalty_scope_note": "The multiplier applies to wrongful eviction economic damages; a source-backed rule applying to a building does not establish a violation."
     },
     {
       "team_rule_id": "SD-JC-02",
@@ -1838,8 +2040,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "No-fault relocation assistance",
-      "requirement": "For covered no-fault terminations, provide two months of actual rent as relocation assistance or an equivalent rent waiver; provide three months if the tenant is senior or disabled. This is separate from returning the security deposit.",
-      "requirement_es": "En terminaciones cubiertas sin culpa, debe darse ayuda o exención de alquiler equivalente a dos meses, o tres si el inquilino es mayor o tiene una discapacidad. Es independiente de la devolución de la fianza.",
+      "requirement": "For covered no-fault terminations, provide two months of actual rent as relocation assistance or an equivalent waiver, or three months for a senior or disabled tenant, separately from returning the deposit. Failure to provide the required assistance creates civil liability for “not less than three times the required relocation assistance and actual economic damages”; strict noncompliance with termination requirements voids the notice.",
+      "requirement_es": "En terminaciones cubiertas sin culpa, debe darse ayuda o exención equivalente a dos meses de alquiler real, o tres para inquilinos mayores o con discapacidad, independientemente de devolver la fianza. No proporcionar la ayuda exigida genera responsabilidad civil por una cuantía «no inferior a tres veces la ayuda de reubicación exigida y los daños económicos reales»; no cumplir estrictamente los requisitos de terminación invalida el aviso.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": "2 months; 3 for senior/disabled tenant",
       "coverage_conditions": {
@@ -1898,6 +2100,21 @@
           "field": "deposit",
           "doc_id": "D073",
           "quote": "(3) The relocation assistance required by this Division shall not relieve the \nlandlord’s obligation to, and shall be in addition to, the return of any \ndeposit or security amounts owed to the tenant."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "(e) In addition to other remedies applicable to landlord’s failure to comply with \nthis Division, a landlord's failure to strictly comply with section 98.0706 shall \nrender void any notice of termination required by section 98.0706. "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "(e) Any landlord who fails to provide relocation assistance as required by \nsection 98.0706(c) shall be liable to the tenant in a civil action for not less \nthan three times the required relocation assistance and actual economic \ndamages. "
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D073",
+          "quote": "(g) The remedies under section 98.0709 are cumulative and may be used in \naddition to any other remedies in this Division or at law, statute, or ordinance. "
         }
       ],
       "retrieved_at": "2026-10-01T22:37Z",
@@ -1905,7 +2122,15 @@
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "source_span_checked_not_legally_validated"
+      "review_status": "source_span_checked_not_legally_validated",
+      "penalties_remedies": {
+        "summary": "Section 98.0709(e) provides civil liability for not less than three times the required relocation assistance and actual economic damages. Section 98.0706(e) voids the termination notice for failure to strictly comply with that section; other remedies remain cumulative.",
+        "citation": "SDMC §§ 98.0706(e), 98.0709(e), (g)",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "The statutory remedy wording is preserved without choosing an unverified aggregation formula or computing an award."
+      },
+      "penalty": "Section 98.0709(e) provides civil liability for not less than three times the required relocation assistance and actual economic damages. Section 98.0706(e) voids the termination notice for failure to strictly comply with that section; other remedies remain cumulative.",
+      "penalty_scope_note": "The statutory remedy wording is preserved without choosing an unverified aggregation formula or computing an award."
     },
     {
       "team_rule_id": "SD-ALG-P1",
@@ -1914,8 +2139,8 @@
       "category": "algorithmic_rent_setting",
       "status": "pending",
       "title": "Proposed algorithmic-rent ban: adoption unverified",
-      "requirement": "The supplied draft would prohibit sale or use of defined algorithmic devices to set rents or occupancy. Its ordinance number, final-passage date and adoption certificate are blank; this source does not prove an active ban.",
-      "requirement_es": "El borrador prohibiría vender o usar determinados dispositivos algorítmicos para fijar alquileres u ocupación. El número, la fecha de aprobación y la certificación están en blanco; esta fuente no prueba una prohibición vigente.",
+      "requirement": "The supplied draft would prohibit defined rent-setting or occupancy algorithms and allow tenant civil penalties up to $1,000 per violation, counted separately by month and property for landlord use, plus damages, injunctions and prevailing-tenant fees. Its ordinance number, final-passage date and adoption certificate remain blank; these are proposed remedies, not proof of an active ban.",
+      "requirement_es": "El borrador prohibiría determinados algoritmos para fijar alquileres u ocupación y permitiría a los inquilinos solicitar sanciones civiles de hasta 1.000 dólares por infracción, contadas por mes e inmueble en el uso por el propietario, además de daños, medidas judiciales y honorarios para el inquilino vencedor. El número de ordenanza, la fecha de aprobación final y la certificación siguen en blanco; son remedios propuestos, no prueba de una prohibición vigente.",
       "translation_method": "machine_translation_not_independently_reviewed",
       "key_value": null,
       "coverage_conditions": {
@@ -1939,6 +2164,11 @@
           "field": "conditional_effective_date",
           "doc_id": "D076",
           "quote": "Section 3. This Ordinance will take effect and be in force on the thirtieth day from\nand after its final passage."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D076",
+          "quote": "(b) It is unlawful for a landlord to use an algorithmic device to set rental rates\nor occupancy levels for residential rental property.\nFor each month a violation of section 98.1103(b) exists or continues, and\nfor each residential rental property a landlord uses an algorithmic device,\nit shall constitute a separate and distinct violation.\n(O-2025-107)\n-PAGE 5 OF 6-\n§98.1104  Remedies\n( a ) A tenant may seek injunctive relief, damages, or civil penalties of up to\n$1,000 per violation of this Division, in a civil action against a landlord.\nIn an action brought under this Division, a prevailing tenant shall recover\ncosts and reasonable attorney’s fees. A prevailing tenant includes a tenant\ngranted an order for injunctive relief. A lease provision that limits a tenant\nfrom recovering attorney’s fees shall not be enforceable against a tenant’s\nclaim for attorney’s fees that arise under this Division.\n(b) The remedies under section 98.1104 are cumulative and are in addition to\nany other remedies in this Division or at law, statute, or ordinance."
         }
       ],
       "retrieved_at": "2026-10-01T22:37Z",
@@ -1949,7 +2179,15 @@
       "review_status": "source_span_checked_not_legally_validated",
       "field_provenance": {
         "status": "Pending reflects the supplied draft only. Current adoption not established by captured text; publisher D074 requires retrieval."
-      }
+      },
+      "penalties_remedies": {
+        "summary": "DRAFT ONLY: tenant injunctions, damages or civil penalties up to $1,000 per violation, with prevailing-tenant fees and costs. Each month and residential rental property in the landlord-use provision is separate. No enacted remedy is asserted.",
+        "citation": "Draft SDMC §§ 98.1103(b), 98.1104",
+        "review_status": "source_span_checked_not_legally_validated",
+        "limitations": "Unsigned draft with no proved final passage. Preserve pending status and never activate it by moving the date."
+      },
+      "penalty": "DRAFT ONLY: tenant injunctions, damages or civil penalties up to $1,000 per violation, with prevailing-tenant fees and costs. Each month and residential rental property in the landlord-use provision is separate. No enacted remedy is asserted.",
+      "penalty_scope_note": "Unsigned draft with no proved final passage. Preserve pending status and never activate it by moving the date."
     },
     {
       "team_rule_id": "nj-fair-act",
@@ -1958,8 +2196,8 @@
       "category": "algorithmic_rent_setting",
       "status": "not_yet_effective",
       "title": "New Jersey FAIR Act",
-      "requirement": "From July 1, 2027, the FAIR Act prohibits owners from paying for coordinating services and prohibits defined algorithmic coordination of residential rental prices and terms. Statutory exclusions and possible conflicts with municipal ordinances require review.",
-      "requirement_es": "Desde el 1 de julio de 2027, la Ley FAIR prohíbe pagar servicios de coordinación y la coordinación algorítmica definida de precios y condiciones de alquiler residencial; deben revisarse las exclusiones legales y los posibles conflictos municipales.",
+      "requirement": "From July 1, 2027, the FAIR Act prohibits payment for coordinating services and defined algorithmic coordination of residential rents and terms, subject to statutory exclusions and review of municipal conflicts. The Act preserves the referenced New Jersey Antitrust Act provisions for violations; the captured text specifies no dollar penalty.",
+      "requirement_es": "Desde el 1 de julio de 2027, la Ley FAIR prohíbe pagar servicios de coordinación y la coordinación algorítmica definida de alquileres y condiciones residenciales, con exclusiones legales y revisión de conflictos municipales. Mantiene la aplicación de las disposiciones citadas de la Ley Antimonopolio de Nueva Jersey a las infracciones; el texto capturado no fija una sanción monetaria.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Effective July 1, 2027",
       "coverage_conditions": {
@@ -2010,6 +2248,15 @@
       "possible_conflicts": [
         "HOB-ALG-01",
         "JC-ALG-01"
+      ],
+      "penalty": "Section 5 preserves application of N.J.S.A. 56:9-6 through 56:9-17 to violations of section 4; no monetary amount is supplied in this captured act.",
+      "penalty_scope_note": "Cross-reference only: the referenced antitrust remedy provisions are not reproduced in this source, so no amount or available claim is inferred.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D069",
+          "quote": "5.    The provisions of this act shall not be construed\nin any manner that limits the application of sections 6 through 17 of P.L.1970,\nc.73 (C.56:9-6 through 9-17) to a violation of section 4 of this act."
+        }
       ]
     },
     {
@@ -2019,8 +2266,8 @@
       "category": "application_screening_fees",
       "status": "in_force",
       "title": "Residential application fee limit",
-      "requirement": "Covered residential application fees cannot exceed $50, subject to the statutory annual CPI adjustment. One- and two-family dwellings and a real-estate licensee who is not the landlord are excluded.",
-      "requirement_es": "Las tarifas de solicitud cubiertas no pueden superar 50 dólares, sujetos al ajuste anual por IPC; se excluyen viviendas de una o dos familias y agentes inmobiliarios que no sean el arrendador.",
+      "requirement": "Covered application fees are capped at $50 subject to annual CPI adjustment, excluding one- and two-family dwellings and a real-estate licensee who is not the landlord. Violations carry penalties up to $500 for a first offense, $750 for a second and $1,000 thereafter; the amount wrongfully charged is remitted to the applicant from the collected penalty.",
+      "requirement_es": "Las solicitudes cubiertas tienen un límite de $50 ajustable anualmente por el IPC; se excluyen viviendas de una o dos familias y agentes inmobiliarios que no sean el arrendador. Las sanciones máximas son $500 por la primera infracción, $750 por la segunda y $1.000 por las posteriores; el cobro indebido se devuelve al solicitante de la sanción recaudada.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "$50 base; annual CPI adjustment",
       "coverage_conditions": {
@@ -2058,6 +2305,14 @@
           "source_doc_id": "D066",
           "quoted_span": "3.  This act shall take effect on the first day of the\nfourth month next following the date of enactment, except that the Director of\nthe Division of Consumer Affairs in the Department of Law and Public Safety\nshall be permitted to take anticipatory action necessary to effectuate the\nprovisions of this act.\nApproved January 20, 2026."
         }
+      ],
+      "penalty": "Up to $500 for a first offense, $750 for a second, and $1,000 for each subsequent offense; the wrongly charged amount is remitted from the collected penalty after proceedings.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D066",
+          "quote": "b.  A landlord, or agent thereof, who violates\nsubsection a. of this section shall be liable for a penalty of up to $500 for a\nfirst offense, up to $750 for a second offense, and up to $1,000 for each\nsubsequent offense, which shall be collected and enforced by summary\nproceedings pursuant to the \"Penalty Enforcement Law of 1999,\"\nP.L.1999, c.274 (C.2A:58-10 et seq.).  The Superior Court, Law Division,\nSpecial Civil Part in the county in which the residential rental property is\nlocated shall have jurisdiction over the proceedings.  Process shall be in the\nnature of a summons or warrant and shall issue upon the complaint of the\nDirector of the Division of Consumer Affairs in the Department of Law and\nPublic Safety or the Attorney General.  Following the proceedings, the amount\nwrongfully charged shall be taken from the collected penalty and shall be\nremitted to the applicant or prospective tenant."
+        }
       ]
     },
     {
@@ -2067,8 +2322,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Criminal history: conditional offer first",
-      "requirement": "Covered housing providers generally may not inquire into criminal history before a conditional offer, except the specified methamphetamine and lifetime-registration exceptions. After an offer, only permitted records may be considered, with individualized assessment and written reasons for withdrawal.",
-      "requirement_es": "Los proveedores cubiertos generalmente no pueden preguntar por antecedentes penales antes de una oferta condicional, salvo las excepciones legales; después deben limitar los antecedentes considerados y realizar una evaluación individual.",
+      "requirement": "Covered providers generally must wait for a conditional offer before criminal-history inquiry, subject to specified exceptions, and may then consider only permitted records with individualized assessment and written withdrawal reasons. Unresolved, substantiated complaints go through the Division on Civil Rights process; penalty ceilings of $1,000, $5,000 or $10,000 depend on the statutory prior-violation lookbacks.",
+      "requirement_es": "Los proveedores cubiertos generalmente deben esperar una oferta condicional antes de preguntar por antecedentes penales, con las excepciones indicadas, y después solo pueden considerar registros permitidos mediante evaluación individual y motivos escritos para retirar la oferta. Las denuncias fundadas no resueltas siguen el procedimiento de la División de Derechos Civiles; los máximos de $1.000, $5.000 o $10.000 dependen de las infracciones previas dentro de los plazos legales.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Conditional offer before most criminal inquiries",
       "coverage_conditions": {
@@ -2109,6 +2364,20 @@
         {
           "source_doc_id": "D065",
           "quoted_span": "5.    a.  A housing provider shall not, either before\nor after the issuance of a conditional offer, evaluate an applicant based on\nany of the following types of criminal records:\n(1)   arrests or charges that have not resulted in a\ncriminal conviction;\n(2)   expunged convictions;\n(3)   convictions erased through executive pardon;\n(4)   vacated and otherwise legally nullified\nconvictions;\n(5)   juvenile adjudications of delinquency; and\n(6)   records that have been sealed.\nb.    After the issuance of a conditional offer to an\napplicant, a housing provider may only consider a criminal record in the\napplicant’s history that:\n(1)   resulted in a conviction for murder, aggravated\nsexual assault, kidnapping, arson, human trafficking, sexual assault in\nviolation of N.J.S.2C:14-2, causing or permitting a child to engage in a\nprohibited sexual act or in the simulation of such an act in violation of\nparagraph (3) of subsection b. of N.J.S.2C:24-4, or any crime that resulted in\nlifetime registration in a state sex offender registry;\n(2)   is for an indictable offense of the first degree\nthat was issued, or if the conviction resulted in a prison sentence that\nsentence concluded, within the six years immediately preceding the issuance of\nthe conditional offer;\n(3)   is for an indictable offense of the second or\nthird degree that was issued, or if the conviction resulted in a prison\nsentence that sentence concluded, within the four years immediately preceding\nthe issuance of the conditional offer; or\n(4)   is for an indictable offense of the fourth degree\nthat was issued, or if the conviction resulted in a prison sentence that\nsentence concluded, within one year immediately preceding the issuance of the\nconditional offer.\nc.     (1)  A housing provider may withdraw a\nconditional offer based on an applicant's criminal record only if the housing\nprovider determines, by preponderance of the evidence, that the withdrawal is\nnecessary to fulfill a substantial, legitimate, and nondiscriminatory interest.\n(2)   If a housing provider withdraws a conditional\noffer, the housing provider shall provide the applicant with written\nnotification that includes, with specificity, the reason or reasons for the\nwithdrawal of the conditional offer and an opportunity to appeal the denial by\nproviding evidence to the housing provider demonstrating inaccuracies within\nthe applicant's criminal record or evidence of rehabilitation or other\nmitigating factors.\n(3)   The housing provider shall perform an\nindividualized assessment of the application in light of the following factors:\n(a)   the nature and severity of the criminal offense;\n(b)   the age of the applicant at the time of the\noccurrence of the criminal offense;\n(c)   the time which has elapsed since the occurrence\nof the criminal offense;\n(d)   any information produced by the applicant, or\nproduced on the applicant's behalf, in regard to the applicant's rehabilitation\nand good conduct since the occurrence of the criminal offense;\n(e)   the degree to which the criminal offense, if it\nreoccurred, would negatively impact the safety of the housing provider's other\ntenants or property; and\n(f)   whether the criminal offense occurred on or was\nconnected to property that was rented or leased by the applicant.\nd.    (1)  The applicant may request, within 30 days\nafter the housing provider's notice of the withdrawal, that the housing\nprovider afford the applicant a copy of all information that the housing\nprovider relied upon in considering the applicant, including criminal records.\n(2)   A housing provider shall provide the information\nrequested under paragraph (1) of this subsection, free of charge, within l0\ndays after receipt of a timely request.\n"
+        }
+      ],
+      "penalty": "DCR process, not a direct private court action under this Act: up to $1,000 with no prior violation in five years, $5,000 with one in five years, or $10,000 with two or more in seven years; no subsection(c) penalty if the complaint is addressed through the subsection(a) process.",
+      "penalty_scope_note": "The $1,000/$5,000/$10,000 figures are ceilings with distinct lookback periods, not automatic first/second/third fines; complaint resolution and findings matter.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D065",
+          "quote": "12.  a.  An action that alleges a violation of this act\nshall not be initiated by any person in court.  The director, or an applicant\nor prospective applicant who believes that a housing provider has violated a\nprovision of this act with respect to that applicant or prospective applicant,\nmay file a complaint with the division.  Upon the filing of a complaint by a\nperson other than the director, the division shall make a good faith effort to\nnotify the housing provider of the alleged violation and offer the housing\nprovider the opportunity to mediate and address the complaint within 14 days of\nreceiving the notice.  The division shall not subject a housing provider to any\npenalty pursuant to subsection c. of this section if the complaint is addressed\npursuant to the process identified in this subsection."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D065",
+          "quote": "c.     A housing provider who violates a provision of\nthis act shall be liable for the following applicable penalties:\n(1)   an amount not to exceed $1,000 if the housing\nprovider has not committed any prior violation within the five-year period\nending on the date of the filing of the charge;\n(2)   an amount not to exceed $5,000 if the housing\nprovider has committed one other violation within the five-year period ending\non the date of the filing of the charge; and\n(3)   an amount not to exceed $10,000 if the housing\nprovider has committed two or more other violations within the seven-year\nperiod ending on the date of the filing of the charge."
         }
       ]
     },
@@ -2179,8 +2448,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Security deposit interest and return",
-      "requirement": "Covered deposits remain tenant property; interest is payable or credited annually and the balance must generally be returned within 30 days after tenancy termination, with itemized lawful deductions.",
-      "requirement_es": "El depósito sigue siendo propiedad del inquilino; los intereses se pagan o acreditan anualmente y el saldo generalmente se devuelve en 30 días tras terminar el arrendamiento, con deducciones justificadas.",
+      "requirement": "Covered deposits remain tenant property; interest is payable or credited annually, and the balance generally must be returned within 30 days after tenancy termination with lawful itemized deductions. A successful wrongful-withholding action may recover double the wrongly withheld amount, court costs and reasonable attorney fees.",
+      "requirement_es": "Los depósitos cubiertos siguen siendo propiedad del inquilino; sus intereses se pagan o abonan anualmente y el saldo generalmente debe devolverse dentro de los 30 días posteriores al fin del arrendamiento, con deducciones legales detalladas. Una demanda exitosa por retención indebida puede recuperar el doble de lo retenido indebidamente, costas y honorarios razonables de abogado.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "30-day return; annual interest",
       "coverage_conditions": {
@@ -2230,6 +2499,15 @@
           "source_doc_id": "D067",
           "quoted_span": " The interest or earnings paid on the security deposit belongs to the tenant and shall be paid \nto the tenant in cash or credited toward rent due and owing on the ren ewal or anniversary of the \ntenant’s lease or on January 31,  if the tenant has been given written notice, that the interest \npayments will be paid on January 31 of each year (N.J.S.A. 46:8-19 (c)).  \n"
         }
+      ],
+      "penalty": "A successful tenant action for a deposit wrongfully withheld may recover twice the wrongly withheld amount, court costs and reasonable attorney fees.",
+      "penalty_scope_note": "Not automatically twice the whole deposit: the quoted remedy concerns the amount wrongfully withheld and a successful claim; tenancy termination and lawful deductions remain relevant.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D067",
+          "quote": " If a landlord fails to return the security deposit within 30 days, or the tenant disagrees with \nthe amount deducted, the tenant may sue for double the amount of the security deposit that the \ntenant contends was wrongfully withheld. If the tenant is successful, the court ma y award the \ntenant double the amount wrongly withheld, together with court costs and reasonable attorney’s \nfees (N.J.S.A. 46:8-21.1)."
+        }
       ]
     },
     {
@@ -2239,8 +2517,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Good cause for eviction or nonrenewal",
-      "requirement": "Covered residential tenancies require good cause and the prescribed legal process for eviction or nonrenewal. Owner-occupied small properties and other stated exceptions require additional facts.",
-      "requirement_es": "Los arrendamientos residenciales cubiertos requieren causa legal y el procedimiento correspondiente para el desalojo o la no renovación; las excepciones necesitan datos adicionales.",
+      "requirement": "Covered residential tenancies require good cause and the prescribed eviction or nonrenewal process, subject to owner-occupied small-property and other stated exceptions. Specified misuse of owner-occupancy or permanent-retirement grounds can trigger treble damages, fees and costs; prohibited residential reuse within five years may additionally carry a civil penalty up to $10,000.",
+      "requirement_es": "Los arrendamientos residenciales cubiertos requieren justa causa y el procedimiento legal de desalojo o no renovación, con excepciones indicadas para pequeños inmuebles ocupados por su propietario y otros casos. Ciertos usos indebidos de las causas de ocupación personal o retiro permanente pueden generar indemnización triple, honorarios y costas; el uso residencial prohibido dentro de cinco años puede además conllevar una sanción civil de hasta $10.000.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": null,
       "coverage_conditions": {
@@ -2295,6 +2573,20 @@
           "source_doc_id": "D067",
           "quoted_span": " The Anti-Eviction Act applies to most residential rental properties including single-family \nhomes, mobile homes and land in a mobile home park, apartment buildings, and complexes. This \nlaw also applies to rooming and boarding homes (N.J.S.A. 2A:18-53 to -84). \nExceptions \n This law may not apply to two - or three-unit owner-occupied premises with two (2) or \nfewer rental units. It does not apply to hotel guests, motel guests, or guest houses rented to a \ntransient guest or seasonal tenant. However, hotel and motel guests are c overed under this law if, \nthe occupant has no alternate residence and resides at the hotel or motel on a continual basis. \nAdditionally, this law does not apply to a unit held in trust on behalf of a member of the immediate \nfamily, if that family member is developmentally disabled, and permanently occupies the dwelling \nunit.  \n"
         }
+      ],
+      "penalty": "Specified N.J.S.A.2A:18-61.6 violations: misuse of the personal-occupancy ground carries three times damages plus fees/costs; residential reuse within five years after removal/demolition/retirement notice may carry treble damages, fees/costs and up to $10,000 civil penalty per violation.",
+      "penalty_scope_note": "These are particular misuse-of-grounds remedies, not a universal penalty for every eviction defect. The source requires at least six months of personal occupancy and five years without residential reuse in the specified retirement case.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D067",
+          "quote": " When a tenant vacates a dwelling unit after having been given notice that the  landlord \nwishes to personally occupy the unit the landlord must occupy the unit for at least six (6) months. \nIf instead the landlord permits personal occupancy of the unit by another tenant or registration of \nconversion of the property to a condominium or cooperative, the landlord is liable to the former \ntenant for three (3) times the damages suffered plus attorney fees and costs  (N.J.S.A. 2A:18-\n61.6(a))."
+        },
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D067",
+          "quote": " When a tenant vacates a dwelling unit after having been given notice that the landlord seeks \nto permanently board up or demolish the building or to permanently retire it from residential use, \nthe landlord must not use this property for residential use for a period of five (5) years. If the \nlandlord allows any residential use of the unit during the five (5) year period from the date the unit \nbecame vacant, the landlord, or the former landlord, may be liable to the tenant for three (3) times \nthe damages plus attorney fees and costs. Additionally, the landlord or former landlord may be \nliable for a civil penalty up to $10,000.00 for each violation of this law and the property may not \nbe registered as a planned real estate development during the five -year period following the date \non which any dwelling unit in the property became vacant as a result of an eviction notice stating \nthat the property was being permanently removed from residential use (N.J.S.A. 2A:18-61.6(c))."
+        }
       ]
     },
     {
@@ -2347,8 +2639,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Lawful income and voucher protection",
-      "requirement": "Landlords covered by the Law Against Discrimination cannot deny housing solely because rent is paid from a lawful source, including a Section 8 voucher. The official guide identifies owner-occupied two-family and room-rental exceptions.",
-      "requirement_es": "Los arrendadores cubiertos no pueden rechazar a alguien únicamente por pagar con una fuente lícita, como un vale de Sección 8; existen excepciones para determinados alquileres ocupados por el propietario.",
+      "requirement": "Covered landlords cannot deny housing solely because rent comes from a lawful source, including Section 8, subject to the stated owner-occupied two-family and room-rental exceptions. For proven housing discrimination, the official guide describes possible damages, an order to rent the unit and LAD penalties up to $10,000 for a first offense.",
+      "requirement_es": "Los arrendadores cubiertos no pueden negar vivienda solo porque el alquiler procede de una fuente lícita, incluida la Sección 8, con las excepciones indicadas para inmuebles de dos familias ocupados por su propietario y alquiler de habitaciones. Ante discriminación acreditada, la guía oficial describe posibles daños, una orden de alquilar la unidad y sanciones de la LAD de hasta $10.000 por la primera infracción.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Lawful income / Section8 protected",
       "coverage_conditions": {
@@ -2380,7 +2672,16 @@
       "conflict_flag": false,
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
-      "review_status": "not_legally_reviewed"
+      "review_status": "not_legally_reviewed",
+      "penalty": "Official NJ tenant guide: a discriminatory landlord may be required to pay damages and rent the unit to the complainant; LAD penalties up to $10,000 for a first offense.",
+      "penalty_scope_note": "This is the provided official guide’s description of LAD remedies after a discrimination finding, not a finding that a sample landlord discriminated; later-offense amounts are not supplied here.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D067",
+          "quote": " If a complaint is filed with one of t he three agencies referenced above these agencies are \nrequired to investigate the complaint and take action and remedy the situation if it is found that \ndiscrimination has actually occurred. A landlord that discriminates may be required to pay \nmonetary damages and be required to rent the unit to the complainant if a violation is determined \nto have occurred. Under the LAD, landlords who violate this law are subject to substantial fines \nand penalties, up to $10,000 for a first offense (N.J.S.A. 10:5-14.1a(a))."
+        }
+      ]
     },
     {
       "team_rule_id": "ma-security-deposit-cap",
@@ -2389,8 +2690,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Security deposit: one month",
-      "requirement": "A residential security deposit may not exceed the first month’s rent. A qualifying short vacation or recreational tenancy is excluded; any optional fee-in-lieu arrangement requires authorized regulations and statutory safeguards.",
-      "requirement_es": "El depósito no puede superar el alquiler del primer mes; se excluyen ciertos alquileres vacacionales breves y cualquier tarifa sustitutiva debe cumplir los requisitos legales.",
+      "requirement": "A residential security deposit may not exceed the first month’s rent, subject to the short vacation-tenancy exclusion and statutory safeguards for any authorized fee-in-lieu arrangement. Conflicting lease terms and waivers of this section are void and unenforceable.",
+      "requirement_es": "El depósito residencial no puede superar el alquiler del primer mes, con la excepción de vacaciones breves y las garantías legales para cualquier alternativa autorizada de pago en lugar del depósito. Las cláusulas contradictorias y las renuncias a esta sección son nulas e inexigibles.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "1 month’s rent",
       "coverage_conditions": {
@@ -2417,6 +2718,15 @@
           "source_doc_id": "D052",
           "quoted_span": "(9) The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose.\n"
         }
+      ],
+      "penalty": "Conflicting lease provisions and tenant/prospective-tenant waivers of G.L.c.186 §15B are void and unenforceable.",
+      "penalty_scope_note": "This is an unenforceability consequence, not an assertion that every fee/cap violation automatically produces treble damages.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D052",
+          "quote": "(8) Any provision of a lease which conflicts with any provision of this section and any waiver by a tenant or prospective tenant of any provision of this section shall be deemed to be against public policy and therefore void and unenforceable."
+        }
       ]
     },
     {
@@ -2426,8 +2736,8 @@
       "category": "application_screening_fees",
       "status": "in_force",
       "title": "Landlord charges limited to enumerated payments",
-      "requirement": "At or before a tenancy begins, a landlord or its agent may require only the enumerated first month, last month, lawful security deposit and key/lock cost; a separate landlord application or screening charge is not listed. This is distinct from a broker engaged by the tenant.",
-      "requirement_es": "Al iniciar el arrendamiento solo pueden exigirse los pagos enumerados: primer y último mes, depósito legal y coste de llave/cerradura; no se enumera una tarifa adicional de solicitud del arrendador.",
+      "requirement": "At or before tenancy begins, a landlord or its agent may require only the enumerated first month, last month, lawful deposit and key/lock cost; a separate landlord application fee is not listed, unlike a separately engaged tenant broker. Conflicting lease terms and waivers of this section are void and unenforceable.",
+      "requirement_es": "Al comenzar el arrendamiento o antes, el arrendador o su agente solo puede exigir el primer mes, el último mes, el depósito legal y el coste de llave o cerradura; no se enumera una tarifa de solicitud del arrendador, a diferencia de un agente contratado por el inquilino. Las cláusulas contradictorias y las renuncias a esta sección son nulas e inexigibles.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "No additional landlord application/screening fee",
       "coverage_conditions": {
@@ -2449,7 +2759,16 @@
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
       "review_status": "not_legally_reviewed",
-      "interpretation_note": "Application-fee prohibition derived from exhaustive payment list, not an express occurrence of those words."
+      "interpretation_note": "Application-fee prohibition derived from exhaustive payment list, not an express occurrence of those words.",
+      "penalty": "Conflicting lease provisions and tenant/prospective-tenant waivers of G.L.c.186 §15B are void and unenforceable.",
+      "penalty_scope_note": "This is an unenforceability consequence, not an assertion that every fee/cap violation automatically produces treble damages.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D052",
+          "quote": "(8) Any provision of a lease which conflicts with any provision of this section and any waiver by a tenant or prospective tenant of any provision of this section shall be deemed to be against public policy and therefore void and unenforceable."
+        }
+      ]
     },
     {
       "team_rule_id": "ma-deposit-account-interest-return",
@@ -2458,8 +2777,8 @@
       "category": "security_deposits",
       "status": "in_force",
       "title": "Deposit account, interest and return",
-      "requirement": "Covered deposits must be held in a separate interest-bearing Massachusetts bank account. Required interest is 5% or the lesser amount actually received; the deposit balance generally must be returned within 30 days after tenancy termination.",
-      "requirement_es": "El depósito debe guardarse en una cuenta separada con intereses en Massachusetts; corresponde el 5 % o el interés bancario menor recibido y generalmente su devolución en 30 días.",
+      "requirement": "Covered deposits must be in a separate interest-bearing Massachusetts account, earn 5% or the lesser interest received, and generally be returned with lawful deductions within 30 days after tenancy termination. Specified failures to bank, transfer or timely return the deposit trigger treble the recoverable deposit or balance, plus 5% interest, costs and reasonable attorney fees.",
+      "requirement_es": "Los depósitos cubiertos deben estar en una cuenta separada con intereses en Massachusetts, devengar el 5% o el menor interés recibido y generalmente devolverse con deducciones legales dentro de 30 días posteriores al fin del arrendamiento. Ciertos incumplimientos de depósito bancario, transferencia o devolución puntual generan el triple del depósito o saldo recuperable, más un 5% de intereses, costas y honorarios razonables de abogado.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "5% or actual lesser interest;30-dayreturn",
       "coverage_conditions": {
@@ -2485,6 +2804,15 @@
         {
           "source_doc_id": "D052",
           "quoted_span": "(4) The lessor shall, within thirty days after the termination of occupancy under a tenancy-at-will or the end of the tenancy as specified in a valid written lease agreement, return to the tenant the security deposit or any balance thereof;  provided, however, that the lessor may deduct from such security deposit for the following:\n"
+        }
+      ],
+      "penalty": "For failures specified in §15B(6)(a), (d) or (e), §15B(7) awards three times the deposit or balance owed, 5% interest from the due date, court costs and reasonable attorney fees; subsection(6) separately forfeits retention rights for its listed violations.",
+      "penalty_scope_note": "Treble damages attach only to the referenced failures in (6)(a), (d) and (e); the source does not assign that remedy to every §15B violation or every interest dispute.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D052",
+          "quote": "(6) The lessor shall forfeit his right to retain any portion of the security deposit for any reason, or, in any action by a tenant to recover a security deposit, to counterclaim for any damage to the premises if he:\n(a) fails to deposit such funds in an account as required by subsection (3);\n(b) fails to furnish to the tenant within thirty days after the termination of the occupancy the itemized list of damages, if any, in compliance with the provisions of this section;\n(c) uses in any lease signed by the tenant any provision which conflicts with any provision of this section and attempts to enforce such provision or attempts to obtain from the tenant or prospective tenant a waiver of any provision of this section;\n(d) fails to transfer such security deposit to his successor in interest or to otherwise comply with the provisions of subsection (5) after he has succeeded to an interest in residential real property;  or,\n(e) fails to return to the tenant the security deposit or balance thereof to which the tenant is entitled after deducting therefrom any sums in accordance with the provisions of this section, together with any interest thereon, within thirty days after termination of the tenancy.\n(7) If the lessor or his agent fails to comply with clauses (a), (d), or (e) of subsection 6, the tenant shall be awarded damages in an amount equal to three times the amount of such security deposit or balance thereof to which the tenant is entitled plus interest at the rate of five per cent from the date when such payment became due, together with court costs and reasonable attorney's fees."
         }
       ]
     },
@@ -2637,8 +2965,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Nonpayment notice must include rights form",
-      "requirement": "A notice to quit for nonpayment must include the statutory information form. A notice to quit is not an eviction; only a court order can require departure. This is a notice protection, not a statewide just-cause regime.",
-      "requirement_es": "El aviso por impago debe incluir el formulario legal; el aviso no es un desalojo y solo una orden judicial obliga a salir. Es una protección de notificación, no un régimen general de causa justa.",
+      "requirement": "A residential nonpayment notice to quit must include the statutory information form, and only a court order can require departure. The court cannot accept the nonpayment eviction filing without proof that the form was delivered; this is a procedural protection, not a statewide just-cause regime.",
+      "requirement_es": "El aviso residencial por impago debe incluir el formulario informativo legal y solo una orden judicial puede exigir la salida. El tribunal no puede admitir la demanda de desalojo por impago sin prueba de entrega del formulario; es una protección procesal, no un régimen estatal general de justa causa.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Rights form with nonpayment notice",
       "coverage_conditions": {
@@ -2658,7 +2986,15 @@
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
       "review_status": "not_legally_reviewed",
-      "rule_kind": "eviction_notice_requirement"
+      "rule_kind": "eviction_notice_requirement",
+      "penalty": "The court may not accept a writ, summons or complaint for residential nonpayment eviction without proof of delivery of the required form.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D058",
+          "quote": "No court having jurisdiction over an action for summary process pursuant to chapter 239, including the Boston municipal court department, shall, in an eviction for nonpayment of rent for a residential dwelling unit, accept for filing a writ, summons or complaint without proof of delivery of the form required under this section."
+        }
+      ]
     },
     {
       "team_rule_id": "boston-fair-chance-policy",
@@ -2735,8 +3071,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Housing Stability Notification Act",
-      "requirement": "A covered landlord ending a tenancy must deliver the rights-and-resources notice with the notice to quit/nonrenewal and send the required notice to the city. This notice requirement does not itself create just-cause protection or stop eviction.",
-      "requirement_es": "Al terminar un arrendamiento cubierto debe entregarse el aviso de derechos y recursos y comunicarse a la ciudad; esto no crea por sí solo protección de causa justa ni detiene el desalojo.",
+      "requirement": "Covered landlords ending a tenancy must deliver the rights-and-resources notice and the required city notice. HSNA enforcement provides a warning for the first offense and $300 per day for second and later offenses; a violation does not halt eviction or create just-cause protection.",
+      "requirement_es": "Los arrendadores cubiertos que terminan un arrendamiento deben entregar el aviso de derechos y recursos y el aviso requerido a la ciudad. La HSNA prevé una advertencia por la primera infracción y $300 diarios por la segunda y posteriores; incumplirla no detiene el desalojo ni crea protección de justa causa.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Rights notice + city notification",
       "coverage_conditions": {
@@ -2758,7 +3094,15 @@
       "conflict_note": null,
       "extraction_method": "codex_assisted_extraction",
       "review_status": "not_legally_reviewed",
-      "rule_kind": "eviction_notice_requirement"
+      "rule_kind": "eviction_notice_requirement",
+      "penalty": "Inspectional Services Department enforcement: first offense warning; second and subsequent offenses $300 per day. A violation does not halt the eviction process.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D014",
+          "quote": "Unless otherwise provided, a person or entity violating any provisions of this \nOrdinance shall be punishable by a warning or fine in accordance with the \nprovisions of City of Boston Ordinances and/or Boston City Charter, shown below. \nHousing Stability Notification Act (Sec. 10-11.7) \nEnforcement Entity: Inspectional Services Department \n1st Offense: Warning \n2nd and Subsequent Offenses: $300 per day \nIf a landlord violates the HSNA, it DOES NOT halt the eviction process."
+        }
+      ]
     },
     {
       "team_rule_id": "boston-income-screening",
@@ -2797,8 +3141,8 @@
       "category": "screening_restrictions",
       "status": "in_force",
       "title": "Cambridge fair-housing screening protections",
-      "requirement": "The Cambridge Fair Housing Ordinance prohibits discrimination in rental transactions and requires selection standards to be applied equally. The official guidance includes source of income and other protected classes; owner-occupied two-family dwellings are exempt.",
-      "requirement_es": "La ordenanza de Cambridge prohíbe la discriminación y exige aplicar los criterios por igual; incluye la fuente de ingresos y excluye viviendas de dos familias ocupadas por el propietario.",
+      "requirement": "Cambridge prohibits rental discrimination, including source-of-income discrimination, and requires equally applied selection standards, with an owner-occupied two-family exemption. After its complaint and hearing process, the Human Rights Commission may impose civil fines up to $300 per violation and seek damages, expenses or injunctive relief.",
+      "requirement_es": "Cambridge prohíbe la discriminación al alquilar, incluida la basada en la fuente de ingresos, y exige criterios de selección iguales, con excepción de inmuebles de dos familias ocupados por su propietario. Tras el procedimiento de denuncia y audiencia, la Comisión de Derechos Humanos puede imponer multas civiles de hasta $300 por infracción y solicitar daños, gastos o medidas judiciales.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Equal screening; protected source of income",
       "coverage_conditions": {
@@ -2836,6 +3180,15 @@
           "source_doc_id": "D029",
           "quoted_span": "The protected categories under the Cambridge Human Rights Ordinance and the Cambridge Fair Housing Ordinance are the following:\nDisability – Defined consistent with the Americans with Disabilities Act (ADA) – a physical or mental impairment which substantially limits one or more major life activities\nRace\nColor\nNational Origin or Ancestry\nFamily Status\nSource of Income, includes Section 8 and public benefits\nMarital Status, includes married and non-married individuals\nSex: Male or female, includes allegations of sexual harassment\nGender identity or expression\nSexual Orientation: Heterosexual, homosexual, or bisexual\nAge\nReligious Creed\nMilitary Status\nRelationship Status\nFamily Structure\n"
         }
+      ],
+      "penalty": "Official commission guidance describes civil fines up to $300 per violation after hearing, and pursuit of damages, expenses or injunctive relief through the stated procedures.",
+      "penalty_scope_note": "Complaint, probable cause, conciliation and hearing/removal procedures matter; these are available remedies, not an automatic award for a sample address.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D029",
+          "quote": "If, during the Commission’s investigation, the evidence is sufficient to show that discrimination may have occurred (Probable Cause), the Commission will attempt conciliation between the parties. If the Commission’s conciliation efforts prove unsuccessful, it will schedule a public hearing at the Commission. The Commission has the authority to provide various remedies after hearing, including filing a criminal complaint in District Court, levying civil fines of up to $300 for each violation, filing a civil complaint in Superior Court seeking injunctive relief, and seeking an award of damages, expenses and other relief. If Probable Cause is found in a complaint filed under the Cambridge Fair Housing Ordinance, either party may opt to remove the case for trial in the Massachusetts Superior Court or to the Attorney General’s Office for review and resolution."
+        }
       ]
     },
     {
@@ -2845,8 +3198,8 @@
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Cambridge tenant-rights guide",
-      "requirement": "Covered landlords must provide the city’s rights-and-resources guide at inception and when taking legal steps to terminate a tenancy. The ordinance does not prevent otherwise-lawful eviction and is not a just-cause regime.",
-      "requirement_es": "Debe entregarse la guía de derechos al iniciar el arrendamiento y al iniciar su terminación legal; no impide un desalojo permitido por la ley ni crea un régimen de causa justa.",
+      "requirement": "Covered landlords must provide the city’s rights-and-resources guide at tenancy inception and when taking legal steps to terminate it. The city guidance specifies a possible $300 fine for each day’s violation; the ordinance does not prevent otherwise-lawful eviction or create just cause.",
+      "requirement_es": "Los arrendadores cubiertos deben entregar la guía municipal de derechos y recursos al comenzar el arrendamiento y al tomar medidas legales para terminarlo. La guía municipal indica una posible multa de $300 por cada día de infracción; la ordenanza no impide un desalojo legal ni crea justa causa.",
       "translation_note": "Machine translation; English source controls.",
       "key_value": "Guide at start and termination",
       "coverage_conditions": {
@@ -2882,6 +3235,14 @@
         {
           "source_doc_id": "D031",
           "quoted_span": "Yes, this Ordinance does NOT apply to: rental units in a hospital, skilled nursing facility or health facility or in a non-profit facility that has the primary purpose of providing short term assistance, treatment, assistance or therapy for alcohol, drug or other substance abuse. (Please read the definition of\nshort-term treatment in the full Ordinance\nfound in Sec 8.71.030)\nIn addition, the Ordinance does NOT apply to Short Term Rental Units as set forth in Article 4, Section 4.60 of the Cambridge Zoning Ordinance.\n"
+        }
+      ],
+      "penalty": "Official guidance for Cambridge Municipal Code §8.71.070 states that noncompliance may be fined $300 for each day’s violation.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D031",
+          "quote": "We encourage you to read the full scope of Section 8.71.070 “Violation Penalty” of the Ordinance and to consult an attorney if you have questions. You may be fined $300 for each day’s violation."
         }
       ]
     },
@@ -2965,8 +3326,8 @@
       "translation_note": "Machine translation; English source controls.",
       "team_rule_id": "ma-tenant-retaliation-protection",
       "title": "No retaliation for exercising housing rights",
-      "requirement": "Threats or reprisals for protected complaints, proceedings or tenant organizing are prohibited. Certain adverse actions within six months create a rebuttable presumption of retaliation; this does not create a general statewide just-cause regime.",
-      "requirement_es": "Se prohíben represalias por reclamaciones, procedimientos o asociación protegidos; determinadas medidas en los seis meses siguientes generan una presunción refutable de represalia.",
+      "requirement": "Threats or reprisals for protected complaints, proceedings or organizing are prohibited, with a rebuttable presumption for specified adverse actions within six months. The statute provides damages of one to three months’ rent, or actual damages if greater, plus suit costs and reasonable attorney fees; this is not general statewide just cause.",
+      "requirement_es": "Se prohíben amenazas o represalias por denuncias, procedimientos u organización protegidos, con presunción refutable para ciertas medidas adversas dentro de seis meses. La ley prevé daños equivalentes a uno a tres meses de alquiler, o daños reales si son mayores, más costas y honorarios razonables de abogado; no es un régimen estatal general de justa causa.",
       "coverage_conditions": {
         "all": []
       },
@@ -2977,7 +3338,15 @@
       "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
       "quoted_span": "Section 18. Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises for the tenant's act of, commencing, proceeding with, or obtaining relief in any judicial or administrative action the purpose of which action is to obtain damages under, or otherwise enforce, any federal, state or local law, regulation, by-law or ordinance, which has as its objective the regulation of residential premises; or exercising the tenant's rights pursuant to section one hundred and twenty-four D of chapter one hundred and sixty-four; or reporting to the board of health or, in the city of Boston to the commissioner of housing inspection or to any other board having as its objective the regulation of residential premises a violation or a suspected violation of any health or building code or of any other municipal by-law or ordinance, or state or federal law or regulation which has as its objective the regulation of residential premises; or reporting or complaining of such violation or suspected violation in writing to the landlord or to the agent of the landlord; or for organizing or joining a tenants' union or similar organization, or for making or expressing an intention to make, a payment of rent to an organization of unit owners pursuant to paragraph (c) of section six of chapter one hundred and eighty-three A shall be liable for damages which shall not be less than one month's rent or more than three month's rent, or the actual damages sustained by the tenant, whichever is greater, and the costs of the suit, including a reasonable attorney's fee.\nThe receipt of any notice of termination of tenancy, except for nonpayment of rent, or, of increase in rent, or, of any substantial alteration in the terms of tenancy within six months after the tenant has commenced, proceeded with, or obtained relief in such action, exercised such rights, made such report or complaint, or organized or joined such tenants' union or within six months after any other person has taken such action or actions on behalf of the tenant or in, or relating to, the building in which the tenant resides, shall create a rebuttable presumption that such notice or other action is a reprisal against the tenant for engaging in such activities. Such presumption shall be rebutted only by clear and convincing evidence that such person's action was not a reprisal against the tenant and that such person had sufficient independent justification for taking such action, and would have in fact taken such action, in the same manner and at the same time the action was taken, regardless of tenants engaging in, or the belief that tenants had engaged in, activities protected under this section.\n",
       "retrieved_at": "2026-10-01T22:37Z",
-      "rule_kind": "anti_retaliation"
+      "rule_kind": "anti_retaliation",
+      "penalty": "Damages not less than one month’s rent or more than three months’ rent, or actual damages if greater, plus suit costs and reasonable attorney fees.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "D053",
+          "quote": "shall be liable for damages which shall not be less than one month's rent or more than three month's rent, or the actual damages sustained by the tenant, whichever is greater, and the costs of the suit, including a reasonable attorney's fee."
+        }
+      ]
     },
     {
       "level": "city",
@@ -3008,8 +3377,8 @@
       "team_rule_id": "HOB-ALG-01",
       "jurisdiction": "Hoboken, NJ",
       "title": "Hoboken: algorithmic price-fixing prohibition",
-      "requirement": "Hoboken prohibits landlords of residential dwelling units from algorithmic price fixing using nonpublic competitor information less than 365 days old. The rule concerns defined coordination of rents, lease terms or occupancy; it is not a ban on every software tool.",
-      "requirement_es": "Hoboken prohíbe la coordinación algorítmica de alquileres, condiciones o niveles de ocupación mediante información no pública de competidores de menos de 365 días; no prohíbe cualquier herramienta informática.",
+      "requirement": "Hoboken prohibits defined rental-price coordination using nonpublic competitor information less than 365 days old, not every pricing tool. Upon conviction, penalties may include a fine up to $2,000, community service up to 90 days or the referenced statutory penalties; alleged violations go to Municipal Court.",
+      "requirement_es": "Hoboken prohíbe la coordinación definida de alquileres con información no pública de competidores de menos de 365 días, no toda herramienta de precios. Tras condena, las sanciones pueden incluir multa de hasta $2.000, servicios comunitarios de hasta 90 días o las sanciones legales citadas; las supuestas infracciones se presentan al Tribunal Municipal.",
       "key_value": "Nonpublic competitor data < 365 days",
       "citation": "Hoboken Municipal Code §158-2; Ordinance B-781",
       "source_doc_id": "S001",
@@ -3019,6 +3388,15 @@
       "adopted_date": "2025-07-09",
       "possible_conflicts": [
         "nj-fair-act"
+      ],
+      "penalty": "Upon conviction, one or more penalties specified in §158-2(C): penalties under N.J.S.A.40:49-5, a fine not exceeding $2,000, or community service not exceeding 90 days.",
+      "penalty_scope_note": "The cited N.J.S.A.40:49-5 is not reproduced in the capture; no further monetary ceiling or punishment is inferred from that cross-reference.",
+      "source_evidence": [
+        {
+          "field": "penalty_or_remedy",
+          "doc_id": "S001",
+          "quote": "Enforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.\nC.\nPenalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\nPenalties as prescribed under N.J.S.A. 40:49-5; or\nBy a fine not exceeding $2,000; or\nBy a period of community service not exceeding 90 days."
+        }
       ]
     },
     {
@@ -3151,14 +3529,14 @@
       "method": "codex_assisted_extraction",
       "rules": 30,
       "external_api_batch": false,
-      "artifact_sha256": "7de2baed67aeb0c14748744947bddb7ee9ae9a79c2d7d9338656b4bf97e43d89"
+      "artifact_sha256": "34a15043289c5ec07bcad0de0d7a8ec60c468b35f63aed4ec566a71775d74634"
     },
     {
       "scope": "nj-ma",
       "method": "codex_assisted_extraction",
       "rules": 27,
       "external_api_batch": false,
-      "artifact_sha256": "a5b934386c421f3c89560167350a56b64778d3bf7236d8d20cf389740830b844"
+      "artifact_sha256": "f2a6306caa1af7f6a47dcd9ed8df99b59cfaa735a979302ed8c4317c84ed14f9"
     }
   ]
 }

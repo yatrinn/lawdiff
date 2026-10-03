@@ -47,6 +47,7 @@ await cp(new URL("public/", root), new URL("dist/", root), { recursive: true });
 const browserFiles = [
   "app.mjs", "engine.mjs", "exporter.mjs", "visuals.mjs", "styles.css",
   "vendor/qrcode.js", "data/catalog.json", "data/rule-pack.json", "data/validation.json",
+  "data/extraction-run.json", "data/extraction-candidates.json",
 ];
 const revisionHash = createHash("sha256");
 for (const file of browserFiles) revisionHash.update(await readFile(new URL(`dist/${file}`, root)));

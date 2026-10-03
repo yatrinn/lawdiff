@@ -70,7 +70,7 @@ def base(index, headline, caption):
     text(d, (112, 161), headline, 78, bold=True, max_width=1696, spacing=13)
     rule(d, 866)
     text(d, (112, 903), caption, 34, INK, max_width=1696, spacing=14)
-    text(d, (112, 1021), "Technical diagrams · Build snapshot: October 3, 2026", 22, MUTED)
+    text(d, (112, 1021), "Technical diagrams · Build snapshot: October 4, 2026", 22, MUTED)
     text(d, (1717, 1021), f"0{index} / 06", 22, MUTED)
     return im, d
 
@@ -95,12 +95,12 @@ def check_snapshot():
                 spans += 1
     matches = sum(bool(a.get("geography", {}).get("legal_city")) for a in catalog["addresses"])
     observed = {"records": len(pack["rules"]), "quotation_spans": spans, "addresses": len(catalog["addresses"]), "legal_city_matches": matches}
-    assert observed == {"records": 58, "quotation_spans": 152, "addresses": 500, "legal_city_matches": 475}, observed
+    assert observed == {"records": 58, "quotation_spans": 193, "addresses": 500, "legal_city_matches": 475}, observed
     node_output = run(["npm", "test"], "javascript-tests.txt")
-    assert re.search(r"tests\s+44\b", node_output) and re.search(r"pass\s+44\b", node_output)
+    assert re.search(r"tests\s+45\b", node_output) and re.search(r"pass\s+45\b", node_output)
     py_output = run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "*_test.py"], "geography-tests.txt")
     assert "Ran 10 tests" in py_output and "OK" in py_output
-    observed.update(javascript_tests=44, geography_tests=10, pack_sha256=hashlib.sha256((ROOT / "public/data/rule-pack.json").read_bytes()).hexdigest())
+    observed.update(javascript_tests=45, geography_tests=10, pack_sha256=hashlib.sha256((ROOT / "public/data/rule-pack.json").read_bytes()).hexdigest())
     (WORK / "snapshot.json").write_text(json.dumps(observed, indent=2))
     return sources
 
@@ -108,18 +108,30 @@ def check_snapshot():
 def scenes(sources):
     frames = []
     captions = []
-
-    cap = "Codex read captured sources and created candidate rules.\nThe shipped records were not produced by an external API batch."
-    im, d = base(1, "Interpretation is hard.\nExecution must be clear.", cap)
-    text(d, (116, 444), "SOURCE TEXT", 25, MUTED, True)
-    text(d, (116, 501), "Human meaning", 48, INK, True)
-    text(d, (116, 569), "Definitions. Exceptions. Dates.", 32, MUTED)
-    arrow(d, 673, 540, 790, BLUE)
-    text(d, (861, 444), "CODEX-ASSISTED EXTRACTION", 25, BLUE, True)
-    text(d, (854, 492), "58", 111, INK, True)
-    text(d, (1054, 515), "rule / status records", 42, INK, True)
-    text(d, (864, 636), "Candidate interpretations, ready for review.", 31, MUTED)
-    text(d, (116, 766), "Separate API compiler: implemented, not live-run for this build.", 29, MUTED)
+    receipt = json.loads((ROOT / "public/data/extraction-run.json").read_text())
+    candidates = json.loads((ROOT / "public/data/extraction-candidates.json").read_text())
+    assert receipt["status"] in ("completed_machine_validation", "completed_with_review_items")
+    assert receipt["requests_sent"] > 0 and receipt["accepted_rule_count"] == len(candidates["rules"]) > 0
+    successful = [s for s in receipt["sources"] if s["status"] == "validated_candidates"]
+    assert successful
+    for s in successful:
+        assert hashlib.sha256(sources[s["source_doc_id"]]["text"].encode()).hexdigest() == s["source_sha256"]
+    for r in candidates["rules"]:
+        assert r["quoted_span"] in sources[r["source_doc_id"]]["text"]
+    cap = "A recorded Codex CLI run reads source text and emits rule candidates.\nExact quotations and executable conditions are checked before review."
+    im, d = base(1, "Source in.\nChecked candidates out.", cap)
+    for x, num, title, detail in [(112, "01", "Read", ", ".join(s["source_doc_id"] for s in successful)), (728, "02", "Extract", receipt["model"]), (1344, "03", "Validate", "Schema + exact spans")]:
+        text(d, (x, 421), num, 27, BLUE, True)
+        text(d, (x, 475), title, 57, INK, True)
+        text(d, (x, 559), detail, 30, MUTED, max_width=464)
+    arrow(d, 565, 510, 666)
+    arrow(d, 1180, 510, 1287)
+    rounded(d, (112, 672, 1808, 818))
+    text(d, (151, 700), str(receipt["accepted_rule_count"]), 64, BLUE, True)
+    noun = "candidate" if receipt["accepted_rule_count"] == 1 else "candidates"
+    text(d, (255, 715), f'{noun} · {receipt["review_issue_count"]} review items', 34, INK, True)
+    text(d, (1008, 700), "Separate from the 58-record public pack.", 28, MUTED)
+    text(d, (1008, 752), "Interpretation still needs expert review.", 28, MUTED)
     frames.append(im); captions.append(cap)
 
     cap = "Captured files carry hashes. Primary and supplemental quotations\nmust occur verbatim in their referenced source texts."
@@ -132,7 +144,7 @@ def scenes(sources):
     arrow(d, 565, 510, 666)
     arrow(d, 1180, 510, 1287)
     rounded(d, (112, 672, 1808, 818))
-    text(d, (151, 708), "152", 62, BLUE, True)
+    text(d, (151, 708), "193", 62, BLUE, True)
     text(d, (297, 721), "checked quotation spans", 36, INK, True)
     sha = sources["D069"]["download_sha256"]
     text(d, (1025, 701), "D069 · captured file SHA-256", 25, MUTED)
@@ -168,7 +180,7 @@ def scenes(sources):
 
     cap = "Regression tests challenge source tampering, jurisdiction mismatches,\nmalformed conditions, calendar boundaries and geographic provenance."
     im, d = base(5, "Test the\nfailure cases.", cap)
-    text(d, (112, 412), "44", 116, INK, True)
+    text(d, (112, 412), "45", 116, INK, True)
     text(d, (112, 566), "JavaScript tests passed", 33, MUTED)
     text(d, (569, 412), "10", 116, INK, True)
     text(d, (569, 566), "Geography tests passed", 33, MUTED)
@@ -221,7 +233,7 @@ def main():
     manifest = WORK / "timeline.ffconcat"
     manifest.write_text("\n".join(concat) + "\n")
     output = MEDIA / "lawdiff-tech.mp4"
-    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough · Captioned", "-metadata", "comment=Technical explanatory diagrams; Codex-assisted extraction; build snapshot 2026-10-03; no API batch or legal accuracy claim.", str(output)], "ffmpeg.log")
+    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough · Captioned", "-metadata", "comment=Technical diagrams with verified automatic extraction receipt; build snapshot 2026-10-04; no legal accuracy claim.", str(output)], "ffmpeg.log")
     probe = json.loads(run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(output)]))
     video = next(s for s in probe["streams"] if s["codec_type"] == "video")
     assert video["codec_name"] == "h264" and video["width"] == WIDTH and video["height"] == HEIGHT

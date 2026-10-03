@@ -3049,3 +3049,275 @@ html[data-theme="dark"] .field-card {
 .condition-status-dot.missing {
   background: #d5a557;
 }
+
+/* A saved extraction receipt, separate from the application's loaded rule pack. */
+.extraction-run-card {
+  margin: 8px 0 36px;
+  padding: 27px 29px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+.extraction-run-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.extraction-run-heading .eyebrow {
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: 1.15px;
+}
+.extraction-run-heading h3 {
+  margin: 8px 0 0;
+  font-size: 24px;
+  letter-spacing: -.7px;
+  font-weight: 570;
+}
+.extraction-run-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--blue);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: right;
+  padding-top: 3px;
+}
+.extraction-run-status svg {
+  flex-shrink: 0;
+}
+.extraction-run-card[data-run-state="review"] .extraction-run-status {
+  color: var(--amber);
+}
+.extraction-run-card[data-run-state="failed"] .extraction-run-status,
+.extraction-run-source[data-source-status="failed_requires_review"] > div > span {
+  color: #b3453f;
+}
+html[data-theme="dark"] .extraction-run-card[data-run-state="failed"] .extraction-run-status,
+html[data-theme="dark"] .extraction-run-source[data-source-status="failed_requires_review"] > div > span {
+  color: #f49f99;
+}
+.integrity-content .extraction-run-context {
+  margin: 14px 0 22px;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+.extraction-run-flow {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+.extraction-run-flow li {
+  position: relative;
+  min-width: 0;
+}
+.extraction-run-flow li:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  top: 20px;
+  right: -17px;
+  color: var(--line);
+  font-size: 22px;
+}
+.extraction-flow-number {
+  display: block;
+  font-size: 10px;
+  color: var(--blue);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 8px;
+}
+.extraction-run-flow strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 560;
+  letter-spacing: -.2px;
+  margin-bottom: 5px;
+}
+.extraction-run-flow li > span:last-child {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.extraction-run-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  margin-top: 23px;
+  padding-top: 20px;
+}
+.extraction-run-metrics strong {
+  display: block;
+  font-size: 29px;
+  letter-spacing: -1px;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+}
+.extraction-run-metrics span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.extraction-run-provenance {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.extraction-run-provenance summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 550;
+  padding: 15px 0;
+}
+.extraction-run-provenance summary > span {
+  float: right;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 11px;
+}
+.extraction-run-times {
+  margin: 0 0 14px;
+  padding: 13px 15px;
+  background: var(--inset);
+  border-radius: 8px;
+}
+.extraction-run-times > div {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.extraction-run-times dt {
+  color: var(--muted);
+}
+.extraction-run-times dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.extraction-run-source {
+  padding: 11px 0 14px;
+  border-top: 1px solid var(--line);
+}
+.extraction-run-source > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+}
+.extraction-run-source > div > span {
+  color: var(--muted);
+  font-size: 11px;
+}
+.extraction-run-source .text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+.integrity-content .extraction-run-source p {
+  font-size: 11px;
+  margin-top: 5px;
+}
+.extraction-run-source code {
+  display: block;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color: var(--muted);
+  font-size: 9px;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+.extraction-run-limitations {
+  margin: 15px 0 0;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.extraction-run-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 18px;
+}
+.extraction-run-footer > span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  max-width: 340px;
+}
+.extraction-run-download {
+  flex-shrink: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  min-height: 38px;
+}
+.extraction-run-unavailable {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 18px 0 25px;
+  color: var(--muted);
+}
+.extraction-run-unavailable strong {
+  display: block;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 550;
+}
+.integrity-content .extraction-run-unavailable p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .extraction-run-card {
+    padding: 22px 20px;
+    border-radius: 14px;
+  }
+  .extraction-run-heading {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .extraction-run-heading h3 {
+    font-size: 22px;
+  }
+  .extraction-run-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 28px;
+  }
+  .extraction-run-flow li:nth-child(2)::after {
+    content: none;
+  }
+  .extraction-run-metrics {
+    gap: 12px;
+  }
+  .extraction-run-metrics strong {
+    font-size: 25px;
+  }
+  .extraction-run-metrics span {
+    font-size: 10px;
+  }
+  .extraction-run-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

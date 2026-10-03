@@ -15,11 +15,11 @@ Die in den bereitgestellten Eventangaben genannte Abgabe ist **Sonntag, 4. Oktob
 | Team-Video | Noch aufzunehmen: persönliches Teamvideo von Yannik |
 | Kontaktadresse | Die tatsächlich zur Teilnahme verwendete E-Mail-Adresse |
 
-Demo- und Technikfilm sind jeweils 56 Sekunden lang, mit eingeblendeten englischen Erklärungen und ohne Ton. Der Demofilm verwendet echte UI-Aufnahmen; der Technikfilm zeigt Architekturdiagramme. Die Dateien liegen zusätzlich unter `media/` für den direkten Upload. Das persönliche Teamvideo fehlt noch.
+Demo- und Technikfilm sind jeweils 56 Sekunden lang, mit eingeblendeten englischen Erklärungen und ohne Ton. Der Demofilm beginnt mit einem belegten Extraktionslauf als Erklärgrafik und zeigt danach echte UI-Aufnahmen; der Technikfilm zeigt Architekturdiagramme. Die Dateien liegen zusätzlich unter `media/` für den direkten Upload. Das persönliche Teamvideo fehlt noch.
 
 ## Dokumentierter Zwischenstand
 
-Beim geprüften Build am **3. Oktober 2026**: **58 Regel-/Statusdatensätze**, **91 Quellen einschließlich Ergänzungen**, **54 verfügbare Texte**, **152 geprüfte Haupt- und Zusatz-Zitatstellen** und **475 von 500 Adressen mit geografischer Zuordnung**. Das sind Snapshot-Werte, keine dauerhaften Zusagen. Vor Aufnahme und Abgabe die tatsächliche Integrity-Ansicht und den Export erneut abgleichen.
+Beim geprüften Build am **4. Oktober 2026**: **58 Regel-/Statusdatensätze**, **91 Quellen einschließlich Ergänzungen**, **54 verfügbare Texte**, **193 geprüfte Haupt- und Zusatz-Zitatstellen** und **475 von 500 Adressen mit geografischer Zuordnung**. Das sind Snapshot-Werte, keine dauerhaften Zusagen. Vor Aufnahme und Abgabe die tatsächliche Integrity-Ansicht und den Export erneut abgleichen.
 
 Die lokale Quellenlücke für Hoboken und Jersey City ist geschlossen. T2 bleibt bei einzelnen Adressen von fehlender geografischer Evidenz abhängig. Die angezeigten betroffenen und ungeklärten Mengen dürfen sich durch weitere belegte Geotreffer verändern. **A0107 ist nun geografisch der City of Los Angeles zugeordnet.** Die LA-Aufnahme kann auf diesem Nachweis aufbauen; die simulierte Zertifikatsangabe bleibt unabhängig davon hypothetisch.
 

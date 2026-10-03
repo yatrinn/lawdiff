@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:09,000
-Codex read captured sources and created candidate rules.
-The shipped records were not produced by an external API batch.
+A recorded Codex CLI run reads source text and emits rule candidates.
+Exact quotations and executable conditions are checked before review.
 
 2
 00:00:09,000 --> 00:00:18,000

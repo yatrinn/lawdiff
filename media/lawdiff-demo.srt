@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:07,000
-One law changes. Which buildings need attention?
+A recorded model run turns source text into structured candidates. Quotations are checked before review.
 
 2
 00:00:07,000 --> 00:00:17,000

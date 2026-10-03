@@ -41,6 +41,13 @@ Object.assign(FACTS, {
   nj_disabled_family_trust: "New Jersey disabled-family trust exception",
   written_lease: "Written lease",
   tenancy_at_will: "Tenancy at will",
+  primary_residence: "Dwelling intended for use as a primary residence",
+  inpatient_medical_care: "Unit is an inpatient medical-care facility",
+  licensed_long_term_care: "Unit is a licensed long-term-care facility",
+  detention_or_correctional_facility: "Unit is a detention or correctional facility",
+  fee_charger_is_landlord: "Person charging the application fee is the property's landlord",
+  fee_charger_is_landlord_agent: "Person charging the application fee acts as an agent of the property's landlord",
+  fee_charger_nj_real_estate_licensee: "Person charging the application fee is a New Jersey Real Estate Commission licensee",
 });
 export function validDate(s) {
   return (

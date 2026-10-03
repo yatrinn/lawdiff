@@ -1,6 +1,6 @@
 {
   "method": "codex_assisted_extraction",
-  "generated_at": "2026-10-03T20:14:02.915Z",
+  "generated_at": "2026-10-03T23:47:31.855Z",
   "legal_review": false,
   "audit": [
     {
@@ -8,14 +8,14 @@
       "method": "codex_assisted_extraction",
       "rules": 30,
       "external_api_batch": false,
-      "artifact_sha256": "7de2baed67aeb0c14748744947bddb7ee9ae9a79c2d7d9338656b4bf97e43d89"
+      "artifact_sha256": "34a15043289c5ec07bcad0de0d7a8ec60c468b35f63aed4ec566a71775d74634"
     },
     {
       "scope": "nj-ma",
       "method": "codex_assisted_extraction",
       "rules": 27,
       "external_api_batch": false,
-      "artifact_sha256": "a5b934386c421f3c89560167350a56b64778d3bf7236d8d20cf389740830b844"
+      "artifact_sha256": "f2a6306caa1af7f6a47dcd9ed8df99b59cfaa735a979302ed8c4317c84ed14f9"
     }
   ],
   "findings": [
@@ -64,5 +64,92 @@
       "quoted_span": "9/9/2024\nHouse\nAccompanied a study order, see\nH5035\n",
       "retrieved_at": "2026-10-01T22:35Z"
     }
-  ]
+  ],
+  "automatic_pipeline_demonstration": {
+    "run_id": "2026-10-03T23-45-24-846Z-65c22251",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.1.0",
+    "started_at": "2026-10-03T23:45:24.847Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 2,
+    "model_turns_completed": 2,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D069",
+        "source_sha256": "1fdbfb48743a46429c3f47dbd8d08c665739202361661e1a2f19b94bb0ec43a6",
+        "prompt_sha256": "d7eb058aadce6978c4da6d41695d412c023302ec3a0d6f777521f143044928ef",
+        "response_sha256": "7dfd2d2078cdc20f4f860f099080b0592ca6b8536ebd581d2d2239e80dd29ec8",
+        "schema_sha256": "72df7b35fb4cde9bdf96af472bb363f32aab8ba698d742cb049f236d64bb29d7",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 5,
+        "started_at": "2026-10-03T23:45:24.863Z",
+        "finished_at": "2026-10-03T23:47:17.435Z",
+        "duration_ms": 112573,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "d3c783b3e10f489a5806ac9ab18ef83d748dd87f7873920168d773deb7bfdc58",
+        "usage": {
+          "input_tokens": 16097,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2684,
+          "reasoning_output_tokens": 1427
+        },
+        "no_rule_findings": 0
+      },
+      {
+        "source_doc_id": "D066",
+        "source_sha256": "e06aa61acf6ddb50631d5be3c89c4029caccb13c0dcc7be888e0e64f8b182c2e",
+        "prompt_sha256": "482ff7d61f8b9237e927a0926699b08b20aff4595dc7adf6a9c47baa7b04d189",
+        "response_sha256": "f410b93a0ed849b6f3883b323052bd6ed9c635140de4c54eda02ef24530da3fd",
+        "schema_sha256": "72df7b35fb4cde9bdf96af472bb363f32aab8ba698d742cb049f236d64bb29d7",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 0,
+        "started_at": "2026-10-03T23:47:17.442Z",
+        "finished_at": "2026-10-03T23:48:25.589Z",
+        "duration_ms": 68148,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "6d5875ec28f4167d4f2dc781157f8904f3049c583ce2143a0d3a00e6689da942",
+        "usage": {
+          "input_tokens": 14709,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1578,
+          "reasoning_output_tokens": 332
+        },
+        "no_rule_findings": 0
+      }
+    ],
+    "status": "completed_with_review_items",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-03T23:48:25.594Z",
+    "duration_ms": 180747,
+    "accepted_rule_count": 1,
+    "review_issue_count": 5,
+    "not_legal_review": true,
+    "duration_seconds": 180.747,
+    "candidate_pack_url": "./data/extraction-candidates.json",
+    "code_sha256": {
+      "scripts/compile-codex.mjs": "fab2d2d776eb8724ab0e78dd60c10096dc14f399d0ad3ec73fa3c4751b50a82d",
+      "scripts/compile.mjs": "959c59541d62c9b28bba622ae2d2531615462f89435b8fe461972409a94f6042",
+      "public/engine.mjs": "c9e6287bd4c218c0fc0db3335bbffb2b3e66d2e2da23f374d7f8a32fc36902e6",
+      "data/schema/rule_record.schema.json": "e0217006fa844b5d632b8a07053af58398f2014a3010b75f9e3d14482bb2a2d5"
+    },
+    "publication_note": "This selected automatic run is separate from the 58-record Codex-assisted public pack. Source matches and structural checks are not legal interpretation approval. Prior exploratory runs are described in docs/codex-extraction.md."
+  },
+  "provenance_note": "The loaded pack and separate automatic pipeline demonstration have distinct provenance. Candidate generation is not independent legal review."
 }

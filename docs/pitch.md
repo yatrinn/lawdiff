@@ -71,7 +71,7 @@ The primary interaction is a change review tied to addresses. A restricted engin
 That remains a real risk. Quotation matching and structural checks catch some errors, not every interpretation error. We retain the source and review notes, expose uncertainty, and would require expert review before a production deployment.
 
 **Did you run a fully automated API extraction?**
-The demonstrated public pack is labeled Codex-assisted extraction. We also implemented a separate API compiler. We will claim a completed API run only where its actual execution log supports that statement.
+The public pack is labeled Codex-assisted extraction. A separate automated Codex CLI extraction run is published with source hashes, model, timing, candidate output and unresolved review items. It is a pipeline demonstration, not a claim that the original 58 records came from that batch.
 
 **Why are so many results unknown?**
 Some decisions require facts absent from the sample. Unknown identifies the missing evidence. It does not replace a known negative: when a necessary condition is false, the engine excludes the rule even if other facts are missing.

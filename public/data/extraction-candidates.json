@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-03T23-45-24-846Z-65c22251",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.1.0",
+    "started_at": "2026-10-03T23:45:24.847Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 2,
+    "model_turns_completed": 2,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D069",
+        "source_sha256": "1fdbfb48743a46429c3f47dbd8d08c665739202361661e1a2f19b94bb0ec43a6",
+        "prompt_sha256": "d7eb058aadce6978c4da6d41695d412c023302ec3a0d6f777521f143044928ef",
+        "response_sha256": "7dfd2d2078cdc20f4f860f099080b0592ca6b8536ebd581d2d2239e80dd29ec8",
+        "schema_sha256": "72df7b35fb4cde9bdf96af472bb363f32aab8ba698d742cb049f236d64bb29d7",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 5,
+        "started_at": "2026-10-03T23:45:24.863Z",
+        "finished_at": "2026-10-03T23:47:17.435Z",
+        "duration_ms": 112573,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "d3c783b3e10f489a5806ac9ab18ef83d748dd87f7873920168d773deb7bfdc58",
+        "usage": {
+          "input_tokens": 16097,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2684,
+          "reasoning_output_tokens": 1427
+        },
+        "no_rule_findings": 0
+      },
+      {
+        "source_doc_id": "D066",
+        "source_sha256": "e06aa61acf6ddb50631d5be3c89c4029caccb13c0dcc7be888e0e64f8b182c2e",
+        "prompt_sha256": "482ff7d61f8b9237e927a0926699b08b20aff4595dc7adf6a9c47baa7b04d189",
+        "response_sha256": "f410b93a0ed849b6f3883b323052bd6ed9c635140de4c54eda02ef24530da3fd",
+        "schema_sha256": "72df7b35fb4cde9bdf96af472bb363f32aab8ba698d742cb049f236d64bb29d7",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 0,
+        "started_at": "2026-10-03T23:47:17.442Z",
+        "finished_at": "2026-10-03T23:48:25.589Z",
+        "duration_ms": 68148,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "6d5875ec28f4167d4f2dc781157f8904f3049c583ce2143a0d3a00e6689da942",
+        "usage": {
+          "input_tokens": 14709,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1578,
+          "reasoning_output_tokens": 332
+        },
+        "no_rule_findings": 0
+      }
+    ],
+    "status": "completed_with_review_items",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-03T23:48:25.594Z",
+    "duration_ms": 180747,
+    "accepted_rule_count": 1,
+    "review_issue_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d066-application-fee-limit",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Residential rental application fee limit",
+      "requirement": "Covered landlords and agents may not require an application or similar fee exceeding $50 to apply to lease or sublease residential property for dwelling purposes, with annual increases beginning January 1, 2027 only when the statutory CPI change is positive. Violations carry penalties of up to $500 for a first offense, $750 for a second offense, and $1,000 for each subsequent offense, enforced through summary proceedings upon complaint by the Director of Consumer Affairs or Attorney General; the amount wrongfully charged must be remitted to the applicant or prospective tenant from the collected penalty.",
+      "key_value": "$50; annual positive-only statutory CPI adjustment beginning January 1, 2027",
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "residential",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "units",
+            "op": "gt",
+            "value": 2
+          },
+          {
+            "any": [
+              {
+                "field": "fee_charger_is_landlord",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "fee_charger_is_landlord_agent",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "field": "fee_charger_nj_real_estate_licensee",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "fee_charger_is_landlord",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "exemptions": "Dwelling units located in one-family or two-family dwellings offered for rent; New Jersey Real Estate Commission licensees unless they are the property's landlord.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-05-01",
+      "citation": "P.L. 2025, c.405, §§ 1, 3; C.46:8-18.1",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.\nb.  A landlord, or agent thereof, who violates\nsubsection a. of this section shall be liable for a penalty of up to $500 for a\nfirst offense, up to $750 for a second offense, and up to $1,000 for each\nsubsequent offense, which shall be collected and enforced by summary\nproceedings pursuant to the \"Penalty Enforcement Law of 1999,\"\nP.L.1999, c.274 (C.2A:58-10 et seq.).  The Superior Court, Law Division,\nSpecial Civil Part in the county in which the residential rental property is\nlocated shall have jurisdiction over the proceedings.  Process shall be in the\nnature of a summons or warrant and shall issue upon the complaint of the\nDirector of the Division of Consumer Affairs in the Department of Law and\nPublic Safety or the Attorney General.  Following the proceedings, the amount\nwrongfully charged shall be taken from the collected penalty and shall be\nremitted to the applicant or prospective tenant.\nc.  The requirements of subsection a. of this section\nshall not apply to:\n(1) a dwelling unit\nlocated in a one-family or two-family dwelling that is offered for rent; or\n(2)  a licensee of the New Jersey Real Estate\nCommission, unless the licensee is the landlord of the residential rental\nproperty.\nd.    Beginning on\nJanuary 1 of the year next following enactment of P.L.2025, c.405 (C.46:8-18.1\net seq.) and each year thereafter, the amount of the fee limitation established\npursuant to subsection a. of this section shall be adjusted by the Director of\nthe Division of Consumer Affairs in the Department of Law and Public Safety in\ndirect proportion to the percent change in the Consumer Price Index over a\n12-month period ending October 31 of the previous year.  For the purpose of\nthis section, \"Consumer Price Index\" means the Consumer Price Index\nfor All Urban Consumers, New York-Northern New Jersey-Long Island Metropolitan\nArea, All Items (1982-84=100), as published by the Bureau of Labor Statistics\nin the United States Department of Labor.  The State Treasurer shall determine\nthe amount of the adjustment by December 1 of each year, and the adjustment to\nthe limitation shall become effective for fees charged during the calendar year\nfollowing the December 1 determination, beginning with fees made on or after\nJanuary 1 of each calendar year.  An adjustment in the fee limitation shall be\nmade only if the percent change in the Consumer Price Index for the period\nspecified is greater than zero.  The Director of the Division of Consumer\nAffairs shall annually publish the fee limitation applicable pursuant to this\nsection on the division’s Internet website.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "requirement_es": null,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "D069, P.L. 2026, c.43, was approved July 20, 2026. Section 9 yields an effective date of July 1, 2027, so its prohibitions are not yet effective as of October 1, 2026. The coverage limitations identified below prevent executable rule records; this is not a finding that the source contains no enacted prohibitions.",
+      "quoted_span": "9.    This act shall take effect on the first day of\nthe twelfth month next following the date of enactment.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 4(a), (b), and (d) restrict specified actors: rental property owners and their agents, representatives or subcontractors; coordinators; and coordinator agents, representatives or subcontractors. The allowed vocabulary cannot faithfully establish those roles. Owner unit counts alone do not establish the defined rental-property-owner role, and application-fee-charger roles cannot substitute for these roles. These prohibitions are expressly violations of the New Jersey Antitrust Act.",
+      "quoted_span": "4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;\nb.    a coordinator to facilitate a tacit or express\nagreement among rental property owners that restricts competition with respect\nto residential dwelling units, including by performing a coordinating\nfunction;\nc.     two or more persons to engage in\n1\nor\notherwise facilitate\n1\nparallel pricing coordination;\nd.    any agent or representative of a coordinator or\nsubcontractor thereof to engage in parallel pricing coordination; or\ne.     any person to perform a coordinating function.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 4(c)'s parallel-pricing prohibition incorporates an exception for conduct required by affordability controls. Those controls encompass government housing programs and rent-control or rent-leveling ordinances. Neither affordable_housing nor local_rent_control_applies establishes whether the particular pricing agreement is required by those controls. The allowed vocabulary cannot represent this essential exception faithfully.",
+      "quoted_span": "“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 4(e) applies to any person, but its prohibition depends on the defined coordinating function and material exclusions for limited research, statistical analysis or testing; free public rent estimates; qualifying brokerage databases; and lawful government affordability controls. The allowed vocabulary cannot represent these exclusions. A residential-use condition and facility exclusions alone would therefore produce an overbroad executable rule.",
+      "quoted_span": "“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 5 preserves application of referenced New Jersey Antitrust Act provisions to section 4 violations. The supplied source does not reproduce those provisions or specify monetary penalties, damages, plaintiff standing, or per-violation counting. No specific sanction or private remedy can be extracted from this cross-reference alone.",
+      "quoted_span": "5.    The provisions of this act shall not be construed\nin any manner that limits the application of sections 6 through 17 of P.L.1970,\nc.73 (C.56:9-6 through 9-17) to a violation of section 4 of this act.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    }
+  ],
+  "no_rule_findings": []
+}

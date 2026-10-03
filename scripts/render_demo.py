@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose actual interface captures into six chapters of the LawDiff demo.
+"""Compose a recorded-extraction data diagram and actual interface captures.
 
 No image generation, UI reconstruction, cursor simulation, or narration is used.
 Python standard library only; FFmpeg and FFprobe must be installed.
@@ -20,10 +20,10 @@ WIDTH, HEIGHT, FPS = 1920, 1080, 30
 SCENES = [
     {
         "seconds": 7,
-        "title": "One law\nchanges.",
-        "caption": "Which buildings need\nattention?",
-        "full_caption": "One law changes. Which buildings need attention?",
-        "chapter": "THE QUESTION",
+        "title": "Read. Extract.\nCheck.",
+        "caption": "A recorded model run\nturns source text into\nstructured candidates.\n\nQuotations are checked\nbefore review.",
+        "full_caption": "A recorded model run turns source text into structured candidates. Quotations are checked before review.",
+        "chapter": "THE EXTRACTION",
     },
     {
         "seconds": 10,
@@ -105,7 +105,7 @@ def scene_filter(index: int, scene: dict, work: Path, regular: Path, bold: Path)
         "chapter": scene["chapter"],
         "title": scene["title"],
         "caption": scene["caption"],
-        "capture_note": "Actual interface captures\n· captioned walkthrough",
+        "capture_note": "Recorded extraction result\n· data diagram" if index == 1 else "Actual interface captures\n· captioned walkthrough",
         "number": f"{index:02d} / 06",
         "closing": "See what changed.\nSee what is missing.",
     }
@@ -164,11 +164,12 @@ def main():
     ffmpeg, ffprobe = binary("ffmpeg", args.ffmpeg), binary("ffprobe", args.ffprobe)
     regular, bold = font_path(False, args.font), font_path(True, args.bold_font)
     captures = [args.captures / f"demo-{i:02d}.png" for i in range(1, 7)]
+    captures[0] = ROOT / "media/extraction-receipt.png"
     before_capture = args.captures / "demo-05-before.png"
     needed = [captures[args.preview-1]] if args.preview else captures + [before_capture]
     missing = [str(path) for path in needed if not path.is_file()]
     if missing:
-        raise SystemExit("Actual interface captures are required; no replacements will be generated:\n" + "\n".join(missing))
+        raise SystemExit("Actual captures and the verified extraction receipt are required:\n" + "\n".join(missing))
     input_probes = {p.name: probe(ffprobe, p) for p in needed}
     if args.check:
         print(json.dumps({"expected_seconds": 56, "output_size": [WIDTH, HEIGHT], "captures": input_probes}, indent=2))
@@ -205,13 +206,13 @@ def main():
                     print(f"Layout preview: {output}")
                     return
                 clips.append(output)
-            print(f"Rendered chapter {index}/6 ({scene['seconds']} seconds; {len(segments)} actual capture(s))", flush=True)
+            print(f"Rendered chapter {index}/6 ({scene['seconds']} seconds; recorded data diagram or actual captures)", flush=True)
         concat = work / "clips.txt"
         concat.write_text("".join(f"file '{clip}'\n" for clip in clips), encoding="utf-8")
         pending = args.output.with_name(args.output.stem + ".rendering.mp4")
         run([ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(concat),
              "-c", "copy", "-movflags", "+faststart", "-metadata", "title=LawDiff — captioned interface walkthrough",
-             "-metadata", "comment=Edited still captures of the actual interface; no simulated cursor actions; no audio.", str(pending)])
+             "-metadata", "comment=Recorded extraction data diagram, then actual interface still captures; no simulated cursor actions; no audio.", str(pending)])
         result = probe(ffprobe, pending)
         videos = [s for s in result["streams"] if s["codec_type"] == "video"]
         audios = [s for s in result["streams"] if s["codec_type"] == "audio"]

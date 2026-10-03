@@ -19,3 +19,10 @@ Reviewed 2026-10-03: rule engine, browser import path, exporter, published catal
 - Structural validation cannot establish that a legally plausible date, interpretation, or selected quote is substantively correct. Source review is still required; the import banner must not imply legal verification.
 
 Regression file: `tests/import.test.mjs`. No engine, exporter, application, or published data files were edited during this review.
+
+
+## October 4 completion audit
+
+The v5 brief requires demonstrable automatic extraction and penalty information. The follow-up added source-supported consequences to 31 existing records, with 41 further exact spans (193 total). A genuine Codex CLI pipeline run is published separately: D066 yields one checked candidate, D069 retains five review items. Neither result is relabelled as the original 58-record pack. The final pipeline preserves explicit actor restrictions and does not infer absent facts.
+
+The project passes 45 JavaScript tests and 10 geography tests. Separate CLI-event and UI-record checks are documented without inflating that count. Updated method-note and pitch pages and the changed encoded video frames were visually checked. The new Integrity card passes its real-record contract, escaping and versioned-download checks; its final interactive browser appearance has not yet been verified because the host display is locked. Prior main-app desktop/mobile checks remain separate from that pending check.
