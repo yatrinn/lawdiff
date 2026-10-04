@@ -22,15 +22,16 @@
         ><span class="brand-caption">Every layer matters.</span></a
       >
       <nav aria-label="Main navigation">
-        <button class="nav-button active" data-view="changes">Changes</button
-        ><button class="nav-button" data-view="address">Address</button
-        ><button class="nav-button" data-view="sources">Sources</button
-        ><button class="nav-button" data-view="integrity">Integrity</button>
+        <button class="nav-button active" data-view="changes" disabled>Changes</button
+        ><button class="nav-button" data-view="address" disabled>Address</button
+        ><button class="nav-button" data-view="sources" disabled>Sources</button
+        ><button class="nav-button" data-view="integrity" disabled>Integrity</button>
       </nav>
       <div class="header-actions">
         <button
           class="search-trigger"
           id="command-button"
+          disabled
           aria-label="Search addresses and laws"
         >
           Search <kbd>⌘ K</kbd></button
@@ -40,12 +41,12 @@
           aria-label="Toggle dark appearance"
         >
           ◐</button
-        ><button class="button button-dark" id="import-button">
+        ><button class="button button-dark" id="import-button" disabled>
           Import <span aria-hidden="true">＋</span>
         </button>
       </div>
     </header>
-    <main id="workspace" tabindex="-1">
+    <main id="workspace" tabindex="-1" aria-busy="true">
       <div class="initial-state">Opening the source collection…</div>
     </main>
     <footer class="site-footer">
@@ -125,12 +126,13 @@
       <label class="file-picker"
         >Choose a JSON rule pack<input
           id="pack-file"
+          disabled
           type="file"
           accept="application/json,.json"
       /></label>
       <div id="import-status" role="status"></div>
       <div class="modal-actions">
-        <button class="button" id="download-pack">Export current pack</button
+        <button class="button" id="download-pack" disabled>Export current pack</button
         ><button class="button button-dark" data-close="import-dialog">
           Done
         </button>

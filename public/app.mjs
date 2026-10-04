@@ -11,6 +11,13 @@ import {
   factsFor,
 } from "./engine.mjs";
 const $ = (s) => document.querySelector(s);
+let dataReady = false;
+function setDataReady(ready) {
+  dataReady = ready;
+  document.querySelectorAll('[data-view], #command-button, #import-button, #download-pack, #pack-file')
+    .forEach(control => { control.disabled = !ready; });
+  $("#workspace").setAttribute("aria-busy", String(!ready));
+}
 let report = null,
   rightsLang = "en",
   playTimer = null;
@@ -93,6 +100,7 @@ function download(name, data) {
   setTimeout(() => URL.revokeObjectURL(u), 1000);
 }
 function activateView(next) {
+  if (!dataReady) return;
   stopPlayback();
   view = next;
   render();
@@ -122,6 +130,7 @@ function selectAddress(id) {
   window.scrollTo({ top: 0 });
 }
 function render() {
+  if (!dataReady) return;
   document
     .querySelectorAll("[data-view]")
     .forEach((b) => b.classList.toggle("active", b.dataset.view === view));
@@ -452,6 +461,7 @@ function openSource(id) {
   $("#source-content mark")?.scrollIntoView({ block: "center" });
 }
 function openSearch() {
+  if (!dataReady) return;
   stopPlayback();
   $("#command-input").value = "";
   renderSearch("");
@@ -459,6 +469,7 @@ function openSearch() {
   $("#command-input").focus();
 }
 function renderSearch(value) {
+  if (!dataReady) return;
   const q = value.toLowerCase().trim();
   const addresses = catalog.addresses
     .filter((a) =>
@@ -821,9 +832,10 @@ document
   .forEach(
     (b) => (b.onclick = () => document.getElementById(b.dataset.close).close()),
   );
-$("#import-button").onclick = () => $("#import-dialog").showModal();
-$("#download-pack").onclick = () => download("lawdiff-rule-pack.json", pack);
+$("#import-button").onclick = () => { if (dataReady) $("#import-dialog").showModal(); };
+$("#download-pack").onclick = () => { if (dataReady) download("lawdiff-rule-pack.json", pack); };
 $("#pack-file").onchange = async (e) => {
+  if (!dataReady) return;
   const file = e.target.files[0];
   if (!file) return;
   try {
@@ -889,6 +901,7 @@ $("#evidence-form").onsubmit = (e) => {
   render();
   toast("Evidence applied. The answer has been recalculated.");
 };
+setDataReady(false);
 try {
   [catalog, pack] = await Promise.all(
     ["./data/catalog.json", "./data/rule-pack.json"].map(async (u) => {
@@ -907,6 +920,7 @@ try {
   if (params.has("address")) view = "address";
   if (validDate(params.get("date"))) asOf = params.get("date");
   rightsLang = params.get("lang") === "es" ? "es" : "en";
+  setDataReady(true);
   render();
   if (params.get("card") === "1") showRights();
   fetch("./data/validation.json")
@@ -967,6 +981,8 @@ try {
     }
   }
 } catch (err) {
+  setDataReady(false);
+  $("#workspace").setAttribute("aria-busy", "false");
   $("#workspace").innerHTML =
     `<div class="initial-state"><h2>We could not open this collection.</h2><p class="muted">${h(err.message)}</p><button class="button" id="retry-load">Try again</button></div>`;
   $("#retry-load").onclick = () => location.reload();
