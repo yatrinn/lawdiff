@@ -26,7 +26,7 @@ def put(x, y, text, size=30, color=INK, bold=False, width=1300):
     for line in text.splitlines():
         assert d.textlength(line, font=f) <= width, line
     d.multiline_text((x,y), text, font=f, fill=color, spacing=10)
-put(66, 54, 'RECORDED EXTRACTION  /  ACTUAL OUTPUT', 23, BLUE, True)
+put(66, 54, 'HISTORICAL EXTRACTION TEST  /  ACTUAL OUTPUT', 23, BLUE, True)
 put(62, 116, 'From law to a checked rule.', 55, bold=True)
 candidate_noun = 'candidate' if len(pack['rules']) == 1 else 'candidates'
 put(66, 198, f'{receipt["model"]}  ·  {len(receipt["sources"])} sources  ·  {len(pack["rules"])} {candidate_noun}  ·  {len(pack["review"])} review items', 29, MUTED)
@@ -49,7 +49,7 @@ if len(lines) > 4: lines = lines[:4]; lines[-1] = lines[-1].rstrip(' .') + ' …
 put(95, 642, '\n'.join(lines), 28, width=1220)
 put(95, 815, 'Source SHA-256: ' + run_source['source_sha256'][:32] + '…', 21, MUTED)
 put(66, 902, 'Recorded result, not live playback. Candidates still require legal review.', 25, MUTED)
-put(66, 948, 'The 58-record public pack has separate Codex-assisted provenance.', 23, MUTED)
+put(66, 948, 'Historical test only. Current selection: see Integrity in the workspace.', 23, MUTED)
 out = ROOT / 'media/extraction-receipt.png'
 im.save(out)
 print(f'Created {out.name} from the recorded run; {len(pack["rules"])} candidates.')

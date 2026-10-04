@@ -4046,7 +4046,10 @@
       "public/engine.mjs": "c9e6287bd4c218c0fc0db3335bbffb2b3e66d2e2da23f374d7f8a32fc36902e6",
       "data/schema/rule_record.schema.json": "e0217006fa844b5d632b8a07053af58398f2014a3010b75f9e3d14482bb2a2d5"
     },
-    "publication_note": "This selected automatic run is separate from the 58-record Codex-assisted public pack. Source matches and structural checks are not legal interpretation approval. Prior exploratory runs are described in docs/codex-extraction.md."
+    "publication_note": "Historical two-source pipeline test, preserved with its original recorded outcomes. It is not the source of the current selected rule pack. See current_selection_url for selected automatic records and current_corpus_receipt_url for all source statuses. Source matches and structural checks are not legal interpretation approval.",
+    "record_role": "historical_pipeline_test",
+    "current_selection_url": "./data/rule-pack.json",
+    "current_corpus_receipt_url": "./data/corpus-coverage.json"
   },
   "provenance_note": "This submission uses the explicit selection of unchanged automatic records. The earlier two-source pipeline test is historical and is not the source of the selected pack. AI-assisted source review is not independent legal review."
 }

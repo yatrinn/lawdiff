@@ -26,7 +26,10 @@ audit.candidate_pack_url = './data/extraction-candidates.json';
 audit.code_sha256 = {};
 for (const path of ['scripts/compile-codex.mjs', 'scripts/compile.mjs', 'public/engine.mjs', 'data/schema/rule_record.schema.json'])
   audit.code_sha256[path] = hash(await readFile(new URL(path, root)));
-audit.publication_note = 'This selected automatic run is separate from the 58-record Codex-assisted public pack. Source matches and structural checks are not legal interpretation approval. Prior exploratory runs are described in docs/codex-extraction.md.';
+audit.record_role = 'separate_pipeline_test';
+audit.current_selection_url = './data/rule-pack.json';
+audit.current_corpus_receipt_url = './data/corpus-coverage.json';
+audit.publication_note = 'This separate pipeline test does not describe the current selected rule pack. See current_selection_url for selected automatic records and current_corpus_receipt_url for all source statuses. Source matches and structural checks are not legal interpretation approval.';
 await writeFile(new URL('public/data/extraction-candidates.json', root), JSON.stringify(pack, null, 2));
 await writeFile(new URL('public/data/extraction-run.json', root), JSON.stringify(audit, null, 2));
 console.log(`Published ${pack.rules.length} separate candidates and ${pack.review.length} review items; public rule pack unchanged.`);
