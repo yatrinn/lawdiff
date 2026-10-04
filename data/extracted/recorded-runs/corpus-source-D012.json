@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-09-26-757Z-1b0b493b",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:09:26.758Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D012",
+        "source_sha256": "aaed5c3d1e3aacb57a1f9a8fa9e855ecaa857bdbedc3d7b99a1992e7fc0aed0f",
+        "prompt_sha256": "5b68d4e34ed645c90eecedb944ced2bf07cd1917d866b487d9df63e8b5e410d2",
+        "response_sha256": "93e5cbff58e18b31db61fbf803d2115b5b9102434db49e27c6afdfb3f9c2c788",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 4,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:09:26.772Z",
+        "finished_at": "2026-10-04T03:10:10.448Z",
+        "duration_ms": 43676,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "c654b63268a99fe2d144f98a745da3412d34764928268c2819380011e0fae81f",
+        "usage": {
+          "input_tokens": 14987,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1775,
+          "reasoning_output_tokens": 516
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D012.json",
+    "lock_scope": "artifacts/corpus-source-D012.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:10:10.452Z",
+    "duration_ms": 43694,
+    "accepted_rule_count": 1,
+    "review_issue_count": 4,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d012-discriminatory-rental-screening",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Prohibition on discriminatory rental decisions",
+      "requirement": "Property owners and landlords must not discriminate in renting housing based on race, color, religion, disability, national origin, ancestry, sex, gender identity, gender expression, age, sexual orientation, marital status, rental assistance, family status, or military status. Prohibited conduct includes refusing rental assistance, discriminatory neighborhood steering, refusing a family because the property has lead paint, and discriminatory rental terms or fees.",
+      "key_value": null,
+      "coverage_conditions": "Applies to property owners and landlords renting residential housing in Boston and their treatment of tenants and prospective tenants based on the listed protected characteristics. Rental assistance includes Section 8 vouchers, social security disability vouchers, and veterans vouchers; family status includes having children. The source supplies no property-size or owner-occupancy exceptions.",
+      "execution_review_pending": true,
+      "exemptions": null,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Boston Fair Housing Regulations, Laws and discrimination; What is housing discrimination?",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "quoted_span": "Our commission makes sure property owners don't discriminate against tenants or buyers.\nIn the City of Boston, it’s illegal to discriminate when renting, buying, selling, or securing financing for any housing.\nYou can’t discriminate someone based on their:\nRace\nColor\nReligion\nDisability\nNational Origin\nAncestry\nSex\nGender Identity\nGender Expression\nAge\nSexual Orientation\nMarital Status\nRental Assistance\n*\nFamily Status\n**\nMilitary Status\n*\nFor example renters using Section 8 voucher\n**\nFor example, a landlord can’t discriminate against someone if they have children\nLearn who else is protected by the\nFair Housing Act\n.\nWhat is housing discrimination?\nDiscrimination comes in many forms. Some examples of housing discrimination include:\nThe landlord tells you they don't accept rental assistance. This includes Section\n8 vouchers, social security disability vouchers, and veterans vouchers.\nYou are told you should or shouldn't live in certain neighborhoods based on your race, religion, or disability.\nThe property owner tells you the apartment has been rented, but you later see it listed again.\nYou were told your family can't rent a property because there is lead paint.\nThe terms of your rental or sale are different than the terms of other tenants. For example, you might be paying different fees.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The source describes the discrimination prohibition as currently operative, supporting in_force status as of 2026-10-01, but supplies no effective date or specific statutory section. The effective date remains null.",
+      "quoted_span": "In the City of Boston, it’s illegal to discriminate when renting, buying, selling, or securing financing for any housing.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review is required because the allowed facts cannot fully express the property-owner or landlord role together with the protected characteristics and discriminatory conduct covered by this rule. The source does not establish the full statutory definitions or exceptions.",
+      "quoted_span": "Our commission makes sure property owners don't discriminate against tenants or buyers.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The source separately describes complaint investigation and attempted resolution when discrimination is found. It provides no specified monetary penalty, damages formula, or per-violation sanction; this separately located enforcement passage is not included in the rule's quoted evidence.",
+      "quoted_span": "Our commission takes housing discrimination seriously. We will investigate all complaints. If we find that there has been discrimination, we’ll try to resolve the complaint.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d012-discriminatory-rental-screening: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes no rent-increase cap or formula. Its discussion of different rental terms concerns discrimination, not a general limit on increases.",
+      "quoted_span": "The terms of your rental or sale are different than the terms of other tenants. For example, you might be paying different fees.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source establishes no just-cause eviction regime or permissible grounds for termination; it describes housing discrimination.",
+      "quoted_span": "Our commission makes sure property owners don't discriminate against tenants or buyers.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This source establishes no security-deposit amount, handling, or return requirement. The discussion of different fees does not establish a deposit rule.",
+      "quoted_span": "The terms of your rental or sale are different than the terms of other tenants. For example, you might be paying different fees.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This source establishes no application or screening fee cap, general prohibition, or refund duty. It identifies different fees as an example of discriminatory rental terms.",
+      "quoted_span": "The terms of your rental or sale are different than the terms of other tenants. For example, you might be paying different fees.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This source establishes no restriction on algorithmic rent setting; its stated subject is enforcement of fair housing laws.",
+      "quoted_span": "Find out how the Fair Housing Commission enforces fair housing laws in Boston.",
+      "source_doc_id": "D012",
+      "source_url": "https://www.boston.gov/departments/fair-housing-and-equity/boston-fair-housing-regulations",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ]
+}

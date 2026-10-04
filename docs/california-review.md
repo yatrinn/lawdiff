@@ -1,3 +1,5 @@
+> Historical development review. This file concerns the earlier assisted fixtures. The current automatic selection and its limits are documented in `challenge-matrix.md`, `method-note.md`, and the pinned selection manifest. These old counts and record IDs are not current submission claims.
+
 # California extraction review
 
 This document accompanies `data/extracted/california.json`. The artifact contains 30 source-grounded rule records extracted by Codex from supplied text. Method: `codex_assisted_extraction`. It is an LLM-assisted extraction snapshot, **not an independently validated legal dataset**, a claimed API batch run, or a certified complete account of California law.

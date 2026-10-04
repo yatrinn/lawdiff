@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T04-00-52-867Z-ee6058f5",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T04:00:52.867Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 0,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D025",
+        "source_sha256": "48b1d005fb59f73082dc625d4038272f4bde950d2c93a70ef400a43b630e1511",
+        "prompt_sha256": "6e6ef587dcf0c7e9e5cdf4f7792aa788b3cc1a23bef9791af970d61a3b2bd796",
+        "response_sha256": null,
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "rejected_requires_review",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T04:00:52.881Z",
+        "finished_at": "2026-10-04T04:00:56.140Z",
+        "duration_ms": 3259,
+        "model_called_this_run": true,
+        "exit_code": null,
+        "transport_sha256": "e7b2f2b3129dfbffacd4941a8d813384dda84e2255cd9fc26304f46f4701ac03",
+        "failure_code": "untrusted_or_failed_cli_event"
+      }
+    ],
+    "status": "stopped_requires_review",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D025.json",
+    "lock_scope": "artifacts/corpus-source-D025.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "trust_status": "entire_run_rejected_for_tool_or_untrusted_event",
+    "finished_at": "2026-10-04T04:00:56.143Z",
+    "duration_ms": 3276,
+    "accepted_rule_count": 0,
+    "review_issue_count": 1,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "source_doc_id": "D025",
+      "issue": "untrusted_or_failed_cli_event"
+    }
+  ],
+  "no_rule_findings": []
+}

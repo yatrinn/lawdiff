@@ -16,13 +16,13 @@ const isolated = id => {
 const validate = (rule, catalog = sources) => validateRulePack({ version: 1, rules: [rule] }, catalog);
 
 test('import rejects a real NJ source relabelled as a California rule', () => {
-  const rule = isolated('nj-fair-act');
+  const rule = isolated('d069-coordinator-services');
   rule.jurisdiction = 'CA';
   assert.throws(() => validate(rule), /Source jurisdiction mismatch/);
 });
 
 test('import rejects the combined jurisdiction and silent-condition bypass', () => {
-  const rule = isolated('nj-fair-act');
+  const rule = isolated('d069-coordinator-services');
   rule.jurisdiction = 'CA';
   rule.status = 'in_force';
   rule.effective_date = '2020-01-01';
@@ -46,7 +46,8 @@ test('current published pack remains valid after import hardening', () => {
 });
 
 test('organizer multi-state fixture may support its expressly listed state', () => {
-  const rule = isolated('MA-RENT-P1');
+  // Historical regression fixture only: this status record is not promoted to the current pack.
+  const rule = JSON.parse(fs.readFileSync(new URL('./fixtures/organizer-status-regression.json', import.meta.url)));
   const source = sources.find(s => s.doc_id === rule.source_doc_id);
   assert.equal(source.doc_id, 'O001');
   assert(source.source_type.startsWith('organizer'));
@@ -56,7 +57,7 @@ test('organizer multi-state fixture may support its expressly listed state', () 
 });
 
 test('ordinary city commas do not turn city source metadata into a state-wide source', () => {
-  const rule = isolated('HOB-ALG-01');
+  const rule = isolated('s001-algorithmic-rent-fixing');
   rule.jurisdiction = 'NJ';
   rule.level = 'state';
   assert.throws(() => validate(rule), /Source jurisdiction mismatch/);

@@ -1,65 +1,65 @@
-# LawDiff · Drei Videos, jeweils unter 60 Sekunden
+# LawDiff · fertige Videos und persönliche Aufnahme
 
-Regiehinweise sind deutsch; nur die englischen Sprechtexte werden gesprochen. Ruhiges Tempo, verständliche Aussprache, kurze Pausen. **105–125 Wörter sind ein Zielbereich, keine Dauergarantie:** jede fertige Aufnahme messen und auf 55–58 Sekunden bringen. Keine Musik unter den technischen Erklärungen nötig. Bildschirm gut lesbar, Maus ruhig, unnötige Browserleisten verborgen; Datum und Prototyp-Hinweis bleiben erkennbar.
+**Finaler Build vom 4. Oktober 2026.** Demo und Technik sind jeweils **56 Sekunden**, 1920 × 1080, 30 fps, H.264, **ohne Ton**. Die englischen Erklärungen sind eingebrannt; SRTs liegen bei. Eine optionale Sprachaufnahme ist noch nicht enthalten. Das Teamvideo ist von Yannik persönlich aufzunehmen.
 
-## 1. Demo
+## Fakten, die in allen Aufnahmen gelten
 
-**Vorbereitung:** Öffentliche Demo, T3 „New Jersey FAIR Act“, Ausgangsdatum 2026-10-01. Frische lokale Daten ohne alte Simulationen. Rechtliche Stadtzuordnung für A0107 prüfen. Den hypothetischen Zertifikatstag **1978-09-30** und die Kennzeichnung **Simulation — hypothetical certificate date** vorbereiten. Keine echte Bescheinigung behaupten.
+89 unverändert ausgewählte automatische Datensätze aus 17 Quellen. Davon 13 mit ausführbarer Coverage und 76 mit noch nicht ausführbarer Coverage-Prosa. 89 exakt geprüfte primäre Zitate. 110 Quellen-IDs / 73 vorhandene Texte; 21 erfolgreich verarbeitet, 37 ohne Text, 44 abgewiesen oder zurückgehalten, 8 unbearbeitet. 475/500 geografische Zuordnungen. **93 JavaScript-Tests und 10 Geografie-Tests**, kein offizieller Juryscore. T1 und T4 erfüllen die qualitative Erwartung; T2, T3 und T5 bleiben teilweise offen. Keine unabhängige Rechtsprüfung, Vollabdeckung, Kunden oder gemessene Einsparung behaupten.
 
-### Sprechtext
+## 1. Demo · 56 Sekunden
 
-One law changes. Which buildings need attention? This is LawDiff. Each mark represents one address in the supplied sample. New Jersey’s FAIR Act is enacted, but it is not yet effective on this date. Move to July 2027: its extracted statewide rule now covers the 140 New Jersey addresses. Open the original source to see where the requirement comes from. Now a separate Los Angeles case: the building year alone cannot answer an occupancy-date condition. I add a clearly labeled hypothetical date. That branch resolves; other exemption questions stay unresolved. Finally, the rights card shares the original-data result and its sources, without exporting my simulation. See what changed. See what is missing.
+Datei `media/lawdiff-demo.mp4`. Sieben echte Interface-Standbilder in sechs Kapiteln. Kennzeichnung: **Actual interface captures · edited walkthrough**. Keine kontinuierliche Bildschirmaufnahme, nachgestellten Klicks, generierten UI-Bilder oder Tonspur. Ablauf: Änderung → Adresse → Originalquelle → Prüfliste → CSV → Herkunftskette.
 
-### Bildregie
+| Zeit | Bild | Englischer Text |
+|---|---|---|
+| 00–08 s | T3 vor Datum; Originalsample. | A new housing law lands on your desk. Which buildings need your attention? This is LawDiff. |
+| 08–17 s | T3 nach Datum: 140 Adressen benötigen Scope-Fakten. | Move New Jersey’s FAIR Act past its effective date. The workspace reveals where missing property facts need a closer look. |
+| 17–27 s | A0002 mit zugehöriger NJ-Regel (4 s), anschließend D069-Originaltext (6 s). | Open one address. See the requirement, its timing, and the original passage behind the interpretation. |
+| 27–37 s | Review Brief mit offenen Fakten und nächstem Prüfschritt. | Now turn that finding into a review brief. Listed addresses get their status, source, and next check. |
+| 37–47 s | Echte Oberfläche nach CSV-Download; keine künstliche Tabellenansicht. | Export the list for your compliance team: original address data, source wording, and what to review next. |
+| 47–56 s | Integrity: automatische Extraktion, unveränderte Auswahl, gemeinsame Engine. | Rules extracted automatically. Selected records unchanged. One traceable pack powers the workspace and submission. Inspect the chain. |
 
-| Zeit | Aktion |
-|---|---|
-| 0–7 s | T3 und gesamtes Adressfeld zeigen; keine Startfolie |
-| 7–18 s | Von „Before“ zu „After“ wechseln; Datum und Statusänderung lesbar halten |
-| 18–26 s | Originalquelle D069 öffnen; relevante Passage zeigen |
-| 26–34 s | Zum Los-Angeles-Grenzfall A0107 wechseln; Jahr 1978 und fehlenden Zertifikatstag zeigen |
-| 34–46 s | Hypothetischen Tag als Simulation hinzufügen; nur die aufgelöste Datumsbedingung hervorheben |
-| 46–55 s | Rights card öffnen; Originaldaten-Kennzeichnung und Quellen sichtbar halten |
-| 55–58 s | Ruhiges Schlussbild der Anwendung mit LawDiff |
+Der eingebrannte Text enthält **102 Wörter**. Er kann unverändert für ein optionales Voiceover verwendet werden; jedes Segment zeitlich einüben. Die sichtbaren 140 NJ-Adressen benötigen nach Datum fehlende Gebäudefakten. Sie werden nicht als bestätigte Rechtsverstöße oder vollständig in Scope bezeichnet. Die Quellenansicht macht die Interpretation überprüfbar; der Export bleibt auf Originaldaten beschränkt.
 
-**Freigabebedingung:** Die 140 müssen in der aufgenommenen Version tatsächlich sichtbar sein. Die LA-Demo setzt einen belegten Rechtsort voraus. Falls der lokale Fall noch nicht funktioniert, keine Szene nachstellen: Die Aufnahme wird angepasst oder erst nach der Korrektur erstellt.
+## 2. Technik · 56 Sekunden
 
-**Aktualisierung des Aufnahmeplans:** Im geprüften Zwischenstand vom 3. Oktober sind 475 von 500 Adressen geografisch zugeordnet; **A0107 ist jetzt als City of Los Angeles aufgelöst**. Den gespeicherten Ortsnachweis unmittelbar vor der Aufnahme nochmals prüfen. Die beiden T2-Ortsgesetze sind mit ergänzten Quellen enthalten. Veränderungen der Trefferzahlen sind kein Anlass, die Sprechtexte um spontane Genauigkeitsbehauptungen zu erweitern. Ein geografischer Treffer bestätigt nicht die rechtliche Interpretation oder den simulierten Zertifikatstag.
+Datei `media/lawdiff-tech.mp4`. Sechs gestaltete Erklärgrafiken. Kein API-Mitschnitt oder vorgetäuschter Live-Lauf. Der Renderer validiert den gleichen eingefrorenen Datenbestand wie der Build und führt die Tests aus.
 
-## 2. Technik
+| Zeit | Bild | Englischer Text |
+|---|---|---|
+| 00–09 s | Dieselbe automatische Quelle→Auswahl→Adresse-Kette. 21/110 Quellen verarbeitet, 89 ausgewählte Records. | Recorded model calls extract candidates; source review selects unchanged records. One selected pack drives the workspace and all 500 submitted address lookups. |
+| 09–18 s | Hash und exakte Originalpassage; 89 primäre Zitatstellen. | Captured files carry hashes. Primary and supplemental quotations must occur verbatim in their referenced source texts. |
+| 18–28 s | Eine Engine für Browser und Exporte, kein Laufzeit-Modellaufruf. | One JavaScript engine serves browser answers and submission exports. It evaluates a restricted rule language. Runtime makes no model calls. |
+| 28–38 s | Wahr/falsch/unbekannt, Datum und Pending-Status. | Missing evidence remains unknown unless another condition decides it. Calendar checks distinguish effective dates from pending proposals. |
+| 38–48 s | 93 JavaScript- und 10 Geografie-Tests im geprüften Build. | Regression tests challenge source tampering, jurisdiction mismatches, malformed conditions, calendar boundaries and geographic provenance. |
+| 48–56 s | 475 Ortszuordnungen, 25 offen; Grenzen des Zitatabgleichs. | 475 sample addresses have matched legal cities; 25 remain unresolved. Exact quotations support review. They do not prove legal interpretation. |
 
-**Vorbereitung:** Das tatsächliche Extraktionsaudit, einen echten Regelkandidaten samt Quelltext und die echte Testausgabe öffnen. Keine Modellkonsole oder Fortschrittsanzeige für einen nicht stattgefundenen API-Lauf nachbauen.
+Die Diagramme zeigen aufgezeichnete Ergebnisse. Modellentwicklung und Extraktion sind von der modellfreien Laufzeitauswertung zu unterscheiden. Der frühere Zwei-Quellen-Versuch bleibt als historisches Audit erhalten, ist aber nicht die Herkunft des aktuellen Pakets. Der alternative Anthropic-Compiler wurde nicht live ausgeführt.
 
-### Sprechtext
+## 3. Team · Aufnahme durch Yannik, Ziel 56 Sekunden
 
-LawDiff separates interpretation from execution. Codex read the supplied source texts and produced structured candidate rules, with the extraction method recorded. The public demo runs those candidates through one shared rule engine; browser answers and submission exports use the same logic. Schema checks, exact source-span checks, calendar validation, and targeted tests catch structural errors. Three-valued logic preserves missing facts without guessing. City rules require geographic evidence, not a matching postal label. Evidence added in the browser stays separate from the original sample. A separate automated Codex CLI run is recorded with source hashes, candidate output, and open review questions. The remaining hard problem is legal interpretation: traceability supports review; it does not certify correctness.
+**Status:** Noch aufzunehmen. Yannik spricht selbst. Kamera auf Augenhöhe, ruhiger Hintergrund, Tageslicht oder weiches Licht von vorn. Vorab zehn Sekunden Tonprobe; Telefon und Benachrichtigungen stumm. Ein Namensschild **“Yannik Trinn · Solo participant”** reicht. Keine Organisationslogos und keine Behauptung einer Unterstützung durch Studieren ohne Grenzen.
 
-### Bildregie
+### Sprechtext und genaue Regie
 
-| Zeit | Aktion |
-|---|---|
-| 0–12 s | Den echten CLI-Lauf und seine Kandidaten zeigen; vom separat erstellten 58-Regel-Paket unterscheiden |
-| 12–23 s | Einfaches Diagramm: Quelle → Regelpaket → gemeinsame Engine → Oberfläche und Exporte |
-| 23–35 s | Echte Prüfungen: Zitatmanipulation, ungültiges Datum und Drei-Werte-Logik |
-| 35–46 s | Fehlender Gebäudefakt und getrennte Simulationsdaten in der Anwendung |
-| 46–58 s | Audit-/Integrity-Ansicht; verbleibende Quellen- und Interpretationslücken |
+| Zeit | Bild | Englischer Sprechtext |
+|---|---|---|
+| 00:00–00:08 | Direkt in die Kamera; Name kurz einblenden. | I’m Yannik Trinn, and I’m competing solo. LawDiff is my independent entry in this hackathon. |
+| 00:08–00:19 | Gleiche Einstellung, ohne Reisebilder oder zusätzliche Titel. | I serve on the national board of Studieren ohne Grenzen, which supports access to higher education in the Global South. |
+| 00:19–00:31 | Ruhig weiterreden; eigene Rolle klar benennen. | I worked with AI agents on product planning, code, extraction and tests. I am responsible for the project I submit. |
+| 00:31–00:44 | Blick zur Kamera; beim Wort „missing“ eine kurze Pause. | I want a reviewer to see what supports an answer and what is missing. A useful interface should make that question easier to resolve. |
+| 00:44–00:56 | Ruhiger Abschluss, letzte Sekunde stehen lassen. | LawDiff is a prototype. My next step is expert review and a focused pilot with people who do this work. |
 
-**Nachweis:** `public/data/extraction-run.json` und `extraction-candidates.json` dokumentieren den tatsächlichen automatischen CLI-Lauf. Nur dessen gemessene Werte nennen. Der alternative Anthropic-Compiler wurde nicht ausgeführt.
+Der Text enthält ungefähr 100 Wörter. Die genannten biografischen Fakten stammen von Yannik: Name, Solo-Teilnahme und Bundesvorstandstätigkeit. Motivation und nächster Schritt sind als persönliche Aussage vor der Aufnahme gegenzulesen. Wenn sie nicht passen, werden sie geändert. Keine unbestätigten Abschlüsse, Arbeitgeber, Hochschulen, früheren Kunden oder fachlichen Zulassungen ergänzen.
 
-## 3. Team
+Drei vollständige Takes aufnehmen. Den klarsten, natürlichsten auswählen, nicht den schnellsten. Ziel 55–58 Sekunden einschließlich Anfang und Ende. Erst die tatsächlich exportierte Aufnahme heißt `lawdiff-team.mp4`. Englische Untertitel nach dem aufgenommenen Wortlaut erstellen. Ein authentisches Teamfoto bleibt zusätzlich erforderlich.
 
-**Vorbereitung:** Yannik spricht selbst in die Kamera. Ruhiger Hintergrund, Kamera auf Augenhöhe, weiches Licht von vorn, kurze Tonprobe. Ein schlichtes Namensschild „Yannik Trinn · Solo builder“ genügt. Keine Logos von Studieren ohne Grenzen verwenden und keine organisatorische Unterstützung behaupten.
 
-### Sprechtext
+## Vor dem Upload
 
-My name is Yannik Trinn. I’m competing solo and serve on the federal board of Studieren ohne Grenzen, which supports access to education in the Global South. This project is my independent hackathon entry. I used AI extensively across product planning, coding, extraction, and testing, and I am responsible for what I present. With LawDiff, I want people to see how an answer was reached, which source supports it, and what is still missing. The ambition is a useful product with a clear interface and an honest technical foundation. Its next step is expert review and a focused pilot. I’m looking for critical feedback and people who understand this workflow.
-
-**Persönliche Freigabe:** Yannik liest den Text vor der Aufnahme. Falls eine Formulierung seine tatsächliche Rolle oder Motivation nicht trifft, wird sie korrigiert. Keine Arbeitgeber, Hochschulen, Abschlüsse oder bisherigen Nutzer ergänzen, die nicht bestätigt sind.
-
-## Export und Dateinamen
-
-- `lawdiff-demo.mp4`
-- `lawdiff-tech.mp4`
-- `lawdiff-team.mp4`
-
-Empfohlen: MP4/H.264, 1920×1080, gut verständliches Audio, eingebrannte oder mitgelieferte englische Untertitel. Die wichtigste Textpassage muss auch bei kleiner Videoansicht lesbar bleiben. Schnitte dürfen Wartezeit kürzen, aber keinen Verarbeitungserfolg vortäuschen. Beschleunigte Abläufe ausdrücklich kennzeichnen. Die endgültige Dauer jedes Videos wird vor dem Upload kontrolliert.
+1. Persönliches Teamvideo und echtes Foto ergänzen.
+2. Jeden endgültigen Film vollständig ansehen; höchstens 60 Sekunden.
+3. Bei optionalem Voiceover Dauer und Untertitel mit dem wirklich gesprochenen Wortlaut abgleichen.
+4. Keine alten Zahlen aus früheren Builds verwenden. Die Demo zeigt keine neue Extraktion in Echtzeit.
+5. Öffentliche Links ohne Anmeldung prüfen. Die MP4-Dateien für Formular-Uploads bereithalten.
+6. HackOS **und** Google Form abschließen, beide Bestätigungen sichern.

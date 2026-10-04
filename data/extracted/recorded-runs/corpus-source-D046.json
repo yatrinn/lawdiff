@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-01-55-791Z-b436b163",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:01:55.791Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D046",
+        "source_sha256": "6ea5313d0a656ab73b683e72b594cf143ee61bd6923ee1d9f3df46682248004d",
+        "prompt_sha256": "f486e60404d9f758d70a67c650209ab8af81fa9fb32bbd680337f9117e73cd02",
+        "response_sha256": "a0999c7d1c0dc9353f9e8e8e7938cf0cabc8fe347e61cd0c496193b8a008a8ee",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 3,
+        "no_rule_findings": 1,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:01:55.806Z",
+        "finished_at": "2026-10-04T03:02:25.174Z",
+        "duration_ms": 29368,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "842bd588637b1c8c5c63ad8ae72e1a546d3b6fdf42ba43fd4e9cf6cb78df9706",
+        "usage": {
+          "input_tokens": 14874,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 548,
+          "reasoning_output_tokens": 197
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D046.json",
+    "lock_scope": "artifacts/corpus-source-D046.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:02:25.177Z",
+    "duration_ms": 29386,
+    "accepted_rule_count": 0,
+    "review_issue_count": 3,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 1,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "issue": "The capture contains a bill status page, not operative bill text. No duties, coverage, exceptions, penalties or remedies can be extracted. Obtain the operative text before extracting any proposed algorithmic rent-setting rule.",
+      "quoted_span": "View Text\nPrint Preview\nDownload PDF\nBill Information",
+      "source_doc_id": "D046",
+      "source_url": "https://malegislature.gov/Bills/194/S2983",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The recorded committee referral supports pending proposal status as of 2026-10-01, not enactment or effectiveness. No effective date is supplied; March 12, 2026 is a committee-action date.",
+      "quoted_span": "3/12/2026\nSenate\nBill reported favorably by committee and referred to the committee on\nSenate Ways and Means",
+      "source_doc_id": "D046",
+      "source_url": "https://malegislature.gov/Bills/194/S2983",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "All six allowed categories were considered. The supplied capture provides no operative provisions establishing rent increase limits, just-cause eviction requirements, security-deposit duties, application or screening fee duties, screening restrictions, or algorithmic rent-setting duties. This evidentiary limitation does not establish the absence of Massachusetts law in those categories.",
+      "quoted_span": null,
+      "source_doc_id": "D046",
+      "source_url": "https://malegislature.gov/Bills/194/S2983",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This capture establishes no active algorithmic rent-setting rule. It records S.2983 as referred to the Senate Committee on Ways and Means and omits the operative bill text; the proposal's duties cannot be inferred from its title.",
+      "quoted_span": "Status:\nReferred to\nSenate Committee on Ways and Means",
+      "source_doc_id": "D046",
+      "source_url": "https://malegislature.gov/Bills/194/S2983",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ]
+}

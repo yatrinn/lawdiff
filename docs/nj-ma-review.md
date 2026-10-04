@@ -1,3 +1,5 @@
+> Historical development review. This file concerns the earlier assisted fixtures. The current automatic selection and its limits are documented in `challenge-matrix.md`, `method-note.md`, and the pinned selection manifest. These old counts and record IDs are not current submission claims.
+
 # New Jersey and Massachusetts extraction review
 
 This artifact is source-grounded **Codex-assisted extraction**, not an externally executed model batch and not legal review. It was produced by reading the supplied source text and translating supported requirements into the executable rule format. The integration must retain that provenance. Exact quotation tests demonstrate that the passages exist; they do not certify their interpretation.

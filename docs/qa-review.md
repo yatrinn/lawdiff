@@ -1,28 +1,34 @@
-# Bounded independent review
+# LawDiff — release verification, October 4, 2026
 
-Reviewed 2026-10-03: rule engine, browser import path, exporter, published catalog and 58-rule pack, and extraction compiler. This is a targeted code and fixture review, not legal review or exhaustive security certification. No live external extraction API request was made.
+This is a bounded technical and artifact review, not independent legal validation, exhaustive security certification or an official jury score. The final snapshot contains 89 unchanged automatic records from 17 sources; 13 have executable coverage and 76 require interpretation review.
 
-## Confirmed defects and disposition
+## Verified release behavior
 
-1. **Fixed by parent: import allowed a source to be assigned to the wrong jurisdiction.** A genuine NJ FAIR Act quote could be imported with `jurisdiction: "CA"`. Quote matching alone did not catch this semantic mismatch. The engine now rejects source/jurisdiction disagreement and preserves explicitly listed organizer multi-state fixtures (O001). Regression tests cover the reproduced exploit and the valid fixture.
-2. **Fixed by parent: mixed condition nodes silently dropped conditions.** `{all: [], field: "units", op: "lt", value: 0}` evaluated unconditionally true because the evaluator chose the group. Import validation now rejects mixed groups/leaves, multiple groups, and extra leaf properties, including nested nodes. Regression tests preserve this behavior.
-3. **Fixed: UI provenance:** the source viewer labelled every capture “The original record” while omitting `source_capture` and `capture_scope`. S001–S003 contain selected official municipal passages captured through the web tool, not the entire original document. The viewer now exposes the capture scope, labels these as captured source excerpts and labels O001 as organizer test metadata. Hashes are identified as captured-text hashes. The deployed viewer was manually checked.
+- **93 JavaScript tests pass**, with no failures, skips or cancelled tests. They cover the engine, original-data exports, condition/date/jurisdiction failures, narrative-coverage gating, strict compiler events, exact quotations, selection and corpus hash integrity, and the review handoff.
+- **10 geography tests pass**. The sample contains 500 unique addresses; 475 have recorded legal-city matches and 25 remain unresolved. Match counts are not measured geographic or legal accuracy.
+- All **89 submitted records pass the supplied Draft 2020-12 rule schema**. Primary quotations occur verbatim in the identified captured source; this does not establish their interpretation.
+- The three submission JSONs are generated from the same selected pack. Browser evidence and simulations are excluded. The audit now includes the selected provenance, assembly, source reviews and no-rule findings; the earlier two-source test is explicitly historical.
+- A clean isolated checkout, without private caches, pre-existing artifacts or credentials, restored all **36 recorded public runs**, passed all 93 JavaScript tests and built the static site. Build/hosting commands restore the pinned archive before validation.
+- The actual qualitative scenario report gives **T1 PASS, T2 PARTIAL, T3 PARTIAL, T4 PASS, T5 PARTIAL**. It retains missing facts and missing conflict/status evidence rather than counting these as correct answers.
 
-## Verified behavior and limits
+## Browser checks
 
-- Missing facts remain unknown unless a decisive known condition settles the result. Excluded selected rules remain visible in the evidence panel after an input change.
-- Pending proposals do not become active solely because the query date advances. Failed proposals remain inactive. Future enacted rules retain their effective date boundary.
-- NJ FAIR/local ordinance interactions become possible conflicts only when both rule records apply. No automatic preemption conclusion is manufactured.
-- The exporter is driven by source-supported rule evaluation, and the explicitly negative Massachusetts organizer fixture remains separate from positive rent caps. Snapshot cases returned affected counts of T1 250, T2 88, T3 140, T4 110, T5 0; these are observations of this build, not claims of official judging accuracy.
-- Source text is HTML-escaped; original-source links accept only HTTP(S). No executable document instructions are intentionally passed to a browser evaluator.
-- The compiler marks source text as untrusted data, uses a forced structured extraction tool with no execution capability, requires exact source identity and quoted spans, rejects mixed condition trees, and requires null confidence rather than accepting invented numerical certainty. It writes a separate candidate artifact, never silently replaces the reviewed pack, and requires explicit model price and budget configuration for a live request.
-- Structural validation cannot establish that a legally plausible date, interpretation, or selected quote is substantively correct. Source review is still required; the import banner must not imply legal verification.
+Desktop at 1440 × 1000: T3 before/after, the correct rule preserved when opening an address, original-source modal, 140-address review brief, real CSV-download action and automatic provenance card. The selected rule is visible first in the address list. The app explicitly displays missing primary-residence and institutional-use evidence instead of claiming confirmed scope.
 
-Regression file: `tests/import.test.mjs`. No engine, exporter, application, or published data files were edited during this review.
+Mobile at 390 × 844: light/dark appearances, pending and failed change cases, selected horizontal navigation, address view, English/Spanish rights card and QR. The document width remained 390px. The selected case is kept visible after rerendering. The source and rights dialogs are scrollable at this width. Translation is not independently reviewed.
 
+## Media and documents
 
-## October 4 completion audit
+Demo and tech files are both 56 seconds, 1920 × 1080, H.264, 30 fps, 1,680 frames, without audio. All seven demo states and six technical scenes were inspected from the final encoded files. The demo explicitly identifies its real UI stills as an edited walkthrough. The technical renderer validates the actual frozen artifacts and reruns both test suites. No live model-run footage is claimed.
 
-The v5 brief requires demonstrable automatic extraction and penalty information. The follow-up added source-supported consequences to 31 existing records, with 41 further exact spans (193 total). A genuine Codex CLI pipeline run is published separately: D066 yields one checked candidate, D069 retains five review items. Neither result is relabelled as the original 58-record pack. The final pipeline preserves explicit actor restrictions and does not infer absent facts.
+The one-page method PDF was rendered and visually reviewed. The two-slide editable PowerPoint passed structural, layout, font-policy and embedded-chart checks and was reimported/rendered. Its matching PDF was generated from those final rendered slides. Native Microsoft PowerPoint execution was not tested. Counts, missing-fact states and buyer hypotheses agree with the shipped pack.
 
-The project passes 45 JavaScript tests and 10 geography tests. Separate CLI-event and UI-record checks are documented without inflating that count. Updated method-note and pitch pages and the changed encoded video frames were visually checked. The new Integrity card passes its real-record contract, escaping and versioned-download checks; its final interactive browser appearance has not yet been verified because the host display is locked. Prior main-app desktop/mobile checks remain separate from that pending check.
+## Fixed during this review
+
+Source/jurisdiction substitution and mixed condition-tree bypasses are rejected. Narrative extraction cannot be silently treated as executable logic. Original automatic records cannot be edited or selected from differing runs without invalidating pinned provenance. CSV text neutralizes spreadsheet formulas. Advancing time cannot activate a pending bill. Source capture scope and historical pipeline provenance stay explicit. The application preserves the selected change when opening its example address and preserves the active case in mobile navigation.
+
+## Remaining limits
+
+The 110-source catalog contains 73 texts. The final corpus receipt counts 21 successfully processed, 37 text-missing, 44 rejected/withheld and 8 unprocessed sources. Failed batch outputs remain withheld; intermediate candidates are not promoted. Coverage, penalties, state/local interactions and property facts are not complete. Automatic provenance is a completed mechanism, not proof of complete legal coverage. A qualified review and a measured customer pilot remain necessary.
+
+Yannik's authentic team video and photograph, and both final hackathon submissions, remain outstanding. The repository/hosting publication and anonymous links are checked separately after deployment. Do not infer an event submission from a Git commit or deployment.

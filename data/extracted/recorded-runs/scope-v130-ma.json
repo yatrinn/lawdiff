@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-29-15-488Z-b09e5b8d",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+    "started_at": "2026-10-04T03:29:15.489Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 2,
+    "model_turns_completed": 2,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "M001",
+        "source_sha256": "24f1dbb368f5ee4f9736f3ad4481bd708b6d49e1fe4ecf2306810a30b73cd021",
+        "prompt_sha256": "2dcdca73a5b63a0bedbf257af3ad619bb58b5a004e52bfa66600d37a9cf32377",
+        "response_sha256": "7f069d884602fce39a5510d13bff3b26a4faceb7b05cbbe7e86abcf208c0d9ba",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 5,
+        "no_rule_findings": 6,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:29:15.505Z",
+        "finished_at": "2026-10-04T03:32:26.561Z",
+        "duration_ms": 191056,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "ce0da5bcccb694624bb98bcdd388fed477412e44f3b5080497936273e8c12de8",
+        "usage": {
+          "input_tokens": 16565,
+          "cached_input_tokens": 4096,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4632,
+          "reasoning_output_tokens": 599
+        }
+      },
+      {
+        "source_doc_id": "M002",
+        "source_sha256": "63a6e8118682be12fa58c6cab9bbb58abb51b647b05d63e5baeaa8d21bc5c3b8",
+        "prompt_sha256": "3f7503c068862c854e894feceff71a060b242df75f49ac42e8efa1dbe5565adc",
+        "response_sha256": "a568f2781d808c586ff2ccf79cfeaf19d53c5f995755b162ef6924fdc4da2f86",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 2,
+        "no_rule_findings": 6,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:32:26.567Z",
+        "finished_at": "2026-10-04T03:34:22.556Z",
+        "duration_ms": 115989,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "2cd0e75b3d7642ff24bf8c1c8cfdfbef6a05b638ac3c826b159cb3b7288a57f7",
+        "usage": {
+          "input_tokens": 16555,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2782,
+          "reasoning_output_tokens": 270
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": true,
+    "output": "artifacts/scope-v130-ma.json",
+    "lock_scope": "artifacts/scope-v130-ma.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:34:22.561Z",
+    "duration_ms": 307072,
+    "accepted_rule_count": 3,
+    "review_issue_count": 7,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 12,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "m001-lessor-coordination-services",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "pending",
+      "title": "Proposed prohibition on lessors purchasing defined coordination services",
+      "requirement": "The bill would prohibit a real estate lessor, its agent or its subcontractor from subscribing to, contracting with or otherwise exchanging anything of value for a defined service provider’s services. For successful enforcement, the proposal would award plaintiffs court-determined action costs, reasonable attorney fees, expert fees and investigation costs, including awards to a successfully enforcing attorney general or municipality; on a plaintiff’s prompt motion, the court could award simple interest on actual damages from service of the pleading asserting the chapter claim through judgment, or a shorter period within that interval.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A residential dwelling unit is a house, apartment, accessory unit or other unit intended as a person’s primary residence, excluding inpatient medical care, licensed long-term care and detention or correctional facilities. A real estate lessor is an individual, corporation, partnership, association, joint-stock company, trust or unincorporated organization that owns real property and leases all or part of it as a residential dwelling unit. A service provider is a person performing a coordination function for any real estate lessor or rentor; person includes a natural person, corporation, partnership, limited liability company, firm or association. Coordination comprises collecting the specified historical or contemporaneous actual rent, price-change, supply, occupancy or lease-termination and renewal information, analyzing or processing that information, and recommending rental prices, lease terms, occupancy levels or another commercial term to a real estate lessor. Publication of a fair market rent calculated using publicly available data is excluded from a recommendation. Computation is included but is not required by the definition. These are qualifications of the regulated actors and services, not findings about actual activity at an address.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "H.5222, 194th General Court, proposed G.L. c. 40Z, §§ 1, 2(a), 3(b), 3(d)",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "quoted_span": "“Coordinate”, with respect to a service provider, the:\n(i) collecting of historical or contemporaneous actual rent prices, price changes, supply levels, occupancy rates or lease or rental contract termination and renewal dates of residential dwelling units;\n(ii) analyzing or processing of the information described in clause (i), including with the use of a system, software or process that uses computation; and\n(iii) recommending of rental prices, lease terms, occupancy levels, or other commercial term to a real estate lessor, provided that publication of a fair market rent calculated using publicly available data shall not constitute a recommendation.\n“Person”, any natural person, corporation, partnership, limited liability company, firm or association.\n“Predispute arbitration agreement”, an agreement to arbitrate a dispute that has not yet arisen at the time of the making of the agreement.\n“Predispute joint-action waiver”, an agreement, whether or not part of a predispute arbitration agreement, that would prohibit or waive the right of one of the parties to participate in a joint, class or collective action in a judicial, arbitral, administrative or other forum, concerning a dispute that has not yet arisen at the time of the making of the agreement.\n“Real estate lessor”, any individual, corporation, partnership, association, joint-stock company, trust or unincorporated organization that owns real property and leases such property or any portion thereof in the form of a residential dwelling unit.\n“Residential dwelling unit”, any house, apartment, accessory unit or other unit intended to be used as a person’s primary residence; provided, that “residential dwelling unit” shall not include inpatient medical care, licensed long-term care and detention or correctional facilities.\n“Service provider”, any person that performs a coordination function for any real estate lessor or rentor.\nSection 2. (a) No real estate lessor, or any agent or subcontractor thereof, shall subscribe to, contract with or otherwise exchange anything of value in return for the services of a service provider.\n(b) No service provider shall facilitate an agreement to not compete among real estate lessors with respect to residential dwelling units.\nSection 3. (a) A violation of this section shall also constitute an unfair method of competition, and a violation of the provisions of chapter 93 and chapter 93A. Nothing in this section shall impair or limit the applicability of either chapter or the antitrust laws, generally.\n(b) Pursuant to a motion by the plaintiff promptly made, the court may award simple interest on actual damages sustained by the plaintiff for the period beginning on the date of service of the pleading of the plaintiff setting forth a claim under this chapter and ending on the date of judgment, or for any shorter period therein.\n(c) At the election of the person alleging conduct constituting a violation of this section, or the named representative of a class or in a collective action alleging such conduct, no predispute arbitration agreement or predispute joint-action waiver shall be valid or enforceable with respect to a case which is filed under federal, tribal or state or local law and relates to a violation of this chapter.\n(d) In the case of any successful action to enforce liability pursuant to this chapter, the costs of the action together with reasonable attorney fees, expert fees and the costs of investigation as determined by the court shall be awarded to plaintiffs. Costs and attorney fees, expert fees and the costs of investigation shall be awarded to the attorney general or municipality where the attorney general or municipality successfully enforces this chapter.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "m001-provider-noncompetition-agreements",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "pending",
+      "title": "Proposed prohibition on providers facilitating noncompetition agreements",
+      "requirement": "The bill would prohibit a defined service provider from facilitating an agreement not to compete among real estate lessors concerning residential dwelling units. For successful enforcement, the proposal would award plaintiffs court-determined action costs, reasonable attorney fees, expert fees and investigation costs, including awards to a successfully enforcing attorney general or municipality; on a plaintiff’s prompt motion, the court could award simple interest on actual damages from service of the pleading asserting the chapter claim through judgment, or a shorter period within that interval.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "This is a provider-only prohibition. A residential dwelling unit is a house, apartment, accessory unit or other unit intended as a person’s primary residence, excluding inpatient medical care, licensed long-term care and detention or correctional facilities. A real estate lessor is an individual, corporation, partnership, association, joint-stock company, trust or unincorporated organization that owns real property and leases all or part of it as a residential dwelling unit. A service provider is a person performing a coordination function for any real estate lessor or rentor; person includes a natural person, corporation, partnership, limited liability company, firm or association. Coordination comprises collecting the specified historical or contemporaneous actual rent, price-change, supply, occupancy or lease-termination and renewal information, analyzing or processing that information, and recommending rental prices, lease terms, occupancy levels or another commercial term to a real estate lessor. Publication of a fair market rent calculated using publicly available data is excluded from a recommendation. Computation is included but is not required by the definition. These qualifications do not establish that a particular actor is a service provider or that an agreement exists.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "H.5222, 194th General Court, proposed G.L. c. 40Z, §§ 1, 2(b), 3(b), 3(d)",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "quoted_span": "“Coordinate”, with respect to a service provider, the:\n(i) collecting of historical or contemporaneous actual rent prices, price changes, supply levels, occupancy rates or lease or rental contract termination and renewal dates of residential dwelling units;\n(ii) analyzing or processing of the information described in clause (i), including with the use of a system, software or process that uses computation; and\n(iii) recommending of rental prices, lease terms, occupancy levels, or other commercial term to a real estate lessor, provided that publication of a fair market rent calculated using publicly available data shall not constitute a recommendation.\n“Person”, any natural person, corporation, partnership, limited liability company, firm or association.\n“Predispute arbitration agreement”, an agreement to arbitrate a dispute that has not yet arisen at the time of the making of the agreement.\n“Predispute joint-action waiver”, an agreement, whether or not part of a predispute arbitration agreement, that would prohibit or waive the right of one of the parties to participate in a joint, class or collective action in a judicial, arbitral, administrative or other forum, concerning a dispute that has not yet arisen at the time of the making of the agreement.\n“Real estate lessor”, any individual, corporation, partnership, association, joint-stock company, trust or unincorporated organization that owns real property and leases such property or any portion thereof in the form of a residential dwelling unit.\n“Residential dwelling unit”, any house, apartment, accessory unit or other unit intended to be used as a person’s primary residence; provided, that “residential dwelling unit” shall not include inpatient medical care, licensed long-term care and detention or correctional facilities.\n“Service provider”, any person that performs a coordination function for any real estate lessor or rentor.\nSection 2. (a) No real estate lessor, or any agent or subcontractor thereof, shall subscribe to, contract with or otherwise exchange anything of value in return for the services of a service provider.\n(b) No service provider shall facilitate an agreement to not compete among real estate lessors with respect to residential dwelling units.\nSection 3. (a) A violation of this section shall also constitute an unfair method of competition, and a violation of the provisions of chapter 93 and chapter 93A. Nothing in this section shall impair or limit the applicability of either chapter or the antitrust laws, generally.\n(b) Pursuant to a motion by the plaintiff promptly made, the court may award simple interest on actual damages sustained by the plaintiff for the period beginning on the date of service of the pleading of the plaintiff setting forth a claim under this chapter and ending on the date of judgment, or for any shorter period therein.\n(c) At the election of the person alleging conduct constituting a violation of this section, or the named representative of a class or in a collective action alleging such conduct, no predispute arbitration agreement or predispute joint-action waiver shall be valid or enforceable with respect to a case which is filed under federal, tribal or state or local law and relates to a violation of this chapter.\n(d) In the case of any successful action to enforce liability pursuant to this chapter, the costs of the action together with reasonable attorney fees, expert fees and the costs of investigation as determined by the court shall be awarded to plaintiffs. Costs and attorney fees, expert fees and the costs of investigation shall be awarded to the attorney general or municipality where the attorney general or municipality successfully enforces this chapter.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "m002-algorithmic-rent-setting",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "pending",
+      "title": "Proposed prohibition on algorithmic rent setting and occupancy determinations",
+      "requirement": "The pending bill would prohibit lessors and landlords from employing, using or relying on a defined algorithmic device or coordinator to set or change rent or determine occupancy levels for residential dwelling units, subject to the definitions and product exclusions below. A violation would violate Chapter 93A, section 2 and carry a civil penalty of no more than $5,000 per violation, with each rent determination, increase or setting under subsection (b) counted separately; successful enforcement plaintiffs, including the attorney general or a municipality when successfully enforcing the chapter, would receive action costs, reasonable attorney fees, expert fees and investigation costs as determined by the court.",
+      "key_value": "Proposed prohibition; civil penalty up to $5,000 per violation",
+      "coverage_conditions": {
+        "field": "primary_residence",
+        "op": "eq",
+        "value": true
+      },
+      "exemptions": "Address scope is a house, apartment, accessory unit or other unit intended for use as a primary residence in Massachusetts. An algorithmic device is a computational process derived from machine learning or other artificial intelligence techniques that processes or calculates nonpublic competitor data to advise a lessor or landlord about rent; it excludes trade-association reports published periodically but no more frequently than monthly that receive renter data and publish it in an aggregated and anonymous matter, and products used to establish rent or income limits under affordable-housing program guidelines of a local government, the commonwealth, the federal government or another political subdivision. These are product exclusions, not blanket exemptions for affordable-housing properties. A coordinator is any person operating an algorithmic device, software or data analytics service that performs a coordinating function for a residential rental property lessor or landlord, including a lessor or landlord performing that function for their own benefit. A coordinating function uses nonpublic competitor data and includes collecting specified rent, supply or termination and renewal data from two or more lessors or landlords; computationally analyzing or processing those data, including algorithm training; and recommending rental prices, lease renewal terms or ideal occupancy levels. Nonpublic competitor data must be information not widely available or easily accessible to the public, derived from or otherwise provided by another lessor or landlord, whether attributable to a particular competitor or anonymized. Person includes natural persons, corporations, partnerships, companies, trusts and associations of persons. The proposal does not prohibit all pricing tools, and this extraction does not establish that any actor or product meets these definitions.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Massachusetts S.2983, 194th General Court, proposed G.L. c. 186, § 15G(a)–(d)",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "quoted_span": "Section 15G. (a) As used in this section, the following words shall have the following meanings unless the context clearly requires otherwise:\n\"Algorithmic device\", any computational process derived from machine learning or other artificial intelligence techniques, that processes or calculates nonpublic competitor data for the purpose of advising a lessor or landlord concerning the amount of rent that the lessor or landlord may consider charging a tenant; provided, however that \"algorithmic device\" shall not include: (i) any report published periodically, but not more frequently than monthly, by a trade association that receives renter data and publishes it in an aggregated and anonymous matter; or (ii) a product used for the purpose of establishing rent or income limits in accordance with the affordable housing program guidelines of a local government, the commonwealth, the federal government or other political subdivision.\n“Coordinating function”, any action utilizing nonpublic competitor data that includes: (i) collecting historical or contemporaneous actual rent prices, supply levels or lease or rental contract termination and renewal dates of residential dwelling units from two or more rental property lessors or landlords; (ii) analyzing or processing of historical or contemporaneous actual rent prices, supply levels or lease or rental contract termination and renewal dates of residential dwelling units from two or more rental property lessors or landlords through use of a system, software or process that uses computation, including by using the information to train an algorithm; and (iii) recommending rental prices, lease renewal terms or ideal occupancy levels to a rental property lessor or landlord.\n\"Coordinator\", any person who operates an algorithmic device, software or data analytics service that performs a coordinating function for any residential rental property lessor or landlord, including a residential rental property lessor or landlord performing a coordinating function for their own benefit.\n\"Nonpublic competitor data\", information that is not widely available or easily accessible to the public, including information about actual rent prices, occupancy rates, lease start and end dates, and similar data, regardless of whether the data are attributable to a specific competitor or anonymized, and that is derived from or otherwise provided by any other lessor or landlord.\n“Person”, any natural person or persons, or any corporation, partnership, company, trust or association of persons.\n\"Residential Dwelling Unit\", any house, apartment, accessory unit or other unit intended to be used as a primary residence in the state.\n(b) In setting the amount of rent to be charged to a tenant for the occupancy of a residential dwelling unit, determining any change in the amount of rent to be charged to a tenant for the renewed occupancy of a residential dwelling unit, or otherwise determining what amount to charge a tenant to rent a residential dwelling unit, or determining occupancy levels of residential dwelling units, no lessor or landlord shall employ, use or rely upon an algorithmic device or coordinator.\n(c) A violation of this section shall constitute a violation of section 2 of Chapter 93A. The civil penalty for each violation of this section shall not exceed $5,000 per violation. For the purposes of this section, each time a rent is determined, increased or otherwise set under subsection (b) shall constitute a single and separate violation.\n(d) In the case of any successful action to enforce liability pursuant to this chapter, the costs of the action together with reasonable attorney fees, expert fees and the costs of investigation as determined by the court shall be awarded to plaintiffs. Costs and attorney fees, expert fees and the costs of investigation shall be awarded to the attorney general or municipality where the attorney general or municipality successfully enforces this chapter.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "As of 2026-10-01, the supplied status capture supports pending status only. Committee reporting and referral do not establish enactment, approval or effectiveness; the supplied proposed text specifies no effective date, so both effective_date values remain null.",
+      "quoted_span": "3/12/2026\nHouse\nBill reported favorably by committee and referred to the committee on\nHouse Ways and Means",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "issue": "Proposed section 3(a) refers to a violation of “this section,” although the substantive prohibitions appear in section 2. Review that cross-reference and the proposed interaction with chapters 93 and 93A and antitrust law; do not infer additional sanctions, verified precedence or conflicts.",
+      "quoted_span": "Section 3. (a) A violation of this section shall also constitute an unfair method of competition, and a violation of the provisions of chapter 93 and chapter 93A. Nothing in this section shall impair or limit the applicability of either chapter or the antitrust laws, generally.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "issue": "The proposal also provides an election against enforcing predispute arbitration agreements and joint-action waivers in related cases filed under federal, tribal, state or local law. The election belongs to the person alleging the conduct or the named class or collective representative; section 3(c)'s “this section” reference requires review before linking this remedy conclusively to section 2.",
+      "quoted_span": "(c) At the election of the person alleging conduct constituting a violation of this section, or the named representative of a class or in a collective action alleging such conduct, no predispute arbitration agreement or predispute joint-action waiver shall be valid or enforceable with respect to a case which is filed under federal, tribal or state or local law and relates to a violation of this chapter.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "issue": "The proposed arbitration remedy uses these definitions, which limit it to agreements concerning disputes that had not yet arisen when the agreements were made.",
+      "quoted_span": "“Predispute arbitration agreement”, an agreement to arbitrate a dispute that has not yet arisen at the time of the making of the agreement.\n“Predispute joint-action waiver”, an agreement, whether or not part of a predispute arbitration agreement, that would prohibit or waive the right of one of the parties to participate in a joint, class or collective action in a judicial, arbitral, administrative or other forum, concerning a dispute that has not yet arisen at the time of the making of the agreement.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "issue": "Proposed section 4 supplies a pleading standard for a civil action filed under chapter 93 while describing a violation of chapter 93A. Preserve this procedural provision for review rather than treating it as an independent housing eligibility condition or silently correcting its chapter references.",
+      "quoted_span": "Section 4. In a civil action filed pursuant to the provisions of chapter 93, a complaint:\n(i) plausibly pleads a violation of chapter 93A if the complaint contains factual allegations demonstrating that the existence of a contract, combination in the form of trust or otherwise, or conspiracy in restraint of trade or commerce is among the realm of plausible possibilities; and\n(ii) need not allege facts tending to exclude the possibility of independent action.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "issue": "As of 2026-10-01, the supplied status page supports pending status, not enactment. No effective date is supplied; effective_date remains null, and the proposed prohibition and remedies must not be treated as current law.",
+      "quoted_span": "3/12/2026\nSenate\nBill reported favorably by committee and referred to the committee on\nSenate Ways and Means",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "issue": "Subsection (d) specifies awards following successful enforcement but does not independently specify who may bring an action or the prerequisites for standing. Do not infer additional plaintiff standing, Chapter 93A remedies or enforcement procedures from this source.",
+      "quoted_span": "(d) In the case of any successful action to enforce liability pursuant to this chapter, the costs of the action together with reasonable attorney fees, expert fees and the costs of investigation as determined by the court shall be awarded to plaintiffs. Costs and attorney fees, expert fees and the costs of investigation shall be awarded to the attorney general or municipality where the attorney general or municipality successfully enforces this chapter.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "The supplied source establishes no rent-increase cap or formula. Its proposed restriction on coordination services is not a numerical limit on rent increases.",
+      "quoted_span": "Section 2. (a) No real estate lessor, or any agent or subcontractor thereof, shall subscribe to, contract with or otherwise exchange anything of value in return for the services of a service provider.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied source establishes no just-cause eviction requirement. Including termination and renewal dates in the proposed coordination definition does not create grounds or procedures for eviction.",
+      "quoted_span": "(i) collecting of historical or contemporaneous actual rent prices, price changes, supply levels, occupancy rates or lease or rental contract termination and renewal dates of residential dwelling units;",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The supplied source contains no security-deposit duty, limit or remedy; its payment-related prohibition concerns exchanging value for defined coordination services.",
+      "quoted_span": "Section 2. (a) No real estate lessor, or any agent or subcontractor thereof, shall subscribe to, contract with or otherwise exchange anything of value in return for the services of a service provider.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied source contains no rule governing application or screening fees. The proposed exchange-of-value prohibition concerns coordination-service transactions.",
+      "quoted_span": "Section 2. (a) No real estate lessor, or any agent or subcontractor thereof, shall subscribe to, contract with or otherwise exchange anything of value in return for the services of a service provider.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied source establishes no tenant-screening restriction. Its proposed prohibitions address coordination services and agreements among lessors not to compete.",
+      "quoted_span": "(b) No service provider shall facilitate an agreement to not compete among real estate lessors with respect to residential dwelling units.",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The supplied source supports proposed algorithmic-rent-setting rules only, not an active prohibition as of 2026-10-01. The captured status shows referral to the House Committee on Ways and Means.",
+      "quoted_span": "Status:\nReferred to\nHouse Committee on Ways and Means",
+      "source_doc_id": "M001",
+      "source_url": "https://malegislature.gov/Bills/194/H5222/House/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.432841+00:00"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source proposes a restriction on rent-setting methods, not a numerical rent cap or allowable-increase formula. It establishes no active rent-increase limit.",
+      "quoted_span": "(b) In setting the amount of rent to be charged to a tenant for the occupancy of a residential dwelling unit, determining any change in the amount of rent to be charged to a tenant for the renewed occupancy of a residential dwelling unit, or otherwise determining what amount to charge a tenant to rent a residential dwelling unit, or determining occupancy levels of residential dwelling units, no lessor or landlord shall employ, use or rely upon an algorithmic device or coordinator.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied text contains no just-cause eviction duty. References to lease termination data in the coordinating-function definition do not establish eviction grounds or protections.",
+      "quoted_span": "“Coordinating function”, any action utilizing nonpublic competitor data that includes: (i) collecting historical or contemporaneous actual rent prices, supply levels or lease or rental contract termination and renewal dates of residential dwelling units from two or more rental property lessors or landlords; (ii) analyzing or processing of historical or contemporaneous actual rent prices, supply levels or lease or rental contract termination and renewal dates of residential dwelling units from two or more rental property lessors or landlords through use of a system, software or process that uses computation, including by using the information to train an algorithm; and (iii) recommending rental prices, lease renewal terms or ideal occupancy levels to a rental property lessor or landlord.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The supplied proposal regulates algorithmic rent setting and occupancy determinations; it contains no security-deposit duty.",
+      "quoted_span": "(b) In setting the amount of rent to be charged to a tenant for the occupancy of a residential dwelling unit, determining any change in the amount of rent to be charged to a tenant for the renewed occupancy of a residential dwelling unit, or otherwise determining what amount to charge a tenant to rent a residential dwelling unit, or determining occupancy levels of residential dwelling units, no lessor or landlord shall employ, use or rely upon an algorithmic device or coordinator.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied proposal contains no application-fee or screening-fee duty. Its enforcement cost and fee awards are litigation remedies, not application charges.",
+      "quoted_span": "(d) In the case of any successful action to enforce liability pursuant to this chapter, the costs of the action together with reasonable attorney fees, expert fees and the costs of investigation as determined by the court shall be awarded to plaintiffs. Costs and attorney fees, expert fees and the costs of investigation shall be awarded to the attorney general or municipality where the attorney general or municipality successfully enforces this chapter.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied text contains no tenant-screening restriction. Its algorithmic prohibition concerns rent amounts and occupancy levels.",
+      "quoted_span": "(b) In setting the amount of rent to be charged to a tenant for the occupancy of a residential dwelling unit, determining any change in the amount of rent to be charged to a tenant for the renewed occupancy of a residential dwelling unit, or otherwise determining what amount to charge a tenant to rent a residential dwelling unit, or determining occupancy levels of residential dwelling units, no lessor or landlord shall employ, use or rely upon an algorithmic device or coordinator.",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The source supports a pending proposed prohibition, recorded above, but does not establish an in-force algorithmic rent-setting rule as of 2026-10-01.",
+      "quoted_span": "Status:\nReferred to\nSenate Committee on Ways and Means",
+      "source_doc_id": "M002",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/Senate/Bill/Text",
+      "retrieved_at": "2026-10-04T03:28:54.433543+00:00"
+    }
+  ]
+}

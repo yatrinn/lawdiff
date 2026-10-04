@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-18-11-087Z-cac95cf7",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:18:11.087Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D042",
+        "source_sha256": "21a8e44f111659923f120ad5543bf46611e1b2dd5af0087cc16f98de479cd262",
+        "prompt_sha256": "fb4ebc327c82f651b1086de95606500f2778bcfd19a3a91f0529feb38c8582eb",
+        "response_sha256": "30a11d994c71d9fedda5bb189409754b4d2254829fd381f923aa61d6873e78ae",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "rejected_requires_review",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:18:11.102Z",
+        "finished_at": "2026-10-04T03:20:27.200Z",
+        "duration_ms": 136098,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "8d8bc1b81a388515a860c0909845fafcdb80a82297e2f851d28ba43c5cb1a895",
+        "usage": {
+          "input_tokens": 15344,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3295,
+          "reasoning_output_tokens": 511
+        },
+        "failure_code": "extraction_validation_failed"
+      }
+    ],
+    "status": "stopped_requires_review",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D042.json",
+    "lock_scope": "artifacts/corpus-source-D042.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:20:27.204Z",
+    "duration_ms": 136117,
+    "accepted_rule_count": 0,
+    "review_issue_count": 1,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "source_doc_id": "D042",
+      "issue": "extraction_validation_failed"
+    }
+  ],
+  "no_rule_findings": []
+}

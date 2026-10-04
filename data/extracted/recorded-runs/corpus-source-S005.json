@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-06-00-008Z-56856718",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:06:00.008Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "S005",
+        "source_sha256": "7d13dd6a67d91f4efc7bad5eb5b9c39f0148d8d185e426dad78814f5b4e7fbca",
+        "prompt_sha256": "9f2b966d1361b4cca6886f3161f0f6149861ce2a80a886a7d66cceb205f6700a",
+        "response_sha256": "aba3aee05121e6bbf676ef7008114489cd91c489ae61c4bd609270597d07f66d",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 4,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:06:00.024Z",
+        "finished_at": "2026-10-04T03:06:28.834Z",
+        "duration_ms": 28809,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "26486fa8e45eb2068d424ec23fe435b78f79f98c56586002822ddb8cb82c6cd2",
+        "usage": {
+          "input_tokens": 15189,
+          "cached_input_tokens": 4096,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 604,
+          "reasoning_output_tokens": 145
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-S005.json",
+    "lock_scope": "artifacts/corpus-source-S005.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:06:28.836Z",
+    "duration_ms": 28828,
+    "accepted_rule_count": 0,
+    "review_issue_count": 4,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "issue": "The resolution reports that the ordinance remains in effect except for a severed Rental Housing Board composition sentence. It supplies no operative rent-increase limits or just-cause eviction requirements, definitions, or exemptions. Those duties cannot be extracted from this source alone; this is not a finding that no active rules exist.",
+      "quoted_span": "the Court ordered the last sentence of Section 8-3180(a)of the Santa Ana Municipal Code as stated in the Ordinance, establishing the composition of the Rental Housing Board, be severed from the Ordinance and the remainder of the Ordinance remain in effect;",
+      "source_doc_id": "S005",
+      "source_url": "https://cc-publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=550168&page=1",
+      "retrieved_at": "2026-10-04T02:08:16.767152+00:00"
+    },
+    {
+      "issue": "The referenced ordinance exhibits are absent from the supplied text. No operative security-deposit, application-screening-fee, screening-restriction, or algorithmic-rent-setting duty is established by this capture.",
+      "quoted_span": "A true and correct copy of Measure CC, Ordinance NS-3073, with deletion of the severed provision as ordered by the Court in the Amended Judgment is attached hereto as Exhibit B.",
+      "source_doc_id": "S005",
+      "source_url": "https://cc-publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=550168&page=1",
+      "retrieved_at": "2026-10-04T02:08:16.767152+00:00"
+    },
+    {
+      "issue": "Section 3 concerns unspecified City service fees. It does not establish a landlord application-screening-fee limit or identify a covered residential program.",
+      "quoted_span": "Section 3. The City Council finds that the aforementioned fees are less than or equal to, but do not exceed, the actual direct and indirect costs and expenses incurred by the City of Santa Ana in providing said services.",
+      "source_doc_id": "S005",
+      "source_url": "https://cc-publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=550168&page=1",
+      "retrieved_at": "2026-10-04T02:08:16.767152+00:00"
+    },
+    {
+      "issue": "The immediate-effect provision applies to this resolution. The attestation establishes its adoption on March 17, 2026; that date does not establish the effective date of underlying residential duties.",
+      "quoted_span": "CERTIFICATE OF ATTESTATION AND ORIGINALITY I, JENNIFER L. HALL, City Clerk, do hereby attest to and certify the attached Resolution No. 2026-006 to be the original resolution adopted by the City Council of the City of Santa Ana on March 17, 2026.",
+      "source_doc_id": "S005",
+      "source_url": "https://cc-publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=550168&page=1",
+      "retrieved_at": "2026-10-04T02:08:16.767152+00:00"
+    }
+  ],
+  "no_rule_findings": []
+}

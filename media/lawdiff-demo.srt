@@ -1,23 +1,23 @@
 1
-00:00:00,000 --> 00:00:07,000
-A recorded model run turns source text into structured candidates. Quotations are checked before review.
+00:00:00,000 --> 00:00:08,000
+A new housing law lands on your desk. Which buildings need your attention? This is LawDiff.
 
 2
-00:00:07,000 --> 00:00:17,000
-Before July 2027: the New Jersey FAIR Act is enacted, but not yet effective.
+00:00:08,000 --> 00:00:17,000
+Move New Jersey’s FAIR Act past its effective date. The workspace reveals where missing property facts need a closer look.
 
 3
-00:00:17,000 --> 00:00:26,000
-After: 140 New Jersey addresses fall within the extracted state rule. Local conflicts stay visible.
+00:00:17,000 --> 00:00:27,000
+Open one address. See the requirement, its timing, and the original passage behind the interpretation.
 
 4
-00:00:26,000 --> 00:00:36,000
-Every interpretation links back to captured source text. A quotation supports review; it does not certify correctness.
+00:00:27,000 --> 00:00:37,000
+Now turn that finding into a review brief. Listed addresses get their status, source, and next check.
 
 5
-00:00:36,000 --> 00:00:46,000
-In Los Angeles, a building year leaves an occupancy-date condition unresolved. A clearly labelled simulation resolves that branch only.
+00:00:37,000 --> 00:00:47,000
+Export the list for your compliance team: original address data, source wording, and what to review next.
 
 6
-00:00:46,000 --> 00:00:56,000
-A bilingual rights card shares the original-data result. Simulations are excluded.
+00:00:47,000 --> 00:00:56,000
+Rules extracted automatically. Selected records unchanged. One traceable pack powers the workspace and submission. Inspect the chain.

@@ -1,0 +1,1056 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-22-49-457Z-9e943351",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+    "started_at": "2026-10-04T03:22:49.458Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 4,
+    "model_turns_completed": 4,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D069",
+        "source_sha256": "1fdbfb48743a46429c3f47dbd8d08c665739202361661e1a2f19b94bb0ec43a6",
+        "prompt_sha256": "00b661432a9a7d610a36ef65f25b8dbdfdd094e1676a59b6d836ab904055cc41",
+        "response_sha256": "53ff1743bde207daf542ec45c6e50344126ddf66f10a3cad42ab917f7f35a592",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 5,
+        "review_issues": 5,
+        "no_rule_findings": 6,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:22:49.473Z",
+        "finished_at": "2026-10-04T03:31:55.233Z",
+        "duration_ms": 545745,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "2939e059dd47537a96c61c2cefb564d4879bc0c9b819c43d50406a87290237df",
+        "usage": {
+          "input_tokens": 17134,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 13469,
+          "reasoning_output_tokens": 1552
+        }
+      },
+      {
+        "source_doc_id": "S003",
+        "source_sha256": "e416109a1ea6a3d0e21d72d79574402797d9c86e82fe96962938502ebed91f60",
+        "prompt_sha256": "8238547fa51037980f184ad0cb0bec31705a16a2fcd7965fb5cd78ee7d8cfc73",
+        "response_sha256": "fdb107028705edb9348c89740540016749ce47df9f8ce098c9250930b41ab0fd",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 3,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:31:55.243Z",
+        "finished_at": "2026-10-04T03:34:30.585Z",
+        "duration_ms": 155342,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "aba96550a0d647fe7585843e61a59b4939a94ac0706c29a21396702bac19661b",
+        "usage": {
+          "input_tokens": 15439,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3772,
+          "reasoning_output_tokens": 461
+        }
+      },
+      {
+        "source_doc_id": "D024",
+        "source_sha256": "eb9c42af2b9a5c220ca37816f409f0bd3ea92a002a973283e779fdb72de18bd7",
+        "prompt_sha256": "475f8f460d9c111e8473df870b2f13d28ba98b55410da7898efe486e9a035749",
+        "response_sha256": "cfc7ef6e74875f0f2e95b42e8d6d3f0acde1bac51cc277317c0181734eabbe97",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 6,
+        "review_issues": 17,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:34:30.590Z",
+        "finished_at": "2026-10-04T03:43:00.023Z",
+        "duration_ms": 509432,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "a5c525952d4ade7cd94d00016f1c1b69537009882a3dde53f4d398918ad5ac12",
+        "usage": {
+          "input_tokens": 18569,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12606,
+          "reasoning_output_tokens": 1289
+        }
+      },
+      {
+        "source_doc_id": "D022",
+        "source_sha256": "0699980875e6bf3d797abd8b734db7d449b295173e33668cc655e3b394c084ed",
+        "prompt_sha256": "2d0f419865488cac94cd0a562c03f027c71c37dc5af1bec4b30cb58b6ba4aa09",
+        "response_sha256": "4f7b0e15a0f4fa9a379c4013a7a56b6c4d6419028a77cc103ce69eac06e1a2f6",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 5,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:43:00.033Z",
+        "finished_at": "2026-10-04T03:45:25.494Z",
+        "duration_ms": 145461,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "2cd2ab8c88ebc1246ee109eb16302e936866d17cc8f0e2c30e258c33dd6ee313",
+        "usage": {
+          "input_tokens": 16287,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3388,
+          "reasoning_output_tokens": 765
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": true,
+    "output": "artifacts/scope-v130-core.json",
+    "lock_scope": "artifacts/scope-v130-core.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:45:25.499Z",
+    "duration_ms": 1356041,
+    "accepted_rule_count": 15,
+    "review_issue_count": 30,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 21,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d069-coordinator-services",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Prohibition on obtaining defined coordinator services",
+      "requirement": "A rental property owner, or its agent, representative, or subcontractor, may not receive, subscribe to, contract for, or otherwise exchange consideration for the use of a defined coordinator’s services. This conduct is unlawful and violates the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A coordinator is a person operating algorithmic revenue management software or an algorithmic device that performs a coordinating function for a rental property owner, including an owner acting for its own benefit. An algorithmic device excludes a spreadsheet operating without artificial intelligence and requiring human analysis to process or calculate data, and a database whose only algorithmic use is querying stored unprocessed data. A coordinating function encompasses collecting two or more owners’ competitively sensitive information for algorithmic or automated analysis used to set or recommend rents, material lease terms, or occupancy levels; setting those terms through an algorithm or automated process analyzing another owner’s competitively sensitive information; or setting or recommending those terms for two or more owners through the same or substantially similar algorithm or automated process facilitating parallel pricing coordination. Information used to train an algorithm is included. Competitively sensitive information is nonpublic information, and information combined with public information remains nonpublic; nonpublic means unavailable to the public at no cost. Excluded functions are research, statistical analysis, or testing without use in setting or recommending current or future lease terms; publicly available, free rent estimates; qualifying real estate brokerage databases available equally to subscribers that neither set or recommend the specified terms nor collect competitively sensitive information for doing so; and lawful government affordability controls. Government entities lawfully imposing affordability controls are also excluded from coordinator status. Parallel pricing coordination requires a tacit or express agreement concerning pricing of reasonably interchangeable residential units, including coordinator agreements with multiple owners, and excludes pricing actions required by affordability controls. Affordability controls are rent restrictions under government programs, including the listed housing programs and rent control or rent leveling ordinances; this is a conduct qualification, not a blanket exemption for affordable properties. A controlling-interest holder and the entity owning a rental residential unit count as one rental property owner. The address must be intended as a primary residence and cannot be inpatient medical care, licensed long-term care, or a detention or correctional facility.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-07-01",
+      "citation": "P.L. 2026, c.43, §§3, 4(a), 9 (C.56:9-22; C.56:9-23(a))",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "quoted_span": "3.    As used in this act:\n“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.\n1\n“\nAlgorithmic\ndevice” means a device that uses one or more algorithms to process or otherwise\nperform calculations of data, including, but not limited to, data concerning\nrental prices, material lease terms, or occupancy levels.  An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.\n1\n“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.\n“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.\n“Coordinator” means any person who operates\n1\n[\na software or\ndata analytics service\n]\nalgorithmic revenue management software or an algorithmic device\n1\nthat\nperforms a coordinating function for any rental property owner, including a\nrental property owner performing a coordinating function for their own benefit.\n“Coordinator” shall not include a government entity that sets or limits rents\nor sale prices of residential property through affordability controls in\naccordance with law.\n“Nonpublic information” means information that is not\navailable to the public at no cost. In instances where the information is\ncombined with public information, all combined information shall be deemed\nnonpublic information.\n“Person” means, unless the context requires otherwise,\nany natural person or persons, or any corporation, partnership, company, trust,\nor association of persons.\n“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.\n1\n“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.  Any person that holds a controlling\ninterest in an entity that owns a rental residential dwelling unit shall be\ndeemed to constitute a single rental property owner with that entity.\n1\n“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState. “Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.\n“Tacit agreement” means mutual consent demonstrated\nwithout verbal or written communication.  Mutual consent may, but need not, be\ndemonstrated by a pattern of conduct.\n4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:56Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d069-coordinator-agreements",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Coordinator prohibition on facilitating anticompetitive agreements",
+      "requirement": "A defined coordinator may not facilitate a tacit or express agreement among rental property owners that restricts competition concerning residential dwelling units, including by performing a defined coordinating function. This conduct is unlawful and violates the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "This duty applies to the coordinator, including an owner acting as a coordinator for its own benefit. A coordinator operates algorithmic revenue management software or an algorithmic device performing a coordinating function; lawful government affordability-control activity is excluded. Algorithmic devices exclude non-AI spreadsheets requiring human analysis to process or calculate data, and databases using an algorithm only to query stored unprocessed data. Coordinating functions encompass collection of two or more owners’ competitively sensitive information for algorithmic or automated processing used to set or recommend rents, material lease terms, or occupancy levels; setting those terms through algorithmic or automated processing of another owner’s competitively sensitive information; and setting or recommending those terms for two or more owners through the same or substantially similar algorithm or automated process facilitating parallel pricing coordination. Algorithm training is included where specified. Competitively sensitive information is nonpublic; information unavailable publicly at no cost, including combinations with public information, remains nonpublic. Exclusions cover research, statistical analysis, or testing without use to set or recommend current or future lease terms; rent estimates made publicly available free of charge; equally available subscriber real estate brokerage databases that neither set or recommend the specified terms nor collect competitively sensitive information for doing so; and lawful government affordability controls. Parallel pricing coordination concerns tacit or express agreements to raise, change, maintain, or manipulate prices for reasonably interchangeable residential units, including coordinator agreements with multiple owners, unless required by affordability controls. Those controls are government-program rent restrictions, including rent control and rent leveling ordinances; affordable-property status alone is not an exemption. A controlling-interest holder and the unit-owning entity count as one owner. Tacit agreement means mutual consent without verbal or written communication, potentially demonstrated by a pattern of conduct. Units must be intended as primary residences and exclude inpatient medical care, licensed long-term care, and detention or correctional facilities.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-07-01",
+      "citation": "P.L. 2026, c.43, §§3, 4(b), 9 (C.56:9-22; C.56:9-23(b))",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "quoted_span": "3.    As used in this act:\n“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.\n1\n“\nAlgorithmic\ndevice” means a device that uses one or more algorithms to process or otherwise\nperform calculations of data, including, but not limited to, data concerning\nrental prices, material lease terms, or occupancy levels.  An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.\n1\n“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.\n“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.\n“Coordinator” means any person who operates\n1\n[\na software or\ndata analytics service\n]\nalgorithmic revenue management software or an algorithmic device\n1\nthat\nperforms a coordinating function for any rental property owner, including a\nrental property owner performing a coordinating function for their own benefit.\n“Coordinator” shall not include a government entity that sets or limits rents\nor sale prices of residential property through affordability controls in\naccordance with law.\n“Nonpublic information” means information that is not\navailable to the public at no cost. In instances where the information is\ncombined with public information, all combined information shall be deemed\nnonpublic information.\n“Person” means, unless the context requires otherwise,\nany natural person or persons, or any corporation, partnership, company, trust,\nor association of persons.\n“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.\n1\n“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.  Any person that holds a controlling\ninterest in an entity that owns a rental residential dwelling unit shall be\ndeemed to constitute a single rental property owner with that entity.\n1\n“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState. “Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.\n“Tacit agreement” means mutual consent demonstrated\nwithout verbal or written communication.  Mutual consent may, but need not, be\ndemonstrated by a pattern of conduct.\n4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;\nb.    a coordinator to facilitate a tacit or express\nagreement among rental property owners that restricts competition with respect\nto residential dwelling units, including by performing a coordinating\nfunction;",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:56Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d069-parallel-pricing",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Prohibition on engaging in or facilitating parallel pricing coordination",
+      "requirement": "Two or more persons may not engage in or otherwise facilitate defined parallel pricing coordination: tacit or express agreements between two or more rental property owners, including agreements between a coordinator and multiple owners, to raise, change, maintain, or manipulate leasing prices for reasonably interchangeable residential dwelling units, unless required by affordability controls. This conduct is unlawful and violates the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A rental property owner owns one or more rental residential dwelling units directly or indirectly; a controlling-interest holder and the entity owning a unit are treated as a single owner. Tacit agreement means mutual consent without verbal or written communication, which may but need not be demonstrated by a pattern of conduct. The exception concerns pricing actions required by affordability controls, meaning rent restrictions established under government programs, including rent control or rent leveling ordinances; it does not categorically exempt affordable properties. Persons include natural persons, corporations, partnerships, companies, trusts, and associations unless context requires otherwise. A coordinator operates algorithmic revenue management software or an algorithmic device performing a defined coordinating function, including an owner acting for its own benefit, subject to the statutory device and coordinating-function exclusions. This prohibition requires the defined agreement; it does not establish that any particular pricing tool or conduct meets that definition. Address scope excludes inpatient medical care, licensed long-term care, and detention or correctional facilities and requires intended primary-residence use.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-07-01",
+      "citation": "P.L. 2026, c.43, §§3, 4(c), 9 (C.56:9-22; C.56:9-23(c))",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "quoted_span": "3.    As used in this act:\n“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.\n1\n“\nAlgorithmic\ndevice” means a device that uses one or more algorithms to process or otherwise\nperform calculations of data, including, but not limited to, data concerning\nrental prices, material lease terms, or occupancy levels.  An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.\n1\n“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.\n“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.\n“Coordinator” means any person who operates\n1\n[\na software or\ndata analytics service\n]\nalgorithmic revenue management software or an algorithmic device\n1\nthat\nperforms a coordinating function for any rental property owner, including a\nrental property owner performing a coordinating function for their own benefit.\n“Coordinator” shall not include a government entity that sets or limits rents\nor sale prices of residential property through affordability controls in\naccordance with law.\n“Nonpublic information” means information that is not\navailable to the public at no cost. In instances where the information is\ncombined with public information, all combined information shall be deemed\nnonpublic information.\n“Person” means, unless the context requires otherwise,\nany natural person or persons, or any corporation, partnership, company, trust,\nor association of persons.\n“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.\n1\n“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.  Any person that holds a controlling\ninterest in an entity that owns a rental residential dwelling unit shall be\ndeemed to constitute a single rental property owner with that entity.\n1\n“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState. “Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.\n“Tacit agreement” means mutual consent demonstrated\nwithout verbal or written communication.  Mutual consent may, but need not, be\ndemonstrated by a pattern of conduct.\n4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;\nb.    a coordinator to facilitate a tacit or express\nagreement among rental property owners that restricts competition with respect\nto residential dwelling units, including by performing a coordinating\nfunction;\nc.     two or more persons to engage in\n1\nor\notherwise facilitate\n1\nparallel pricing coordination;",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:56Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d069-coordinator-agent-pricing",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Parallel pricing prohibition for coordinator agents and representatives",
+      "requirement": "Any agent or representative of a defined coordinator or its subcontractor may not engage in defined parallel pricing coordination. This conduct is unlawful and violates the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "Parallel pricing coordination is a tacit or express agreement between two or more rental property owners to raise, change, maintain, or manipulate leasing prices for reasonably interchangeable residential dwelling units, including coordinator agreements with multiple owners, unless required by affordability controls. Tacit agreement is mutual consent without verbal or written communication and may, but need not, be shown by a pattern of conduct. A controlling-interest holder and the unit-owning entity count as one rental property owner. A coordinator operates algorithmic revenue management software or an algorithmic device performing a coordinating function for an owner, including an owner acting for its own benefit; government entities lawfully imposing affordability controls are excluded. Algorithmic devices exclude non-AI spreadsheets requiring human analysis to process or calculate data and databases using an algorithm only to query stored unprocessed data. Coordinating functions encompass processing two or more owners’ competitively sensitive information for setting or recommending rents, material lease terms, or occupancy levels; setting those terms through processing another owner’s competitively sensitive information; and setting or recommending those terms for two or more owners through the same or substantially similar algorithm or automated process facilitating parallel pricing coordination. Algorithm training is included where specified. Competitively sensitive information is nonpublic, including combinations with public information; nonpublic means unavailable publicly at no cost. Excluded functions are research, statistical analysis, or testing without use to set or recommend current or future lease terms; free public rent estimates; equally available subscriber brokerage databases that neither set or recommend the specified terms nor collect competitively sensitive information for doing so; and lawful government affordability controls. Affordability controls are government-program rent restrictions, including rent control and rent leveling ordinances, not a blanket property exemption. Address scope requires intended primary-residence use and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-07-01",
+      "citation": "P.L. 2026, c.43, §§3, 4(d), 9 (C.56:9-22; C.56:9-23(d))",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "quoted_span": "3.    As used in this act:\n“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.\n1\n“\nAlgorithmic\ndevice” means a device that uses one or more algorithms to process or otherwise\nperform calculations of data, including, but not limited to, data concerning\nrental prices, material lease terms, or occupancy levels.  An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.\n1\n“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.\n“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.\n“Coordinator” means any person who operates\n1\n[\na software or\ndata analytics service\n]\nalgorithmic revenue management software or an algorithmic device\n1\nthat\nperforms a coordinating function for any rental property owner, including a\nrental property owner performing a coordinating function for their own benefit.\n“Coordinator” shall not include a government entity that sets or limits rents\nor sale prices of residential property through affordability controls in\naccordance with law.\n“Nonpublic information” means information that is not\navailable to the public at no cost. In instances where the information is\ncombined with public information, all combined information shall be deemed\nnonpublic information.\n“Person” means, unless the context requires otherwise,\nany natural person or persons, or any corporation, partnership, company, trust,\nor association of persons.\n“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.\n1\n“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.  Any person that holds a controlling\ninterest in an entity that owns a rental residential dwelling unit shall be\ndeemed to constitute a single rental property owner with that entity.\n1\n“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState. “Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.\n“Tacit agreement” means mutual consent demonstrated\nwithout verbal or written communication.  Mutual consent may, but need not, be\ndemonstrated by a pattern of conduct.\n4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;\nb.    a coordinator to facilitate a tacit or express\nagreement among rental property owners that restricts competition with respect\nto residential dwelling units, including by performing a coordinating\nfunction;\nc.     two or more persons to engage in\n1\nor\notherwise facilitate\n1\nparallel pricing coordination;\nd.    any agent or representative of a coordinator or\nsubcontractor thereof to engage in parallel pricing coordination; or",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:56Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d069-coordinating-functions",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "not_yet_effective",
+      "title": "Prohibition on performing a defined coordinating function",
+      "requirement": "Any person is prohibited from performing a coordinating function as defined by the Act, subject to its research, free public rent estimate, qualifying brokerage database, and lawful government affordability-control exclusions. Performing such a function is unlawful and violates the New Jersey Antitrust Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A coordinating function is: collecting competitively sensitive information of two or more rental property owners for algorithmic or automated analysis or processing, including training, where that process is used to set or recommend rents, material lease terms, or occupancy levels; setting those terms through an algorithm or automated process analyzing or processing another owner’s competitively sensitive information, including training; or setting or recommending those terms for two or more owners through the same or substantially similar algorithm or automated process facilitating parallel pricing coordination. Competitively sensitive information is nonpublic information, including prices, supply levels, security deposits, ideal occupancy levels, termination and renewal dates, and other material lease terms. Information unavailable to the public at no cost is nonpublic, and combinations with public information are treated as nonpublic. Exclusions apply to providing, using, or collecting that information solely for research, statistical analysis, or testing when it is not used to set or recommend rents, material lease terms, fees, occupancy rates or levels, or other current or future lease terms; developing rent estimates made publicly available at no cost; using equally available subscriber brokerage databases listing properties for rent or sale that neither set or recommend the specified terms nor collect competitively sensitive information for doing so; and lawful government affordability controls. Parallel pricing coordination requires a tacit or express agreement between two or more owners concerning pricing of reasonably interchangeable units, including coordinator agreements with multiple owners, unless required by affordability controls. A controlling-interest holder and its unit-owning entity count as one owner. Affordability controls are government-program rent restrictions, including rent control and rent leveling ordinances; affordable-property status alone does not exempt an address. The prohibition applies to any person and does not require coordinator status. Address scope requires intended primary-residence use and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2027-07-01",
+      "citation": "P.L. 2026, c.43, §§3, 4(e), 9 (C.56:9-22; C.56:9-23(e))",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "quoted_span": "3.    As used in this act:\n“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.\n1\n“\nAlgorithmic\ndevice” means a device that uses one or more algorithms to process or otherwise\nperform calculations of data, including, but not limited to, data concerning\nrental prices, material lease terms, or occupancy levels.  An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.\n1\n“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.\n“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;\n(2)   setting rental prices, material lease terms, or\noccupancy levels pursuant to an underlying algorithm or other automated process\nthat analyzes or processes competitively sensitive information of any other\nrental property owner, including by using that competitively sensitive\ninformation to train an algorithm; or\n(3)   setting for or recommending to two or more rental\nproperty owners: rental prices, material lease terms, or occupancy levels\npursuant to the same or a substantially similar underlying algorithm or other\nautomated process, that facilitates parallel pricing coordination.\n“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.\n“Coordinator” means any person who operates\n1\n[\na software or\ndata analytics service\n]\nalgorithmic revenue management software or an algorithmic device\n1\nthat\nperforms a coordinating function for any rental property owner, including a\nrental property owner performing a coordinating function for their own benefit.\n“Coordinator” shall not include a government entity that sets or limits rents\nor sale prices of residential property through affordability controls in\naccordance with law.\n“Nonpublic information” means information that is not\navailable to the public at no cost. In instances where the information is\ncombined with public information, all combined information shall be deemed\nnonpublic information.\n“Person” means, unless the context requires otherwise,\nany natural person or persons, or any corporation, partnership, company, trust,\nor association of persons.\n“Parallel pricing coordination” means a tacit or\nexpress agreement between two or more rental property owners to raise, change,\nmaintain, or manipulate pricing for the leasing of reasonably interchangeable\nresidential dwelling units, unless required to do so in accordance with\naffordability controls.  This includes agreements between a coordinator and\nmultiple property owners.\n1\n“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.  Any person that holds a controlling\ninterest in an entity that owns a rental residential dwelling unit shall be\ndeemed to constitute a single rental property owner with that entity.\n1\n“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState. “Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.\n“Tacit agreement” means mutual consent demonstrated\nwithout verbal or written communication.  Mutual consent may, but need not, be\ndemonstrated by a pattern of conduct.\n4.    It\nshall be unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.) for:\na.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;\nb.    a coordinator to facilitate a tacit or express\nagreement among rental property owners that restricts competition with respect\nto residential dwelling units, including by performing a coordinating\nfunction;\nc.     two or more persons to engage in\n1\nor\notherwise facilitate\n1\nparallel pricing coordination;\nd.    any agent or representative of a coordinator or\nsubcontractor thereof to engage in parallel pricing coordination; or\ne.     any person to perform a coordinating function.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:56Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s003-lessor-coordination-services",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Restriction on obtaining defined rent-coordination services",
+      "requirement": "A real estate lessor, or its agent or subcontractor, must not subscribe to, contract with, or otherwise exchange anything of value for the services of a source-defined Service Provider, subject to the coordination definitions and exclusions described below.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A residential dwelling unit must be intended as a person's primary residence and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities. A real estate lessor is a listed individual or entity that owns real property and leases all or part of it as a residential dwelling unit. The coordination definition describes collecting nonpublic competitor information from real estate lessors; collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates from two or more real estate lessors or public databases; computationally analyzing or processing the described information; and recommending rental prices, lease terms, or occupancy levels using that information. Nonpublic competitor information includes material lease information less than 365 days old that is not widely and readily available to the public at no cost. Coordination excludes owners' actions related exclusively to multiple properties controlled by the same rental property owner, and licensed real estate agents operating in accordance with all applicable state regulations. Service Provider means a person performing the referenced coordination function for a real estate lessor or rentor and separately excludes such compliant licensed real estate agents. The definition's cross-reference requires interpretation as identified in review; this is not a prohibition on every pricing tool.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Ord. 25-057, §218-12(1), (2)(a)",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "quoted_span": "1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor\ninformation from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply\nlevels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a\nperson’s primary residence; and does not include inpatient medical care, licensed long-term care, and detention or\ncorrectional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or\nunincorporated organization that owns real property and leases such property or any portion thereof in the form of a\nresidential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-03T20:08:28.896458Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s003-provider-noncompetition",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Service-provider restriction on facilitating noncompetition agreements",
+      "requirement": "A source-defined service provider must not facilitate an agreement not to compete among real estate lessors concerning any aspect of covered residential dwelling units, including rental pricing, fees, or other rental terms, subject to the coordination definitions and exclusions described below.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "A residential dwelling unit must be intended as a person's primary residence and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities. A real estate lessor is a listed individual or entity that owns real property and leases all or part of it as a residential dwelling unit. The coordination definition describes collecting nonpublic competitor information from real estate lessors; collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates from two or more real estate lessors or public databases; computationally analyzing or processing the described information; and recommending rental prices, lease terms, or occupancy levels using that information. Nonpublic competitor information includes material lease information less than 365 days old that is not widely and readily available to the public at no cost. Coordination excludes owners' actions related exclusively to multiple properties controlled by the same rental property owner, and licensed real estate agents operating in accordance with all applicable state regulations. Service Provider means a person performing the referenced coordination function for a real estate lessor or rentor and separately excludes such compliant licensed real estate agents. The definition's cross-reference requires interpretation as identified in review; this duty addresses defined service providers and does not establish that any particular person or product qualifies.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Ord. 25-057, §218-12(1), (2)(b)",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "quoted_span": "1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor\ninformation from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply\nlevels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a\nperson’s primary residence; and does not include inpatient medical care, licensed long-term care, and detention or\ncorrectional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or\nunincorporated organization that owns real property and leases such property or any portion thereof in the form of a\nresidential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-03T20:08:28.896458Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-rent-increase-cap",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Annual residential rent increase limit",
+      "requirement": "An owner of covered residential real property must limit increases over any 12-month period to the lower of 5 percent plus the defined cost-of-living change or 10 percent of the lowest gross rent charged during the preceding 12 months, excluding tenant-accepted discounts, incentives, concessions and credits from that baseline calculation. An owner who demands, accepts, receives or retains excessive rent is liable in a civil action to the tenant from whom it was demanded, accepted, received or retained for injunctive relief, excess-rent damages, discretionary reasonable attorney’s fees and costs, and damages up to three times the excess upon a showing of willfulness, oppression, fraud or malice, subject to the three-year deadline from accrual.",
+      "key_value": "Lower of 5% plus defined cost-of-living change or 10% over 12 months",
+      "coverage_conditions": "Applies to dwellings or units intended for human habitation, including units in mobilehome parks. Exclude: housing restricted by deed, a government-agency regulatory agreement or another recorded document as affordable housing for very-low-, low- or moderate-income persons and families under the cited definitions, or subject to an agreement providing the specified affordable-housing subsidies; dormitories owned and operated by higher-education institutions or K–12 schools; housing subject to valid public-entity rent or price control consistent with Chapter 2.7 that permits a smaller annual increase; non-mobilehome housing issued a certificate of occupancy within the preceding 15 years; and property containing exactly two separate dwellings in one structure where the owner occupied one as the owner's principal residence at the tenancy's beginning, continues to occupy it, and neither unit is an ADU or junior ADU. Also exclude separately alienable residential property, including a mobilehome, only if the owner is neither a REIT, a corporation, an LLC with any corporate member, nor mobilehome-park management as defined in Section 798.2, and tenants received the exact statutory written exemption notice. That notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; for tenancies existing before the applicable date, inclusion in the agreement is optional. Section 1947.12(j) additionally states that the section does not apply to a mobilehome homeowner as defined in Section 798.9; that definition and its application require review. A new tenancy with no prior tenant remaining in lawful possession is exempt from subdivision (a) for its initial rate, but subsequent increases are covered. Tenancy means lawful occupation, including a lease or sublease. The allowed facts cannot fully express the narrower affordable-housing and dormitory definitions, comparative local cap, duplex conditions, notice timing and placement, or mobilehome-homeowner exclusion.",
+      "execution_review_pending": true,
+      "exemptions": "All property, owner, tenancy and notice exemptions stated in coverage apply. Owner includes anyone acting as principal or through an agent with the right to offer residential property for rent, and a predecessor in interest. The cost-of-living measure uses the applicable CPI-U: Los Angeles–Long Beach–Anaheim for Los Angeles and Orange Counties; Riverside–San Bernardino–Ontario for Riverside and San Bernardino Counties; San Diego–Carlsbad for San Diego County; San Francisco–Oakland–Hayward for Alameda, Contra Costa, Marin, San Francisco and San Mateo Counties; or successor indexes. Where BLS does not publish a metropolitan CPI-U, use the California CPI-U published by the Department of Industrial Relations. Newly published metropolitan indexes are subject to subdivision (g)(1)(C)'s August 1 transition. Before August 1, compare April of the preceding year with April of the year before that; on or after August 1, compare April of the current year with April of the preceding year. Use the corresponding March comparison if April data are unavailable, and round the change to the nearest tenth of one percent. Subdivisions (h) and (i) prescribe historical baseline adjustments and expressly exclude liability for corresponding transitional overpayments; they also contain limited historical permissions for two increases. Those provisions are not additional current increase allowances. The source does not specify a fixed penalty per violation.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(a)(1), (b), (d), (g)–(k)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(a) (1)   Subject to subdivision (b), an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase. In determining the lowest gross rental amount pursuant to this section, any rent discounts, incentives, concessions, or credits offered by the owner of such unit of residential real property and accepted by the tenant shall be excluded. The gross per-month rental rate and any owner-offered discounts, incentives, concessions, or credits shall be separately listed and identified in the lease or rental agreement or any\namendments to an existing lease or rental agreement.\n(2) If the same tenant remains in occupancy of a unit of residential real property over any 12-month period, the gross rental rate for the unit of residential real property shall not be increased in more than two increments over that 12-month period, subject to the other restrictions of this subdivision governing gross rental rate increase.\n(b) For a new tenancy in which no tenant from the prior tenancy remains in lawful possession of the residential real property, the owner may establish the initial rental rate not subject to subdivision (a). Subdivision (a) is only applicable to subsequent increases after that initial rental rate has been established.\n(c) A tenant of residential real property subject to this section shall not enter into a sublease that results in a total rent for the premises that\nexceeds the allowable rental rate authorized by subdivision (a). Nothing in this subdivision authorizes a tenant to sublet or assign the tenant’s interest where otherwise prohibited.\n(d) This section shall not apply to the following residential real properties:\n(1) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes.\n(2) Dormitories owned and operated by an institution of higher education or a kindergarten\nand grades 1 to 12, inclusive, school.\n(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).\n(4) Housing that has been issued a certificate of occupancy within the previous 15 years, unless the housing is a mobilehome.\n(5) Residential real property that is alienable separate from the title to any other dwelling unit, including a mobilehome, provided that both of the following apply:\n(A) The owner is not any of the following:\n(i) A real estate investment trust, as defined in Section 856 of the Internal Revenue Code.\n(ii) A corporation.\n(iii) A limited liability company in which at least one member is a corporation.\n(iv) Management of a mobilehome park, as defined in Section 798.2.\n(B) (i) The tenants have been provided written notice that the residential real property is exempt from this section using the following statement:\n“This property is not subject to the rent limits imposed by Section 1947.12 of the Civil Code and is not subject to the just cause requirements of Section 1946.2 of the Civil Code. This property meets the requirements of Sections 1947.12 (d)(5) and 1946.2 (e)(8) of the Civil Code and the owner is not any of the following: (1) a real estate investment trust, as defined by Section 856 of the Internal Revenue Code; (2) a corporation; or (3) a limited liability company\nin which at least one member is a corporation.”\n(ii) For a tenancy existing before July 1, 2020, or July 1, 2022, if the lease is for a tenancy in a mobilehome, the notice required under clause (i) may, but is not required to, be provided in the rental agreement.\n(iii) For a tenancy commenced or renewed on or after July 1, 2020, or July 1, 2022, if the lease is for a tenancy in a mobilehome, the notice required under clause (i) must be provided in the rental agreement.\n(iv) Addition of a provision containing the notice required under clause (i) to any new or renewed rental agreement or fixed-term lease constitutes a similar provision for the purposes of subparagraph (E) of paragraph (1) of subdivision (b) of Section 1946.2.\n(6) A property containing two separate dwelling units within a single\nstructure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.\n(e) An owner shall provide notice of any increase in the rental rate, pursuant to subdivision (a), to each tenant in accordance with Section 827.\n(f) (1) On or before January 1, 2030, the Legislative Analyst’s Office shall report to the Legislature regarding the effectiveness of this section and Section 1947.13. The report shall include, but not be limited to, the impact of the rental rate cap pursuant to subdivision (a) on the housing market within the state.\n(2) The report required by paragraph (1) shall be submitted in compliance with Section 9795 of the Government Code.\n(g) For the purposes of this section, the following definitions shall apply:\n(1) “Consumer Price Index for All Urban Consumers for All Items” means the following:\n(A) The Consumer Price Index for All Urban Consumers for All Items (CPI-U) for the metropolitan area in which the property is located, as published by the United States Bureau of Labor Statistics, which are as follows:\n(i) The CPI-U for the Los Angeles-Long Beach-Anaheim metropolitan area covering the Counties of Los Angeles and Orange.\n(ii) The CPI-U for the Riverside-San Bernardino-Ontario metropolitan area covering the Counties of Riverside and San Bernardino.\n(iii) The CPI-U for the San Diego-Carlsbad metropolitan area covering the County of San Diego.\n(iv) The CPI-U for the San Francisco-Oakland-Hayward metropolitan area covering the Counties of Alameda, Contra Costa, Marin, San Francisco, and San Mateo.\n(v) Any successor metropolitan area index to any of the indexes listed in clauses (i) to (iv), inclusive.\n(B) If the United States Bureau of Labor Statistics does not publish a CPI-U for the metropolitan area in which the property is located, the California Consumer Price Index for All Urban Consumers for All Items as published by the Department of Industrial Relations.\n(C) On or after January 1, 2021, if the United States Bureau of Labor Statistics publishes a CPI-U index for one or more metropolitan areas not listed in subparagraph (A), that CPI-U index shall apply in those areas with respect to rent increases that take effect on or after August 1 of the calendar year in\nwhich the 12-month change in that CPI-U, as described in subparagraph (B) of paragraph (3), is first published.\n(2) “Owner” includes any person, acting as principal or through an agent, having the right to offer residential real property for rent, and includes a predecessor in interest to the owner.\n(3) (A) “Percentage change in the cost of living” means the percentage change, computed pursuant to subparagraph (B), in the applicable, as determined pursuant to paragraph (1), Consumer Price Index for All Urban Consumers for All Items.\n(B) (i) For rent increases that take effect before August 1 of any calendar year, the following shall apply:\n(I) The percentage change shall be the percentage change in the amount published for April of the immediately preceding\ncalendar year and April of the year before that.\n(II) If there is not an amount published in April for the applicable geographic area, the percentage change shall be the percentage change in the amount published for March of the immediately preceding calendar year and March of the year before that.\n(ii) For rent increases that take effect on or after August 1 of any calendar year, the following shall apply:\n(I) The percentage change shall be the percentage change in the amount published for April of that calendar year and April of the immediately preceding calendar year.\n(II) If there is not an amount published in April for the applicable geographic area, the percentage change shall be the percentage change in the amount published for March of that calendar year and March of the immediately preceding\ncalendar year.\n(iii) The percentage change shall be rounded to the nearest one-tenth of 1 percent.\n(4) “Residential real property” means any dwelling or unit that is intended for human habitation, including any dwelling or unit in a mobilehome park.\n(5) “Tenancy” means the lawful occupation of residential real property and includes a lease or sublease.\n(h) (1) This section shall apply to all rent increases subject to subdivision (a) occurring on or after March 15, 2019, except as provided in subdivision (i).\n(2) In the event that an owner has increased the rent by more than the amount permissible under subdivision (a) between March 15, 2019, and January 1, 2020, both of the following shall apply:\n(A) The applicable rent on January 1, 2020, shall be the rent as of March 15, 2019, plus the maximum permissible increase under subdivision (a).\n(B) An owner shall not be liable to the tenant for any corresponding rent overpayment.\n(3) An owner of residential real property subject to subdivision (a) who increased the rental rate on that residential real property on or after March 15, 2019, but prior to January 1, 2020, by an amount less than the rental rate increase permitted by subdivision (a) shall be allowed to increase the rental rate twice, as provided in paragraph (2) of subdivision (a), within 12 months of March 15, 2019, but in no event shall that rental rate increase exceed the maximum rental rate increase permitted by subdivision (a).\n(i) (1) Notwithstanding subdivision (h), this section shall apply\nonly to rent increases for a tenancy in a mobilehome subject to subdivision (a) occurring on or after February 18, 2021.\n(2) In the event that an owner has increased the rent for a tenancy in a mobilehome by more than the amount permissible under subdivision (a) between February 18, 2021, and January 1, 2022, both of the following shall apply:\n(A) The applicable rent on January 1, 2022, shall be the rent as of February 18, 2021, plus the maximum permissible increase under subdivision (a).\n(B) An owner shall not be liable to the tenant for any corresponding rent overpayment.\n(3) An owner of residential real property subject to subdivision (a) who increased the rental rate on that residential real property on or after February 18, 2021, but prior to January 1, 2022, by an amount less than the rental rate\nincrease permitted by subdivision (a) shall be allowed to increase the rental rate twice, as provided in paragraph (2) of subdivision (a), within 12 months of February 18, 2021, but in no event shall that rental rate increase exceed the maximum rental rate increase permitted by subdivision (a).\n(j) This section shall not apply to a homeowner of a mobilehome, as defined in Section 798.9.\n(k) (1) An owner who demands, accepts, receives, or retains any payment of rent in excess of the maximum rent allowed by this section shall be liable in a civil action to the tenant from whom those payments are demanded, accepted, received, or retained for all of the following:\n(A) Injunctive relief.\n(B) Damages in the amount by which any payment demanded, accepted, received, or retained exceeds the\nmaximum allowable rent.\n(C) In the court’s discretion, reasonable attorney’s fees and costs.\n(D) Upon a showing that the owner has acted willfully or with oppression, fraud, or malice, damages up to three times the amount by which any payment demanded, accepted, received, or retained exceeds the maximum allowable rent.\n(2) The Attorney General, in the name of the people of the State of California, and the city attorney or county counsel in the jurisdiction in which the rental unit is located, in the name of the city or county, may do both of the following:\n(A) Enforce the provisions of this section.\n(B) Seek injunctive relief based on violations of this section.\n(3) In an action pursuant to this\nsubdivision for injunctive relief, it shall be presumed that a tenant suffers irreparable harm through violation of this section.\n(4) An action pursuant to this subdivision shall not be brought after the date that is three years from the date on which the cause of action accrued.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-two-increase-limit",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "At most two increases during continuing occupancy",
+      "requirement": "When the same tenant remains in occupancy over any 12-month period, an owner of covered residential real property must not increase gross rent in more than two increments during that period. Both increments remain subject to the other rent increase restrictions in subdivision (a).",
+      "key_value": "At most two increments in 12 months",
+      "coverage_conditions": "Applies to dwellings or units intended for human habitation, including mobilehome-park units, where the same tenant remains in occupancy over a 12-month period. Exclude housing subject to the specified recorded or governmental affordable-housing restrictions or subsidy agreements for very-low-, low- or moderate-income persons and families; dormitories owned and operated by higher-education institutions or K–12 schools; housing under valid public-entity rent or price control consistent with Chapter 2.7 permitting a smaller annual increase; non-mobilehome housing with a certificate of occupancy issued within the previous 15 years; and properties with two separate dwellings in one structure where the owner occupied one as a principal residence at the tenancy's beginning and continues to occupy it, with neither dwelling an ADU or junior ADU. Separately alienable dwellings, including mobilehomes, are exempt only if the owner is not a REIT, corporation, LLC with any corporate member, or mobilehome-park management under Section 798.2, and tenants received the exact statutory written exemption notice. The notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; placement in the agreement is optional for tenancies existing before the applicable date. Preserve the Section 798.9 mobilehome-homeowner exclusion in subdivision (j), whose referenced definition is not supplied. A new tenancy with no prior tenant remaining in lawful possession has an initial rate outside subdivision (a); subsequent increases are covered. Tenancy is lawful occupation, including a lease or sublease. Execution review is necessary because the allowed facts do not completely express these qualified program, school, local-cap, duplex, notice and homeowner conditions.",
+      "execution_review_pending": true,
+      "exemptions": "All exclusions in coverage apply. Owner includes a person acting as principal or through an agent with the right to offer the property for rent, including a predecessor in interest. The two-increment provision does not authorize exceeding the aggregate cap. Historical two-increase permissions in subdivisions (h)(3) and (i)(3) concern their specified 2019 and 2021 transition periods and do not create additional increments in 2026.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(a)(2), (b), (d), (g), (j)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(2) If the same tenant remains in occupancy of a unit of residential real property over any 12-month period, the gross rental rate for the unit of residential real property shall not be increased in more than two increments over that 12-month period, subject to the other restrictions of this subdivision governing gross rental rate increase.\n(b) For a new tenancy in which no tenant from the prior tenancy remains in lawful possession of the residential real property, the owner may establish the initial rental rate not subject to subdivision (a). Subdivision (a) is only applicable to subsequent increases after that initial rental rate has been established.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-rent-itemization",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Separate identification of gross rent and concessions",
+      "requirement": "For rental arrangements subject to subdivision (a), the owner must separately list and identify the gross monthly rent and any owner-offered discounts, incentives, concessions or credits in the lease, rental agreement or amendments to an existing agreement.",
+      "key_value": null,
+      "coverage_conditions": "Applies to residential dwellings or units intended for human habitation, including units in mobilehome parks, subject to subdivision (a) and its initial-rate exception for a new tenancy in which no prior tenant remains in lawful possession. Exclude housing restricted by deed, government-agency regulatory agreement or another recorded document as affordable housing for the specified very-low-, low- or moderate-income persons and families, or subject to the specified affordable-housing subsidy agreement; dormitories owned and operated by higher-education institutions or K–12 schools; housing under valid public-entity rent or price control consistent with Chapter 2.7 that permits smaller annual increases; non-mobilehome housing issued a certificate of occupancy within the previous 15 years; and two separate dwellings in a single structure where the owner occupied one as a principal residence at the tenancy's beginning, remains in occupancy, and neither dwelling is an ADU or junior ADU. A separately alienable dwelling, including a mobilehome, is exempt only when the owner is neither a REIT, corporation, LLC with a corporate member, nor mobilehome-park management under Section 798.2, and tenants received the exact statutory written exemption notice. The notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; placement is optional for tenancies existing before the applicable date. Subdivision (j) excludes a mobilehome homeowner as defined in the unsupplied Section 798.9. Tenancy includes lawful occupation under a lease or sublease. The allowed facts cannot fully express these conditions, and subdivision (b)'s effect on initial-agreement itemization also requires review.",
+      "execution_review_pending": true,
+      "exemptions": "All exclusions in coverage apply. Owner includes a person acting as principal or through an agent with the right to offer residential real property for rent, including a predecessor in interest. The source makes subdivision (a) subject to subdivision (b); the itemization sentence should not be treated as an independently universal requirement for exempt initial rental rates.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(a)(1), (b), (d), (g), (j)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(a) (1)   Subject to subdivision (b), an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase. In determining the lowest gross rental amount pursuant to this section, any rent discounts, incentives, concessions, or credits offered by the owner of such unit of residential real property and accepted by the tenant shall be excluded. The gross per-month rental rate and any owner-offered discounts, incentives, concessions, or credits shall be separately listed and identified in the lease or rental agreement or any\namendments to an existing lease or rental agreement.\n(2) If the same tenant remains in occupancy of a unit of residential real property over any 12-month period, the gross rental rate for the unit of residential real property shall not be increased in more than two increments over that 12-month period, subject to the other restrictions of this subdivision governing gross rental rate increase.\n(b) For a new tenancy in which no tenant from the prior tenancy remains in lawful possession of the residential real property, the owner may establish the initial rental rate not subject to subdivision (a). Subdivision (a) is only applicable to subsequent increases after that initial rental rate has been established.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-sublease-rent-limit",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Sublease total-rent restriction",
+      "requirement": "A tenant of covered residential real property must not enter into a sublease that makes total rent for the premises exceed the allowable rental rate under subdivision (a). This restriction does not authorize subletting or assignment where otherwise prohibited.",
+      "key_value": "Total rent cannot exceed the subdivision (a) allowable rate",
+      "coverage_conditions": "Applies to a tenant's lawful occupation of a dwelling or unit intended for human habitation, including a mobilehome-park unit; tenancy includes a lease or sublease. Exclude housing restricted by deed, government-agency regulatory agreement or another recorded document as affordable housing for the specified very-low-, low- or moderate-income persons and families, or subject to the specified affordable-housing subsidy agreement; dormitories owned and operated by higher-education institutions or K–12 schools; housing under valid public-entity rent or price control consistent with Chapter 2.7 permitting a smaller annual increase; non-mobilehome housing with a certificate of occupancy issued within the preceding 15 years; and two separate dwellings in one structure where the owner occupied one as a principal residence at the tenancy's beginning and continues to occupy it, and neither is an ADU or junior ADU. Separately alienable property, including a mobilehome, is exempt only if its owner is neither a REIT, corporation, LLC with a corporate member, nor mobilehome-park management under Section 798.2, and tenants received the exact statutory written exemption notice. Notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; inclusion is optional for tenancies existing before the applicable date. Preserve subdivision (j)'s exclusion of a mobilehome homeowner as defined in the unsupplied Section 798.9. The allowed facts cannot fully express these qualified program, school, local-cap, duplex, notice and homeowner conditions.",
+      "execution_review_pending": true,
+      "exemptions": "All exclusions in coverage apply. The allowable rate is determined under subdivision (a), including its defined CPI measure and subdivision (b)'s initial-rate treatment when no prior tenant remains in lawful possession; this does not establish permission to sublet. Subdivision (k)(1)'s private monetary remedies expressly address an owner; they should not automatically be attributed to every tenant who sublets without assessing the statutory owner definition.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(c), (d), (g), (j)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(c) A tenant of residential real property subject to this section shall not enter into a sublease that results in a total rent for the premises that\nexceeds the allowable rental rate authorized by subdivision (a). Nothing in this subdivision authorizes a tenant to sublet or assign the tenant’s interest where otherwise prohibited.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-increase-notice",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Notice to each tenant of a covered rent increase",
+      "requirement": "An owner must notify each tenant of any rental-rate increase pursuant to subdivision (a), in accordance with Section 827.",
+      "key_value": null,
+      "coverage_conditions": "Applies to dwellings or units intended for human habitation, including mobilehome-park units, for increases subject to subdivision (a). A new tenancy with no prior tenant remaining in lawful possession has an initial rate outside subdivision (a), but subsequent increases are covered. Exclude housing under the specified recorded or governmental affordable-housing restrictions or subsidy agreements for very-low-, low- or moderate-income persons and families; dormitories owned and operated by higher-education institutions or K–12 schools; housing under valid public-entity rent or price control consistent with Chapter 2.7 permitting a smaller annual increase; non-mobilehome housing issued a certificate of occupancy within the preceding 15 years; and two separate dwellings in one structure where the owner occupied one as a principal residence at the tenancy's beginning and continues to occupy it, with neither unit an ADU or junior ADU. Separately alienable dwellings, including mobilehomes, are exempt only if the owner is neither a REIT, corporation, LLC with a corporate member, nor mobilehome-park management under Section 798.2, and tenants received the exact statutory written exemption notice. Notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; agreement placement is optional for tenancies existing before the applicable date. Subdivision (j) excludes a mobilehome homeowner as defined in the unsupplied Section 798.9. Tenancy means lawful occupation, including a lease or sublease. Execution review is required because the vocabulary cannot fully represent these qualified program, school, comparative local-cap, duplex, notice and homeowner conditions.",
+      "execution_review_pending": true,
+      "exemptions": "All exclusions in coverage apply. Owner includes a person acting as principal or through an agent with the right to offer residential real property for rent, including a predecessor in interest. Section 827 is referenced but not supplied; no notice duration, service method or separate sanction from that section is inferred.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(e)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(e) An owner shall provide notice of any increase in the rental rate, pursuant to subdivision (a), to each tenant in accordance with Section 827.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d024-rights-nonwaivable",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Rights under the section cannot be waived",
+      "requirement": "Parties cannot give legal effect to a waiver of rights under Section 1947.12; any such waiver is void as contrary to public policy.",
+      "key_value": "Waiver void",
+      "coverage_conditions": "Applies to rights under Section 1947.12 concerning dwellings or units intended for human habitation, including units in mobilehome parks. Exclude housing under the specified recorded or governmental affordable-housing restrictions or subsidy agreements for very-low-, low- or moderate-income persons and families; dormitories owned and operated by higher-education institutions or K–12 schools; housing under valid public-entity rent or price control consistent with Chapter 2.7 permitting a smaller annual increase; non-mobilehome housing issued a certificate of occupancy within the previous 15 years; and two separate dwellings in one structure where the owner occupied one as a principal residence at the tenancy's beginning and continues in occupancy, and neither dwelling is an ADU or junior ADU. Separately alienable property, including mobilehomes, is exempt only if the owner is neither a REIT, corporation, LLC with a corporate member, nor mobilehome-park management under Section 798.2, and tenants received the exact statutory written exemption notice. The notice must be in the rental agreement for tenancies commenced or renewed on or after July 1, 2020, or July 1, 2022 for mobilehomes; agreement placement is optional for tenancies existing before the applicable date. Preserve subdivision (j)'s mobilehome-homeowner exclusion under the unsupplied Section 798.9. Tenancy means lawful occupation, including a lease or sublease. This rule protects only rights the section supplies, including subdivision (b)'s initial-rate limitation and the continuing-occupancy condition for subdivision (a)(2); it creates no cap on an otherwise exempt initial rate. The allowed facts cannot completely represent the qualified program, school, local-cap, duplex, notice and homeowner conditions.",
+      "execution_review_pending": true,
+      "exemptions": "All exclusions in coverage apply. The provision voids waivers of rights under this section; it does not independently extend the section to exempt property or create a separate fixed monetary penalty.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-01-01",
+      "citation": "Cal. Civ. Code § 1947.12(l)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "quoted_span": "(l) Any waiver of the rights under this section shall be void as contrary to public policy.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d022-algorithm-restraint-of-trade",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Common pricing algorithms used in unlawful restraints of trade",
+      "requirement": "A person other than an end consumer may not use or distribute a common pricing algorithm as part of a contract, trust combination, or conspiracy to restrain trade or commerce in violation of the Cartwright Act.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": []
+      },
+      "exemptions": "The prohibition concerns the defined conduct and algorithm; it is not a general ban on pricing tools. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making available by any means, including subscriptions or service sales. Person incorporates Section 16702 and excludes the end consumer of a product or service. Commercial terms include level of service, availability, and output, including quantities produced or distributed or the amount or level of service provided. Price includes money or other tangible or intangible value expected, required, or given for any product or service, including employee or independent-contractor compensation. The supplied section establishes no property, owner, tenancy, or housing-program eligibility restriction.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cal. Bus. & Prof. Code § 16729(a), (d)",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.\n(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.\n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d022-algorithm-price-coercion",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Coercion to adopt algorithm-recommended prices or commercial terms",
+      "requirement": "A person other than an end consumer may not use or distribute a common pricing algorithm if that person coerces another person to set or adopt a price or commercial term recommended by the algorithm for the same or similar products or services within California.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": []
+      },
+      "exemptions": "The prohibition requires the specified coercion and a defined common pricing algorithm; it is not a general ban on pricing tools. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making available by any means, including subscriptions or service sales. Person incorporates Section 16702 and excludes the end consumer of a product or service. Commercial terms include level of service, availability, and output, including quantities produced or distributed or the amount or level of service provided. Price includes money or other tangible or intangible value expected, required, or given for any product or service, including employee or independent-contractor compensation. The supplied section establishes no property, owner, tenancy, or housing-program eligibility restriction.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cal. Bus. & Prof. Code § 16729(b), (d)",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.\n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The source identifies an enacted chapter approved July 20, 2026. Approval is distinct from effectiveness; applying section 9 gives July 1, 2027, so the extracted prohibitions are not yet effective on October 1, 2026.",
+      "quoted_span": "P.L.\n2026, CHAPTER 43,\napproved July 20, 2026",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Effective-date evidence for all extracted rules: the first day of the twelfth month following the stated July 20, 2026 enactment is July 1, 2027.",
+      "quoted_span": "9.    This act shall take effect on the first day of\nthe twelfth month next following the date of enactment.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 5 preserves application of the referenced Antitrust Act provisions, but their text is not supplied. Specific penalties, remedies, plaintiff standing, monetary limits, and per-violation counting cannot be extracted from this source; the requirements therefore state only the express classification as an Antitrust Act violation.",
+      "quoted_span": "5.    The provisions of this act shall not be construed\nin any manner that limits the application of sections 6 through 17 of P.L.1970,\nc.73 (C.56:9-6 through 9-17) to a violation of section 4 of this act.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "The Act preserves existing illegality and limits conflicting municipal ordinances while preserving ordinances explicitly authorized or required by other law. Any application to another rule or ordinance requires separate review; no override or verified conflict is established here.",
+      "quoted_span": "6.    a.  This act shall not authorize or permit any\nconduct already unlawful pursuant to the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.), or any other law, and shall be construed as in\naddition to that act.\nb.    A municipality shall be prohibited from enacting\nan ordinance that conflicts with this act.  This subsection shall not be\nconstrued to prohibit the enactment of ordinances explicitly authorized or\nrequired by any other law.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "Section 7 separately directs the Attorney General to provide a website location for complaints, including suspected violations; an existing Antitrust Act complaint location can satisfy the duty. This administrative obligation is not a personal duty of an owner or resident, and this source does not establish whether the location exists.",
+      "quoted_span": "7.    The Attorney General shall establish, on the\nofficial website of the Department of Law and Public Safety, a location to\nreceive complaints alleging any violation or suspected violation of this act,\nwhich requirement may be satisfied by establishing or maintaining such a\nlocation for complaints alleging violations or suspected violations of the “New\nJersey Antitrust Act” P.L.1970, c.73 (C.56:9-1 et seq.).",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "issue": "The source records final adoption on May 21, 2025 and mayoral approval on May 22, 2025, supporting treatment as an enacted ordinance in force by the October 1, 2026 assessment date. It supplies no effective-date provision; effective_date remains null, and the precise commencement date requires review. Neither adoption nor approval has been substituted for an effective date.",
+      "quoted_span": "Adopted on second and final reading after hearing on May 21 2025\nDate to Mayor: May 22 2025\nApproved: May 22 2025\n",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "The Service Provider definition refers specifically to Section 1(a)(i)(1), which describes computational analysis or processing, while the broader coordination definition also describes collection and recommendations. Review whether the cross-reference incorporates the full coordination sequence or only that subparagraph; the extraction preserves these qualifications without determining whether any actor or product qualifies.",
+      "quoted_span": "v.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "The captured text states no penalties, remedies, plaintiff standing, or per-violation counting provisions. No enforcement consequence is inferred.",
+      "quoted_span": null,
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "All records use the expressly stated January 1, 2024 effective date. The section separately became operative April 1, 2024 and is scheduled for repeal January 1, 2030; it is in force on October 1, 2026. Historical rent-increase applicability dates in subdivisions (h) and (i) are not the effective date of this version.",
+      "quoted_span": "(n) This section shall become operative on April 1, 2024.\n(o) This section shall remain in effect until January 1, 2030, and as of that date is repealed.\n(Repealed (in Sec. 3) and added by Stats. 2023, Ch. 290, Sec. 4.   (SB 567)   Effective January 1, 2024.   Operative April 1, 2024, by its own provisions.   Repealed as of January 1, 2030, by its own provisions.)",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review is required for all records because the allowed vocabulary cannot fully encode the owner-occupied duplex exemption: exactly two separate dwellings must be in one structure, principal-residence occupancy must exist at the tenancy's beginning and continue, and neither dwelling may be an ADU or junior ADU. Units=2 and owner_occupied=true alone are insufficient.",
+      "quoted_span": "(6) A property containing two separate dwelling units within a single\nstructure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The affordable-housing and dormitory exemptions are narrower than unqualified affordable_housing or dormitory facts. Their instrument, income-definition, subsidy-agreement and institutional ownership-and-operation requirements remain in coverage prose; the research sample supplies none of these facts.",
+      "quoted_span": "(d) This section shall not apply to the following residential real properties:\n(1) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes.\n(2) Dormitories owned and operated by an institution of higher education or a kindergarten\nand grades 1 to 12, inclusive, school.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The local-control exclusion requires a valid public-entity control consistent with Chapter 2.7 and a smaller permitted annual increase. A bare local_rent_control_applies fact does not establish it. Applicable local rules and any precedence or interaction require separate review; no override relationship is established.",
+      "quoted_span": "(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The rolling new-construction exemption uses certificate issuance within the preceding 15 years, not year built. It expressly does not exempt a mobilehome on that basis.",
+      "quoted_span": "(4) Housing that has been issued a certificate of occupancy within the previous 15 years, unless the housing is a mobilehome.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The separately alienable exemption is conditional, not automatic. Its exact written notice, tenancy commencement or renewal dates, mobilehome-specific date and rental-agreement placement must be verified together with ownership qualifications. The vocabulary cannot fully express these timing and placement conditions. The Section 1946.2 cross-reference does not establish a verified just-cause rule or relationship here.",
+      "quoted_span": "(5) Residential real property that is alienable separate from the title to any other dwelling unit, including a mobilehome, provided that both of the following apply:\n(A) The owner is not any of the following:\n(i) A real estate investment trust, as defined in Section 856 of the Internal Revenue Code.\n(ii) A corporation.\n(iii) A limited liability company in which at least one member is a corporation.\n(iv) Management of a mobilehome park, as defined in Section 798.2.\n(B) (i) The tenants have been provided written notice that the residential real property is exempt from this section using the following statement:\n“This property is not subject to the rent limits imposed by Section 1947.12 of the Civil Code and is not subject to the just cause requirements of Section 1946.2 of the Civil Code. This property meets the requirements of Sections 1947.12 (d)(5) and 1946.2 (e)(8) of the Civil Code and the owner is not any of the following: (1) a real estate investment trust, as defined by Section 856 of the Internal Revenue Code; (2) a corporation; or (3) a limited liability company\nin which at least one member is a corporation.”\n(ii) For a tenancy existing before July 1, 2020, or July 1, 2022, if the lease is for a tenancy in a mobilehome, the notice required under clause (i) may, but is not required to, be provided in the rental agreement.\n(iii) For a tenancy commenced or renewed on or after July 1, 2020, or July 1, 2022, if the lease is for a tenancy in a mobilehome, the notice required under clause (i) must be provided in the rental agreement.\n(iv) Addition of a provision containing the notice required under clause (i) to any new or renewed rental agreement or fixed-term lease constitutes a similar provision for the purposes of subparagraph (E) of paragraph (1) of subdivision (b) of Section 1946.2.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Section 798.9 is not supplied, and no allowed fact fully identifies the mobilehome-homeowner exclusion or its application to the relevant person and tenancy. Preserve this exclusion for execution review rather than excluding every mobilehome or assuming the exemption is absent.",
+      "quoted_span": "(j) This section shall not apply to a homeowner of a mobilehome, as defined in Section 798.9.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Additional enforcement provisions apply across the section: the Attorney General may enforce in the people's name, and the city attorney or county counsel for the unit's jurisdiction may enforce in the city or county's name; they may seek injunctions. Subdivision (k) injunction actions carry a presumption of tenant irreparable harm, and actions under that subdivision have a three-year accrual deadline. These separately located provisions are retained here without inventing private monetary remedies for every procedural breach.",
+      "quoted_span": "(2) The Attorney General, in the name of the people of the State of California, and the city attorney or county counsel in the jurisdiction in which the rental unit is located, in the name of the city or county, may do both of the following:\n(A) Enforce the provisions of this section.\n(B) Seek injunctive relief based on violations of this section.\n(3) In an action pursuant to this\nsubdivision for injunctive relief, it shall be presumed that a tenant suffers irreparable harm through violation of this section.\n(4) An action pursuant to this subdivision shall not be brought after the date that is three years from the date on which the cause of action accrued.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Section 827's operative notice details are absent. The extracted notice duty preserves the cross-reference without inventing a notice period or service procedure.",
+      "quoted_span": "(e) An owner shall provide notice of any increase in the rental rate, pursuant to subdivision (a), to each tenant in accordance with Section 827.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Subdivision (b) exempts the initial rate for a new tenancy with no prior tenant remaining in lawful possession and makes subdivision (a) applicable to subsequent increases. Because the itemization sentence is within subdivision (a), its application to initial agreements should be reviewed rather than silently made universal.",
+      "quoted_span": "(b) For a new tenancy in which no tenant from the prior tenancy remains in lawful possession of the residential real property, the owner may establish the initial rental rate not subject to subdivision (a). Subdivision (a) is only applicable to subsequent increases after that initial rental rate has been established.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Historical rent histories may require the transition rules, including their express overpayment-liability exclusions, when establishing a lawful baseline. These provisions do not create an additional 2026 increase allowance or establish how later enforcement remedies apply retroactively.",
+      "quoted_span": "(h) (1) This section shall apply to all rent increases subject to subdivision (a) occurring on or after March 15, 2019, except as provided in subdivision (i).\n(2) In the event that an owner has increased the rent by more than the amount permissible under subdivision (a) between March 15, 2019, and January 1, 2020, both of the following shall apply:\n(A) The applicable rent on January 1, 2020, shall be the rent as of March 15, 2019, plus the maximum permissible increase under subdivision (a).\n(B) An owner shall not be liable to the tenant for any corresponding rent overpayment.\n(3) An owner of residential real property subject to subdivision (a) who increased the rental rate on that residential real property on or after March 15, 2019, but prior to January 1, 2020, by an amount less than the rental rate increase permitted by subdivision (a) shall be allowed to increase the rental rate twice, as provided in paragraph (2) of subdivision (a), within 12 months of March 15, 2019, but in no event shall that rental rate increase exceed the maximum rental rate increase permitted by subdivision (a).\n(i) (1) Notwithstanding subdivision (h), this section shall apply\nonly to rent increases for a tenancy in a mobilehome subject to subdivision (a) occurring on or after February 18, 2021.\n(2) In the event that an owner has increased the rent for a tenancy in a mobilehome by more than the amount permissible under subdivision (a) between February 18, 2021, and January 1, 2022, both of the following shall apply:\n(A) The applicable rent on January 1, 2022, shall be the rent as of February 18, 2021, plus the maximum permissible increase under subdivision (a).\n(B) An owner shall not be liable to the tenant for any corresponding rent overpayment.\n(3) An owner of residential real property subject to subdivision (a) who increased the rental rate on that residential real property on or after February 18, 2021, but prior to January 1, 2022, by an amount less than the rental rate\nincrease permitted by subdivision (a) shall be allowed to increase the rental rate twice, as provided in paragraph (2) of subdivision (a), within 12 months of February 18, 2021, but in no event shall that rental rate increase exceed the maximum rental rate increase permitted by subdivision (a).",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-rent-increase-cap: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-two-increase-limit: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-rent-itemization: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-sublease-rent-limit: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-increase-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d024-rights-nonwaivable: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The source supplies chaptered enactment text and October 6, 2025 approval and filing dates, supporting treatment as enacted rather than pending as of October 1, 2026. It does not state an effective date; both effective_date values remain null, and the precise commencement date requires review. Approval and filing dates are not used as effective dates.",
+      "quoted_span": "[\nApproved  by\nGovernor\nOctober 06, 2025.\nFiled with\nSecretary of State\nOctober 06, 2025.\n]",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The definition of person incorporates Section 16702, whose text is not supplied. Review that incorporated actor definition before determining whether a particular actor is regulated. The express end-consumer exclusion is preserved; neither rule establishes that a particular landlord, resident, provider, or product satisfies the conduct definitions.",
+      "quoted_span": "(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Separately located sanction evidence: the digest states that Cartwright Act violations are punishable as crimes and that this enactment expands prohibited activities. The supplied text gives no specific punishment, per-violation counting rule, plaintiff standing, or damages remedy. This general criminal-enforcement statement is preserved here because it is outside the operative passages quoted for the two prohibitions.",
+      "quoted_span": "Because the bill would expand the scope of activities prohibited by the Cartwright Act, the violation of which is punishable as a crime, the bill would impose a state-mandated local program.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Section 16756.1 supplies a complaint-pleading standard for any violation of the chapter: factual allegations making the specified agreement or conspiracy plausible suffice, without allegations tending to exclude independent action. This procedural provision is preserved for enforcement review rather than classified as a separate residential housing duty.",
+      "quoted_span": "16756.1.\nNotwithstanding any other law, in a complaint for any violation of this chapter, it is sufficient to contain factual allegations demonstrating that the existence of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce is plausible, and the complaint shall not be required to allege facts tending to exclude the possibility of independent action.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The section preserves other antitrust laws. Their application and any interactions require separate review; no precedence, override, or conflict relationship is established here.",
+      "quoted_span": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes no numerical rent-increase ceiling or generally applicable rent-increase formula. Its references to affordability controls define qualifications to the coordination prohibitions and do not enact the referenced programs’ limits.",
+      "quoted_span": "“Affordability controls” means a restriction on rent\nprice established pursuant to a government program, including but not limited\nto: the federal section 8 Housing Choice Voucher Homeownership Program,\nauthorized pursuant to Subpart M of Part 982 of Title 24 of the Code of Federal\nRegulations (24 CFR 982.601 et seq.); P.L.2004, c.140 (C.52:27D-287.1 et seq.);\nthe “Fair Housing Act,” P.L.1985, c.222 (C.52:27D-301 et al.); any program\nadministered by the New Jersey Housing and Mortgage Finance Agency; a rent\ncontrol or rent leveling ordinance; or other local, State, or federal\ngovernment housing program.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source creates no just-cause eviction requirement. Termination and renewal information appears as competitively sensitive information within the coordination restrictions.",
+      "quoted_span": "“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This source creates no security-deposit amount, custody, interest, or return duty. It includes security deposits among the information relevant to the coordination restrictions.",
+      "quoted_span": "“Competitively\nsensitive information” means nonpublic information including, but not limited\nto, prices, supply levels, security deposits, ideal occupancy levels, lease\ncontract termination, renewal dates of residential dwelling units, or any other\nmaterial lease terms.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This source establishes no application or screening fee limit, disclosure, or refund requirement. Its fee reference qualifies the research exclusion from a coordinating function.",
+      "quoted_span": "providing, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This source establishes no applicant-screening or tenant-selection restriction. Its algorithmic restrictions concern defined coordination of rental prices, material lease terms, and occupancy levels.",
+      "quoted_span": "“Coordinating function” means:\n(1)   collecting the competitively sensitive\ninformation of two or more rental property owners for the purpose of analyzing\nor processing information through the use of an algorithm or other automated\nprocess, including by using the information to train an algorithm, where the\nalgorithm or other automated process is used to set or recommend rental prices,\nmaterial lease terms, or occupancy levels;",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The supplied Act's algorithmic coordination prohibitions are enacted but not yet effective as of October 1, 2026; they take effect July 1, 2027. This finding does not determine the reach of existing antitrust law.",
+      "quoted_span": "9.    This act shall take effect on the first day of\nthe twelfth month next following the date of enactment.",
+      "source_doc_id": "D069",
+      "source_url": "https://pub.njleg.state.nj.us/Bills/2026/AL26/43_.HTM",
+      "retrieved_at": "2026-10-01T22:56Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "The supplied text restricts defined coordination services and facilitation of noncompetition agreements; it establishes no rent-increase cap or formula.",
+      "quoted_span": "b.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied text establishes no permitted eviction grounds or just-cause eviction requirement; its operative restrictions address coordination services and noncompetition agreements.",
+      "quoted_span": "2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "Security deposits appear as information within the nonpublic competitor information definition. The supplied text establishes no deposit amount, handling, or return requirement.",
+      "quoted_span": "vi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The reference to fees concerns service-provider facilitation of noncompetition agreements. The supplied text establishes no application or screening fee limit or separate fee-charging requirement.",
+      "quoted_span": "b.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied text establishes no applicant-screening restriction; its operative restrictions address coordination services and noncompetition agreements.",
+      "quoted_span": "2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source references Section 1946.2 in an exemption notice and a cross-reference but does not supply its operative just-cause duties. No independent just-cause eviction rule is established by this source.",
+      "quoted_span": "This property is not subject to the rent limits imposed by Section 1947.12 of the Civil Code and is not subject to the just cause requirements of Section 1946.2 of the Civil Code.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The supplied section regulates residential rental rates and related rights; it supplies no operative security-deposit duty. This finding is limited to this source.",
+      "quoted_span": "(m) (1) The Legislature finds and declares that the unique circumstances of the current housing crisis require a statewide response to address rent gouging by establishing statewide limitations on gross rental rate increases.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "No application-screening-fee limit or duty is supplied in this rent-increase section. No conclusion about other law is drawn.",
+      "quoted_span": "(m) (1) The Legislature finds and declares that the unique circumstances of the current housing crisis require a statewide response to address rent gouging by establishing statewide limitations on gross rental rate increases.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied source contains no operative tenant-screening restriction. Its property and tenancy exemptions qualify rent regulation rather than establish screening duties.",
+      "quoted_span": "(m) (1) The Legislature finds and declares that the unique circumstances of the current housing crisis require a statewide response to address rent gouging by establishing statewide limitations on gross rental rate increases.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The source establishes rental-rate limits without regulating a defined algorithmic pricing product or service. No algorithmic-rent-setting prohibition is supported by this source.",
+      "quoted_span": "(m) (1) The Legislature finds and declares that the unique circumstances of the current housing crisis require a statewide response to address rent gouging by establishing statewide limitations on gross rental rate increases.",
+      "source_doc_id": "D024",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes no numerical or formula-based residential rent-increase limit. Its qualified common-pricing-algorithm prohibitions do not establish a rent cap.",
+      "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "No just-cause eviction duty is established by this source, which adds common-pricing-algorithm prohibitions and a Cartwright Act complaint-pleading standard.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No residential security-deposit limit, handling duty, or return requirement is established by this source.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "No residential application or screening-fee duty is established by this source.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "No tenant-screening restriction is established by this source; its algorithm provisions concern pricing and commercial terms.",
+      "quoted_span": "(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-43-47-130Z-f2cb99eb",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:43:47.130Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D029",
+        "source_sha256": "ce40e4d452c15e43e1bb07e7f03f7bd2bd738b2da614d1d21b7826f7e581e01c",
+        "prompt_sha256": "23cbd2c86000b173b9d1de0d45c72e716a79abafbabd5c1e47896c19b42b2f51",
+        "response_sha256": "0b820b735376f7b3a02d47bba41b0401e3be12387e464a8c6991b8e8f0c118db",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 3,
+        "review_issues": 6,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:43:47.146Z",
+        "finished_at": "2026-10-04T03:46:00.781Z",
+        "duration_ms": 133635,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "83ce545278b9857af7edb6ef4e35e2ed92531fc5fedbc2ee9d99bdb8efe7566e",
+        "usage": {
+          "input_tokens": 16502,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3223,
+          "reasoning_output_tokens": 636
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D029.json",
+    "lock_scope": "artifacts/corpus-source-D029.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:46:00.787Z",
+    "duration_ms": 133657,
+    "accepted_rule_count": 3,
+    "review_issue_count": 6,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d029-housing-nondiscrimination",
+      "jurisdiction": "Cambridge, MA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Nondiscrimination in access to rental housing",
+      "requirement": "Covered housing providers must not discriminate on protected grounds when allowing applicants to view or rent an apartment, subject to the exemption for owner-occupied two-family dwellings.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords, sellers and rental agents involved in residential apartment viewing or rental transactions in Cambridge, except two-family dwellings where the owner lives. Protected grounds identified by the source are disability, race, color, national origin or ancestry, family status, source of income including Section 8 and public benefits, marital status including married and non-married individuals, sex including allegations of sexual harassment, gender identity or expression, sexual orientation, age, religious creed, military status, relationship status and family structure. The source defines disability consistently with the ADA as a physical or mental impairment substantially limiting one or more major life activities. The supplied vocabulary cannot fully represent the covered actors and transactions.",
+      "execution_review_pending": true,
+      "exemptions": "Two-family dwellings where the owner lives.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cambridge Fair Housing Ordinance, chapter 14.04",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "quoted_span": "The Fair Housing Ordinance prohibits discrimination in real estate transactions such as:\nviewing or renting an apartment\nterms and conditions of tenancy\nrefusing to reasonably accommodate a person with a  disability if the accommodation would not cause an undue hardship to the landlord\nviewing or purchasing a home\napplying for or obtaining a mortgage\npurchasing homeowners' or renters' insurance\nprinting, publicizing or advertising housing in a discriminatory manner\nUnder the law, landlords, sellers and rental agents may use any reasonable standard to determine which applicants are selected, as long as that standard is applied equally and uniformly to all applicants. Tenant selection may be based on:\nan applicant's ability to pay the rent\nan applicant's ability to take care of the apartment and to respect the rights of others\nNOTE: there is an exemption for 2-family dwellings, when the owner lives there",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:36Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d029-uniform-selection-standards",
+      "jurisdiction": "Cambridge, MA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Reasonable and uniformly applied tenant-selection standards",
+      "requirement": "Landlords, sellers and rental agents must use reasonable applicant-selection standards and apply them equally and uniformly to all applicants, except at owner-occupied two-family dwellings. Permitted tenant-selection considerations include ability to pay rent, care for the apartment and respect others' rights.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords, sellers and rental agents selecting applicants for residential rental housing in Cambridge. Two-family dwellings where the owner lives are exempt. The supplied fact vocabulary cannot establish whether the person conducting selection is a landlord, seller or rental agent; the fee-charger role fields do not establish those roles for tenant selection.",
+      "execution_review_pending": true,
+      "exemptions": "Two-family dwellings where the owner lives.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cambridge Fair Housing Ordinance, chapter 14.04",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "quoted_span": "Under the law, landlords, sellers and rental agents may use any reasonable standard to determine which applicants are selected, as long as that standard is applied equally and uniformly to all applicants. Tenant selection may be based on:\nan applicant's ability to pay the rent\nan applicant's ability to take care of the apartment and to respect the rights of others\nNOTE: there is an exemption for 2-family dwellings, when the owner lives there",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:36Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d029-disability-accommodation",
+      "jurisdiction": "Cambridge, MA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Reasonable disability accommodation in rental access",
+      "requirement": "In covered residential rental transactions, landlords must not refuse a reasonable accommodation for a person with a disability when it would not cause the landlord undue hardship. Owner-occupied two-family dwellings are exempt.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords in Cambridge residential rental transactions involving a person with a disability, including access to viewing or renting an apartment. Disability means a physical or mental impairment substantially limiting one or more major life activities, defined consistently with the ADA. The accommodation must be reasonable and must not cause undue hardship to the landlord; two-family dwellings where the owner lives are exempt. The supplied vocabulary cannot fully express landlord status, disability, accommodation reasonableness or undue hardship.",
+      "execution_review_pending": true,
+      "exemptions": "Two-family dwellings where the owner lives; the stated accommodation obligation is conditional on the accommodation not causing undue hardship to the landlord.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cambridge Fair Housing Ordinance, chapter 14.04",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "quoted_span": "The Fair Housing Ordinance prohibits discrimination in real estate transactions such as:\nviewing or renting an apartment\nterms and conditions of tenancy\nrefusing to reasonably accommodate a person with a  disability if the accommodation would not cause an undue hardship to the landlord\nviewing or purchasing a home\napplying for or obtaining a mortgage\npurchasing homeowners' or renters' insurance\nprinting, publicizing or advertising housing in a discriminatory manner\nUnder the law, landlords, sellers and rental agents may use any reasonable standard to determine which applicants are selected, as long as that standard is applied equally and uniformly to all applicants. Tenant selection may be based on:\nan applicant's ability to pay the rent\nan applicant's ability to take care of the apartment and to respect the rights of others\nNOTE: there is an exemption for 2-family dwellings, when the owner lives there",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:36Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The page describes current enforcement and operative prohibitions, supporting in_force status as of 2026-10-01, but supplies no effective date for the extracted duties. All effective_date values remain null; the Commission's establishment in 1984 is not an effective date for these provisions.",
+      "quoted_span": "The Cambridge Human Rights Commission (CHRC) was established in 1984 to protect the civil rights of residents and visitors to the city. The Commission enforces two ordinances: the\nCambridge Human Rights Ordinance, chapter 2.76\nand the\nCambridge Fair Housing Ordinance, chapter 14.04",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Remedies are stated in a separate passage and are therefore recorded here rather than added to requirements whose quotations do not contain them. Following probable cause, unsuccessful conciliation and a hearing, the Commission may file a criminal complaint in District Court, levy civil fines up to $300 for each violation, file a Superior Court civil complaint seeking injunctive relief, and seek damages, expenses and other relief. For a Fair Housing Ordinance complaint with probable cause, either party may elect removal to Superior Court for trial or to the Attorney General's Office for review and resolution.",
+      "quoted_span": "If, during the Commission’s investigation, the evidence is sufficient to show that discrimination may have occurred (Probable Cause), the Commission will attempt conciliation between the parties. If the Commission’s conciliation efforts prove unsuccessful, it will schedule a public hearing at the Commission. The Commission has the authority to provide various remedies after hearing, including filing a criminal complaint in District Court, levying civil fines of up to $300 for each violation, filing a civil complaint in Superior Court seeking injunctive relief, and seeking an award of damages, expenses and other relief. If Probable Cause is found in a complaint filed under the Cambridge Fair Housing Ordinance, either party may opt to remove the case for trial in the Massachusetts Superior Court or to the Attorney General’s Office for review and resolution.",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The protected-category definitions below inform the nondiscrimination and accommodation coverage. These conditions, covered actor roles and transaction scope require execution review because the supplied fact vocabulary cannot fully represent them.",
+      "quoted_span": "Discrimination occurs when a policy or practice segregates, creates unequal status, separates or has a disproportionate impact on a person based on their membership in one or more legally protected categories. The protected categories under the Cambridge Human Rights Ordinance and the Cambridge Fair Housing Ordinance are the following:\nDisability – Defined consistent with the Americans with Disabilities Act (ADA) – a physical or mental impairment which substantially limits one or more major life activities\nRace\nColor\nNational Origin or Ancestry\nFamily Status\nSource of Income, includes Section 8 and public benefits\nMarital Status, includes married and non-married individuals\nSex: Male or female, includes allegations of sexual harassment\nGender identity or expression\nSexual Orientation: Heterosexual, homosexual, or bisexual\nAge\nReligious Creed\nMilitary Status\nRelationship Status\nFamily Structure",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d029-housing-nondiscrimination: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d029-uniform-selection-standards: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d029-disability-accommodation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source supplies no operative rent-increase limit or cap formula. Its prohibition of discriminatory tenancy terms does not establish a general rent cap; this finding is limited to the supplied source.",
+      "quoted_span": "The Fair Housing Ordinance prohibits discrimination in real estate transactions such as:\nviewing or renting an apartment\nterms and conditions of tenancy",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source does not establish a just-cause eviction regime. References to a notification ordinance and eviction-prevention services supply no operative eviction grounds or duties.",
+      "quoted_span": "Tenants' Rights and Resources Notification Ordinance\nFair Housing Brochure\nHomeless and Eviction Prevention Services",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No operative security-deposit amount, handling, interest or return rule is supplied. The reference to a landlord-and-tenant guide does not provide its contents.",
+      "quoted_span": "Attorney General's Guide to Landlord and Tenants Rights",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The source regulates selection standards but supplies no operative restriction on application or screening fees.",
+      "quoted_span": "Under the law, landlords, sellers and rental agents may use any reasonable standard to determine which applicants are selected, as long as that standard is applied equally and uniformly to all applicants.",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The source supplies no operative rule about algorithmic rent setting. Its housing-discrimination provisions do not establish a distinct algorithmic-pricing restriction.",
+      "quoted_span": "The Fair Housing Ordinance prohibits discrimination in real estate transactions such as:\nviewing or renting an apartment\nterms and conditions of tenancy",
+      "source_doc_id": "D029",
+      "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ]
+}

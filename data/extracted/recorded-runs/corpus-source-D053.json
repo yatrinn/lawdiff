@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-12-56-281Z-00e7e16f",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:12:56.281Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D053",
+        "source_sha256": "5c418b18df23a00a8b6b056e68352f67b378b94321ee42867df8ce02ce36830a",
+        "prompt_sha256": "9790e1f17a8c6ad03e5fe4f8554223ccec311b7884fedc3431b1f8c08e27b4ab",
+        "response_sha256": "8826ac8fe128aee86796380636e2bdd7f58c039fd14f9e28d7be733e9241f929",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 6,
+        "no_rule_findings": 4,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:12:56.297Z",
+        "finished_at": "2026-10-04T03:14:28.286Z",
+        "duration_ms": 91989,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "f9afd56dee86b6c6da2a831e7803235e0a496480bdf884a2f26c5de40cf5ce84",
+        "usage": {
+          "input_tokens": 15013,
+          "cached_input_tokens": 4096,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4466,
+          "reasoning_output_tokens": 1034
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D053.json",
+    "lock_scope": "artifacts/corpus-source-D053.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:14:28.290Z",
+    "duration_ms": 92009,
+    "accepted_rule_count": 2,
+    "review_issue_count": 6,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 4,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d053-retaliatory-rent-increases",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Protection against retaliatory rent increases",
+      "requirement": "Any person or agent who threatens or takes a retaliatory rent increase against a residential tenant for protected activity is liable for the greater of actual damages or an award of one to three months' rent, plus suit costs and a reasonable attorney's fee. A qualifying rent-increase notice within six months creates a rebuttable presumption of retaliation, rebuttable only by clear and convincing evidence of no reprisal, sufficient independent justification, and the same action at the same time regardless of protected activity or belief in it; any lease or rental-agreement waiver is void and unenforceable.",
+      "key_value": "Retaliatory increases prohibited; six-month rebuttable presumption",
+      "coverage_conditions": "Applies to any person or agent thereof threatening or taking reprisals against a tenant of residential premises because the tenant: commenced, proceeded with, or obtained relief in a judicial or administrative action seeking damages under or enforcement of federal, state, or local law, regulation, by-law, or ordinance regulating residential premises; exercised rights under chapter 164, section 124D; reported a violation or suspected violation of a health or building code or other law, regulation, or municipal by-law or ordinance regulating residential premises to the board of health, Boston commissioner of housing inspection, or another board regulating residential premises; reported or complained of such a violation or suspected violation in writing to the landlord or landlord's agent; organized or joined a tenants' union or similar organization; or made or expressed an intention to make a rent payment to an organization of unit owners under chapter 183A, section 6(c). For the rent-increase presumption, the tenant must receive notice of an increase within six months after the tenant commenced, proceeded with, or obtained relief in such an action, exercised such rights, made such a report or complaint, or organized or joined such a tenants' union, or within six months after another person took such action or actions on the tenant's behalf or in, or relating to, the building where the tenant resides. The six-month period governs the presumption and does not establish a time limit on the underlying reprisal liability. The presumption requires clear and convincing rebuttal evidence of no reprisal, sufficient independent justification, and that the action would have occurred in the same manner and at the same time regardless of tenants' protected activity or the belief that tenants engaged in it. Waivers in any lease or other rental agreement are void and unenforceable.",
+      "exemptions": null,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Mass. Gen. Laws ch. 186, § 18",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "quoted_span": "Section 18. Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises for the tenant's act of, commencing, proceeding with, or obtaining relief in any judicial or administrative action the purpose of which action is to obtain damages under, or otherwise enforce, any federal, state or local law, regulation, by-law or ordinance, which has as its objective the regulation of residential premises; or exercising the tenant's rights pursuant to section one hundred and twenty-four D of chapter one hundred and sixty-four; or reporting to the board of health or, in the city of Boston to the commissioner of housing inspection or to any other board having as its objective the regulation of residential premises a violation or a suspected violation of any health or building code or of any other municipal by-law or ordinance, or state or federal law or regulation which has as its objective the regulation of residential premises; or reporting or complaining of such violation or suspected violation in writing to the landlord or to the agent of the landlord; or for organizing or joining a tenants' union or similar organization, or for making or expressing an intention to make, a payment of rent to an organization of unit owners pursuant to paragraph (c) of section six of chapter one hundred and eighty-three A shall be liable for damages which shall not be less than one month's rent or more than three month's rent, or the actual damages sustained by the tenant, whichever is greater, and the costs of the suit, including a reasonable attorney's fee.\nThe receipt of any notice of termination of tenancy, except for nonpayment of rent, or, of increase in rent, or, of any substantial alteration in the terms of tenancy within six months after the tenant has commenced, proceeded with, or obtained relief in such action, exercised such rights, made such report or complaint, or organized or joined such tenants' union or within six months after any other person has taken such action or actions on behalf of the tenant or in, or relating to, the building in which the tenant resides, shall create a rebuttable presumption that such notice or other action is a reprisal against the tenant for engaging in such activities. Such presumption shall be rebutted only by clear and convincing evidence that such person's action was not a reprisal against the tenant and that such person had sufficient independent justification for taking such action, and would have in fact taken such action, in the same manner and at the same time the action was taken, regardless of tenants engaging in, or the belief that tenants had engaged in, activities protected under this section.\nAny waiver of this provision in any lease or other rental agreement shall be void and unenforceable.",
+      "confidence": null,
+      "conflict_flag": false,
+      "execution_review_pending": true,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d053-retaliatory-termination",
+      "jurisdiction": "MA",
+      "level": "state",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Protection against retaliatory tenancy termination",
+      "requirement": "Any person or agent who threatens or takes retaliatory tenancy termination against a residential tenant for protected activity is liable for the greater of actual damages or an award of one to three months' rent, plus suit costs and a reasonable attorney's fee. A qualifying termination notice within six months, except for nonpayment of rent, creates a rebuttable presumption of retaliation, rebuttable only by clear and convincing evidence of no reprisal, sufficient independent justification, and the same action at the same time regardless of protected activity or belief in it; any lease or rental-agreement waiver is void and unenforceable.",
+      "key_value": "Retaliatory termination prohibited; six-month rebuttable presumption",
+      "coverage_conditions": "Applies to any person or agent thereof threatening or taking reprisals against a tenant of residential premises because the tenant: commenced, proceeded with, or obtained relief in a judicial or administrative action seeking damages under or enforcement of federal, state, or local law, regulation, by-law, or ordinance regulating residential premises; exercised rights under chapter 164, section 124D; reported a violation or suspected violation of a health or building code or other law, regulation, or municipal by-law or ordinance regulating residential premises to the board of health, Boston commissioner of housing inspection, or another board regulating residential premises; reported or complained of such a violation or suspected violation in writing to the landlord or landlord's agent; organized or joined a tenants' union or similar organization; or made or expressed an intention to make a rent payment to an organization of unit owners under chapter 183A, section 6(c). For the termination presumption, the tenant must receive a notice of termination, except for nonpayment of rent, within six months after the tenant commenced, proceeded with, or obtained relief in such an action, exercised such rights, made such a report or complaint, or organized or joined such a tenants' union, or within six months after another person took such action or actions on the tenant's behalf or in, or relating to, the building where the tenant resides. The nonpayment exception applies to the termination-notice presumption, not to the underlying reprisal liability. The six-month period governs the presumption and does not establish a time limit on that liability. The presumption requires clear and convincing rebuttal evidence of no reprisal, sufficient independent justification, and that the action would have occurred in the same manner and at the same time regardless of tenants' protected activity or the belief that tenants engaged in it. Waivers in any lease or other rental agreement are void and unenforceable.",
+      "exemptions": "Termination notices for nonpayment of rent are excluded from the rebuttable presumption; the text does not make nonpayment a general exemption from reprisal liability.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Mass. Gen. Laws ch. 186, § 18",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "quoted_span": "Section 18. Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises for the tenant's act of, commencing, proceeding with, or obtaining relief in any judicial or administrative action the purpose of which action is to obtain damages under, or otherwise enforce, any federal, state or local law, regulation, by-law or ordinance, which has as its objective the regulation of residential premises; or exercising the tenant's rights pursuant to section one hundred and twenty-four D of chapter one hundred and sixty-four; or reporting to the board of health or, in the city of Boston to the commissioner of housing inspection or to any other board having as its objective the regulation of residential premises a violation or a suspected violation of any health or building code or of any other municipal by-law or ordinance, or state or federal law or regulation which has as its objective the regulation of residential premises; or reporting or complaining of such violation or suspected violation in writing to the landlord or to the agent of the landlord; or for organizing or joining a tenants' union or similar organization, or for making or expressing an intention to make, a payment of rent to an organization of unit owners pursuant to paragraph (c) of section six of chapter one hundred and eighty-three A shall be liable for damages which shall not be less than one month's rent or more than three month's rent, or the actual damages sustained by the tenant, whichever is greater, and the costs of the suit, including a reasonable attorney's fee.\nThe receipt of any notice of termination of tenancy, except for nonpayment of rent, or, of increase in rent, or, of any substantial alteration in the terms of tenancy within six months after the tenant has commenced, proceeded with, or obtained relief in such action, exercised such rights, made such report or complaint, or organized or joined such tenants' union or within six months after any other person has taken such action or actions on behalf of the tenant or in, or relating to, the building in which the tenant resides, shall create a rebuttable presumption that such notice or other action is a reprisal against the tenant for engaging in such activities. Such presumption shall be rebutted only by clear and convincing evidence that such person's action was not a reprisal against the tenant and that such person had sufficient independent justification for taking such action, and would have in fact taken such action, in the same manner and at the same time the action was taken, regardless of tenants engaging in, or the belief that tenants had engaged in, activities protected under this section.\nAny waiver of this provision in any lease or other rental agreement shall be void and unenforceable.",
+      "confidence": null,
+      "conflict_flag": false,
+      "execution_review_pending": true,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The supplied text presents an operative General Laws section, supporting in_force status as of 2026-10-01, but supplies no effective date. Both effective_date values remain null.",
+      "quoted_span": "General Law - Part II, Title I, Chapter 186, Section 18",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Both rules require execution review because the fact vocabulary cannot represent protected activities, retaliatory motive, notice receipt and timing, another person's qualifying activity, or the evidentiary rebuttal. Complete qualified coverage is retained as prose.",
+      "quoted_span": "Such presumption shall be rebutted only by clear and convincing evidence that such person's action was not a reprisal against the tenant and that such person had sufficient independent justification for taking such action, and would have in fact taken such action, in the same manner and at the same time the action was taken, regardless of tenants engaging in, or the belief that tenants had engaged in, activities protected under this section.",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The rent and termination records describe applications of the same statutory reprisal liability, not independently verified or cumulative damage awards. This source establishes neither a numerical rent-increase cap nor a universal just-cause eviction regime.",
+      "quoted_span": "The receipt of any notice of termination of tenancy, except for nonpayment of rent, or, of increase in rent, or, of any substantial alteration in the terms of tenancy within six months after the tenant has commenced, proceeded with, or obtained relief in such action, exercised such rights, made such report or complaint, or organized or joined such tenants' union or within six months after any other person has taken such action or actions on behalf of the tenant or in, or relating to, the building in which the tenant resides, shall create a rebuttable presumption that such notice or other action is a reprisal against the tenant for engaging in such activities.",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The underlying reprisal protection expressly includes making or intending rent payments to an organization of unit owners. The presumption sentence does not expressly repeat that activity; its inclusion in the presumption requires review rather than an expanded executable trigger. The substantive content of the cross-referenced sections is not supplied.",
+      "quoted_span": "or for making or expressing an intention to make, a payment of rent to an organization of unit owners pursuant to paragraph (c) of section six of chapter one hundred and eighty-three A",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d053-retaliatory-rent-increases: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d053-retaliatory-termination: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "security_deposits",
+      "finding": "This source supplies no distinct security-deposit amount, collection, holding, or return rule; its operative subject is reprisals against residential tenants.",
+      "quoted_span": "Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This source supplies no application or screening fee duty or limit; its operative subject is reprisals against residential tenants.",
+      "quoted_span": "Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This source supplies no distinct applicant-screening restriction; it protects residential tenants against reprisals for specified activities.",
+      "quoted_span": "Any person or agent thereof who threatens to or takes reprisals against any tenant of residential premises",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This source supplies no restriction on algorithmic rent setting. Its rent-increase provision concerns a rebuttable presumption of reprisal after protected activity.",
+      "quoted_span": "The receipt of any notice of termination of tenancy, except for nonpayment of rent, or, of increase in rent, or, of any substantial alteration in the terms of tenancy within six months after the tenant has commenced, proceeded with, or obtained relief in such action, exercised such rights, made such report or complaint, or organized or joined such tenants' union or within six months after any other person has taken such action or actions on behalf of the tenant or in, or relating to, the building in which the tenant resides, shall create a rebuttable presumption that such notice or other action is a reprisal against the tenant for engaging in such activities.",
+      "source_doc_id": "D053",
+      "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ]
+}

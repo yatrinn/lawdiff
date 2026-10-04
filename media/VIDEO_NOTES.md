@@ -1,38 +1,18 @@
 # Demo video production notes
 
-`lawdiff-demo.mp4` is a **56-second captioned walkthrough combining a recorded-extraction data diagram with six actual interface screenshots in six chapters**. It is an edited sequence of still captures, not a continuous screen recording. The first diagram is generated directly from a completed model-run audit and its checked candidate output, clearly labelled as a recorded result. The remaining scenes use actual product captures. Caption rails and chapter markers do not imply continuous real-time interaction. There is no audio. Captions are burned into the video; `lawdiff-demo.srt` contains the same authored narration text as an optional accessibility sidecar.
+`lawdiff-demo.mp4`: **56 seconds, 1920 × 1080, 30 fps, H.264, no audio**. Seven actual interface still captures, six chapters. Explicitly labelled “Actual interface captures · edited walkthrough.” No reconstructed interface, pointer animation, artificial clicks or simulated success messages.
 
-## Capture order and timing
-
-| File | Time | Actual interface state |
+| Zeit | Bild | Englischer Text |
 |---|---|---|
-| `extraction-receipt.png` | 00:00–00:07 | Data diagram from an actual Codex CLI extraction: source, model, candidate and exact-span validation |
-| `captures/demo-02.png` | 00:07–00:17 | New Jersey FAIR Act enacted but not yet effective |
-| `captures/demo-03.png` | 00:17–00:26 | After the effective date: 140 supplied New Jersey addresses in the extracted state rule; local conflict review remains visible |
-| `captures/demo-04.png` | 00:26–00:36 | Captured source evidence in the real viewer |
-| `captures/demo-05-before.png` | 00:36–00:40 | Los Angeles occupancy-date branch unresolved before the simulation |
-| `captures/demo-05.png` | 00:40–00:46 | A visibly labelled hypothetical simulation resolves that branch; other missing exemption facts remain unresolved |
-| `captures/demo-06.png` | 00:46–00:56 | Bilingual rights card based on original address data, excluding simulation overrides |
+| 00–08 s | T3 vor Datum; Originalsample. | A new housing law lands on your desk. Which buildings need your attention? This is LawDiff. |
+| 08–17 s | T3 nach Datum: 140 Adressen benötigen Scope-Fakten. | Move New Jersey’s FAIR Act past its effective date. The workspace reveals where missing property facts need a closer look. |
+| 17–27 s | A0002 mit zugehöriger NJ-Regel (4 s), anschließend D069-Originaltext (6 s). | Open one address. See the requirement, its timing, and the original passage behind the interpretation. |
+| 27–37 s | Review Brief mit offenen Fakten und nächstem Prüfschritt. | Now turn that finding into a review brief. Listed addresses get their status, source, and next check. |
+| 37–47 s | Echte Oberfläche nach CSV-Download; keine künstliche Tabellenansicht. | Export the list for your compliance team: original address data, source wording, and what to review next. |
+| 47–56 s | Integrity: automatische Extraktion, unveränderte Auswahl, gemeinsame Engine. | Rules extracted automatically. Selected records unchanged. One traceable pack powers the workspace and submission. Inspect the chain. |
 
-The 140-address count is a scope result for the supplied dataset and extracted rule, not a count of demonstrated violations. A quote match does not establish a correct legal interpretation. The Los Angeles simulated date is hypothetical, not newly verified property evidence. The real captures must visibly substantiate the corresponding caption before this video is used for submission.
+The final scene shows the automatic extraction-to-selection-to-evaluation chain for the same shipped pack. The after-date NJ view shows **missing scope evidence**, not 140 established legal violations or covered addresses. The exact-source view preserves the captured statutory context. The review brief and CSV exclude hypothetical browser evidence.
 
-## Reproduce
+102 English words are burned into the caption rail and repeated in the SRT. Optional narration is not included. CSV contents are not shown as a fabricated spreadsheet; scene five preserves the actual review dialog after its download action.
 
-Requires Python 3, Pillow for the extraction diagram, FFmpeg with `drawtext` and H.264 encoding, FFprobe, and an installed Arial font (or explicit font paths). Pillow is used only to lay out the recorded data diagram; it does not create or reconstruct product screenshots.
-
-```sh
-python3 scripts/render_extraction_receipt.py
-python3 scripts/render_demo.py --check
-python3 scripts/render_demo.py --preview 5
-python3 scripts/render_demo.py
-```
-
-The video renderer requires the verified extraction diagram and six actual UI captures. Original capture files remain unchanged. Their supplied filenames end in `.png`; FFprobe identified the capture payloads as JPEG, which FFmpeg reads by content. It preserves the entire aspect ratio of each input in a 1440×1000 image pane, with no cropping. The left 460px rail contains authored captions. Scene cuts are intentional and do not represent uninterrupted interaction. The original capture files are never modified.
-
-Output: 1920×1080, 30 fps, H.264 high profile, YUV 4:2:0, 56 seconds, no audio. The script verifies these properties with FFprobe and writes the resulting `lawdiff-demo.probe.json`. The composer uses six scene durations of 7, 10, 9, 10, 10 and 10 seconds.
-
-## Render verification
-
-The updated renderer checks the recorded model output before creating its diagram. After composition, FFprobe verifies the full MP4 duration, dimensions, codec and frame rate. The new encoded extraction frame was visually inspected on October 4; both Los Angeles capture states had already been inspected and their source images remain unchanged. The updated MP4 passes duration, dimensions and codec checks. This is an edited, captioned sequence, not an uninterrupted screen recording.
-
-This demo file does not replace the separate technical explanation video or the participant's authentic team video and photo. Nothing in this media directory constitutes an event submission.
+Reproduce with `python3 scripts/render_demo.py`; requires FFmpeg/FFprobe and Arial or an explicit font. Source images are the `captures/review-demo-*` files. The renderer verifies 1440 × 1000 input dimensions, hashes, duration, frame count and absence of audio. A changed capture requires rerendering. Source hashes and media properties are in `lawdiff-demo.probe.json`. Every scene must also be visually checked in the final encoded file.

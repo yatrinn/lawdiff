@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "selections": [
+    {
+      "artifact": "artifacts/corpus-source-N004.json",
+      "source_doc_id": "N004",
+      "rule_ids": [
+        "n004-vacancy-increase-cap",
+        "n004-post-vacancy-base-rent",
+        "n004-decontrol-vacancy-conditions",
+        "n004-decontrol-certificate",
+        "n004-decontrol-frequency"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "2f3b8a04c7ecde53755e6108ea96d6948a13955ca6bda575cf13dc62d11c3121"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D066.json",
+      "source_doc_id": "D066",
+      "rule_ids": [
+        "d066-application-fee-cap",
+        "d066-annual-fee-adjustment",
+        "d066-fee-violation-reporting"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "a585515744470e85a52385be76ab389813103e2bb9b7bd18e91a62ff75909393"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D012.json",
+      "source_doc_id": "D012",
+      "rule_ids": [
+        "d012-discriminatory-rental-screening"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "1f3ac9a924f5dc5b62a111f90bf0411a2a13b9fd086da913d28dca072c52151b"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D053.json",
+      "source_doc_id": "D053",
+      "rule_ids": [
+        "d053-retaliatory-rent-increases",
+        "d053-retaliatory-termination"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "2f400a8fed988528d2514e3aef96e02cdc145bbe76c84f10d04bc36c9748e6a3"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D014.json",
+      "source_doc_id": "D014",
+      "rule_ids": [
+        "d014-tenant-rights-notice",
+        "d014-city-notice-filing",
+        "d014-nonwaivable-rights"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "a19e5b439cdc3506e56defd04c8203bc9571cce66aa2aff4ff536cc27b7cff94"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D003.json",
+      "source_doc_id": "D003",
+      "rule_ids": [
+        "d003-criminal-history-screening",
+        "d003-exclusionary-statements",
+        "d003-refusal-to-rent",
+        "d003-criminal-history-termination",
+        "d003-criminal-history-deposit",
+        "d003-criminal-history-rental-amount",
+        "d003-immediate-family-addition",
+        "d003-rental-assistance-disqualification",
+        "d003-differential-treatment",
+        "d003-written-notice-response",
+        "d003-formal-notice-distribution"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "338158b210cd6050cfdfe65bd79b2395c54f08b8f6831be5981cac8f25180adf"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D010.json",
+      "source_doc_id": "D010",
+      "rule_ids": [
+        "d010-individual-criminal-history-review",
+        "d010-excluded-criminal-records",
+        "d010-no-credit-score-decisions",
+        "d010-credit-history-limited-use",
+        "d010-rent-payment-demonstration",
+        "d010-no-credit-history-rejection",
+        "d010-prior-rent-burden",
+        "d010-sensitive-information-care-return"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "979263fcabf4034c45328504f66c814ab7115ebb2014704e4e6bafd92470afb4"
+    },
+    {
+      "artifact": "artifacts/scope-v130-ma.json",
+      "source_doc_id": "M001",
+      "rule_ids": [
+        "m001-lessor-coordination-services",
+        "m001-provider-noncompetition-agreements"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation. Proposed operative language is retained as pending, not current law.",
+      "artifact_sha256": "b60eee4da799a545e6c9508e4efe89c1d77b466b23507f2b564ee10ac8e30eb8"
+    },
+    {
+      "artifact": "artifacts/scope-v130-ma.json",
+      "source_doc_id": "M002",
+      "rule_ids": [
+        "m002-algorithmic-rent-setting"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation. Proposed operative language is retained as pending, not current law.",
+      "artifact_sha256": "b60eee4da799a545e6c9508e4efe89c1d77b466b23507f2b564ee10ac8e30eb8"
+    },
+    {
+      "artifact": "artifacts/scope-v130-core.json",
+      "source_doc_id": "D069",
+      "rule_ids": [
+        "d069-coordinator-services",
+        "d069-coordinator-agreements",
+        "d069-parallel-pricing",
+        "d069-coordinator-agent-pricing",
+        "d069-coordinating-functions"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "f5ae78d2a9170e28483a58a17e6ef4d72aea428dd530e5c63a93c4d77c679465"
+    },
+    {
+      "artifact": "artifacts/scope-v130-context.json",
+      "source_doc_id": "C001",
+      "rule_ids": [
+        "c001-pricing-algorithm-restraint",
+        "c001-pricing-algorithm-coercion"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation. The January 2026 operative start is derived from the bill and separately captured official effective-date guidance.",
+      "artifact_sha256": "c730dccc76934a0d46fd3dad39d2b146c71b41930b666125ebbb88a1ea335ab6"
+    },
+    {
+      "artifact": "artifacts/scope-v130-context.json",
+      "source_doc_id": "S007",
+      "rule_ids": [
+        "s007-lessor-service-provider-prohibition",
+        "s007-provider-noncompetition-prohibition"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation. The July amendment is read with the original definitions; the older standalone S003 candidates are not selected.",
+      "artifact_sha256": "c730dccc76934a0d46fd3dad39d2b146c71b41930b666125ebbb88a1ea335ab6"
+    },
+    {
+      "artifact": "artifacts/scope-v130-context.json",
+      "source_doc_id": "S001",
+      "rule_ids": [
+        "s001-algorithmic-rent-fixing"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Unresolved source notes and missing property facts remain explicit; this is not independent legal validation.",
+      "artifact_sha256": "c730dccc76934a0d46fd3dad39d2b146c71b41930b666125ebbb88a1ea335ab6"
+    },
+    {
+      "artifact": "artifacts/corpus-long-S006.json",
+      "source_doc_id": "S006",
+      "rule_ids": [
+        "s006-rent-cap",
+        "s006-capital-improvement-pass-through",
+        "s006-tenant-rent-petitions",
+        "s006-petition-compliance-bar",
+        "s006-ineffective-rent-increases",
+        "s006-rent-rights-notices",
+        "s006-registry-fee-pass-through",
+        "s006-registration-rent-prerequisite",
+        "s006-just-cause-thirty-days",
+        "s006-post-and-deliver-eviction-rights",
+        "s006-material-breach-limits",
+        "s006-criminal-activity-eviction-limits",
+        "s006-protected-subletting",
+        "s006-owner-occupancy-and-withdrawal",
+        "s006-remodel-reoccupancy",
+        "s006-curable-violation-notice",
+        "s006-no-fault-relocation",
+        "s006-lease-just-cause-disclosure",
+        "s006-mobilehome-park-sale",
+        "s006-termination-notice-procedure",
+        "s006-retaliatory-eviction",
+        "s006-harassing-services-and-payments",
+        "s006-abusive-entry-and-coercion",
+        "s006-baseless-eviction-and-misinformation",
+        "s006-buyout-and-occupancy-harassment",
+        "s006-registration-eviction-prerequisite"
+      ],
+      "reason": "Selected unchanged after AI-assisted source review of the complete ordinance and separately labelled status resolution. Five administrative, category or scope-ambiguous candidates are withheld. Every selected record retains narrative coverage requiring specialist interpretation review. This is not independent legal validation.",
+      "artifact_sha256": "a1dce6b9c7ce576f9d3940029fa0034ce8a45ae949d34274b170419fc41e9607"
+    },
+    {
+      "artifact": "artifacts/corpus-source-N007.json",
+      "source_doc_id": "N007",
+      "rule_ids": [
+        "n007-criminal-inquiry-timing",
+        "n007-pre-inquiry-notice",
+        "n007-prohibited-criminal-records",
+        "n007-required-screening-considerations",
+        "n007-adverse-decision-notice",
+        "n007-criminal-history-confidentiality",
+        "n007-criminal-history-advertisements"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Narrative coverage and unresolved source interactions remain explicit. This is not independent legal validation.",
+      "artifact_sha256": "d7a63fe953de950ce8bc57bbe773d9e34beddb4a441ba0d4b30b305034df8074"
+    },
+    {
+      "artifact": "artifacts/corpus-source-D029.json",
+      "source_doc_id": "D029",
+      "rule_ids": [
+        "d029-housing-nondiscrimination",
+        "d029-uniform-selection-standards",
+        "d029-disability-accommodation"
+      ],
+      "reason": "Selected unchanged after AI-assisted review of the captured source. Narrative coverage and unresolved source interactions remain explicit. This is not independent legal validation.",
+      "artifact_sha256": "459f483afc035831adc12cae17e55360c7260366652803746409cef86e904e28"
+    },
+    {
+      "artifact": "artifacts/scope-v131-d024.json",
+      "source_doc_id": "D024",
+      "rule_ids": [
+        "d024-annual-rent-cap",
+        "d024-two-increase-increments",
+        "d024-gross-rent-disclosure",
+        "d024-sublease-rent-limit",
+        "d024-rent-increase-notice",
+        "d024-rent-cap-remedies",
+        "d024-rights-nonwaivable"
+      ],
+      "reason": "Selected unchanged after AI-assisted comparison with the complete captured statute. The operative date is April 1, 2024, and repeal boundary January 1, 2030. All material exemptions remain narrative and require interpretation review; no address is declared covered on incomplete facts. This is not independent legal validation.",
+      "artifact_sha256": "00f4ec440182a15f58052a416d9d3036ea4a2d96c32f89cb90384977d54176b1"
+    }
+  ]
+}

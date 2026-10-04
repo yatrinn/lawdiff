@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-33-00-778Z-38facd62",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:33:00.778Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D036",
+        "source_sha256": "f444bed30ede0905ce671ac4b9addf27feaa31c9a74ba6ba537b7f8d77e81dce",
+        "prompt_sha256": "10ee023536668d35a28999d19c0b579ea6194ee917cae40546ad567b459959c2",
+        "response_sha256": "bbe37a418897f48bda57f7d3fbc1187df3c5fef15861e658e5c8d2ca8303b8c3",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 4,
+        "no_rule_findings": 1,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:33:00.793Z",
+        "finished_at": "2026-10-04T03:33:47.747Z",
+        "duration_ms": 46954,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "636f83b3e99283208bc6fcafe567c11b229b08f28a5a73e2ac9afdd4e1fb8b59",
+        "usage": {
+          "input_tokens": 15817,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1049,
+          "reasoning_output_tokens": 497
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D036.json",
+    "lock_scope": "artifacts/corpus-source-D036.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:33:47.750Z",
+    "duration_ms": 46972,
+    "accepted_rule_count": 0,
+    "review_issue_count": 4,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 1,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "issue": "The page identifies an administered rent-control ordinance but does not supply its operative rent-increase limits, complete coverage, permitted adjustments, or effective dates. The referenced ordinance and CPI chart are not included in the supplied text. Do not infer coverage for all properties with five or more units.",
+      "quoted_span": "The Rent Control Ordinance provides certain exemptions from rent regulation.  A\n\"Rent Control Exemption Request\"\ncan be submitted for the Office's review if a property owner meets the criteria for one of the permitted exemptions.",
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The page requires use of the TYLER portal for landlord rent-increase applications and other filings. This administrative submission requirement does not establish a substantive rent-increase limit.",
+      "quoted_span": "All Landlord Applications for Rent Increases, Annual Registrations, Petitions, and Requests, must be submitted through the new\nTYLER\nportal.",
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The page describes illegal-rent and service-maintenance petition procedures, including service on the landlord and submission of proof of service. It does not state the underlying rent limit, adjudication standard, or a guaranteed refund or reduction.",
+      "quoted_span": "A tenant claiming the rent they are being charged is illegal may file an Illegal Rent Petition:\nIllegal Rent Petition\nA tenant seeking a rent reduction due to the conditions of the building and/or apartment may file a Failure to Maintain Service Petition:\nFailure to Maintain Service Petition\nThe Landlord must be provided with a copy of the Petition and all documents. A completed Proof of Service form, Petition, and all documents are to be submitted to the Office once the Landlord has been served.",
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The supplied text contains no operative provisions establishing duties or their status for just_cause_eviction, security_deposits, application_screening_fees, screening_restrictions, or algorithmic_rent_setting. Resource names and links alone do not establish those rules; their absence from this page does not establish that no applicable laws exist.",
+      "quoted_span": null,
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "The page expressly states that all properties with one through four units are exempt from Jersey City rent control. This supports a local rent-control exemption for that property class, not a finding that every other rent restriction is inapplicable.",
+      "quoted_span": "(Please Note: All 1-4 Unit Properties are exempt from rent control)",
+      "source_doc_id": "D036",
+      "source_url": "https://www.jerseycitynj.gov/landlordtenant",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ]
+}

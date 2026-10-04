@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-10-10-470Z-c517b191",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:10:10.470Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D066",
+        "source_sha256": "e06aa61acf6ddb50631d5be3c89c4029caccb13c0dcc7be888e0e64f8b182c2e",
+        "prompt_sha256": "8499207b93895417903b3d3518f6a10a7e8f3f9d727a19dc0ee7a9fe6c6da78b",
+        "response_sha256": "b9aa59aa6ff46f121d5e5cc9a9b441db1bae706eb70007e58036ddff5dc05408",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 3,
+        "review_issues": 5,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:10:10.485Z",
+        "finished_at": "2026-10-04T03:12:56.258Z",
+        "duration_ms": 165773,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "fbb67e36388cd8aaf5bb6756e5512be07fc44dfd4c8ee3e602af2559e8b9bfda",
+        "usage": {
+          "input_tokens": 15108,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4027,
+          "reasoning_output_tokens": 819
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D066.json",
+    "lock_scope": "artifacts/corpus-source-D066.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:12:56.264Z",
+    "duration_ms": 165794,
+    "accepted_rule_count": 3,
+    "review_issue_count": 5,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d066-application-fee-cap",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Residential rental application fee limit",
+      "requirement": "A covered landlord or landlord's agent must not require an application or similar fee exceeding $50 to apply to lease or sublease residential rental property for dwelling purposes. Violators face penalties of up to $500 for a first offense, $750 for a second offense, and $1,000 for each subsequent offense, enforced through summary proceedings in the property's county Superior Court, Law Division, Special Civil Part upon a complaint by the Division of Consumer Affairs Director or Attorney General; following proceedings, the amount wrongfully charged must be remitted to the applicant or prospective tenant from the collected penalty.",
+      "key_value": "$50 as of 2026-10-01; subject to statutory annual adjustment",
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "residential",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "not": {
+              "field": "units",
+              "op": "in",
+              "value": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "any": [
+              {
+                "field": "fee_charger_is_landlord",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "fee_charger_is_landlord_agent",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "field": "fee_charger_nj_real_estate_licensee",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "fee_charger_is_landlord",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "exemptions": "Dwelling units located in one-family or two-family dwellings offered for rent are exempt. New Jersey Real Estate Commission licensees are exempt unless they are the landlord of the residential rental property.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-05-01",
+      "citation": "N.J.S.A. 46:8-18.1(a)-(c); P.L. 2025, c.405, §§ 1, 3",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.\nb.  A landlord, or agent thereof, who violates\nsubsection a. of this section shall be liable for a penalty of up to $500 for a\nfirst offense, up to $750 for a second offense, and up to $1,000 for each\nsubsequent offense, which shall be collected and enforced by summary\nproceedings pursuant to the \"Penalty Enforcement Law of 1999,\"\nP.L.1999, c.274 (C.2A:58-10 et seq.).  The Superior Court, Law Division,\nSpecial Civil Part in the county in which the residential rental property is\nlocated shall have jurisdiction over the proceedings.  Process shall be in the\nnature of a summons or warrant and shall issue upon the complaint of the\nDirector of the Division of Consumer Affairs in the Department of Law and\nPublic Safety or the Attorney General.  Following the proceedings, the amount\nwrongfully charged shall be taken from the collected penalty and shall be\nremitted to the applicant or prospective tenant.\nc.  The requirements of subsection a. of this section\nshall not apply to:\n(1) a dwelling unit\nlocated in a one-family or two-family dwelling that is offered for rent; or\n(2)  a licensee of the New Jersey Real Estate\nCommission, unless the licensee is the landlord of the residential rental\nproperty.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d066-annual-fee-adjustment",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Annual adjustment and publication of the application fee limit",
+      "requirement": "Beginning January 1, 2027, the Division of Consumer Affairs Director must adjust the application fee limit annually in direct proportion to a positive percentage change over the 12 months ending the preceding October 31 in the specified Consumer Price Index for All Urban Consumers, New York-Northern New Jersey-Long Island Metropolitan Area, All Items (1982-84=100); no adjustment is made unless that change is greater than zero. The State Treasurer must determine the adjustment by December 1 for fees charged in the following calendar year beginning January 1, and the Director must publish the applicable limit annually on the division's website.",
+      "key_value": "Annual adjustment only for positive change in the specified CPI",
+      "coverage_conditions": "These administrative duties apply to the Director of the Division of Consumer Affairs in the Department of Law and Public Safety and the State Treasurer in administering the application or similar fee limit for applications to lease or sublease residential rental property for dwelling purposes. The underlying limit applies to landlords and their agents, excludes dwelling units located in one-family or two-family dwellings offered for rent, and excludes New Jersey Real Estate Commission licensees unless the licensee is the property's landlord. Annual adjustments begin January 1 of the year following enactment and apply only when the specified CPI percentage change is greater than zero.",
+      "execution_review_pending": true,
+      "exemptions": "The underlying fee limitation excludes units in one-family or two-family dwellings offered for rent and New Jersey Real Estate Commission licensees who are not the property's landlord.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-05-01",
+      "citation": "N.J.S.A. 46:8-18.1(d); P.L. 2025, c.405, §§ 1, 3",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "quoted_span": "d.    Beginning on\nJanuary 1 of the year next following enactment of P.L.2025, c.405 (C.46:8-18.1\net seq.) and each year thereafter, the amount of the fee limitation established\npursuant to subsection a. of this section shall be adjusted by the Director of\nthe Division of Consumer Affairs in the Department of Law and Public Safety in\ndirect proportion to the percent change in the Consumer Price Index over a\n12-month period ending October 31 of the previous year.  For the purpose of\nthis section, \"Consumer Price Index\" means the Consumer Price Index\nfor All Urban Consumers, New York-Northern New Jersey-Long Island Metropolitan\nArea, All Items (1982-84=100), as published by the Bureau of Labor Statistics\nin the United States Department of Labor.  The State Treasurer shall determine\nthe amount of the adjustment by December 1 of each year, and the adjustment to\nthe limitation shall become effective for fees charged during the calendar year\nfollowing the December 1 determination, beginning with fees made on or after\nJanuary 1 of each calendar year.  An adjustment in the fee limitation shall be\nmade only if the percent change in the Consumer Price Index for the period\nspecified is greater than zero.  The Director of the Division of Consumer\nAffairs shall annually publish the fee limitation applicable pursuant to this\nsection on the division’s Internet website.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d066-fee-violation-reporting",
+      "jurisdiction": "NJ",
+      "level": "state",
+      "category": "application_screening_fees",
+      "status": "in_force",
+      "title": "Application fee regulations and violation reporting mechanism",
+      "requirement": "The Division of Consumer Affairs Director must adopt rules and regulations as necessary to implement the act in accordance with the Administrative Procedure Act, including rules establishing a mechanism for applicants or prospective tenants to report violations. The Director must make that reporting mechanism available on the division's website.",
+      "key_value": null,
+      "coverage_conditions": "The duty applies to the Director of the Division of Consumer Affairs in the Department of Law and Public Safety when implementing P.L.2025, c.405, and the reporting mechanism serves applicants or prospective tenants reporting violations of that act. Its underlying application fee limit covers landlords and their agents requiring application or similar fees to apply to lease or sublease residential rental property for dwelling purposes, except units located in one-family or two-family dwellings offered for rent and New Jersey Real Estate Commission licensees who are not the property's landlord.",
+      "execution_review_pending": true,
+      "exemptions": "The reporting mechanism concerns violations of this act; the underlying fee limit retains its one-family and two-family dwelling exemption and its exemption for real estate licensees who are not the property's landlord.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-05-01",
+      "citation": "N.J.S.A. 46:8-18.2; P.L. 2025, c.405, §§ 2, 3",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "quoted_span": "2.  The Director of the Division of Consumer Affairs\nin the Department of Law and Public Safety shall, in accordance with the\n\"Administrative Procedure Act,\" P.L.1968, c.410 (C.52:14B-1 et seq.),\nadopt rules and regulations as necessary to implement P.L.2025, c.405 (C.46:8-18.1\net seq.), including rules setting forth a mechanism for applicants or\nprospective tenants to report violations of P.L.2025, c.405 (C.46:8-18.1 et\nseq.), which the director shall make available on the Internet website of the\nDivision of Consumer Affairs.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The May 1, 2026 effective date is calculated from the January 20, 2026 approval date and the first-day-of-the-fourth-following-month clause. The chapter designation P.L. 2025 does not supply a 2025 enactment date; the annual adjustment schedule therefore first reaches January 1, 2027. The Director's permission to take anticipatory action is distinct from the act's general effective date.",
+      "quoted_span": "3.  This act shall take effect on the first day of the\nfourth month next following the date of enactment, except that the Director of\nthe Division of Consumer Affairs in the Department of Law and Public Safety\nshall be permitted to take anticipatory action necessary to effectuate the\nprovisions of this act.\nApproved January 20, 2026.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review is required for the annual adjustment and publication rule because the supplied fact vocabulary does not represent the Director and State Treasurer roles or the CPI and calendar triggers. The source establishes the adjustment formula, but does not supply a calculated 2027 fee limit.",
+      "quoted_span": "An adjustment in the fee limitation shall be\nmade only if the percent change in the Consumer Price Index for the period\nspecified is greater than zero.  The Director of the Division of Consumer\nAffairs shall annually publish the fee limitation applicable pursuant to this\nsection on the division’s Internet website.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review is required for the regulation and reporting rule because the supplied fact vocabulary does not represent the Director's administrative role. The source establishes the duty but does not establish whether implementing regulations or a reporting mechanism have actually been issued.",
+      "quoted_span": "including rules setting forth a mechanism for applicants or\nprospective tenants to report violations of P.L.2025, c.405 (C.46:8-18.1 et\nseq.), which the director shall make available on the Internet website of the\nDivision of Consumer Affairs.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d066-annual-fee-adjustment: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d066-fee-violation-reporting: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source limits rental application fees and provides for adjustment of that fee limit; it does not establish a rent increase limit.",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source does not establish permissible grounds for eviction or a just-cause eviction requirement.",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This source regulates application or similar fees, but does not establish a security deposit limit or handling requirement.",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This source limits application fees but does not restrict screening criteria, screening information, or applicant eligibility decisions.",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This source does not establish a restriction or duty concerning algorithmic rent setting.",
+      "quoted_span": "1. a. A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50.",
+      "source_doc_id": "D066",
+      "source_url": "https://pub.njleg.gov/bills/2024/PL25/405_.HTM",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ]
+}

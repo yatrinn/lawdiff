@@ -1,4 +1,5 @@
-import { lookupsFor, changesFor } from "./exporter.mjs";
+import { checkedCorpusCoverage } from "./corpus.mjs";
+import { lookupsFor, changesFor, matchesCase, reviewBriefFor, reviewBriefCSV } from "./exporter.mjs";
 import { icon, renderField, renderLayers, catName } from "./visuals.mjs";
 import {
   FACTS,
@@ -13,6 +14,7 @@ const $ = (s) => document.querySelector(s);
 let report = null,
   rightsLang = "en",
   playTimer = null;
+let corpusCoverage = null, corpusCoverageState = "idle";
 let extractionRun = null,
   extractionRunState = "idle";
 let catalog,
@@ -28,7 +30,7 @@ try {
   overrides = JSON.parse(localStorage.getItem("lawdiff-evidence-v1") || "{}");
 } catch {}
 const labels = {
-  applies: "Applies",
+  applies: "In scope",
   unknown: "Needs evidence",
   not_applicable: "Not applicable",
   not_yet_effective: "Not yet effective",
@@ -42,34 +44,14 @@ const evidenceValues = (a) =>
   Object.fromEntries(
     Object.entries(overrides[a.address_id] ?? {}).map(([k, v]) => [k, v.value]),
   );
+const evaluationCache = new Map();
 function evaluations(a) {
-  return evaluateAddress(pack.rules, a, asOf, evidenceValues(a));
+  if (!evaluationCache.has(a.address_id))
+    evaluationCache.set(a.address_id, evaluateAddress(pack.rules, a, asOf, evidenceValues(a)));
+  return evaluationCache.get(a.address_id);
 }
 function caseRuleMatches(r) {
-  if (caseId === "T1")
-    return (
-      r.source_doc_id === "D022" && r.category === "algorithmic_rent_setting"
-    );
-  if (caseId === "T2")
-    return (
-      r.category === "algorithmic_rent_setting" &&
-      ["Hoboken, NJ", "Jersey City, NJ"].includes(r.jurisdiction)
-    );
-  if (caseId === "T3")
-    return (
-      r.source_doc_id === "D069" && r.category === "algorithmic_rent_setting"
-    );
-  if (caseId === "T4")
-    return (
-      r.jurisdiction === "MA" &&
-      r.category === "algorithmic_rent_setting" &&
-      r.status === "pending"
-    );
-  return (
-    r.status === "failed" &&
-    r.jurisdiction === "MA" &&
-    r.category === "rent_increase_limits"
-  );
+  return matchesCase(r, caseId);
 }
 function caseRules(a) {
   return evaluations(a).filter((r) => caseRuleMatches(r.rule));
@@ -133,7 +115,8 @@ function selectAddress(id) {
   if (!catalog.addresses.some((a) => a.address_id === id))
     throw Error("Unknown address.");
   addressId = id;
-  ruleId = null;
+  const address = catalog.addresses.find(a => a.address_id === id);
+  ruleId = view === "changes" ? caseRules(address).find(row => row.result !== "not_applicable")?.team_rule_id ?? null : null;
   view = "address";
   render();
   window.scrollTo({ top: 0 });
@@ -153,9 +136,18 @@ function render() {
   $("#footer-meta").textContent =
     `${catalog.stats.addresses} sample addresses · Source snapshot ${catalog.snapshot}`;
   bindContent();
+  const sidebar = document.querySelector('.change-sidebar');
+  const activeCase = sidebar?.querySelector('.change-item.selected');
+  if (activeCase && sidebar.scrollWidth > sidebar.clientWidth) {
+    sidebar.scrollLeft = activeCase.offsetLeft - sidebar.offsetLeft - (sidebar.clientWidth - activeCase.offsetWidth) / 2;
+  }
   if (view === "integrity" && extractionRunState === "idle") loadExtractionRun();
+  if (view === "integrity" && corpusCoverageState === "idle") loadCorpusCoverage();
 }
 function renderChanges() {
+  // The field, counts and interaction summary use the same evaluation once per
+  // address. Every new render/date clears it, including timeline-only updates.
+  evaluationCache.clear();
   const c = selectedCase(),
     rs = pack.rules.filter(caseRuleMatches),
     notRun = !pack.rules.length;
@@ -170,26 +162,27 @@ function renderChanges() {
     const v = statusFor(a);
     counts[v] = (counts[v] || 0) + 1;
   });
-  const number =
-    c.type === "pending"
-      ? counts.pending
-      : c.type === "negative"
-        ? 0
-        : counts.applies;
-  const future =
-    c.type === "pending"
-      ? "Potential scope"
-      : c.type === "negative"
-        ? "New obligations"
-        : "Applies now";
+  const impact = c.type === "negative"
+    ? { number: 0, title: "New obligations", detail: "No change: this proposal did not become law." }
+    : !rs.length
+      ? { number: "—", title: "Coverage open", detail: "No extracted rule is loaded for this change. Its scope has not been determined." }
+      : c.type === "pending"
+        ? { number: counts.pending, title: "Potential scope", detail: "Possible coverage if enacted. These bills are not active law; property conditions still need review." }
+        : counts.applies
+          ? { number: counts.applies, title: "In scope", detail: "Addresses meeting the extracted property conditions. This is not a finding of a violation." }
+          : counts.unknown
+            ? { number: counts.unknown, title: "Need scope evidence", detail: "The change is in force. Missing property facts or unresolved interpretation prevent a reliable scope decision." }
+            : counts.not_yet_effective
+              ? { number: counts.not_yet_effective, title: "Upcoming review", detail: "Addresses to check before the effective date. Missing property facts may still limit their scope." }
+              : { number: 0, title: "In scope", detail: "No supplied address meets this change’s extracted conditions on the selected date." };
   const conflictCount = catalog.addresses.filter((a) =>
     caseRules(a).some((r) => r.conflict_flag),
   ).length;
-  return `<div class="workspace-grid"><aside class="change-sidebar"><div class="sidebar-top"><span class="eyebrow">WORKSPACE</span><span class="small muted">07</span></div><div class="sidebar-label"><span>CHANGE CASES</span><span>5</span></div>${catalog.changes.map((x) => `<button class="change-item ${x.test_id === caseId ? "selected" : ""}" data-case="${x.test_id}" aria-pressed="${x.test_id === caseId}"><span class="meta"><span>${h(x.states.join(" / "))}</span><span>${x.test_id}</span></span><div class="name">${h(x.short)}</div><div class="sub">${x.type === "pending" ? "Pending legislation" : x.type === "negative" ? "Failed proposal" : x.type === "boundary" ? "Local boundaries" : displayDate(x.date)}</div></button>`).join("")}<div class="sidebar-note"><span class="eyebrow">ONE FACT CAN MATTER</span><p>See how a missing occupancy date changes a single branch of the answer.</p><button class="text-button" data-address="A0107">Explore the boundary case</button></div><div class="sidebar-bottom">${icon("shield", 15)} Source-grounded. Reviewable.</div></aside>
+  return `<div class="workspace-grid"><aside class="change-sidebar"><div class="sidebar-top"><span class="eyebrow">WORKSPACE</span><span class="small muted">07</span></div><div class="sidebar-label"><span>CHANGE CASES</span><span>5</span></div>${catalog.changes.map((x) => `<button class="change-item ${x.test_id === caseId ? "selected" : ""}" data-case="${x.test_id}" aria-pressed="${x.test_id === caseId}"><span class="meta"><span>${h(x.states.join(" / "))}</span><span>${x.test_id}</span></span><div class="name">${h(x.short)}</div><div class="sub">${x.type === "pending" ? "Pending legislation" : x.type === "negative" ? "Failed proposal" : x.type === "boundary" ? "Local boundaries" : displayDate(x.date)}</div></button>`).join("")}<div class="sidebar-note"><span class="eyebrow">ONE FACT CAN MATTER</span><p>See which property facts are still needed before a rule can be assigned.</p><button class="text-button" data-address="A0002">Inspect missing evidence</button></div><div class="sidebar-bottom">${icon("shield", 15)} Source-grounded. Reviewable.</div></aside>
  <section class="main-column"><div class="page-heading"><div><span class="eyebrow">${h(c.label)}</span><h1>${h(c.short)}</h1><p class="muted">${h(c.description)}</p></div><span class="context-tag">${c.type === "pending" ? "Proposed" : c.type === "negative" ? "Not enacted" : asOf < c.date ? "Before effective date" : "Change in view"}</span></div>
- <div class="stage-grid"><section class="field-card"><div class="field-header"><div><span class="eyebrow">THE FIELD</span><h3>500 addresses. One clear view.</h3></div><span class="field-count">${icon("home", 16)} 3 states</span></div>${renderField(catalog, statusFor, addressId)}<div class="field-legend"><span><i class="legend-dot applies"></i>Applies</span><span><i class="legend-dot unknown"></i>Needs evidence</span><span><i class="legend-dot not_yet_effective"></i>Future</span><span><i class="legend-dot pending"></i>Pending</span><span><i class="legend-dot outside"></i>Other</span></div><div class="field-note">One mark = one supplied address. Clusters follow sample collections, not map coordinates.</div>
+ <div class="stage-grid"><section class="field-card"><div class="field-header"><div><span class="eyebrow">THE FIELD</span><h3>500 addresses. One clear view.</h3></div><span class="field-count">${icon("home", 16)} 3 states</span></div>${renderField(catalog, statusFor, addressId)}<div class="field-legend"><span><i class="legend-dot applies"></i>In scope</span><span><i class="legend-dot unknown"></i>Needs evidence</span><span><i class="legend-dot not_yet_effective"></i>Future</span><span><i class="legend-dot pending"></i>Pending</span><span><i class="legend-dot outside"></i>Other</span></div><div class="field-note">One mark = one supplied address. Clusters follow sample collections, not map coordinates.</div>
  <div class="timeline"><div class="timeline-head"><button class="play-button" id="play-timeline" aria-label="Play timeline">${icon("play", 16)}</button><div><span class="eyebrow">AS OF</span><strong id="timeline-date">${displayDate(asOf)}</strong></div><div class="timeline-jumps"><button class="button button-light" data-date="${c.as_of_before || catalog.snapshot}">Before</button><button class="button button-light" data-date="${c.date}">After</button><input type="date" id="as-of" aria-label="As of date" value="${asOf}" min="2024-01-01" max="2028-12-31"></div></div><input id="time-scrubber" type="range" min="0" max="1460" value="${Math.round((new Date(asOf + "T12:00Z") - new Date("2024-01-01T12:00Z")) / 86400000)}" aria-label="Move through time"><div class="timeline-years"><span>2024</span><span>2025</span><span>2026</span><span>2027</span></div></div></section>
- <aside class="impact-inspector"><span class="eyebrow">THE IMPACT</span><div class="impact-number">${notRun ? "—" : number}<span>/ 500</span></div><h3>${future}</h3><p class="muted">${notRun ? "No extracted rules loaded." : c.type === "negative" ? "No change: this proposal did not become law." : c.type === "pending" ? "Possible coverage if enacted. These bills are not active law." : "Addresses meeting this change’s extracted conditions on the selected date."}</p><div class="impact-breakdown"><div><span>Needs evidence</span><strong>${counts.unknown}</strong></div><div><span>Not yet effective</span><strong>${counts.not_yet_effective}</strong></div><div><span>Possible conflicts</span><strong>${conflictCount}</strong></div><div><span>Rules in this case</span><strong>${rs.length}</strong></div></div><div class="inspector-source"><span class="eyebrow">START AT THE SOURCE</span>${
+ <aside class="impact-inspector"><span class="eyebrow">THE IMPACT</span><div class="impact-number">${notRun ? "—" : impact.number}<span>/ 500</span></div><h3>${impact.title}</h3><p class="muted">${notRun ? "No extracted rules loaded." : impact.detail}</p><div class="impact-breakdown"><div><span>Confirmed in scope</span><strong>${counts.applies}</strong></div><div><span>Needs evidence</span><strong>${counts.unknown}</strong></div><div><span>Not yet effective</span><strong>${counts.not_yet_effective}</strong></div><div><span>Possible conflicts</span><strong>${conflictCount}</strong></div><div><span>Rules in this case</span><strong>${rs.length}</strong></div></div><div class="inspector-source"><span class="eyebrow">START AT THE SOURCE</span>${
    (c.sources.length ? c.sources : rs.map((r) => r.source_doc_id))
      .slice(0, 3)
      .map((id) => {
@@ -202,9 +195,10 @@ function renderChanges() {
    '<p class="small muted">Source coverage is being resolved.</p>'
  }</div><button class="button button-wide" id="inspect-address">Explore an address</button></aside></div>
  ${notRun ? '<div class="notice">Source preview: the real sample is loaded, but extracted applicability results are not yet available.</div>' : rs.length === 0 && c.type !== "negative" ? '<div class="notice">This case has no source-supported extracted rule in the current pack. Zero computed matches must not be read as proof that no rule exists.</div>' : ""}
- <div class="below-field"><span>${icon("layers", 18)} Every address. Every layer. Every change.</span><button class="text-button" data-view-link="integrity">Inspect the method</button></div></section></div>`;
+ <div class="below-field"><span>${icon("layers", 18)} Every address. Every layer. Every change.</span><div class="field-actions"><button class="button button-dark" id="review-brief">Prepare review brief</button><button class="text-button" data-view-link="integrity">Inspect the method</button></div></div></section></div>`;
 }
 function renderAddress() {
+  evaluationCache.clear();
   const a =
     catalog.addresses.find((x) => x.address_id === addressId) ||
     catalog.addresses.find((x) => x.address_id === "A0107");
@@ -213,6 +207,7 @@ function renderAddress() {
     (r) => r.result !== "not_applicable" || r.team_rule_id === ruleId,
   );
   const reasoning = renderEvidence(a);
+  rows.sort((left, right) => Number(right.team_rule_id === ruleId) - Number(left.team_rule_id === ruleId));
   return `<div class="address-heading"><div><button class="text-button back-button" data-view-link="changes">Change desk</button><div class="eyebrow">${h(a.address_id)} · ADDRESS WORKSPACE</div><h1>${h(a.street_address.toLowerCase())}</h1><p class="muted">${h(cityLabel(a))}, ${a.state} ${h(a.zip)} · ${displayDate(asOf)}</p></div><div class="address-heading-actions"><button class="button" id="find-address">${icon("search", 16)} Find address</button><button class="button button-dark" id="rights-button">${icon("share", 16)} Rights card</button></div></div>
  <div class="address-workspace"><aside class="address-overview"><div class="panel layer-panel"><div class="panel-head"><h3>The jurisdiction layers</h3>${icon("layers")}</div>${renderLayers(a, rows)}<div class="layer-caption">${a.geography?.legal_city ? "Legal city from the recorded geographic match." : "Legal city not verified; the postal label is not a substitute."} The corpus defines state and city rules.</div></div><div class="panel facts-panel"><div class="panel-head"><h3>What the record tells us</h3><span class="status-pill neutral">Source data</span></div><div class="facts-list"><div><span>Year built</span><strong>${a.year_built ?? "Not supplied"}</strong></div><div><span>Units</span><strong>${a.units ?? "Not supplied"}</strong></div><div><span>Occupancy certificate</span><strong>Not supplied</strong></div><div><span>Ownership details</span><strong>Not supplied</strong></div></div><p class="fact-provenance">${h(a.source_dataset)}<br>Retrieved ${h(a.retrieved_at)}</p></div></aside>
  <section class="address-rules"><div class="section-title"><h3>The rules at this address</h3><span class="meta">${rows.length} records · ${asOf}</span></div>${rows.length ? rows.map((r) => `<button class="rule-card ${r.team_rule_id === ruleId ? "selected" : ""}" data-rule="${h(r.team_rule_id)}"><div class="rule-card-top"><span class="eyebrow">${h(catName(r.rule.category))}</span><span class="status-pill ${r.result === "unknown" ? "amber" : r.result === "applies" ? "" : "neutral"}">${labels[r.result]}</span></div><h3>${h(r.rule.title)}</h3><p>${h(r.rule.requirement)}</p><div class="rule-card-bottom"><span>${h(r.rule.jurisdiction)}</span><span>${h(r.rule.citation)}</span></div>${r.conflict_flag ? '<span class="conflict-label">Possible interaction · review required</span>' : ""}</button>`).join("") : '<div class="panel empty-list">No source-supported rules are loaded for this address yet. This is not a finding that the address has no protections.</div>'}</section>
@@ -236,6 +231,8 @@ function renderBuildingList() {
   );
 }
 function renderCondition(node, facts) {
+  if (typeof node === "string")
+    return `<div class="quote"><strong>Coverage needs specialist review</strong><p>${h(node)}</p></div><p class="small muted">This coverage description is preserved from extraction. It is not executed as a rule. Supplying building facts cannot bypass this review.</p>`;
   const evaluated = evaluateCondition(node, facts),
     state =
       evaluated.value === null ? "missing" : evaluated.value ? "met" : "unmet",
@@ -394,8 +391,8 @@ function renderExtractionRun() {
     ? `The ${pack.rules.length} Codex-assisted records loaded in this workspace remain a separate pack.`
     : `The ${pack.rules.length} records currently loaded in this workspace remain a separate pack.`;
   return `<section class="extraction-run-card" data-run-state="${state}" aria-labelledby="extraction-run-heading">
-    <div class="extraction-run-heading"><div><span class="eyebrow">AUTOMATIC EXTRACTION</span><h3 id="extraction-run-heading">A run you can inspect.</h3></div><span class="extraction-run-status">${icon(failed ? "close" : review ? "document" : "check", 15)}${status}</span></div>
-    <p class="extraction-run-context">${loadedPack} Any candidates from this recorded compiler run require review before they can replace the loaded records.</p>
+    <div class="extraction-run-heading"><div><span class="eyebrow">EARLIER PIPELINE TEST</span><h3 id="extraction-run-heading">An earlier run, preserved.</h3></div><span class="extraction-run-status">${icon(failed ? "close" : review ? "document" : "check", 15)}${status}</span></div>
+    <p class="extraction-run-context">${loadedPack} This historical test is retained as an audit record; it is not the source of the current selected pack.</p>
     <ol class="extraction-run-flow" aria-label="Recorded extraction workflow"><li><span class="extraction-flow-number">01</span><strong>Source</strong><span>${run.sources.length} recorded ${run.sources.length === 1 ? "input" : "inputs"}</span></li><li><span class="extraction-flow-number">02</span><strong>Model</strong><span>${h(run.model)}</span></li><li><span class="extraction-flow-number">03</span><strong>Validate</strong><span>Machine checks</span></li><li><span class="extraction-flow-number">04</span><strong>Review</strong><span>Human review required</span></li></ol>
     <div class="extraction-run-metrics"><div><strong>${run.accepted}</strong><span>${run.accepted === 1 ? "candidate passed checks" : "candidates passed checks"}</span></div><div><strong>${run.requests}</strong><span>model requests sent</span></div><div><strong>${duration}</strong><span>recorded runtime</span></div></div>
     <details class="extraction-run-provenance"><summary>Sources and run details<span>${run.sources.length} ${run.sources.length === 1 ? "source" : "sources"}</span></summary><dl class="extraction-run-times"><div><dt>Started</dt><dd>${h(formatTime(run.started_at))}</dd></div><div><dt>Finished</dt><dd>${h(formatTime(run.finished_at))}</dd></div></dl><div class="extraction-run-sources">${run.sources.map((source) => {
@@ -407,8 +404,35 @@ function renderExtractionRun() {
     <div class="extraction-run-footer"><span>Source matches and machine checks do not establish legal correctness.</span>${run.candidateUrl && run.accepted > 0 ? `<a class="button extraction-run-download" href="${h(run.candidateUrl)}" download="extraction-candidates.json">${icon("download", 15)}Download candidates</a>` : ""}</div>
   </section>`;
 }
+async function loadCorpusCoverage() {
+  corpusCoverageState = "loading";
+  try {
+    const response = await fetch("./data/corpus-coverage.json");
+    if (response.status === 404) { corpusCoverageState = "absent"; return; }
+    if (!response.ok) throw Error("Corpus receipt unavailable.");
+    corpusCoverage = checkedCorpusCoverage(await response.json(), catalog);
+    corpusCoverageState = "ready";
+  } catch {
+    corpusCoverage = null;
+    corpusCoverageState = "unavailable";
+  }
+  if (view === "integrity") render();
+}
+function renderCorpusCoverage() {
+  if (corpusCoverageState === "unavailable") return '<p class="notice">The corpus extraction receipt could not be verified. No coverage result is claimed.</p>';
+  if (!corpusCoverage) return "";
+  const { stats, sources } = corpusCoverage;
+  const names = { processed: "Processed", missing_text: "Text missing", rejected: "Needs review", unprocessed: "Not processed" };
+  return `<section class="corpus-card" aria-labelledby="corpus-heading"><span class="eyebrow">AUTOMATED CORPUS REVIEW</span><h3 id="corpus-heading">The collection. Accounted for.</h3><p>A recorded status for every source. Processing a document does not establish complete legal coverage.</p><div class="corpus-metrics">${Object.entries(names).map(([key, name]) => `<div><strong>${stats[key]}</strong><span>${name}</span></div>`).join("")}</div><div class="corpus-source-grid" aria-label="Extraction status by source">${sources.map(s => `<button class="corpus-source ${s.status}" data-source="${h(s.source_doc_id)}" title="${h(s.source_doc_id)}: ${names[s.status]} · ${s.accepted_rule_count} candidates" aria-label="${h(s.source_doc_id)}: ${names[s.status]}. Inspect source.">${h(s.source_doc_id)}</button>`).join("")}</div><p class="small">${stats.accepted_rule_count} candidates passed structural and source-span checks. ${stats.execution_review_count} preserve coverage as prose and still need specialist review before execution. This is the full candidate inventory. The selected workspace records and their provenance are shown above when an automatic selection is loaded.</p><div class="evidence-actions"><a class="button" href="./data/corpus-coverage.json" download="corpus-coverage.json">Download coverage receipt</a><a class="button" href="./data/corpus-candidates.json" download="corpus-candidates.json">Download corpus candidates</a></div></section>`;
+}
+function renderPackProvenance() {
+  if (pack.method !== "explicit_selection_of_automatic_candidates" || !pack.assembly) return "";
+  const sources = Array.isArray(pack.audit) ? pack.audit : [];
+  const review = pack.rules.filter(r => r.execution_review_pending === true).length;
+  return `<section class="corpus-card provenance-card" aria-labelledby="provenance-heading"><span class="eyebrow">THE RULES YOU ARE USING</span><h3 id="provenance-heading">One traceable path to the answer.</h3><p>Automatically extracted candidates, selected after source review. The selected records are unchanged; the workspace and submission use the same rules and evaluation engine.</p><ol class="extraction-run-flow" aria-label="Shipped rule provenance"><li><span class="extraction-flow-number">01</span><strong>Capture</strong><span>Source text + hash</span></li><li><span class="extraction-flow-number">02</span><strong>Extract</strong><span>Recorded model output</span></li><li><span class="extraction-flow-number">03</span><strong>Select</strong><span>Unchanged candidates</span></li><li><span class="extraction-flow-number">04</span><strong>Evaluate</strong><span>Same rules, same engine</span></li></ol><div class="corpus-metrics"><div><strong>${pack.rules.length}</strong><span>selected records</span></div><div><strong>${sources.length}</strong><span>extracted sources</span></div><div><strong>${pack.rules.length - review}</strong><span>executable conditions</span></div><div><strong>${review}</strong><span>interpretation review</span></div></div><p class="small">Source review was AI-assisted. Exact quotations and unchanged output hashes do not establish legal correctness. Missing property facts remain unknown; narrative coverage cannot produce an executable scope decision.</p><details class="extraction-run-provenance"><summary>Inspect the selected sources<span>${sources.length} sources</span></summary><div class="extraction-run-sources">${sources.map(s => `<div class="extraction-run-source"><div><button class="text-button" data-source="${h(s.source_doc_id)}">${h(s.source_doc_id)} ${icon("document",13)}</button><span>${s.selected_rule_ids?.length || 0} records</span></div><p>${h(s.selection_reason || "Explicit selection from the recorded extraction.")}</p><code>${h(s.run_id)}</code></div>`).join("")}</div></details><div class="evidence-actions"><a class="button" href="./data/rule-pack.json" download="lawdiff-rule-pack.json">Download rules with provenance</a></div></section>`;
+}
 function renderIntegrity() {
-  return `<div class="page-heading"><div><span class="eyebrow">BUILT TO BE CHECKED</span><h1>Confidence needs evidence.</h1><p class="muted" style="margin-top:16px">What has been processed, what has been checked, and what remains unresolved.</p></div></div><div class="integrity-cards"><div class="integrity-card"><span class="eyebrow">EXTRACTED RULES</span><strong>${pack.rules.length}</strong><p>${pack.rules.length ? "Loaded rules passed source-span and structural checks. This does not establish legal correctness." : "Extraction has not run. No benchmark score or rule coverage is claimed."}</p></div><div class="integrity-card"><span class="eyebrow">SOURCE TEXTS</span><strong>${catalog.stats.availableTexts}<span class="muted" style="font-size:20px"> / ${catalog.stats.sourceRecords}</span></strong><p>Available text, as distinct from link-only or unavailable sources.</p></div><div class="integrity-card"><span class="eyebrow">LEGAL CITY MATCHES</span><strong>${catalog.stats.geocoded}<span class="muted" style="font-size:20px"> / 500</span></strong><p>Postal labels are not automatically treated as legal city boundaries.</p></div></div><div class="integrity-content">${renderExtractionRun()}${report ? `<h3>Checks on this build</h3><div class="validation-list">${report.checks.map((c) => `<div class="validation-row"><span>${h(c)}</span><strong>Passed</strong></div>`).join("")}</div><p>${report.primary_quotes + report.supplemental_quotes} exact quotations checked. These checks establish source presence and structure, not independent legal validation.</p>` : ""}<h3>Official scoring</h3><p>${catalog.organizerScoringAvailable ? "An organizer scoring file is present. Results must be generated and inspected before being reported." : "The downloaded participant package contains no score.py or development answer key. We cannot report an official score. Internal tests are separate from organizer evaluation."}</p><h3>What a source match establishes</h3><p>The quoted passage occurs in the supplied document. Whether it supports the interpretation is a separate question. Reproducible execution does not make an incorrect interpretation correct.</p><h3>Changes and local evidence</h3><p>Time comparisons use the supplied building facts, not reconstructed historical building records. Evidence you add is stored only in this browser and excluded from the unmodified sample export.</p><h3>Known gaps</h3><p>Ownership, some construction years, unit counts and certificate-of-occupancy dates are not included for all buildings. A possible conflict is flagged for review rather than silently resolved.</p><div class="evidence-actions"><button class="button" id="download-audit">Export extraction audit</button><button class="button" id="download-changes">Export change cases</button><button class="button" id="download-lookups" ${pack.rules.length ? "" : "disabled"}>Export sample lookups</button></div></div>`;
+  return `<div class="page-heading"><div><span class="eyebrow">BUILT TO BE CHECKED</span><h1>Confidence needs evidence.</h1><p class="muted" style="margin-top:16px">What has been processed, what has been checked, and what remains unresolved.</p></div></div><div class="integrity-cards"><div class="integrity-card"><span class="eyebrow">EXTRACTED RULES</span><strong>${pack.rules.length}</strong><p>${pack.rules.length ? "Loaded rules passed source-span and structural checks. This does not establish legal correctness." : "Extraction has not run. No benchmark score or rule coverage is claimed."}</p></div><div class="integrity-card"><span class="eyebrow">SOURCE TEXTS</span><strong>${catalog.stats.availableTexts}<span class="muted" style="font-size:20px"> / ${catalog.stats.sourceRecords}</span></strong><p>Available text, as distinct from link-only or unavailable sources.</p></div><div class="integrity-card"><span class="eyebrow">LEGAL CITY MATCHES</span><strong>${catalog.stats.geocoded}<span class="muted" style="font-size:20px"> / 500</span></strong><p>Postal labels are not automatically treated as legal city boundaries.</p></div></div><div class="integrity-content">${renderPackProvenance()}${renderCorpusCoverage()}${renderExtractionRun()}${report ? `<h3>Checks on this build</h3><div class="validation-list">${report.checks.map((c) => `<div class="validation-row"><span>${h(c)}</span><strong>Passed</strong></div>`).join("")}</div><p>${report.primary_quotes + report.supplemental_quotes} exact quotations checked. These checks establish source presence and structure, not independent legal validation.</p>` : ""}<h3>Official scoring</h3><p>${catalog.organizerScoringAvailable ? "An organizer scoring file is present. Results must be generated and inspected before being reported." : "The downloaded participant package contains no score.py or development answer key. We cannot report an official score. Internal tests are separate from organizer evaluation."}</p><h3>What a source match establishes</h3><p>The quoted passage occurs in the supplied document. Whether it supports the interpretation is a separate question. Reproducible execution does not make an incorrect interpretation correct.</p><h3>Changes and local evidence</h3><p>Time comparisons use the supplied building facts, not reconstructed historical building records. Evidence you add is stored only in this browser and excluded from the unmodified sample export.</p><h3>Known gaps</h3><p>Ownership, some construction years, unit counts and certificate-of-occupancy dates are not included for all buildings. A possible conflict is flagged for review rather than silently resolved.</p><div class="evidence-actions"><button class="button" id="download-audit">Export extraction audit</button><button class="button" id="download-changes">Export change cases</button><button class="button" id="download-lookups" ${pack.rules.length ? "" : "disabled"}>Export sample lookups</button></div></div>`;
 }
 function openSource(id) {
   const s = catalog.sources.find((s) => s.doc_id === id);
@@ -423,7 +447,7 @@ function openSource(id) {
     sourceHTML = sourceHTML.replace(h(quote), "<mark>" + h(quote) + "</mark>");
   $("#source-title").textContent = `${s.doc_id} · ${s.jurisdictions}`;
   $("#source-content").innerHTML =
-    `<h2>${s.source_capture === "web_tool_text" ? "The captured source excerpt." : s.doc_id === "O001" ? "The organizer’s test case." : "The captured source text."}</h2><p class="muted">Retrieved ${h(s.retrieved_at || "date not supplied")} · ${h(s.source_type)}</p>${s.capture_scope ? `<p class="small muted">${h(s.capture_scope)}</p>` : ""}<p><a href="${h(/^https?:\/\//.test(s.url) ? s.url : "#")}" target="_blank" rel="noopener noreferrer">Open original source</a></p>${s.text ? `<pre>${sourceHTML}</pre>` : '<p class="notice">No usable text is available in the downloaded starter pack. This source has not been used to support an extracted rule.</p>'}<p class="small muted">Captured-text SHA-256: ${h(s.download_sha256 || "unavailable")}</p>`;
+    `<h2>${s.source_capture === "web_tool_text" ? "The captured source excerpt." : s.doc_id === "O001" ? "The organizer’s test case." : "The captured source text."}</h2><p class="muted">Retrieved ${h(s.retrieved_at || "date not supplied")} · ${h(s.source_type)}</p>${s.capture_scope ? `<p class="small muted">${h(s.capture_scope)}</p>` : ""}${s.capture_note ? `<p class="notice">${h(s.capture_note)}</p>` : ""}${s.components?.length ? `<p class="small muted">Composite capture: ${s.components.map(c => h(c.doc_id || c.source_doc_id || c.url)).join(" · ")}. Original components and their hashes are listed in the source manifest.</p>` : ""}<p><a href="${h(/^https?:\/\//.test(s.url) ? s.url : "#")}" target="_blank" rel="noopener noreferrer">Open original source</a></p>${s.text ? `<pre>${sourceHTML}</pre>` : '<p class="notice">No usable text is available in the downloaded starter pack. This source has not been used to support an extracted rule.</p>'}<p class="small muted">Captured-text SHA-256: ${h(s.download_sha256 || "unavailable")}</p>`;
   $("#source-dialog").showModal();
   $("#source-content mark")?.scrollIntoView({ block: "center" });
 }
@@ -610,8 +634,7 @@ function updateTimeline(value) {
     .forEach((b) => (b.onclick = () => openSource(b.dataset.source)));
   if ($("#inspect-address"))
     $("#inspect-address").onclick = () => {
-      addressId = scope()[0]?.address_id;
-      activateView("address");
+      selectAddress(scope()[0]?.address_id);
     };
 }
 function stopPlayback() {
@@ -621,6 +644,7 @@ function stopPlayback() {
   }
 }
 function bindContent() {
+  if ($("#review-brief")) $("#review-brief").onclick = openReviewBrief;
   document
     .querySelectorAll("[data-view-link]")
     .forEach((b) => (b.onclick = () => activateView(b.dataset.viewLink)));
@@ -633,8 +657,7 @@ function bindContent() {
   );
   if ($("#inspect-address"))
     $("#inspect-address").onclick = () => {
-      addressId = scope()[0]?.address_id;
-      activateView("address");
+      selectAddress(scope()[0]?.address_id);
     };
   if ($("#find-address")) $("#find-address").onclick = openSearch;
   if ($("#rights-button")) $("#rights-button").onclick = () => showRights();
@@ -756,6 +779,30 @@ function bindContent() {
   if ($("#download-changes"))
     $("#download-changes").onclick = () =>
       download("changes.json", changesFor(catalog, pack));
+}
+function openReviewBrief() {
+  stopPlayback();
+  const brief = reviewBriefFor(catalog, pack, caseId, asOf);
+  $("#review-content").innerHTML = `<h2 id="review-title">Make the next step clear.</h2>
+    <p class="review-context">${h(brief.title)} · ${displayDate(brief.as_of)}</p>
+    <div class="review-metrics"><div><strong>${brief.counts.applies}</strong><span>Applies</span></div><div><strong>${brief.counts.unknown}</strong><span>Needs evidence</span></div><div><strong>${brief.counts.not_yet_effective}</strong><span>Future</span></div><div><strong>${brief.counts.pending}</strong><span>Pending</span></div></div>
+    <p class="review-basis">${h(brief.basis)}</p>
+    <p class="small muted">${h(brief.note)}${brief.conflict_count ? ` ${brief.conflict_count} addresses also have possible rule interactions for review.` : ""}</p>
+    <div class="review-list">${brief.records.map((record) => `<button class="review-row" data-review-address="${h(record.address_id)}"><span class="review-row-heading"><strong>${h(record.street_address.toLowerCase())}</strong><span class="status-pill ${record.status === "unknown" ? "amber" : "neutral"}">${labels[record.status]}</span></span><span class="review-row-place">${h(record.legal_city || "Legal city unresolved")}, ${h(record.state)} · ${h(record.address_id)}</span><span class="review-row-step">${h(record.next_step)}</span><span class="review-row-sources">${[...new Set(record.rows.map((row) => row.rule.source_doc_id))].map(h).join(" · ")} → Inspect address</span></button>`).join("") || `<div class="review-empty">${h(brief.note)}</div>`}</div>`;
+  $("#review-content").querySelectorAll("[data-review-address]").forEach((button) => button.onclick = () => {
+    $("#review-dialog").close();
+    selectAddress(button.dataset.reviewAddress);
+  });
+  $("#download-review").onclick = () => {
+    const url = URL.createObjectURL(new Blob([reviewBriefCSV(brief)], {type: "text/csv;charset=utf-8"}));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `lawdiff-${brief.case_id}-${brief.as_of}-review.csv`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast("Review list exported with sources and original sample facts.");
+  };
+  $("#review-dialog").showModal();
 }
 function saveEvidence() {
   try {

@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-02-25-191Z-6be7d920",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:02:25.191Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D047",
+        "source_sha256": "9af3e5eba834b37a5115fef298f5e2a1c1fc0b93c1d69500aea9d6bc7ee24b93",
+        "prompt_sha256": "4c1e8ad3810d753aa202c3418fc99f6cd9866e3f8abcb9ebbadbc3a4b8534e42",
+        "response_sha256": "1e5ae83f689e7f75f3e2d4e5a70d110328d3087183a6e6c451ed0c8c20116fdd",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 0,
+        "review_issues": 2,
+        "no_rule_findings": 6,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:02:25.204Z",
+        "finished_at": "2026-10-04T03:03:04.055Z",
+        "duration_ms": 38851,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "6f43dabb30bc9302fb5b44bdfb0ac78f40e2b3c6af73817320d83d55ee275fa0",
+        "usage": {
+          "input_tokens": 14883,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 759,
+          "reasoning_output_tokens": 119
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D047.json",
+    "lock_scope": "artifacts/corpus-source-D047.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:03:04.057Z",
+    "duration_ms": 38866,
+    "accepted_rule_count": 0,
+    "review_issue_count": 2,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 6,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "issue": "As of 2026-10-01, the supplied history supports pending status for S.2983, not enactment. The operative bill text is missing, so its duties, coverage, exceptions, penalties and remedies cannot be extracted. The title does not establish an operative prohibition.",
+      "quoted_span": "Status:\nReferred to\nSenate Committee on Ways and Means",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "March 12, 2026 is a committee-action date. The source provides no supported adoption, approval or effective date.",
+      "quoted_span": "3/12/2026\nSenate\nBill reported favorably by committee and referred to the committee on\nSenate Ways and Means",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "No residential rent-increase limit is established by this bill-history page, which contains no operative provisions. This finding does not establish the absence of other Massachusetts law.",
+      "quoted_span": "Bill History\nDisplaying  3 actions for Bill S.2983",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "No just-cause eviction duty is established by this bill-history page, which contains no operative provisions. This finding does not establish the absence of other Massachusetts law.",
+      "quoted_span": "Bill History\nDisplaying  3 actions for Bill S.2983",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No security-deposit duty is established by this bill-history page, which contains no operative provisions. This finding does not establish the absence of other Massachusetts law.",
+      "quoted_span": "Bill History\nDisplaying  3 actions for Bill S.2983",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "No application or screening-fee duty is established by this bill-history page, which contains no operative provisions. This finding does not establish the absence of other Massachusetts law.",
+      "quoted_span": "Bill History\nDisplaying  3 actions for Bill S.2983",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "No tenant-screening restriction is established by this bill-history page, which contains no operative provisions. This finding does not establish the absence of other Massachusetts law.",
+      "quoted_span": "Bill History\nDisplaying  3 actions for Bill S.2983",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The source identifies a pending proposal concerning algorithmic rent setting but supplies no operative text. It establishes no active prohibition or extractable proposed duty as of 2026-10-01.",
+      "quoted_span": "3/12/2026\nSenate\nBill reported favorably by committee and referred to the committee on\nSenate Ways and Means",
+      "source_doc_id": "D047",
+      "source_url": "https://malegislature.gov/Bills/194/S2983/BillHistory",
+      "retrieved_at": "2026-10-01T22:36Z"
+    }
+  ]
+}

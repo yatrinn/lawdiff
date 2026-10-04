@@ -9,10 +9,15 @@ import zipfile
 root = Path(__file__).resolve().parents[1]
 target = root.parent / "LawDiff-Abgabepaket.zip"
 files = {}
-for name in ("rules.json", "lookups.json", "changes.json", "extraction-audit.json", "method-note.pdf"):
+for name in ("rules.json", "lookups.json", "changes.json", "extraction-audit.json", "method-note.pdf", "change-case-review.json"):
     files[name] = root / "submission" / name
-for name in ("extraction-run.json", "extraction-candidates.json"):
+for name in ("extraction-run.json", "extraction-candidates.json", "corpus-coverage.json", "corpus-candidates.json", "rule-pack.json", "catalog.json", "validation.json"):
     files[f"pipeline/{name}"] = root / "public/data" / name
+for name in ("automatic-selection.json", "automatic-reviewed.json"):
+    files[f"pipeline/{name}"] = root / "data/extracted" / name
+for path in (root / "data/extracted/recorded-runs").glob("*.json"):
+    files[f"pipeline/recorded-runs/{path.name}"] = path
+files["pipeline/recorded-runs/manifest.json.sha256"] = root / "data/extracted/recorded-runs/manifest.json.sha256"
 for name in ("lawdiff-demo.mp4", "lawdiff-tech.mp4", "VIDEO_NOTES.md", "TECH_VIDEO_NOTES.md"):
     files[f"media/{name}"] = root / "media" / name
 for path in (root / "media").glob("lawdiff-*.srt"):

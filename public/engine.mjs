@@ -227,6 +227,10 @@ export function jurisdictionMatch(rule, address) {
 }
 export function evaluateRule(rule, address, asOf, overrides = {}) {
   if (!validDate(asOf)) throw Error("A real calendar date is required.");
+  const coverageReview = typeof rule.coverage_conditions === "string";
+  if ((coverageReview && rule.execution_review_pending !== true) ||
+      (!coverageReview && rule.execution_review_pending === true))
+    throw Error("Coverage review must be explicitly paired with non-executable prose.");
   const j = jurisdictionMatch(rule, address);
   const base = {
     team_rule_id: rule.team_rule_id,
@@ -261,7 +265,7 @@ export function evaluateRule(rule, address, asOf, overrides = {}) {
       explanation:
         "The legal city has not been verified. The postal city is not used as a substitute.",
     };
-  const c = evaluateCondition(
+  const c = coverageReview ? result(null, ["coverage interpretation"]) : evaluateCondition(
     rule.coverage_conditions,
     factsFor(address, overrides, asOf),
   );
@@ -317,7 +321,8 @@ export function evaluateRule(rule, address, asOf, overrides = {}) {
       result: "unknown",
       missing: c.missing,
       explanation:
-        "The outcome depends on evidence missing from the supplied building record.",
+        coverageReview ? "This source-supported rule has documented coverage and exceptions that still require specialist review before address applicability can be determined."
+          : "The outcome depends on evidence missing from the supplied building record.",
     };
   return {
     ...base,
@@ -435,7 +440,14 @@ export function validateRulePack(pack, sources) {
           r[key].some((id) => typeof id !== "string" || id === r.team_rule_id))
       )
         throw Error(`Invalid rule relationship: ${r.team_rule_id}`);
-    validateCondition(r.coverage_conditions);
+    if (typeof r.coverage_conditions === "string") {
+      if (r.execution_review_pending !== true || r.coverage_conditions.trim().length < 20 || r.coverage_conditions.length > 10000)
+        throw Error("Narrative coverage requires explicit review and a bounded description.");
+    } else {
+      if (r.execution_review_pending === true)
+        throw Error("Executable coverage cannot be marked as non-executable prose.");
+      validateCondition(r.coverage_conditions);
+    }
   }
   for (const r of pack.rules)
     for (const id of [...(r.supersedes ?? []), ...(r.possible_conflicts ?? [])])

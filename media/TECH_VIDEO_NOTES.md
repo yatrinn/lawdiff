@@ -1,35 +1,18 @@
-# LawDiff · fertiges Technikvideo
+# Technical video production notes
 
-Datei: `lawdiff-tech.mp4` · 56 Sekunden · 1920 × 1080 · 30 Bilder/s · H.264 · ohne Ton.
+`lawdiff-tech.mp4`: **56 seconds, 1920 × 1080, 30 fps, H.264, no audio**. Six authored diagrams labelled “Technical walkthrough · Captioned.” They explain recorded build evidence; they are not an API recording or a live test session. English captions are burned in and repeated in the SRT.
 
-Der Film ist als **Technical walkthrough · Captioned** gekennzeichnet. Englische Untertitel sind über die gesamte jeweilige Szene sichtbar. Die sechs Szenen sind eigens gestaltete technische Erklärgrafiken, keine nachgestellte Oberfläche, kein API-Mitschnitt und kein vorgetäuschter Live-Testlauf. Das fertige Video kann als Technikvideo hochgeladen werden; Untertitel sind bereits eingebrannt. Zusätzlich liegt `lawdiff-tech.srt` mit denselben sechs zeitlich passenden Untertitelblöcken bei.
-
-## Ablauf und vollständige Untertitel
-
-| Zeit | Inhalt | Sichtbarer englischer Untertitel |
+| Zeit | Bild | Englischer Text |
 |---|---|---|
-| 00–09 s | Automatischer Codex-CLI-Lauf: Quellen → strukturierte Kandidaten → Prüfungen | A recorded Codex CLI run reads source text and emits rule candidates. Exact quotations and executable conditions are checked before review. |
-| 09–18 s | Quellidentität, Datei-Hash, exakter Quelltextabgleich; 193 Zitatstellen | Captured files carry hashes. Primary and supplemental quotations must occur verbatim in their referenced source texts. |
-| 18–28 s | Beschränkte Bedingungssprache, eine gemeinsame JavaScript-Engine, Browser und Exporte | One JavaScript engine serves browser answers and submission exports. It evaluates a restricted rule language. Runtime makes no model calls. |
-| 28–38 s | Dreiwertige Logik, entscheidendes FALSE und Umgang mit ausstehenden Gesetzesvorschlägen | Missing evidence remains unknown unless another condition decides it. Calendar checks distinguish effective dates from pending proposals. |
-| 38–48 s | 45 JavaScript-Tests und 10 Geografie-Tests; manipulierte Quellen und Bedingungen | Regression tests challenge source tampering, jurisdiction mismatches, malformed conditions, calendar boundaries and geographic provenance. |
-| 48–56 s | 475 von 500 geografisch zugeordnete Rechtsorte; 25 ungeklärte Stadtzuordnungen und rechtliche Grenzen | 475 sample addresses have matched legal cities; 25 remain unresolved. Exact quotations support review. They do not prove legal interpretation. |
+| 00–09 s | Dieselbe automatische Quelle→Auswahl→Adresse-Kette. 21/110 Quellen verarbeitet, 89 ausgewählte Records. | Recorded model calls extract candidates; source review selects unchanged records. One selected pack drives the workspace and all 500 submitted address lookups. |
+| 09–18 s | Hash und exakte Originalpassage; 89 primäre Zitatstellen. | Captured files carry hashes. Primary and supplemental quotations must occur verbatim in their referenced source texts. |
+| 18–28 s | Eine Engine für Browser und Exporte, kein Laufzeit-Modellaufruf. | One JavaScript engine serves browser answers and submission exports. It evaluates a restricted rule language. Runtime makes no model calls. |
+| 28–38 s | Wahr/falsch/unbekannt, Datum und Pending-Status. | Missing evidence remains unknown unless another condition decides it. Calendar checks distinguish effective dates from pending proposals. |
+| 38–48 s | 93 JavaScript- und 10 Geografie-Tests im geprüften Build. | Regression tests challenge source tampering, jurisdiction mismatches, malformed conditions, calendar boundaries and geographic provenance. |
+| 48–56 s | 475 Ortszuordnungen, 25 offen; Grenzen des Zitatabgleichs. | 475 sample addresses have matched legal cities; 25 remain unresolved. Exact quotations support review. They do not prove legal interpretation. |
 
-## Aussagen und ihre Grenzen
+The shared build validator checks the selection, reviewed pack, catalog and corpus receipts before rendering. The selected pack contains 89 automatic records, 13 executable coverage definitions and 76 records awaiting interpretation review. The corpus receipt separately records 21 processed, 37 text-missing, 44 rejected/withheld and 8 unprocessed sources out of 110. These counts are not legal-accuracy measurements.
 
-- Die Zahlen beschreiben den tatsächlich geprüften Build vom **4. Oktober 2026**. Sie sind keine Genauigkeitsmessung, kein offizieller Score und keine juristische Validierung. Der Renderer bricht ab, wenn sich die im Film verwendeten Bestandszahlen ändern.
-- Die 58 Datensätze umfassen einen Statusdatensatz auf Grundlage von Veranstalter-Metadaten. Die im Film gezeigte Zahl bedeutet nicht 58 unabhängig juristisch validierte Gesetze.
-- 193 ist die Zahl exakt abgeglichener primärer und ergänzender Zitatstellen. Der Abgleich belegt deren Vorkommen im erfassten Quelltext, nicht die Richtigkeit einer Auslegung.
-- Der in Szene 2 verkürzt gezeigte SHA-256-Wert stammt aus dem tatsächlichen `download_sha256` der erfassten Quelle D069. Er ist ein Datei-Fingerabdruck und keine Echtheits- oder Rechtsgültigkeitsgarantie.
-- Szene 1 liest den tatsächlichen Laufnachweis aus `public/data/extraction-run.json` und prüft Kandidaten, Quell-Hashes und Zitate vor dem Rendern. Es ist eine Erklärgrafik über einen aufgezeichneten Lauf, kein Live-Mitschnitt. Der ursprüngliche 58-Regel-Bestand und die automatisch erzeugten Kandidaten bleiben ausdrücklich getrennt. Der alternative Anthropic-Compiler wurde nicht ausgeführt.
-- „Runtime makes no model calls“ beschreibt die deterministische Auswertung im Browser bzw. Export. Es ist keine Behauptung, dass Entwicklung und Extraktion kostenlos gewesen seien.
-- 475/500 bezeichnet vorhandene geografische Rechtsortzuordnungen des Samples. Eine Geocoding-Zuordnung ist keine Vermessung eines Grundstücks oder unabhängige juristische Bestätigung einer kommunalen Grenze.
-- Dreiwertige Logik kann einen Fall trotz fehlender Fakten ausschließen, wenn eine andere notwendige Bedingung nachweislich falsch ist. „Unknown“ ersetzt keine bereits entscheidende Bedingung.
+The renderer runs all 93 JavaScript tests and 10 geography tests; any failure stops it. It checks all 89 primary quotation spans and 475 legal-city matches. Exact quotation presence and deterministic execution do not certify interpretation. The shortened SHA-256 value is a real captured source fingerprint, not a legal-validity guarantee. Model calls were used for extraction, but runtime evaluation uses none. No monetary-cost or independent legal-review claim is made.
 
-## Reproduzieren und prüfen
-
-`python3 scripts/render_tech.py` benötigt Pillow, ffmpeg/ffprobe, Node/npm und Arial oder DejaVu Sans. Die Erzeugung liest die veröffentlichten Quell- und Regelartefakte, prüft alle 193 Zitatstellen und führt beide aktuellen Testsuiten aus. Fehlgeschlagene Prüfungen stoppen den Export. Es wird kein Modell-API-Aufruf vorgenommen.
-
-Geprüft: 44/45 JavaScript-Tests und 10/10 Geografie-Tests bestanden; 58 Datensätze, 193 Zitatstellen und 475 Stadtzuordnungen stimmen mit den öffentlichen Artefakten überein. Der Container wurde auf 56,000 Sekunden, H.264, 1920 × 1080 und 1.680 Bilder geprüft. Jede der sechs Szenen wurde anschließend aus der fertigen Videodatei entnommen und visuell auf Beschnitt, Lesbarkeit und korrekte Zahlen kontrolliert. Es wurden keine Beschnitt- oder Lesbarkeitsfehler gefunden.
-
-Arbeitsprotokolle und Einzelbilder liegen außerhalb des Abgabeordners unter `work/lawdiff-tech/`. Bei späteren Änderungen an Quellen, Engine oder Testergebnissen das Video vor einer erneuten Abgabe neu erzeugen und kontrollieren.
+Reproduce with `python3 scripts/render_tech.py`; requires Pillow, FFmpeg/FFprobe, Node, Python and Arial or DejaVu Sans. Private API credentials are unnecessary. Work images, validation receipts and test outputs are outside the deliverable tree under `work/lawdiff-tech/`. Inspect all six scenes after encoding; if the data changes, regenerate and inspect again.

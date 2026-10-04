@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-50-49-716Z-347410ef",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:50:49.716Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 0,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D023",
+        "source_sha256": "fdd8d7fca42103cf630c3a9a4ed217150eb17a6e180edd80c1d845ca5e8aa1fe",
+        "prompt_sha256": "46e12d66bc3b6422d2d913961e15b97a14e66e9140054a9a6fe8ddd7c3967249",
+        "response_sha256": null,
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "rejected_requires_review",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:50:49.732Z",
+        "finished_at": "2026-10-04T04:00:49.754Z",
+        "duration_ms": 600021,
+        "model_called_this_run": true,
+        "exit_code": null,
+        "transport_sha256": "439043101bc6358fbedd11adb6861098f4ad8c4d33367bc662fa602f5eef1d37",
+        "failure_code": "cli_timeout"
+      }
+    ],
+    "status": "stopped_requires_review",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D023.json",
+    "lock_scope": "artifacts/corpus-source-D023.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T04:00:49.758Z",
+    "duration_ms": 600042,
+    "accepted_rule_count": 0,
+    "review_issue_count": 1,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "source_doc_id": "D023",
+      "issue": "cli_timeout"
+    }
+  ],
+  "no_rule_findings": []
+}

@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:09,000
-A recorded Codex CLI run reads source text and emits rule candidates.
-Exact quotations and executable conditions are checked before review.
+Recorded model calls extract candidates; source review selects unchanged records.
+One selected pack drives the workspace and all 500 submitted address lookups.
 
 2
 00:00:09,000 --> 00:00:18,000

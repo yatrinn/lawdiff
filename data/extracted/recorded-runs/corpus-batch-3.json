@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T02-51-47-940Z-dd9f5b72",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T02:51:47.941Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 4,
+    "model_turns_completed": 3,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D002",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D017",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D018",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D019",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D020",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D021",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D028",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D032",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D033",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D034",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D035",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D044",
+        "source_sha256": null,
+        "prompt_sha256": null,
+        "response_sha256": null,
+        "schema_sha256": null,
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "missing_captured_source",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0
+      },
+      {
+        "source_doc_id": "D081",
+        "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+        "prompt_sha256": "de3f67ac89650582d4c2815e89ff389c6e80cabf9304abea6104b539cadeac9d",
+        "response_sha256": "11ed0b4928f87301f2aabf67a00784097fcd43b1126926c9083ea49087319019",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "withheld_after_untrusted_run",
+        "accepted_rules": 0,
+        "review_issues": 2,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T02:51:47.960Z",
+        "finished_at": "2026-10-04T02:52:44.906Z",
+        "duration_ms": 56947,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "0c97152e0775b8d94490235103e6709857de10642ce79f5023c0d5d126e0873d",
+        "usage": {
+          "input_tokens": 14356,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1300,
+          "reasoning_output_tokens": 227
+        }
+      },
+      {
+        "source_doc_id": "D008",
+        "source_sha256": "969848595b70aa2ff7b9e8420f610c36b914521c4ea4dd1d0656be776e90c39f",
+        "prompt_sha256": "ec9f4c686604c128b79aecf0268dc0df585021fa091e83590f763fbd2ea37b50",
+        "response_sha256": "4b92df34e91dff2cf660c5f6fcc6a3f9285873a95e9dc03bb9df0e81849a2fe3",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "withheld_after_untrusted_run",
+        "accepted_rules": 0,
+        "review_issues": 3,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T02:52:44.911Z",
+        "finished_at": "2026-10-04T02:54:08.068Z",
+        "duration_ms": 83158,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "72ec50d482ee1a336e29f94960913c109acc79a900d10d1cd92208c0b6ecb528",
+        "usage": {
+          "input_tokens": 14658,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1914,
+          "reasoning_output_tokens": 382
+        }
+      },
+      {
+        "source_doc_id": "D045",
+        "source_sha256": "8bc537dfe4d0e00b829147ae82ba11d40bef8a2b0696f487c417ca517673bba7",
+        "prompt_sha256": "7830e9a61b7cbb86fec4a45eb207f738bb5cc1484ee87ac56082ba092e741fdb",
+        "response_sha256": "afcca9e4049d96d8142a3b19ca83b0cd88d038289d945cda4253729d2b088ece",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "withheld_after_untrusted_run",
+        "accepted_rules": 0,
+        "review_issues": 2,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T02:54:08.072Z",
+        "finished_at": "2026-10-04T02:54:34.364Z",
+        "duration_ms": 26293,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "38ca62a6770b45d88f4883727c235e06e757cdc73b4fb010ff0a550d7e1081f2",
+        "usage": {
+          "input_tokens": 14750,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 463,
+          "reasoning_output_tokens": 157
+        }
+      },
+      {
+        "source_doc_id": "D058",
+        "source_sha256": "80dcf6692b891859e2601c0732252ba30ec010b5034749c4693ef68ce1fd4281",
+        "prompt_sha256": "1b55490c3a6446da6c6f1b7e5b097dcedd4f6dfe5a71e87f4f742edf3c6e341b",
+        "response_sha256": null,
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "rejected_requires_review",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T02:54:34.366Z",
+        "finished_at": "2026-10-04T02:55:00.708Z",
+        "duration_ms": 26342,
+        "model_called_this_run": true,
+        "exit_code": null,
+        "transport_sha256": "e0153457fc1f73234565e82ead86e3bbd3ef3eb1f8d537629d995b0bc54f7a60",
+        "failure_code": "untrusted_or_failed_cli_event"
+      },
+      {
+        "source_doc_id": "S003",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D046",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D047",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N004",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "S005",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D005",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D012",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D066",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D053",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D007",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D042",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D014",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D003",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D010",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D022",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D036",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D040",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D069",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D029",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N007",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D023",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N002",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D025",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D049",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N008",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D067",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      }
+    ],
+    "status": "stopped_requires_review",
+    "continue_on_source_error": true,
+    "output": "artifacts/corpus-batch-3.json",
+    "lock_scope": "artifacts/corpus-batch-3.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "trust_status": "entire_run_rejected_for_tool_or_untrusted_event",
+    "finished_at": "2026-10-04T02:55:00.710Z",
+    "duration_ms": 192769,
+    "accepted_rule_count": 0,
+    "review_issue_count": 20,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "source_doc_id": "D002",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D017",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D018",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D019",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D020",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D021",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D028",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D032",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D033",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D034",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D035",
+      "issue": "missing_captured_source"
+    },
+    {
+      "source_doc_id": "D044",
+      "issue": "missing_captured_source"
+    },
+    {
+      "issue": "Execution review is required because the supplied fact vocabulary cannot express an entity's sale or use of a qualifying algorithmic device, its use of nonpublic competitor rental data, or its purpose of recommending vacant-unit rents to a landlord. The source supports the prohibition, effective date and civil-action standing but does not specify monetary penalties or per-violation counting.",
+      "quoted_span": "The term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit. The law prohibits the sale or use of such algorithmic devices and allows a tenant or the City Attorney to bring a civil action if they believe an entity is in violation of the law.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d081-algorithmic-device-prohibition: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The notice establishes the 2026 adjustment but does not reproduce Regulation 1148's full eligibility conditions or tenant-notice requirements. Coverage remains qualified and awaits execution review; the supplied fact vocabulary also cannot express the exact tenancy-start cutoff and Costa-Hawkins rent-setting condition. Do not treat this record as establishing eligibility or extract a specific notice period from this source.",
+      "quoted_span": "The 2026 AGA may not adjust tenants’ rents when their tenancy began on or after \nJanuary 1, 2025, and who had their rents set pursuant to the Costa-Hawkins Rental \nHousing Act.  The Order – Rent Board Regulation 1148 – also sets forth the conditions \nfor qualifying for this rent increase and the notice that must be given to tenants in order \nto raise the rent.",
+      "source_doc_id": "D008",
+      "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "January 1, 2026 is the expressly stated earliest date for using this adjustment. October 16, 2025 is the adoption date, not the adjustment's commencement date. The notice does not establish a universal ceiling for every Berkeley rent increase or resolve interactions with other adjustment mechanisms.",
+      "quoted_span": "At its regular meeting on October 16, 2025, the Berkeley Rent Stabilization Board \nadopted the Annual General Adjustment (AGA) Order for Year 2026 which will allow \neligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than \nJanuary 1, 2026.",
+      "source_doc_id": "D008",
+      "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d008-2026-aga-limit: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D008",
+      "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The capture contains a bill status page but no operative bill text. The title does not establish an algorithmic rent-setting duty, covered actors, exceptions, penalties or remedies. Extraction requires the operative text of H.5222.",
+      "quoted_span": "An Act relative to preventing algorithmic rent fixing in the rental housing market\nView Text\nPrint Preview\nDownload PDF",
+      "source_doc_id": "D045",
+      "source_url": "https://malegislature.gov/Bills/194/H5222",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The supplied history supports pending proposal status as of 2026-10-01, not enactment or an effective date. No operative requirements are supplied for rent_increase_limits, just_cause_eviction, security_deposits, application_screening_fees or screening_restrictions; this capture cannot establish whether such rules exist elsewhere.",
+      "quoted_span": "3/12/2026\nHouse\nBill reported favorably by committee and referred to the committee on\nHouse Ways and Means",
+      "source_doc_id": "D045",
+      "source_url": "https://malegislature.gov/Bills/194/H5222",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "source_doc_id": "D058",
+      "issue": "untrusted_or_failed_cli_event"
+    }
+  ],
+  "no_rule_findings": []
+}

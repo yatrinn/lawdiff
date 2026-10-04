@@ -1,19 +1,36 @@
 {
-  "generated_at": "2026-10-03T23:53:15.136Z",
-  "rules": 58,
-  "primary_quotes": 58,
-  "supplemental_quotes": 135,
+  "generated_at": "2026-10-04T10:45:05.124Z",
+  "rules": 89,
+  "executable_rules": 13,
+  "coverage_review_records": 76,
+  "primary_quotes": 89,
+  "supplemental_quotes": 0,
   "addresses": 500,
   "geocoded": 475,
-  "source_texts": 54,
+  "source_texts": 73,
   "official_score": null,
   "legal_review": false,
-  "pack_sha256": "99c6e227aa22d36b5c2dec3b84ed248ead9c7abeec91ca7ae88e52d1220e0b3d",
+  "pack_sha256": "d17411015bdfe1b4102b322c12d6f75a38dd8a81e4442375dd574deb2a8e2f5d",
+  "corpus_file_sha256": {
+    "catalog": "c57399cb93251f87e0114b1e1d8e6d34cd282c2a796a8a9d3785c1cdc332f69b",
+    "corpus-coverage": "d6cadcbec4e249b26ee05588fa3437abcddc031a9b62db254ad0d8561ae04b30",
+    "corpus-candidates": "7eb05fb53649009f7310e22583c3103b7a667ffb63f405c6b3d0f701b26caae5",
+    "rule-pack": "853774902cd29c92855db5e54d91ec1bc5cd10a494ad47844e85f355846d7d38"
+  },
+  "automatic_selection": {
+    "source_file_sha256": "edf6ac6b64c9dca4e8d0cf23b5f2e3e794b781d4836cd98270d5cd3825384859",
+    "selection_file_sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31",
+    "original_artifacts_revalidated": true,
+    "rules_modified": false,
+    "independent_legal_review": false
+  },
   "checks": [
-    "Rule structure and executable conditions",
+    "Rule structure, executable conditions and explicit coverage-review flags",
     "Primary and supplementary exact source spans",
     "Real calendar dates",
     "Unique address and rule identifiers",
-    "Referenced rule identifiers"
+    "Referenced rule identifiers",
+    "Automatic selection audit and unchanged per-rule hashes",
+    "Corpus catalog bytes, source hashes, candidate-set hashes and reconciled receipts"
   ]
 }

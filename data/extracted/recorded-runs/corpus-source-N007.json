@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-46-00-806Z-b1d8c090",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:46:00.806Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "N007",
+        "source_sha256": "8d6971461a2f531e24c6f4a2c1bd571e3bc6d171eb7af493aaa97bb0ac4d2f52",
+        "prompt_sha256": "0318b6ef558f3c5999fe34e911235c83897e9e883a7df64c2986a44a77f99b9f",
+        "response_sha256": "81551a13323ffa12ed0d097b25df91a84dfbb422d9937c9af52bd189ffda5fc2",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 7,
+        "review_issues": 15,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:46:00.821Z",
+        "finished_at": "2026-10-04T03:50:49.693Z",
+        "duration_ms": 288871,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "db69e0561b42988f0f6103ea21bb15254dae3226177000605d8e598efe1a29be",
+        "usage": {
+          "input_tokens": 19844,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7015,
+          "reasoning_output_tokens": 516
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-N007.json",
+    "lock_scope": "artifacts/corpus-source-N007.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:50:49.698Z",
+    "duration_ms": 288892,
+    "accepted_rule_count": 7,
+    "review_issue_count": 15,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "n007-criminal-inquiry-timing",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Formal application before criminal-history inquiry",
+      "requirement": "Inquiry into and consideration of an applicant's criminal history must wait until submission of a formal application containing all required review materials or information. A landlord or real estate broker may discuss criminal history disclosed through the applicant's unsolicited voluntary written or oral disclosure.",
+      "key_value": "After formal application",
+      "coverage_conditions": "Applies to landlords as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, and real estate brokers as defined in that section, in connection with residential rentals, leases and subleases and applicants seeking those transactions or related information. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Article prohibitions do not apply where federal or state law, regulation or rule requires or permits consideration of criminal history, but only for the specified offenses or offense types and time periods, or to property designated by the landlord or broker to participate in a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly. The unsolicited voluntary disclosure exception permits discussion of the history disclosed.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-2(a), 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "Inquiry into and consideration of any applicant's criminal history shall take place only after the applicant has submitted a formal application. Notwithstanding the foregoing, if the applicant discloses any information regarding his or her criminal history by unsolicited voluntary written or oral disclosure, the landlord or real estate broker may discuss the criminal history disclosed by the applicant.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-pre-inquiry-notice",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Written notification before criminal-history inquiry",
+      "requirement": "Before a criminal-history inquiry, the landlord or broker must give standard written notification explaining written consent, at least three business days after receipt of notice to submit evidence upon consenting, and the right to obtain inquiry results on request, with the Appendix A housing information form attached. The landlord or broker may hold the unit for rehabilitation information but need not hold it after an initial eligibility determination.",
+      "key_value": "At least 3 business days to submit evidence",
+      "coverage_conditions": "Applies before a criminal-history inquiry by a landlord as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, or by a real estate broker as defined in that section, concerning an applicant for a residential rental, lease or sublease. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Section 2:31-8 exempts Article prohibitions where federal or state law, regulation or rule requires or permits criminal-history consideration, limited to the specified offenses or offense types and time periods, and for property designated by the landlord or broker for a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly; whether those exemptions from prohibitions also displace this affirmative notification duty requires review.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-2(b)–(c), 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "Prior to conducting any criminal history inquiry regarding an applicant, the landlord or real estate broker shall provide standard written notification to the applicant.\n\n1.\n\nAdvising that, upon the written consent of the applicant, the landlord or real estate broker will conduct a criminal history inquiry;\n\n2.\nAdvising that upon consenting to a criminal history inquiry, the applicant has the right and opportunity of not less than three business days from the receipt of notice to submit evidence which may inform the consideration under Section 2:31-4 of this Article; and\n\n3.\n\nAdvising that the applicant has the right to receive a copy, upon the applicant's request, of the results of any criminal history inquiry obtained regarding the applicant.\n\n4.\nAttaching a copy of the Information Form Regarding Criminal Record Review - Housing, attached hereto as Appendix A.\n\nc.\n\nA landlord or real estate broker may hold a housing unit open until an applicant provides information about rehabilitation, but a landlord or real estate broker is not required to hold a housing unit after making an initial determination of an applicant's eligibility.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-prohibited-criminal-records",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Criminal records excluded from inquiry and adverse action",
+      "requirement": "A landlord or broker must not inquire into, require disclosure of, or take adverse action based on arrests or accusations that are neither pending nor resulted in conviction; erased, expunged, pardoned or otherwise legally nullified records; juvenile delinquency adjudications; or sealed records.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, and real estate brokers as defined in that section, in connection with residential rentals, leases and subleases. The prohibition protects any person described in § 2:31-3(d). Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Article prohibitions do not apply where federal or state law, regulation or rule requires or permits consideration of criminal history, but only for the specified offenses or offense types and time periods, or to property designated by the landlord or broker to participate in a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-3(d), 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "It shall not be permissible for a landlord or real estate broker to conduct any criminal history inquiry, require any person to disclose or reveal, or to take any adverse action against any person on the basis of\n\n1.\n\nAny arrest or criminal accusation made against such person which is not then pending against that person and which did not result in a conviction;\n\n2.\n\nAny records which have been erased, expunged, the subject of an executive pardon, or otherwise legally nullified; or\n3.\n\nAny juvenile adjudications of delinquency or any records which have been sealed.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-required-screening-considerations",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Required individualized criminal-history considerations",
+      "requirement": "When evaluating an applicant and a criminal-history inquiry conducted within § 2:31-3's limits, the landlord or broker must consider any supplied rehabilitation, good-conduct or record-accuracy information, including rehabilitation certificates. The evaluation must also consider time since conviction or release and the nature and circumstances of the crimes.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, and real estate brokers as defined in that section, evaluating applicants and criminal-history inquiry results in connection with residential rentals, leases, assignments or subleases. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Section 2:31-8 exempts Article prohibitions where federal or state law, regulation or rule requires or permits criminal-history consideration, limited to the specified offenses or offense types and time periods, and for property designated by the landlord or broker for a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly; whether those exemptions from prohibitions also displace this affirmative consideration duty requires review.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-4(a), 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "A landlord or real estate broker shall consider the following factors in evaluating the applicant and the results of any criminal history inquiry, conducted in accordance with the limitations of Section 2:31-3 .\n\n1.\nAny information, if provided, pertaining to the degree of rehabilitation and good conduct or to the accuracy of the criminal record in question produced by the applicant, or produced on his or her behalf to the landlord or real estate broker, including but not limited to any certificate of rehabilitation issued by any state or federal agency, which includes but is not limited to certificates issued pursuant to N.J.S.A. 2A:168A-1 to 16;\n\n2.\nThe amount of time that has passed since the conviction(s) and/or release from custody; and\n\n3.\n\nThe nature of and circumstances surrounding the crime(s).",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-adverse-decision-notice",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Notice and inquiry results after an adverse decision",
+      "requirement": "Within 10 business days after a final adverse determination following a criminal-history inquiry that results in refusal of a rental, lease, assignment or sublease, the landlord or broker must provide written notice stating the reasons and consideration of § 2:31-4 factors, plus a copy of the inquiry results. All required documents and notices must be sent together in one registered mailing.",
+      "key_value": "10 business days; one registered mailing",
+      "coverage_conditions": "Applies when a landlord as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, or a real estate broker as defined in that section, conducts a criminal-history inquiry and then makes a final adverse determination refusing an applicant a residential rental, lease, assignment or sublease. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Section 2:31-8 exempts Article prohibitions where federal or state law, regulation or rule requires or permits criminal-history consideration, limited to the specified offenses or offense types and time periods, and for property designated by the landlord or broker for a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly; whether those exemptions from prohibitions also displace this affirmative notice duty requires review.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-5, 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "If after conducting a criminal history inquiry the landlord or real estate broker makes a final determination adverse to the applicant resulting in the refusal of any rental, lease, assignment, or sublease, the landlord or real estate broker shall, within 10 business days.\n\n1.\n\nNotify the applicant in writing of the adverse action, stating the reasons for rejection and including the landlord's or real estate broker's consideration of factors required under Section 2:31-4 of this Article; and\n2.\n\nProvide the applicant with a copy of the results of the criminal history inquiry.\n\nb.\n\nA copy of all documents and notices required under Section 2:31-5a shall be sent in one mailing, by registered mail, to the applicant.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-criminal-history-confidentiality",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Confidentiality and restricted use of criminal history",
+      "requirement": "Criminal-history information obtained in the rental, lease or sublease process must remain confidential and be shared only with individuals needing it to evaluate applicants consistently with the Article. Landlords and brokers may use or distribute it only for Article purposes and may not disseminate it to other entities or individuals except as dictated by law.",
+      "key_value": null,
+      "coverage_conditions": "Applies to applicants' criminal-history information obtained in connection with residential rentals, leases or subleases, including its handling by landlords as defined in § 2:31-1, meaning owners, lessees, sublessees, assignees, managing agents, other persons entitled to rent, lease or sublease the property, or their employees or agents, and real estate brokers as defined in that section. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Article prohibitions do not apply where federal or state law, regulation or rule requires or permits criminal-history consideration, limited to the specified offenses or offense types and time periods, or to property designated by the landlord or broker for a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly. Section 2:31-6 permits sharing for consistent applicant evaluation on a need-to-know basis and dissemination to others as dictated by law; the reach of § 2:31-8's exemption from prohibitions into affirmative confidentiality duties requires review.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-6, 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "Any information pertaining to an applicant's criminal history obtained in conjunction with the rental, lease, or sublease process:\n\n1.\n\nShall remain confidential;\n\n2.\n\nShall only be shared with individuals who have a need to know for the purpose of evaluating applicants in a manner consistent with this Article;\n\n3.\n\nShall not be used, distributed, or disseminated by the landlord or real estate broker for any use other than those described in this Article; and\n\n4.\nShall not be used, distributed, or disseminated by the landlord or real estate broker to any other entity or individual, except as dictated by law.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n007-criminal-history-advertisements",
+      "jurisdiction": "Newark, NJ",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Restrictions on criminal-history advertising",
+      "requirement": "A landlord or broker must not produce or disseminate rental advertisements directly or indirectly referencing use or consideration of criminal history, except expressions of eligibility restrictions under § 2:31-8(a) limited to legally specified offenses and time periods. In an action under this section, such an advertisement is presumptive evidence that the landlord or broker authorized it.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords as defined in § 2:31-1, including an owner, lessee, sublessee, assignee, managing agent, other person entitled to rent, lease or sublease the property, or their employee or agent, and real estate brokers as defined in that section, producing or disseminating advertisements connected to residential rentals, leases or subleases. Advertisements include circulation, mailing, posting or other publication in any media promoting the landlord or broker or alerting audiences or prospective applicants to property availability. Excludes rental of a single apartment or flat in a two-family dwelling when the other unit is occupied by the owner as a residence or by the owner's family household at the time of rental; also excludes rental of rooms by the owner or occupant of a one-family dwelling occupied by that person as a residence or by that person's family household at the time of rental. Article prohibitions do not apply where federal or state law, regulation or rule requires or permits criminal-history consideration, limited to the specified offenses or offense types and time periods, or to property designated by the landlord or broker for a federal, state or local government program or obligation designed to encourage housing for individuals with criminal histories. Exceptions must be interpreted narrowly. Section 2:31-7 expressly allows expression of statutory, regulatory or rule-based eligibility restrictions described in § 2:31-8(a) only within the offenses and time periods established by law.",
+      "execution_review_pending": true,
+      "overrides": [],
+      "effective_date": null,
+      "citation": "Newark Code §§ 2:31-1, 2:31-7, 2:31-8",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "quoted_span": "In connection with any rental, lease, or sublease, it shall be unlawful for a landlord or real estate broker to produce or disseminate any advertisement that directly or indirectly references the use or consideration of an applicant's criminal history, except that nothing in this section shall preclude the expression of statutory, regulatory, or rule-based eligibility restrictions applicable to the rental, lease or sublease of real property as described in Section 2:31-8a so long as such expression is limited to the specified offense(s) and time period(s) as established by law.\nb.\n\nIn any action against any landlord or real estate broker under this section, any such advertisement shall be presumptive evidence that the landlord or real estate broker authorized the advertisement.",
+      "confidence": null,
+      "retrieved_at": "2026-10-04T02:04:15.005Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The supplied codified housing provisions support in_force status, but their precise effective date is not supplied. The ordinance history date is not expressly an effective date; all extracted effective_date values therefore remain null. The capture occurred after the as-of date and supplies no separate historical version.",
+      "quoted_span": "[Ord. 6 PSF-B, 4-15-2015 Art. I § 1]",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "The editor's repeal note concerns the 2012 ordinance. The operative housing provisions are separately attributed to the 2015 ordinance; the note does not establish repeal of those replacement provisions.",
+      "quoted_span": "Editor's Note: Ordinance No. 6 PSF-F, 9-19-2012, Reintegration of Formerly Incarcerated People into the Community was repealed in its entirety by Ordinance No. 6 PSF-B, 4-15-2015.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "All rules require execution review because the fact vocabulary cannot fully express covered landlord and broker roles, the family-household and room-rental exclusions, or the statutory and designated-program exceptions. Owner occupancy alone does not completely represent the housing exclusions.",
+      "quoted_span": "REAL PROPERTY — Shall mean real estate, lands, multiple dwellings and hereditaments, corporeal incorporeal, and leaseholds, provided however that the provisions of this Article shall not apply to the rental:\n1.\n\nOf a single apartment or flat in a two family dwelling, the other occupancy unit of which is occupied by the owner as his/her residence or the household of his/her family at the time of such rental; or\n\n2.\n\nOf a room or rooms to another person or persons by the owner or occupant of one-family dwelling occupied by him/her as his/her residence or the household of his/her family at the time of such rental.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Section 2:31-8 expressly exempts the Article's prohibitions. Its effect on affirmative notice, consideration and confidentiality duties requires interpretation. The supplied source does not establish how any particular federal or state law interacts with these local provisions, and no precedence or override is verified.",
+      "quoted_span": "The prohibitions of this Article shall not apply:\n\n1.\nWhere any federal or state law, regulation, or rule requires or permits the consideration of an applicant's criminal history in the rental, lease, or sublease of real property, provided the exemption is limited to those offenses or types of offenses and time periods that federal or state law, regulation, or rule requires or permits the landlord or real estate broker to consider.\n\n2.\nTo any real property designated by the landlord or real estate broker to participate in a federal, state, or local government program or obligation that is designed to encourage the provision of housing for individuals with criminal histories.\n\nb.\n\nIt is the intent of the Municipal Council that exceptions under this Article be interpreted narrowly.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Do not compile an unconditional eight-year or five-year criminal-record cutoff. Section 2:31-3(a) permits specified inquiries, but subsection (b) permits consideration of older convictions while naming an 'employer' in the housing Article, and subsection (c) permits specified serious convictions regardless of age. The actor error and inquiry-versus-consideration distinctions require interpretation before a complete temporal restriction can be extracted.",
+      "quoted_span": "Subject to the terms of this Article, a landlord or real estate broker shall be permitted to inquire about:\n\n1.\n\nIndictable offense convictions in New Jersey (or, if from any other state or jurisdiction, convictions for conduct which, if committed in New Jersey, would constitute an indictable offense) for eight years following the release from post-conviction custody or from the date of sentencing if the person was not incarcerated;\n2.\n\nDisorderly persons convictions or municipal ordinance violations in New Jersey (or, if from any other state or jurisdiction, convictions for conduct which, if committed in New Jersey, would constitute a disorderly persons offense or municipal ordinance violation) for five years following the release from post-conviction custody or from the date of sentencing if the person was not incarcerated; and\n\n3.\n\nPending criminal charges.\n\nb.\nNotwithstanding 2:31-3a, all prior disorderly persons and indictable offense convictions (or, if from any other state or jurisdiction, convictions for conduct which, if committed in New Jersey, would constitute an indictable offense or disorderly persons conviction) may be considered by the employer if any of the subject's convictions may be considered pursuant to Section 2:31-3a or c, of this section, unless they are deemed impermissible pursuant to Section 2:31-3d herein.\n\nc.\nNotwithstanding Section 2:31-3a , and subject to the terms of this Article, a landlord or real estate broker shall be permitted to consider convictions for murder, attempted murder, arson-related offenses, sex offenses requiring registry under N.J. S.A. 2C Chapter 2C:7-1, et seq. that are punishable by a term of incarceration in state prison, and any crime listed in 18 U.S.C. Chapter 113B - Terrorism or N.J.S.A. 2C:-38-1, et seq.\n- September 11th, 2001 Anti-Terrorism Act (or in any other state or jurisdiction, convictions for conduct which, if committed in New Jersey, would constitute a violation of N.J.S.A. 2C:38-1, et seq.), regardless of when they occurred.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Separately located housing enforcement provision: a first violation is subject to a fine of up to $500, and each subsequent violation to a fine of up to $1,000; enforcement is assigned to an office or department designated by the Business Administrator. These sanctions are retained here because individual rule quotations do not include this passage. The passage does not specify private plaintiff standing, a private damages remedy, or a per-day counting rule.",
+      "quoted_span": "The City of Newark Business Administrator shall designate an office or department that shall enforce the provisions of this Article.\n\nb.\n\nA first violation shall be subject to a fine of up to $500. Each subsequent violation shall be subject to a fine of up to $1,000.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "The housing notice must attach Appendix A, but that form's contents are absent from the supplied source. The attachment duty is extracted; additional form-specific duties cannot be established.",
+      "quoted_span": "Attaching a copy of the Information Form Regarding Criminal Record Review - Housing, attached hereto as Appendix A.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Article 2 governs City licensing, not residential tenant screening. Its otherwise-qualified prerequisite, review opportunity and licensing-specific protections are not imported into the housing rules.",
+      "quoted_span": "Inquiry into and consideration of any applicant's criminal history shall take place only after the applicant has submitted a formal application and has been found otherwise qualified to receive a license from the City.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-criminal-inquiry-timing: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-pre-inquiry-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-prohibited-criminal-records: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-required-screening-considerations: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-adverse-decision-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-criminal-history-confidentiality: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "issue": "Execution review required for n007-criminal-history-advertisements: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "The supplied chapter establishes criminal-history screening procedures but supplies no residential rent-increase limit. This is a finding about this source only, not about other Newark law.",
+      "quoted_span": "Inquiry into and consideration of any applicant's criminal history shall take place only after the applicant has submitted a formal application.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied source establishes applicant rejection notices, not a just-cause eviction regime. No just-cause eviction rule is supported by this source.",
+      "quoted_span": "If after conducting a criminal history inquiry the landlord or real estate broker makes a final determination adverse to the applicant resulting in the refusal of any rental, lease, assignment, or sublease, the landlord or real estate broker shall, within 10 business days.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No security-deposit duty or limit is supplied in this chapter's housing screening provisions. This does not establish the absence of deposit rules elsewhere.",
+      "quoted_span": "Prior to conducting any criminal history inquiry regarding an applicant, the landlord or real estate broker shall provide standard written notification to the applicant.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The source regulates criminal-history inquiries but supplies no application or screening fee amount, prohibition, refund requirement or other fee duty.",
+      "quoted_span": "Prior to conducting any criminal history inquiry regarding an applicant, the landlord or real estate broker shall provide standard written notification to the applicant.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The supplied chapter contains no algorithmic rent-setting rule; its inquiry provisions concern applicants' criminal histories.",
+      "quoted_span": "Inquiry into and consideration of any applicant's criminal history shall take place only after the applicant has submitted a formal application.",
+      "source_doc_id": "N007",
+      "source_url": "https://ecode360.com/36642000",
+      "retrieved_at": "2026-10-04T02:04:15.005Z"
+    }
+  ]
+}

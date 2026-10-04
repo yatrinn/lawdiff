@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "format": "lawdiff-recorded-runs/1.0.0",
+  "generated_at": "2026-10-04T10:31:27.510Z",
+  "inputs": [
+    {
+      "path": "public/data/corpus-coverage.json",
+      "sha256": "d6cadcbec4e249b26ee05588fa3437abcddc031a9b62db254ad0d8561ae04b30"
+    },
+    {
+      "path": "data/extracted/automatic-selection.json",
+      "sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31"
+    }
+  ],
+  "files": [
+    {
+      "artifact_path": "artifacts/corpus-batch-1.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-batch-1.json",
+      "sha256": "0f1bd8250b9583c2ccfcb4634571c7765bda2eed794e96938c9a9e94ef385adb",
+      "run_id": "2026-10-04T02-36-45-187Z-3efe2542",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 7484,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-batch-2.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-batch-2.json",
+      "sha256": "af8285dcea33f207f0984419116ee425859a8b9c4200fcf21fb6fc3b1c024c3c",
+      "run_id": "2026-10-04T02-36-47-159Z-52453bcf",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 9964,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-batch-3.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-batch-3.json",
+      "sha256": "37a17d00c34516d8af41aa7e833e9db567c381b203b29a2211194b013e615a68",
+      "run_id": "2026-10-04T02-51-47-940Z-dd9f5b72",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 20311,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-batch-4.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-batch-4.json",
+      "sha256": "d90e8963f3187ef0706c519d1d6223e713924fe64dc131973bc6efc6b70cbb58",
+      "run_id": "2026-10-04T02-51-53-030Z-67a31803",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 197583,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-long-S006.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-long-S006.json",
+      "sha256": "a1dce6b9c7ce576f9d3940029fa0034ce8a45ae949d34274b170419fc41e9607",
+      "run_id": "2026-10-04T03-11-20-257Z-b6daacc1",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 164826,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D003.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D003.json",
+      "sha256": "338158b210cd6050cfdfe65bd79b2395c54f08b8f6831be5981cac8f25180adf",
+      "run_id": "2026-10-04T03-22-49-944Z-6a18fd18",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 34801,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D005.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D005.json",
+      "sha256": "cb6087c27cffa346ee55bf7f59a4e73a5b53e3c3e0d2710305458b06768bfae7",
+      "run_id": "2026-10-04T03-06-28-850Z-7c92bc5a",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2592,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D007.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D007.json",
+      "sha256": "2ec71bc602d1446c49fddfcef022b5b1bf2187e8bf4deabf9b00175d5c259608",
+      "run_id": "2026-10-04T03-14-28-310Z-5ca0c858",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2596,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D010.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D010.json",
+      "sha256": "979263fcabf4034c45328504f66c814ab7115ebb2014704e4e6bafd92470afb4",
+      "run_id": "2026-10-04T03-26-54-751Z-d60c3de3",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 33820,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D012.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D012.json",
+      "sha256": "1f3ac9a924f5dc5b62a111f90bf0411a2a13b9fd086da913d28dca072c52151b",
+      "run_id": "2026-10-04T03-09-26-757Z-1b0b493b",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 10794,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D014.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D014.json",
+      "sha256": "a19e5b439cdc3506e56defd04c8203bc9571cce66aa2aff4ff536cc27b7cff94",
+      "run_id": "2026-10-04T03-20-27-223Z-aa314041",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 20307,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D022.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D022.json",
+      "sha256": "1e1fd53e4366d57d47a5c16bf9f0e24e84bc0dc03927795603d9bfa0dab54af2",
+      "run_id": "2026-10-04T03-30-58-519Z-33a41309",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 16048,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D023.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D023.json",
+      "sha256": "f1ab775ac11a9628dc81e7f920d29849e99f2f3631e20d6aa6fdcd55e61ecad8",
+      "run_id": "2026-10-04T03-50-49-716Z-347410ef",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2285,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D025.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D025.json",
+      "sha256": "dddcfeca40f0dfb1053afaa9858be6c35c75d520046aba98ad807ec5c77ef860",
+      "run_id": "2026-10-04T04-00-52-867Z-ee6058f5",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2388,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D029.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D029.json",
+      "sha256": "459f483afc035831adc12cae17e55360c7260366652803746409cef86e904e28",
+      "run_id": "2026-10-04T03-43-47-130Z-f2cb99eb",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 18386,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D036.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D036.json",
+      "sha256": "e516be4c97793efe00fd45a931571393737c98c76cab98e90944ed31b4d16647",
+      "run_id": "2026-10-04T03-33-00-778Z-38facd62",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 5798,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D040.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D040.json",
+      "sha256": "9f63b80120cbc8f2a5bcfc3c8bbc30a6a91ea038b578f25734cadeb94dfffa7f",
+      "run_id": "2026-10-04T03-33-47-766Z-98cb72e2",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2597,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D042.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D042.json",
+      "sha256": "b86088d5ea2d27c6b74590f8e8e02c105a7b84a52deeeb9b7687065a7c41ec25",
+      "run_id": "2026-10-04T03-18-11-087Z-cac95cf7",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2592,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D046.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D046.json",
+      "sha256": "38c69c9e785b83abde50a24f9c88325bb5c5e2c2006b8c34389694af67524680",
+      "run_id": "2026-10-04T03-01-55-791Z-b436b163",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 4534,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D047.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D047.json",
+      "sha256": "62554382f6c9d447b0dd9a27836784bfe0652bfb5d33e988edbc24e54ddde681",
+      "run_id": "2026-10-04T03-02-25-191Z-6be7d920",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 6398,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D049.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D049.json",
+      "sha256": "3ed5987406af8d08a82773600ef96933d5b5c05dd913a106d67fc3561e156c42",
+      "run_id": "2026-10-04T04-00-56-158Z-c30e0a1e",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2388,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D053.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D053.json",
+      "sha256": "2f400a8fed988528d2514e3aef96e02cdc145bbe76c84f10d04bc36c9748e6a3",
+      "run_id": "2026-10-04T03-12-56-281Z-00e7e16f",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 22330,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D066.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D066.json",
+      "sha256": "a585515744470e85a52385be76ab389813103e2bb9b7bd18e91a62ff75909393",
+      "run_id": "2026-10-04T03-10-10-470Z-c517b191",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 19379,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D067.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D067.json",
+      "sha256": "536e12580f03b7bbf4fefaf77cf49dec5dcebeb171ac2f94e81eff06b439803f",
+      "run_id": "2026-10-04T04-01-04-015Z-4b0aa65e",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2388,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-D069.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-D069.json",
+      "sha256": "8e61fd0ff00c8dfa310d543c8e8d4608ab76ab3042b9de8689f2472c49183820",
+      "run_id": "2026-10-04T03-38-50-938Z-25eb9d37",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 39640,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-N002.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-N002.json",
+      "sha256": "a492cbfd3abc673e567d78b6ccd00266dd8590d00778d5dd4f9b917cb3391e31",
+      "run_id": "2026-10-04T04-00-49-777Z-446ee5dd",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2388,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-N004.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-N004.json",
+      "sha256": "2f3b8a04c7ecde53755e6108ea96d6948a13955ca6bda575cf13dc62d11c3121",
+      "run_id": "2026-10-04T03-03-04-078Z-a7554e5c",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 25063,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-N007.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-N007.json",
+      "sha256": "d7a63fe953de950ce8bc57bbe773d9e34beddb4a441ba0d4b30b305034df8074",
+      "run_id": "2026-10-04T03-46-00-806Z-b1d8c090",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 39410,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-N008.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-N008.json",
+      "sha256": "43c62f4e11f45944d37d9fa33a394fb485dd7fd874fdf9161d47e3c1250c9266",
+      "run_id": "2026-10-04T04-01-01-080Z-193bbfb7",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2388,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-S003.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-S003.json",
+      "sha256": "dc1a267085af9f2b479278716b223143ce7f9cd358e222c3bc681ab31fc31359",
+      "run_id": "2026-10-04T03-00-04-669Z-5736088b",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 16904,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/corpus-source-S005.json",
+      "archive_path": "data/extracted/recorded-runs/corpus-source-S005.json",
+      "sha256": "ff60967338f22216decf5e98a1f91020161e6677c7b11d94cc8fe36d4dc91c3e",
+      "run_id": "2026-10-04T03-06-00-008Z-56856718",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 5253,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/scope-v130-context.json",
+      "archive_path": "data/extracted/recorded-runs/scope-v130-context.json",
+      "sha256": "c730dccc76934a0d46fd3dad39d2b146c71b41930b666125ebbb88a1ea335ab6",
+      "run_id": "2026-10-04T03-38-42-692Z-350adb42",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 52314,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/scope-v130-core.json",
+      "archive_path": "data/extracted/recorded-runs/scope-v130-core.json",
+      "sha256": "f5ae78d2a9170e28483a58a17e6ef4d72aea428dd530e5c63a93c4d77c679465",
+      "run_id": "2026-10-04T03-22-49-457Z-9e943351",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 156083,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/scope-v130-ma.json",
+      "archive_path": "data/extracted/recorded-runs/scope-v130-ma.json",
+      "sha256": "b60eee4da799a545e6c9508e4efe89c1d77b466b23507f2b564ee10ac8e30eb8",
+      "run_id": "2026-10-04T03-29-15-488Z-b09e5b8d",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 40560,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/scope-v131-d024.json",
+      "archive_path": "data/extracted/recorded-runs/scope-v131-d024.json",
+      "sha256": "00f4ec440182a15f58052a416d9d3036ea4a2d96c32f89cb90384977d54176b1",
+      "run_id": "2026-10-04T03-50-37-546Z-76e03c1b",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 52753,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/scope-v131-negative.json",
+      "archive_path": "data/extracted/recorded-runs/scope-v131-negative.json",
+      "sha256": "c78b1f35bbcf362d8a8293f834ce8c2eaca24a14af75dff0cc3cf9b66a498728",
+      "run_id": "2026-10-04T03-55-37-692Z-cce8ac14",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2390,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "stopped_requires_review"
+    }
+  ],
+  "no_model_calls": true,
+  "note": "Exact original bytes of explicitly referenced public terminal compiler artifacts. Stopped runs preserve failed/unprocessed audit outcomes; archival is not acceptance or legal review."
+}

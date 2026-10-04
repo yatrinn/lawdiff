@@ -20,6 +20,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: node scripts/restore-extraction.mjs
       - run: npm test
       - run: python3 tests/geocode_test.py
       - run: npm run build

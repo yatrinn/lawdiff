@@ -1,0 +1,21 @@
+{
+  "team_rule_id": "MA-RENT-P1",
+  "jurisdiction": "MA",
+  "level": "state",
+  "category": "rent_increase_limits",
+  "status": "failed",
+  "title": "Rent-control ballot proposal — organizer negative case",
+  "requirement": "The organizer’s T5 case records IP 25-21 as failed. It creates no active rent cap in this model. An independent court or ballot record has not been captured.",
+  "requirement_es": "El caso T5 del organizador identifica IP 25-21 como una propuesta fallida. No crea un límite de alquiler vigente en este modelo. No se ha capturado un registro judicial independiente.",
+  "coverage_conditions": {
+    "all": []
+  },
+  "effective_date": null,
+  "citation": "Organizer dev/change_tests.json, T5",
+  "source_doc_id": "O001",
+  "source_url": "https://drive.google.com/drive/folders/14TT6AEH8TStzoT5c5fZ45Bt4grODsowR",
+  "quoted_span": "No rent cap reported for any Boston or Cambridge address; IP 25-21 recorded as failed. Affected set is empty.",
+  "extraction_method": "organizer_test_status",
+  "review_status": "organizer_metadata_only",
+  "conflict_flag": false
+}

@@ -1,0 +1,517 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-38-42-692Z-350adb42",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.3.0",
+    "started_at": "2026-10-04T03:38:42.693Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 3,
+    "model_turns_completed": 3,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "C001",
+        "source_sha256": "22a5edbd367e7ebadc696ac9833abdce547f5c7934383640ff03067cb752f5d9",
+        "prompt_sha256": "c2aa051799c724ed5efdce81ea9d7e575047e978a06d1c97d767ebc035627c59",
+        "response_sha256": "05bf508be51d28008ee02b085041a71b7bdfff824734ad799fc6fc617bc41533",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 6,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:38:42.720Z",
+        "finished_at": "2026-10-04T03:40:46.987Z",
+        "duration_ms": 124267,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "b0fcc50765d47209d3530e8df4b805c7d91a7528ae1142e14807bf086afa9a4e",
+        "usage": {
+          "input_tokens": 16768,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2974,
+          "reasoning_output_tokens": 159
+        }
+      },
+      {
+        "source_doc_id": "S007",
+        "source_sha256": "70a4f2651034915926d6456641c448b042c2241cd9dd72f107a79aeb359439fe",
+        "prompt_sha256": "49d6420109e0e9786c53332ca702cb31f7ae9a6e4facda1b6041919d07877b4c",
+        "response_sha256": "46c644dcfa555d12ff892dd1a904c2192041d196143b96dc1bae0c8109f0933e",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 3,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:40:46.994Z",
+        "finished_at": "2026-10-04T03:44:03.214Z",
+        "duration_ms": 196221,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "5db9b01091d5cc3612384df9d22b1f7a1cf2a8b232a4e11e921bdf8369b94a8c",
+        "usage": {
+          "input_tokens": 16157,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4767,
+          "reasoning_output_tokens": 516
+        }
+      },
+      {
+        "source_doc_id": "S001",
+        "source_sha256": "698fd6d8feeb2632243e052fdef6922aee2b7603cf77f01d5f461ad7b6b32d16",
+        "prompt_sha256": "48d0fde7402fefe552f350f6cad4dae83712cb68606639247ebc79a8e247b7ed",
+        "response_sha256": "74a337264d5791643b9f47d1e5fc7d67d11ba67dc3d5fe285173da648da93b35",
+        "schema_sha256": "5823aa52ce5844fa544eec52e8944b28b5237ae0a70e5e109e0c5c8b292ecebf",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 4,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:44:03.218Z",
+        "finished_at": "2026-10-04T03:45:30.193Z",
+        "duration_ms": 86975,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "e88c8fbe7aa8ba3a53ef2349b0bbb9a66900eee5aecc7c46c4a1da8ff6ecdfd5",
+        "usage": {
+          "input_tokens": 15088,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2003,
+          "reasoning_output_tokens": 303
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": true,
+    "output": "artifacts/scope-v130-context.json",
+    "lock_scope": "artifacts/scope-v130-context.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:45:30.197Z",
+    "duration_ms": 407504,
+    "accepted_rule_count": 5,
+    "review_issue_count": 13,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 15,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "c001-pricing-algorithm-restraint",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Common pricing algorithms used in unlawful restraints of trade",
+      "requirement": "A person, as defined by Section 16702 and excluding an end consumer, must not use or distribute a common pricing algorithm as part of a contract, trust combination, or conspiracy restraining trade or commerce in violation of the Cartwright Act. This prohibition concerns methodologies used by two or more persons that use competitor data to influence a price or commercial term.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": []
+      },
+      "exemptions": "Section 16729 states no property, ownership, tenancy, or housing-program eligibility conditions. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making available by any means, including subscriptions or service sales. Commercial terms include service level, availability, and output, including product quantities or the amount or level of service. Price includes money or any other tangible or intangible thing of value expected, required, or given in payment for a product or service, including employee or independent-contractor compensation. Person incorporates Section 16702, whose text is not supplied, and expressly excludes the end consumer of a product or service. These are actor and conduct qualifications, not findings about any address or actual product use.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-01-01",
+      "citation": "Cal. Bus. & Prof. Code § 16729(a), (d)",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "16729.\n(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.\n(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.\n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "c001-pricing-algorithm-coercion",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Coercion to adopt common pricing algorithm recommendations",
+      "requirement": "A person, as defined by Section 16702 and excluding an end consumer, must not use or distribute a common pricing algorithm if that person coerces another person to set or adopt its recommended price or commercial term for the same or similar products or services in California. This prohibition concerns methodologies used by two or more persons that use competitor data to influence a price or commercial term.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": []
+      },
+      "exemptions": "Section 16729 states no property, ownership, tenancy, or housing-program eligibility conditions. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making available by any means, including subscriptions or service sales. Commercial terms include service level, availability, and output, including product quantities or the amount or level of service. Price includes money or any other tangible or intangible thing of value expected, required, or given in payment for a product or service, including employee or independent-contractor compensation. Person incorporates Section 16702, whose text is not supplied, and expressly excludes the end consumer of a product or service. The prohibition is conditional on coercion concerning the same or similar products or services in California; it does not ban all pricing tools or establish that any actor engaged in prohibited conduct.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-01-01",
+      "citation": "Cal. Bus. & Prof. Code § 16729(b), (d)",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.\n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s007-lessor-service-provider-prohibition",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Prohibition on using defined rent-coordination service providers",
+      "requirement": "A real estate lessor—an owner leasing real property or a portion of it as a residential dwelling unit—or its agent or subcontractor may not subscribe to, contract with, exchange anything of value for, or otherwise use the services of a service provider as defined in the ordinance.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "residential",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "Residential dwelling units must be intended as a person's primary residence and exclude inpatient medical care, licensed long-term care, and detention or correctional facilities. A service provider is a person performing a coordination function, with the source's express cross-reference to Section 1(a)(i)(1), for a real estate lessor or rentor. Person includes a natural person, corporation, partnership, limited liability company, firm, or association. The coordination definition describes collecting nonpublic competitor information from real estate lessors; collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates from two or more real estate lessors or public databases; computational analysis or processing of that information; and recommendations using that information concerning rental prices, lease terms, or occupancy levels. Nonpublic competitor information includes prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates, or other material lease terms that are less than 365 days old and not widely and readily available to the public at no cost. The coordination definition exempts owners of multiple properties for actions related exclusively to properties controlled by the same rental property owner. Licensed Real Estate Agents operating in accordance with all applicable state regulations are excluded from both the coordination and service-provider definitions. These are qualifications of the regulated actors and services, not findings that any address uses such a service.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Code §218-12(2)(1), Ord. 25-076; definitions in §218-12(1), Ord. 25-057",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "quoted_span": "1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor\ninformation from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply\nlevels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a\nperson’s primary residence; and does not include inpatient medical care, licensed long-term care, and detention or\ncorrectional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or\nunincorporated organization that owns real property and leases such property or any portion thereof in the form of a\nresidential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\nAdopted on second and final reading after hearing on May 21 2025\nDate to Mayor: May 22 2025\nApproved: May 22 2025\n\n\n=== CAPTURED SOURCE S002: https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6 ===\nOrdinance of the City of Jersey City, N.J.\nOrd. 25-076\nAN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12\n(PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE\nCODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or\notherwise exchange anything of value in return for or otherwise utilize the services of a Service\nProvider.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s007-provider-noncompetition-prohibition",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Service providers may not facilitate agreements not to compete",
+      "requirement": "A service provider as defined in the ordinance must not facilitate an agreement not to compete among real estate lessors concerning any aspect of residential dwelling units, including rental pricing, fees, or other rental terms.",
+      "key_value": null,
+      "coverage_conditions": {
+        "all": [
+          {
+            "field": "residential",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "primary_residence",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "inpatient_medical_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "licensed_long_term_care",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "detention_or_correctional_facility",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "exemptions": "Residential dwelling units must be intended as a person's primary residence and exclude inpatient medical care, licensed long-term care, and detention or correctional facilities. Real estate lessors are individuals or listed entities owning real property and leasing it or a portion of it as residential dwelling units. A service provider is a person performing a coordination function, with the source's express cross-reference to Section 1(a)(i)(1), for a real estate lessor or rentor. Person includes a natural person, corporation, partnership, limited liability company, firm, or association. The coordination definition describes collecting nonpublic competitor information from real estate lessors; collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates from two or more real estate lessors or public databases; computational analysis or processing of that information; and recommendations using that information concerning rental prices, lease terms, or occupancy levels. Nonpublic competitor information includes prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates, or other material lease terms that are less than 365 days old and not widely and readily available to the public at no cost. The coordination definition exempts owners of multiple properties for actions related exclusively to properties controlled by the same rental property owner. Licensed Real Estate Agents operating in accordance with all applicable state regulations are excluded from both the coordination and service-provider definitions. The prohibition is a duty of the defined service provider and depends on facilitating an agreement not to compete; it does not establish that any particular landlord, resident, product, or address engages in prohibited conduct.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Code §218-12(2)(2), Ord. 25-076; definitions in §218-12(1), Ord. 25-057",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "quoted_span": "1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor\ninformation from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply\nlevels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a\nperson’s primary residence; and does not include inpatient medical care, licensed long-term care, and detention or\ncorrectional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or\nunincorporated organization that owns real property and leases such property or any portion thereof in the form of a\nresidential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\nAdopted on second and final reading after hearing on May 21 2025\nDate to Mayor: May 22 2025\nApproved: May 22 2025\n\n\n=== CAPTURED SOURCE S002: https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6 ===\nOrdinance of the City of Jersey City, N.J.\nOrd. 25-076\nAN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12\n(PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE\nCODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or\notherwise exchange anything of value in return for or otherwise utilize the services of a Service\nProvider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to\nany aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s001-algorithmic-rent-fixing",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Prohibition on algorithmic rent fixing",
+      "requirement": "Landlords renting covered residential dwelling units in Hoboken must not use software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels among competing real estate lessors. The Division of Housing or any private citizen alleging to be aggrieved may bring alleged violations to Hoboken Municipal Court; upon conviction, any person violating the chapter is subject to one or more penalties prescribed under N.J.S.A. 40:49-5, a fine not exceeding $2,000, or community service not exceeding 90 days.",
+      "key_value": null,
+      "coverage_conditions": "Covers residential dwelling units in Hoboken used as primary residences, excluding medical/long-term care or detention facilities. The source does not limit its medical exclusion to inpatient care or its long-term-care exclusion to licensed facilities; the available fact vocabulary cannot completely represent these exclusions.",
+      "execution_review_pending": true,
+      "exemptions": "Medical/long-term care and detention facilities are excluded from covered residential dwelling units. The prohibition concerns the defined collection and analysis of nonpublic competitor information from other real estate lessors for coordination, recommendation, or implementation among competing lessors, not all pricing tools. Nonpublic competitor information must be less than 365 days old and not widely and readily available to the public at no cost; it includes, without limitation, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units, and other material terms.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 158-2(A)–(C), Ord. No. B-781",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "quoted_span": "A.\nProhibited conduct. Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.\nFor purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors.\nFor purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.\nB.\nEnforcement.\nEnforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.\nC.\nPenalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\nPenalties as prescribed under N.J.S.A. 40:49-5; or\nBy a fine not exceeding $2,000; or\nBy a period of community service not exceeding 90 days.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-03T20:08:28.896458Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The January 1, 2026 effective date is derived from the supplied general effective-date guidance and the chaptered 2025 enactment, interpreted as a regular-session, nonurgency statute. It is not an effective date expressly written in AB 325. On this interpretation both prohibitions are in force as of October 1, 2026.",
+      "quoted_span": "A statute enacted during a regular session of the Legislature takes effect on January 1 of the following year, unless a later date is specified in the statute. An urgency statute, which must be approved by a two-thirds majority vote in each house of the Legislature, can take effect immediately after it is signed by the Governor and chaptered into law.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "The source establishes approval and filing on October 6, 2025; those dates are distinct from the derived effective date.",
+      "quoted_span": "[\nApproved  by\nGovernor\nOctober 06, 2025.\nFiled with\nSecretary of State\nOctober 06, 2025.\n]",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "The incorporated Section 16702 definition of person is not supplied. Both requirements preserve that incorporation and the express end-consumer exclusion; determining whether a particular actor qualifies requires the missing definition. No supplied provision makes this an address-level ownership exemption.",
+      "quoted_span": "(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "The digest states that Cartwright Act violations are punishable as crimes, but the supplied operative text does not specify the applicable criminal sanction, its limits, plaintiff standing, or per-violation counting. This separately located statement is retained for review rather than adding an unsupported sanction to either operative requirement.",
+      "quoted_span": "Because the bill would expand the scope of activities prohibited by the Cartwright Act, the violation of which is punishable as a crime, the bill would impose a state-mandated local program.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "Section 16756.1 supplies a complaint pleading standard for Cartwright Act violations, rather than a separate residential address duty. It requires factual allegations making the specified restraint plausible and removes the need to allege facts tending to exclude independent action; it does not itself establish a violation or specify a remedy.",
+      "quoted_span": "16756.1.\nNotwithstanding any other law, in a complaint for any violation of this chapter, it is sufficient to contain factual allegations demonstrating that the existence of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce is plausible, and the complaint shall not be required to allege facts tending to exclude the possibility of independent action.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "Section 16729 preserves the applicability of antitrust laws. The supplied source does not establish precedence or verified relationships with other housing or antitrust rules.",
+      "quoted_span": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "issue": "Both rules are classified as in_force as of 2026-10-01 on the supplied record of final adoption and mayoral approval in July 2025. The captured text supplies no effective-date clause; effective_date remains null, and neither adoption nor approval is treated as the precise effective date.",
+      "quoted_span": "Adopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted\nby the Municipal Council at its meeting on Jul 16 2025\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 2025",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "issue": "The service-provider definition cross-references Section 1(a)(i)(1), which describes computational analysis or processing, while the broader coordination definition also describes collection and recommendations. Preserve this drafting ambiguity when determining whether a particular service qualifies; the extraction does not resolve it by treating all pricing software as prohibited.",
+      "quoted_span": "v.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "issue": "The supplied captures state no penalties, remedies, plaintiff standing, or per-violation counting rules. No sanction is inferred.",
+      "quoted_span": null,
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "issue": "The supplied codified provision supports treating the rule as in force as of 2026-10-01, but states only an adoption date. Its precise effective date is not supplied and remains null.",
+      "quoted_span": "[Adopted 7-9-2025 by Ord. No. B-781]",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "Executable coverage requires review because the source excludes medical/long-term care facilities without an inpatient or licensing limitation. Substituting inpatient_medical_care or licensed_long_term_care would narrow those exclusions. Primary-residence eligibility and the detention-facility exclusion must also be retained; dataset membership establishes none of these facts.",
+      "quoted_span": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "The contents of the incorporated penalties under N.J.S.A. 40:49-5 are not supplied. The source also provides no express per-violation counting rule; neither additional sanctions nor a counting method can be extracted.",
+      "quoted_span": "Penalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\nPenalties as prescribed under N.J.S.A. 40:49-5; or\nBy a fine not exceeding $2,000; or\nBy a period of community service not exceeding 90 days.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "Execution review required for s001-algorithmic-rent-fixing: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "The supplied source establishes conditional common-pricing-algorithm prohibitions, but no residential rent-increase cap or formula.",
+      "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "No just-cause eviction duty is established by the supplied text; its operative additions concern common pricing algorithms and Cartwright Act complaint pleading.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No security-deposit limit or handling duty is established by the supplied text.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "No application or screening-fee limit or collection duty is established by the supplied text.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "No tenant-screening restriction is established by the supplied text; its algorithm provisions regulate pricing and commercial terms.",
+      "quoted_span": "(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.",
+      "source_doc_id": "C001",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-04T03:38:30.005938+00:00"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "The supplied text prohibits specified coordination services and facilitation of agreements not to compete. It establishes no numerical or formula-based rent-increase limit.",
+      "quoted_span": "2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to\nany aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied text mentions lease termination and renewal dates as information used in coordination; it establishes no permissible eviction grounds or just-cause eviction duty.",
+      "quoted_span": "vi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "Security deposits appear as a type of nonpublic competitor information. The supplied text establishes no deposit amount, handling, interest, or return requirement.",
+      "quoted_span": "vi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "Fees are included in the provider prohibition on facilitating agreements not to compete. The supplied text establishes no distinct application or screening fee limit or charging requirement.",
+      "quoted_span": "2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to\nany aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied computational-processing language concerns rent coordination. It establishes no restriction on applicant screening criteria, records, or screening procedures.",
+      "quoted_span": "1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process\nthat uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the\ninformation described in subparagraph (1)(a)(i).",
+      "source_doc_id": "S007",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/433505/Amending%20218-12%20to%20clarify%20language.pdf?handle=3F11119129CC46B2BFCB4CCFFFBBE8D6",
+      "retrieved_at": "2026-10-04T03:38:30.007049+00:00"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source prohibits defined algorithmic rent fixing but establishes no rent-increase cap or formula.",
+      "quoted_span": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "Lease termination and renewal appear only as potential competitor information; this source establishes no just-cause eviction requirement.",
+      "quoted_span": "For purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "Security deposits appear only as potential competitor information; this source establishes no deposit limit, handling duty, or return requirement.",
+      "quoted_span": "For purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied algorithmic rent-fixing provision establishes no application or screening fee requirement.",
+      "quoted_span": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied provision regulates competitor-information-based rent fixing and establishes no tenant-screening restriction.",
+      "quoted_span": "For purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors.",
+      "source_doc_id": "S001",
+      "source_url": "https://ecode360.com/46249538",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    }
+  ]
+}

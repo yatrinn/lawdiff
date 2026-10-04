@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose a recorded-extraction data diagram and actual interface captures.
+"""Compose a 56-second review workflow from actual interface captures.
 
 No image generation, UI reconstruction, cursor simulation, or narration is used.
 Python standard library only; FFmpeg and FFprobe must be installed.
@@ -8,6 +8,7 @@ Python standard library only; FFmpeg and FFprobe must be installed.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -19,46 +20,46 @@ ROOT = Path(__file__).resolve().parents[1]
 WIDTH, HEIGHT, FPS = 1920, 1080, 30
 SCENES = [
     {
-        "seconds": 7,
-        "title": "Read. Extract.\nCheck.",
-        "caption": "A recorded model run\nturns source text into\nstructured candidates.\n\nQuotations are checked\nbefore review.",
-        "full_caption": "A recorded model run turns source text into structured candidates. Quotations are checked before review.",
-        "chapter": "THE EXTRACTION",
-    },
-    {
-        "seconds": 10,
-        "title": "Before the\nchange.",
-        "caption": "Before July 2027:\nthe New Jersey FAIR Act\nis enacted, but not yet\neffective.",
-        "full_caption": "Before July 2027: the New Jersey FAIR Act is enacted, but not yet effective.",
-        "chapter": "THE EFFECTIVE DATE",
+        "seconds": 8,
+        "title": "A law changes.\nWhat follows?",
+        "caption": "A new housing law\nlands on your desk.\n\nWhich buildings need\nyour attention?\n\nThis is LawDiff.",
+        "full_caption": "A new housing law lands on your desk. Which buildings need your attention? This is LawDiff.",
+        "chapter": "THE QUESTION",
     },
     {
         "seconds": 9,
-        "title": "140 addresses.\nReview intact.",
-        "caption": "After:\n140 New Jersey addresses\nfall within the extracted\nstate rule.\n\nLocal conflicts stay visible.",
-        "full_caption": "After: 140 New Jersey addresses fall within the extracted state rule. Local conflicts stay visible.",
-        "chapter": "THE IMPACT",
+        "title": "See the\naddresses.",
+        "caption": "Move New Jersey’s FAIR Act\npast its effective date.\n\nThe workspace reveals where\nmissing property facts\nneed a closer look.",
+        "full_caption": "Move New Jersey’s FAIR Act past its effective date. The workspace reveals where missing property facts need a closer look.",
+        "chapter": "THE CHANGE",
     },
     {
         "seconds": 10,
         "title": "Follow the\nsource.",
-        "caption": "Every interpretation links\nback to captured source text.\n\nA quotation supports review;\nit does not certify\ncorrectness.",
-        "full_caption": "Every interpretation links back to captured source text. A quotation supports review; it does not certify correctness.",
+        "caption": "Open one address.\n\nSee the requirement,\nits timing, and the original\npassage behind\nthe interpretation.",
+        "full_caption": "Open one address. See the requirement, its timing, and the original passage behind the interpretation.",
         "chapter": "THE EVIDENCE",
     },
     {
         "seconds": 10,
-        "title": "One fact.\nOne branch.",
-        "caption": "In Los Angeles, a building\nyear leaves an occupancy-\ndate condition unresolved.\n\nA clearly labelled simulation\nresolves that branch only.",
-        "full_caption": "In Los Angeles, a building year leaves an occupancy-date condition unresolved. A clearly labelled simulation resolves that branch only.",
-        "chapter": "THE MISSING FACT",
+        "title": "Make it a\nreview brief.",
+        "caption": "Now turn that finding\ninto a review brief.\n\nListed addresses get their\nstatus, source, and\nnext check.",
+        "full_caption": "Now turn that finding into a review brief. Listed addresses get their status, source, and next check.",
+        "chapter": "THE NEXT CHECK",
     },
     {
         "seconds": 10,
-        "title": "Clarity,\nshared.",
-        "caption": "A bilingual rights card\nshares the original-data\nresult.\n\nSimulations are excluded.",
-        "full_caption": "A bilingual rights card shares the original-data result. Simulations are excluded.",
-        "chapter": "THE TAKEAWAY",
+        "title": "Ready for\nhandoff.",
+        "caption": "Export the list for your\ncompliance team:\n\noriginal address data,\nsource wording, and\nwhat to review next.",
+        "full_caption": "Export the list for your compliance team: original address data, source wording, and what to review next.",
+        "chapter": "THE HANDOFF",
+    },
+    {
+        "seconds": 9,
+        "title": "A traceable\nanswer.",
+        "caption": "Rules extracted automatically.\nSelected records unchanged.\n\nOne traceable pack powers\nthe workspace and submission.\n\nInspect the chain.",
+        "full_caption": "Rules extracted automatically. Selected records unchanged. One traceable pack powers the workspace and submission. Inspect the chain.",
+        "chapter": "THE EXTRACTION CHAIN",
     },
 ]
 
@@ -105,9 +106,9 @@ def scene_filter(index: int, scene: dict, work: Path, regular: Path, bold: Path)
         "chapter": scene["chapter"],
         "title": scene["title"],
         "caption": scene["caption"],
-        "capture_note": "Recorded extraction result\n· data diagram" if index == 1 else "Actual interface captures\n· captioned walkthrough",
+        "capture_note": "Actual interface captures\n· edited walkthrough",
         "number": f"{index:02d} / 06",
-        "closing": "See what changed.\nSee what is missing.",
+        "closing": "From legal change\nto the next review step.",
     }
     for key, value in texts.items():
         (work / f"{key}.txt").write_text(value, encoding="utf-8")
@@ -163,14 +164,18 @@ def main():
     args = parser.parse_args()
     ffmpeg, ffprobe = binary("ffmpeg", args.ffmpeg), binary("ffprobe", args.ffprobe)
     regular, bold = font_path(False, args.font), font_path(True, args.bold_font)
-    captures = [args.captures / f"demo-{i:02d}.png" for i in range(1, 7)]
-    captures[0] = ROOT / "media/extraction-receipt.png"
-    before_capture = args.captures / "demo-05-before.png"
-    needed = [captures[args.preview-1]] if args.preview else captures + [before_capture]
+    captures = [args.captures / f"review-demo-{i:02d}.png" for i in range(1, 7)]
+    address_capture = args.captures / "review-demo-03-address.png"
+    needed = [captures[args.preview-1]] if args.preview else captures + [address_capture]
     missing = [str(path) for path in needed if not path.is_file()]
     if missing:
-        raise SystemExit("Actual captures and the verified extraction receipt are required:\n" + "\n".join(missing))
+        raise SystemExit("The actual review-workflow captures are required:\n" + "\n".join(missing))
     input_probes = {p.name: probe(ffprobe, p) for p in needed}
+    input_hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in needed}
+    for path in needed:
+        stream = next(s for s in input_probes[path.name]["streams"] if s["codec_type"] == "video")
+        if (stream["width"], stream["height"]) != (1440, 1000):
+            raise SystemExit(f"Expected the complete 1440x1000 capture: {path.name}")
     if args.check:
         print(json.dumps({"expected_seconds": 56, "output_size": [WIDTH, HEIGHT], "captures": input_probes}, indent=2))
         return
@@ -188,8 +193,8 @@ def main():
             folder.mkdir()
             graph = folder / "filter.txt"
             graph.write_text(scene_filter(index, scene, folder, regular_copy, bold_copy), encoding="utf-8")
-            segments = ([(before_capture, 4), (captures[index-1], 6)]
-                        if index == 5 and not args.preview else [(captures[index-1], scene["seconds"])])
+            segments = ([(address_capture, 4), (captures[index-1], 6)]
+                        if index == 3 and not args.preview else [(captures[index-1], scene["seconds"])])
             for segment, (capture, seconds) in enumerate(segments, 1):
                 if args.preview:
                     output = args.output.with_name(f"demo-preview-{index:02d}.png")
@@ -206,20 +211,33 @@ def main():
                     print(f"Layout preview: {output}")
                     return
                 clips.append(output)
-            print(f"Rendered chapter {index}/6 ({scene['seconds']} seconds; recorded data diagram or actual captures)", flush=True)
+            print(f"Rendered chapter {index}/6 ({scene['seconds']} seconds; actual interface captures)", flush=True)
         concat = work / "clips.txt"
         concat.write_text("".join(f"file '{clip}'\n" for clip in clips), encoding="utf-8")
         pending = args.output.with_name(args.output.stem + ".rendering.mp4")
         run([ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(concat),
              "-c", "copy", "-movflags", "+faststart", "-metadata", "title=LawDiff — captioned interface walkthrough",
-             "-metadata", "comment=Recorded extraction data diagram, then actual interface still captures; no simulated cursor actions; no audio.", str(pending)])
+             "-metadata", "comment=Edited walkthrough from actual interface still captures; no simulated cursor actions, reconstructed UI, or audio.", str(pending)])
         result = probe(ffprobe, pending)
         videos = [s for s in result["streams"] if s["codec_type"] == "video"]
         audios = [s for s in result["streams"] if s["codec_type"] == "audio"]
         assert len(videos) == 1 and not audios, "Expected one video stream and no audio."
         stream = videos[0]
         assert (stream["width"], stream["height"], stream["codec_name"], stream["pix_fmt"]) == (WIDTH, HEIGHT, "h264", "yuv420p")
+        assert stream["avg_frame_rate"] == "30/1", "Unexpected frame rate."
+        assert int(stream["nb_frames"]) == 56 * FPS, "Unexpected frame count."
         assert abs(float(result["format"]["duration"]) - 56) < 0.05, "Unexpected duration."
+        assert all(hashlib.sha256(p.read_bytes()).hexdigest() == input_hashes[p.name] for p in needed), "A source capture changed during rendering; re-run with stable captures."
+        result["composition"] = {
+            "kind": "actual_interface_captures_edited_walkthrough",
+            "scene_seconds": [s["seconds"] for s in SCENES],
+            "scene_three_seconds": {address_capture.name: 4, captures[2].name: 6},
+            "caption_word_count": sum(len(s["full_caption"].split()) for s in SCENES),
+            "source_sha256": input_hashes,
+            "source_capture_dimensions": [1440, 1000],
+            "source_files_modified": False,
+            "audio": False,
+        }
         pending.replace(args.output)
     elapsed, captions = 0, []
     for index, scene in enumerate(SCENES, 1):

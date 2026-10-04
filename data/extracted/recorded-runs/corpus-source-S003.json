@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-00-04-669Z-5736088b",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:00:04.670Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "S003",
+        "source_sha256": "e416109a1ea6a3d0e21d72d79574402797d9c86e82fe96962938502ebed91f60",
+        "prompt_sha256": "685dfdceb2be4f375e2e8a9b743526e07d0157c33e7ff7b4e51f7aef83d20d08",
+        "response_sha256": "c8e4d004e15addcf1235c9657cb5166cd88d4e6b942e8c1011749b75781f8d3e",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 5,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:00:04.688Z",
+        "finished_at": "2026-10-04T03:01:55.767Z",
+        "duration_ms": 111079,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "947edcf1b86a9c3fbcb2aa159e662c1e06417c6b5d3795e4a0084c75c4882f7f",
+        "usage": {
+          "input_tokens": 14801,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2665,
+          "reasoning_output_tokens": 398
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-S003.json",
+    "lock_scope": "artifacts/corpus-source-S003.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:01:55.774Z",
+    "duration_ms": 111104,
+    "accepted_rule_count": 2,
+    "review_issue_count": 5,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "s003-algorithmic-service-purchases",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Prohibition on purchasing covered rent coordination services",
+      "requirement": "A covered real estate lessor, its agent, or its subcontractor must not subscribe to, contract with, or exchange anything of value for the services of a covered service provider.",
+      "key_value": null,
+      "coverage_conditions": "Applies in Jersey City to a real estate lessor, its agent, or its subcontractor. A real estate lessor is an individual, corporation, partnership, association, joint-stock company, trust, or unincorporated organization that owns real property and leases all or part of it as a residential dwelling unit. Such a unit must be intended as a person's primary residence and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities. The purchased services must be those of a service provider: a person performing a coordination function, as defined by the source's reference to Section 1(a)(i)(1), for a real estate lessor or rentor. Person includes a natural person, corporation, partnership, limited liability company, firm, or association. The coordination definition describes collecting nonpublic competitor information from real estate lessors and collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from two or more real estate lessors or public databases; computationally analyzing or processing that information; and using that information to recommend rental prices, lease terms, or occupancy levels to a real estate lessor. Nonpublic competitor information is material lease information less than 365 days old that is not widely and readily available to the public at no cost. The coordination definition exempts owners of multiple properties for actions related exclusively to properties controlled by the same rental property owner. Licensed Real Estate Agents operating in accordance with all applicable state regulations are excluded from both the coordination and service-provider definitions.",
+      "execution_review_pending": true,
+      "exemptions": "The coordination definition exempts same-owner actions related exclusively to that owner's multiple properties. Compliant Licensed Real Estate Agents are excluded from the coordination and service-provider definitions. The residential dwelling unit definition excludes inpatient medical care, licensed long-term care, and detention or correctional facilities.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Ord. 25-057, §218-12(2)(a)",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "quoted_span": "a.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-03T20:08:28.896458Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "s003-provider-noncompetition-agreements",
+      "jurisdiction": "Jersey City, NJ",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Prohibition on facilitating rental noncompetition agreements",
+      "requirement": "A covered service provider must not facilitate an agreement not to compete among real estate lessors concerning any aspect of residential dwelling units, including rental pricing, fees, or other rental terms.",
+      "key_value": null,
+      "coverage_conditions": "Applies in Jersey City to a service provider facilitating an agreement not to compete among real estate lessors concerning residential dwelling units. A service provider is a person performing a coordination function, as defined by the source's reference to Section 1(a)(i)(1), for a real estate lessor or rentor. Person includes a natural person, corporation, partnership, limited liability company, firm, or association. A real estate lessor is an individual, corporation, partnership, association, joint-stock company, trust, or unincorporated organization that owns real property and leases all or part of it as a residential dwelling unit. Such a unit must be intended as a person's primary residence and excludes inpatient medical care, licensed long-term care, and detention or correctional facilities. The coordination definition describes collecting nonpublic competitor information from real estate lessors and collecting historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from two or more real estate lessors or public databases; computationally analyzing or processing that information; and using that information to recommend rental prices, lease terms, or occupancy levels to a real estate lessor. Nonpublic competitor information is material lease information less than 365 days old that is not widely and readily available to the public at no cost. The coordination definition exempts owners of multiple properties for actions related exclusively to properties controlled by the same rental property owner. Licensed Real Estate Agents operating in accordance with all applicable state regulations are excluded from both the coordination and service-provider definitions.",
+      "execution_review_pending": true,
+      "exemptions": "The coordination definition exempts same-owner actions related exclusively to that owner's multiple properties. Compliant Licensed Real Estate Agents are excluded from the coordination and service-provider definitions. The residential dwelling unit definition excludes inpatient medical care, licensed long-term care, and detention or correctional facilities.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Jersey City Ord. 25-057, §218-12(2)(b)",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "quoted_span": "b.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-03T20:08:28.896458Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The source records final adoption on May 21, 2025 and mayoral approval on May 22, 2025, supporting treatment as enacted and in force as of October 1, 2026. It supplies no effective-date provision; both effective_date fields remain null, and neither adoption nor approval is substituted for the effective date.",
+      "quoted_span": "Adopted on second and final reading after hearing on May 21 2025\nDate to Mayor: May 22 2025\nApproved: May 22 2025",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "Execution review is required for both rules because the supplied fact vocabulary cannot fully represent service-provider status, coordination activities, ownership and leasing roles, subcontractor status, the same-owner activity exception, or Licensed Real Estate Agents' compliance with all applicable state regulations. Coverage remains qualified prose.",
+      "quoted_span": "a.This definition exempts owners of multiple properties for actions related exclusively to multiple properties\ncontrolled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all\napplicable state regulations.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "The service-provider definition references Section 1(a)(i)(1), while the broader coordination definition contains collection, computational processing, and recommendation language. Review the cross-reference before converting that definition into executable coverage; the source also uses the undefined term 'rentor'.",
+      "quoted_span": "v.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this\nAct, for any real estate lessor or rentor.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "Execution review required for s003-algorithmic-service-purchases: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "issue": "Execution review required for s003-provider-noncompetition-agreements: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source prohibits covered coordination services and noncompetition agreements but supplies no numerical or formula-based rent-increase limit. It does not establish the absence of rent limits elsewhere.",
+      "quoted_span": "b.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The source mentions lease termination and renewal dates as coordination data but establishes no permissible eviction grounds or just-cause eviction duty.",
+      "quoted_span": "levels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from\ntwo or more real estate lessors or from public databases;",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "Security deposits appear only as an example of nonpublic competitor information; this source establishes no separate deposit cap, handling duty, or return deadline.",
+      "quoted_span": "vi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels,\nsecurity deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or\nany other material lease terms that is less than 365 days old and is not widely and readily available to the public at\nno cost.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The prohibition on facilitating noncompetition agreements includes fees, but the source establishes no separate application or screening fee limit or disclosure duty.",
+      "quoted_span": "b.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The operative prohibitions concern coordination services and noncompetition agreements; this source establishes no separate restriction on tenant screening criteria or procedures.",
+      "quoted_span": "a.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise\nexchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any\naspect of residential dwelling units, including rental pricing, fees, or any other rental terms.",
+      "source_doc_id": "S003",
+      "source_url": "https://cityofjerseycity.civicweb.net/document/429156/Ordinance%20Amending%20Chapter%20218%20creating%20section.pdf",
+      "retrieved_at": "2026-10-03T20:08:28.896458Z"
+    }
+  ]
+}

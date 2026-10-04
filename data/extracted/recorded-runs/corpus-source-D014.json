@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-20-27-223Z-aa314041",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:20:27.223Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D014",
+        "source_sha256": "70574b2f50c363398d635ef9cc92eed83ba4eca0e404a04ec04bfba004ff9606",
+        "prompt_sha256": "280ff49642daeedcff55dfec534fcf938a89f93968de6df33a926ad89beb2c59",
+        "response_sha256": "83410f480d6432e02abd3197ac48ef0d7a09694a9df6152a084a455979004e44",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 3,
+        "review_issues": 8,
+        "no_rule_findings": 6,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:20:27.239Z",
+        "finished_at": "2026-10-04T03:22:49.924Z",
+        "duration_ms": 142685,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "8df144d267b911e6d44dc4eff136abaae016e3f1a4ce64c0f2cb74cb65e8c44c",
+        "usage": {
+          "input_tokens": 15503,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3409,
+          "reasoning_output_tokens": 460
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D014.json",
+    "lock_scope": "artifacts/corpus-source-D014.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:22:49.928Z",
+    "duration_ms": 142705,
+    "accepted_rule_count": 3,
+    "review_issue_count": 8,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 6,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d014-tenant-rights-notice",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Notice of tenants’ rights when ending occupancy",
+      "requirement": "Covered landlords and foreclosing owners must provide the Notice of Tenants’ Rights and Resources when starting eviction, declining lease renewal, or asking a tenant or former homeowner to leave, delivering it together with the applicable termination notice. This is a notification requirement and does not establish permissible grounds for eviction.",
+      "key_value": null,
+      "coverage_conditions": "Applies to all landlords and foreclosing owners intending to end a tenancy or post-foreclosure occupancy of a unit in Boston, including purchasers of property out of foreclosure or from a bank or mortgage lender asking former owners or tenants to leave. Excludes residences in any hospital, skilled nursing facility or health facility, and residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "execution_review_pending": true,
+      "exemptions": "Residences in any hospital, skilled nursing facility or health facility; residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2020-11-06",
+      "citation": "Housing Stability Notification Act, Sec. 10-11.7; Tenant FAQs, questions 1, 4 and 5",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "quoted_span": "The Housing Stability Notification Act (HSNA) is an Ordinance passed by the City of\nBoston in October 2020 that requires any landlord planning to end a tenancy\nagreement to provide the tenant with a Notice of Tenants’ Rights and Resources.\nThe HSNA requires that landlords give this Notice of Tenants’ Rights and Resources\nto tenants when the landlord starts the eviction process, or when the landlord\ndecides to not offer the tenant a renewal of their lease agreement. The Notice of\nTenants’ Rights and Resources must be delivered at the same time as the Notice to\nQuit.\nThe Notice of Tenants’ Rights and Resources must also be delivered to any tenant\nthat is asked to leave a property. For example, if someone is purchasing a property\nout of foreclosure, or from a bank or a mortgage lender, they must provide this\nNotice to the former owners of the property, or any tenants that live in the\nproperty.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d014-city-notice-filing",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Send termination notices and compliance certificate to the City",
+      "requirement": "Covered landlords and foreclosing owners must send the Office of Housing Stability a copy of the Notice to Quit or Notice of Non-renewal of Lease together with a Certificate of Compliance/Service.",
+      "key_value": null,
+      "coverage_conditions": "Applies to all landlords and foreclosing owners intending to end a tenancy or post-foreclosure occupancy of a unit in Boston. Excludes residences in any hospital, skilled nursing facility or health facility, and residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "execution_review_pending": true,
+      "exemptions": "Residences in any hospital, skilled nursing facility or health facility; residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2020-11-06",
+      "citation": "Housing Stability Notification Act, Sec. 10-11.7; Tenant FAQs, questions 1 and 5",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "quoted_span": "The HSNA also requires landlords and foreclosing owners to send a copy of the\nNotice to Quit or Notice of Non-renewal of Lease, together with a Certificate of\nCompliance/Service, to the City of Boston’s Office of Housing Stability at:",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d014-nonwaivable-rights",
+      "jurisdiction": "Boston, MA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "HSNA rights cannot be waived or limited by agreement",
+      "requirement": "HSNA requirements cannot be waived; any lease, contract or other agreement term purporting to waive or limit a tenant’s or former homeowner’s substantive or procedural rights under the ordinance is contrary to public policy, unenforceable and void.",
+      "key_value": null,
+      "coverage_conditions": "Applies to agreement terms affecting HSNA rights of tenants or former homeowners where a landlord or foreclosing owner intends to end a tenancy or post-foreclosure occupancy of a unit in Boston. Excludes residences in any hospital, skilled nursing facility or health facility, and residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "execution_review_pending": true,
+      "exemptions": "Residences in any hospital, skilled nursing facility or health facility; residences in a nonprofit facility whose primary purpose is providing short-term treatment, assistance or therapy for alcohol, drug or other substance abuse.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2020-11-06",
+      "citation": "Housing Stability Notification Act, Sec. 10-11.7; Tenant FAQs, questions 5 and 6",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "quoted_span": "No. The requirements of this Ordinance may not be waived, and any term of any\nlease, contract, or other agreement that purports to waive or limit a tenant’s or\nformer homeowner’s substantive or procedural rights under this Ordinance are\ncontrary to public policy, unenforceable, and void.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "All three rules require execution review because the supplied vocabulary cannot completely express the covered landlord/foreclosing-owner roles, termination triggers, post-foreclosure occupancy and precise facility exceptions. Their coverage is preserved as prose.",
+      "quoted_span": "The Ordinance applies to all landlords/foreclosing owners intending to end a\ntenancy or post-foreclosure occupancy of a unit in the City of Boston.\nThe only exempt properties are residences:\n1. in any hospital, skilled nursing facility or health facility;  and\n2. in a non-profit facility whose primary purpose is providing short-term\ntreatment, assistance or therapy for alcohol, drug, or other substance\nabuse.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The source expressly supplies November 6, 2020 as the effective date; its separate October 2020 passage date is not used as the effective date.",
+      "quoted_span": "The HSNA becomes effective on November 6, 2020.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Separately located enforcement provisions state that, unless otherwise provided, a person or entity violating the ordinance receives a warning for the first offense and a $300-per-day fine for second and subsequent offenses, enforced by ISD. These sanctions are preserved here because the individual rule quotations do not contain them; the source does not specify additional per-tenant or per-notice counting.",
+      "quoted_span": "Unless otherwise provided, a person or entity violating any provisions of this \nOrdinance shall be punishable by a warning or fine in accordance with the \nprovisions of City of Boston Ordinances and/or Boston City Charter, shown below. \nHousing Stability Notification Act (Sec. 10-11.7) \nEnforcement Entity: Inspectional Services Department \n1st Offense: Warning \n2nd and Subsequent Offenses: $300 per day ",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The described tenant reporting route requires reporting to FHE, submitting requested information online or by mail, written proof of tenancy, a Notice to Quit or Court Complaint, and landlord or property-manager contact information. The FAQ conditions the described ticket issuance on missing required information and proper reporting; it does not establish a private damages action.",
+      "quoted_span": "Violations of the HSNA are investigated by the Office of Fair Housing and Equity\n(FHE) and enforced by the Inspectional Services Department (ISD). ISD will issue a\nticket to your landlord if the required information is not provided to you and you\nproperly report the violation.\nIn order for ISD to issue a ticket, you will need to do the following: \n\nHousing Stability Notification Act \nFrequently Asked Questions for Tenants \n3 \n1. Call FHE at 617-635-2500 and explain that you are calling to report a\nviolation of the new Housing Stability Notification Act. You can also call 311\nand ask for FHE.\n2. FHE may direct you to submit your information through an online intake\nform available on FHE’s website: boston.gov/departments/fair-housing-\nand-equity. If you are unable to use the online form, you may submit any\nrequired documentation through the mail to the following address:\nCity of Boston \nOffice of Fair Housing and Equity \n1 City Hall Square, Rm. 966 \nBoston, MA 02201 \n3. Provide FHE with written proof of your tenancy such as your lease, rent\nreceipts, or your name on a notice to quit or court complaint (other items\nproving your tenancy may be accepted).\n4. Provide FHE with a copy of the Notice to Quit or Court Complaint, as well as\nyour landlord or property manager’s contact information.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The source expressly limits the effect of an HSNA violation: it does not halt eviction. The extracted procedural rules must not be evaluated as a universal just-cause requirement or automatic eviction stay.",
+      "quoted_span": "If a landlord violates the HSNA, it DOES NOT halt the eviction process. ",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d014-tenant-rights-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d014-city-notice-filing: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d014-nonwaivable-rights: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes termination-notification duties but supplies no rent-increase cap or formula. It does not establish whether other sources impose rent limits.",
+      "quoted_span": "The Housing Stability Notification Act (HSNA) is an Ordinance passed by the City of\nBoston in October 2020 that requires any landlord planning to end a tenancy\nagreement to provide the tenant with a Notice of Tenants’ Rights and Resources.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The source supports the procedural notification rules extracted above, but supplies no substantive permitted grounds for termination and does not establish a universal just-cause eviction regime.",
+      "quoted_span": "If a landlord violates the HSNA, it DOES NOT halt the eviction process. ",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No security-deposit duty or limit is established by this source, which addresses notification when tenancy or residential occupancy is terminated.",
+      "quoted_span": "The Ordinance was passed to ensure that tenants and former homeowners\nunderstand their rights when their tenancy or residential occupancy is being\nterminated, and that they know about agencies that may be able to assist them.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "No application or screening-fee duty or limit is established by this source, which addresses termination notifications.",
+      "quoted_span": "The Ordinance was passed to ensure that tenants and former homeowners\nunderstand their rights when their tenancy or residential occupancy is being\nterminated, and that they know about agencies that may be able to assist them.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "No tenant-screening restriction is established by this source, which addresses termination notifications.",
+      "quoted_span": "The Ordinance was passed to ensure that tenants and former homeowners\nunderstand their rights when their tenancy or residential occupancy is being\nterminated, and that they know about agencies that may be able to assist them.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "No algorithmic rent-setting restriction is established by this source, which addresses termination notifications.",
+      "quoted_span": "The Ordinance was passed to ensure that tenants and former homeowners\nunderstand their rights when their tenancy or residential occupancy is being\nterminated, and that they know about agencies that may be able to assist them.",
+      "source_doc_id": "D014",
+      "source_url": "https://www.boston.gov/sites/default/files/file/2020/11/Housing%20Stability%20Notification%20Act%20Tenant%20FAQs.pdf",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ]
+}

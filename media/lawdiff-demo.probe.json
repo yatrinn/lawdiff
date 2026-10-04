@@ -14,6 +14,37 @@
   ],
   "format": {
     "duration": "56.000000",
-    "size": "1457423"
+    "size": "1720336"
+  },
+  "composition": {
+    "kind": "actual_interface_captures_edited_walkthrough",
+    "scene_seconds": [
+      8,
+      9,
+      10,
+      10,
+      10,
+      9
+    ],
+    "scene_three_seconds": {
+      "review-demo-03-address.png": 4,
+      "review-demo-03.png": 6
+    },
+    "caption_word_count": 102,
+    "source_sha256": {
+      "review-demo-01.png": "a34c402768f4956bfa260ca04e81a222e1a6aea70d440d30dac0cad17358bd71",
+      "review-demo-02.png": "12b7f2f3d34f606a80fa9e40ffad2e61356c11b6954d26437f4013b599246ea2",
+      "review-demo-03.png": "b5dba222b56317c4b487f25e946f73f6af63149f525e76df8eea7037a67468d2",
+      "review-demo-04.png": "a53151a28baf92c1ae4715be82ed0147d5c1c077b25c875bcfb31566700d6b4a",
+      "review-demo-05.png": "903e1c0f6cdcffafd9a7be225491699e949f775d78d12d1d32cbf206f9736bac",
+      "review-demo-06.png": "15cd6c5954b637f6c93c133c78aff9f61b0d4d178711d02d545d138da8be3b24",
+      "review-demo-03-address.png": "4a65363dbf821df05c002afa6aa4a7f2120d46e57650e379d2b93b1ee8bdeb05"
+    },
+    "source_capture_dimensions": [
+      1440,
+      1000
+    ],
+    "source_files_modified": false,
+    "audio": false
   }
 }

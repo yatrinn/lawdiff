@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-03-04-078Z-a7554e5c",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:03:04.078Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "N004",
+        "source_sha256": "9786883b7b4abc0d076a862660fa5bfa9a9ad269241b655b5b66003311d1b6b2",
+        "prompt_sha256": "035647ef4825ad371e835332b0096205c09f8e288bfa45c727b4d049a89cca26",
+        "response_sha256": "02ae0c5d3c235f8ac96dcc139f4ad348ea6bc988f1295dea522c397a755a6370",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 5,
+        "review_issues": 13,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:03:04.093Z",
+        "finished_at": "2026-10-04T03:05:59.986Z",
+        "duration_ms": 175894,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "84cc929902d4af55874dbfa05c64d529e446844c3f20cb5e0120b5e051257780",
+        "usage": {
+          "input_tokens": 14943,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4281,
+          "reasoning_output_tokens": 502
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-N004.json",
+    "lock_scope": "artifacts/corpus-source-N004.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:05:59.991Z",
+    "duration_ms": 175913,
+    "accepted_rule_count": 5,
+    "review_issue_count": 13,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "n004-vacancy-increase-cap",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Initial rent limit after voluntary vacancy",
+      "requirement": "For qualifying vacancy decontrol after a tenant voluntarily vacates, the landlord must limit the new tenant's initial rent increase to 25% over the prior tenant's last rent, excluding any capital improvement surcharge from that prior rent.",
+      "key_value": "25% above prior rent, excluding capital improvement surcharge",
+      "coverage_conditions": "Applies to a landlord setting a new tenant's initial rent under Article VII for a residential apartment in a dwelling registered in accordance with § 155-30, after the prior tenant voluntarily vacates without harassment, duress or unreasonable pressure from the landlord or the landlord's agents. The unit may not be decontrolled more than once in any three-year period. This finding addresses the expressly described voluntary-vacancy calculation; application of that calculation after eviction requires review.",
+      "execution_review_pending": true,
+      "exemptions": "Any capital improvement surcharge included in the prior tenant's last rent is excluded from the comparison amount.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 155-31; §§ 155-32(A), 155-34",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "quoted_span": "Provided that a dwelling is registered in accordance with § 155-30 upon the vacation of a residential apartment unit by a tenant, the apartment unit shall become decontrolled and exempt from the provisions of this chapter for the new tenant's initial rental; provided, however, that said rental shall be limited to an increase of 25% over the last rental paid by the tenant who voluntarily vacated the rental unit, exclusive of any capital improvement surcharge that is a component of said last rental.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-04T02:05:02.338Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n004-post-vacancy-base-rent",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Subsequent increases and new base rent",
+      "requirement": "After the new tenant's initial rent under vacancy decontrol, additional rent increases must comply with Chapter 155. Computations under that chapter must use the initial base rent charged to the new tenant under § 155-31 as the base rent.",
+      "key_value": "Initial rent becomes the base rent",
+      "coverage_conditions": "Applies to landlords imposing additional increases, and computations under Chapter 155, after a new tenant receives an initial rent under Article VII vacancy decontrol of a residential apartment in a dwelling registered under § 155-30. Qualifying vacancy circumstances are voluntary departure without landlord or agent harassment, duress or unreasonable pressure, legal eviction, or departure resulting from a competent court's order; the court-order ground is unavailable for dispossession based on holding over after expiration of the tenant's term. Decontrol is limited to once in any three-year period. Disputed vacancy circumstances are determined by the Rent Control Board after a hearing.",
+      "execution_review_pending": true,
+      "exemptions": "The Article VII exemption is limited to the new tenant's initial rent.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 155-31; §§ 155-32, 155-34",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "quoted_span": "However, any additional rental increase beyond the initial rental of the new tenant shall be subject to the provisions of this chapter. For the purpose of any computations under this chapter, the initial base rent charged to the new tenant under this section shall be considered the base rent.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-04T02:05:02.338Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n004-decontrol-vacancy-conditions",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Permitted vacancy circumstances and improper decontrol remedies",
+      "requirement": "A landlord may claim Article VII decontrol only for voluntary vacancy without landlord or agent harassment, duress or unreasonable pressure, legal eviction, or vacancy resulting from a competent court's order; the court-order ground excludes dispossession based on holding over after the tenant's term expires. The Rent Control Board decides disputed vacancy circumstances after a hearing and, if it finds a landlord seeking or having obtained decontrol after a vacancy outside the permitted circumstances, may rescind decontrol, with rent reverting to its pre-vacancy amount, and prosecute the landlord under § 155-21.",
+      "key_value": null,
+      "coverage_conditions": "Applies to landlords seeking or having obtained Article VII vacancy decontrol of residential apartment units. Article VII requires dwelling registration under § 155-30 and permits decontrol no more than once in any three-year period. Permitted vacancy grounds are voluntary departure without harassment, duress or unreasonable pressure from the landlord or the landlord's agents, legal eviction, or departure resulting from an order of a court of competent jurisdiction; the court-order ground is unavailable to a landlord receiving a dispossession order based on the tenant holding over after expiration of the term. The stated remedies require a Board finding that the tenant vacated under circumstances outside § 155-32.",
+      "execution_review_pending": true,
+      "exemptions": "The court-order ground does not include dispossession based on holding over after expiration of the tenant's term.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 155-32; §§ 155-31, 155-34",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "quoted_span": "The landlord shall be entitled to decontrol the apartment unit under this article only under the following circumstances:\n\nA.\n\nIf the tenant vacates the apartment voluntarily without harassment, duress or unreasonable pressure from the landlord or his agents or if the tenant is legally evicted.\n\nB.\nIf the tenant vacates the apartment as a result of a court order from a court of competent jurisdiction. This ground shall not be available to a landlord who receives a court order to dispossess a tenant based upon the tenant holding over and continuing in possession of the premises after the expiration of his term. Whenever there is an issue as to the circumstances under which a tenant has vacated an apartment unit, that issue shall be determined by the Rent Control Board after a hearing.\nIf the Board finds that a landlord is seeking to decontrol or has decontrolled an apartment unit and the tenant has vacated the unit under circumstances other than those set forth in this section, the Rent Board may rescind the decontrol of the apartment unit, and the rent shall revert to that rental on the apartment unit prior to the vacation of the apartment, and prosecute the landlord for violation of the chapter under § 155-21 .",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-04T02:05:02.338Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n004-decontrol-certificate",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Vacancy decontrol certificate and filing fee",
+      "requirement": "When an apartment is decontrolled under Article VII, the landlord must file the Rent Leveling Board's certificate with a $50 filing fee. The certificate must identify the vacating tenant, existing rent, circumstances of vacancy, new tenant, new rent and effective date of the new rent.",
+      "key_value": "$50 certificate filing fee",
+      "coverage_conditions": "Applies to the landlord whenever an apartment unit is decontrolled under Article VII. Authorized decontrol concerns a residential apartment in a dwelling registered under § 155-30, following voluntary vacancy without landlord or agent harassment, duress or unreasonable pressure, legal eviction, or vacancy resulting from a competent court's order; the court-order ground excludes dispossession based on holding over after expiration of the tenant's term. Decontrol is limited to once in any three-year period, and disputed vacancy circumstances are decided by the Rent Control Board after a hearing. The filing trigger is decontrol under Article VII, not a tenant's application for housing.",
+      "execution_review_pending": true,
+      "exemptions": null,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 155-33; §§ 155-31, 155-32, 155-34",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "quoted_span": "When any apartment unit is decontrolled under this article, the landlord shall file a certificate, provided by the Rent Leveling Board, including a filing fee in the amount of $50, indicating the name of the vacating tenant, the existing rental, the circumstances under which the tenant vacated the apartment unit, the name of the new tenant, the new rental and the effective date of the new rental.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-04T02:05:02.338Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "n004-decontrol-frequency",
+      "jurisdiction": "Hoboken, NJ",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Decontrol limited to once in three years",
+      "requirement": "A landlord may not decontrol a dwelling unit under Article VII more than once in any three-year period.",
+      "key_value": "Once in any three-year period",
+      "coverage_conditions": "Applies to landlords seeking Article VII vacancy decontrol of dwelling units. Article VII concerns residential apartments in dwellings registered under § 155-30 and requires voluntary vacancy without landlord or agent harassment, duress or unreasonable pressure, legal eviction, or vacancy resulting from a competent court's order; the court-order ground is unavailable for dispossession based on holding over after expiration of the tenant's term. Disputed vacancy circumstances are decided by the Rent Control Board after a hearing. The frequency restriction concerns decontrol under this article.",
+      "execution_review_pending": true,
+      "exemptions": null,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Hoboken Code § 155-34; §§ 155-31, 155-32",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "quoted_span": "No dwelling unit shall be decontrolled pursuant to this article more than once in any three-year period.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-04T02:05:02.338Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The supplied codified provisions support in_force status, but supply no precise effective dates for these rules. The § 155-33 annotation identifies an amendment date, not an expressly stated effective date; all effective_date values therefore remain null.",
+      "quoted_span": "[Amended 4-3-2023 by Ord. No. B-549]",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "All rules retain prose coverage pending execution review because the fact vocabulary cannot fully represent the landlord role, Article VII decontrol, registration compliance, qualifying vacancy circumstances, court-order exclusions or decontrol history. These findings do not establish executable applicability.",
+      "quoted_span": "The landlord shall be entitled to decontrol the apartment unit under this article only under the following circumstances:",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Section 155-30 is referenced but not supplied, and the capture contains Article VII rather than the whole chapter. Registration requirements and any chapter-wide definitions or exemptions cannot be fully resolved from this source.",
+      "quoted_span": "Provided that a dwelling is registered in accordance with § 155-30 upon the vacation of a residential apartment unit by a tenant, the apartment unit shall become decontrolled and exempt from the provisions of this chapter for the new tenant's initial rental; provided, however, that said rental shall be limited to an increase of 25% over the last rental paid by the tenant who voluntarily vacated the rental unit, exclusive of any capital improvement surcharge that is a component of said last rental.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Section 155-31 describes the 25% comparison using the rent of a tenant who voluntarily vacated, while § 155-32 also permits decontrol following legal eviction or qualifying court-ordered vacancy. The calculation after those other vacancy circumstances requires review; no broader cap calculation is inferred.",
+      "quoted_span": "If the tenant vacates the apartment voluntarily without harassment, duress or unreasonable pressure from the landlord or his agents or if the tenant is legally evicted.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "The relationship between the legal-eviction ground in subsection A and the holdover exclusion attached to the court-order ground in subsection B requires review. The extraction preserves both provisions without determining precedence or a verified conflict.",
+      "quoted_span": "If the tenant vacates the apartment as a result of a court order from a court of competent jurisdiction. This ground shall not be available to a landlord who receives a court order to dispossess a tenant based upon the tenant holding over and continuing in possession of the premises after the expiration of his term.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "The source makes subsequent increases subject to Chapter 155 but does not supply that chapter's ordinary increase formula or other adjustment provisions. No ordinary recurring rent cap is inferred.",
+      "quoted_span": "However, any additional rental increase beyond the initial rental of the new tenant shall be subject to the provisions of this chapter.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "The extraction includes the stated rescission, rent reversion and prosecution remedy. Section 155-21 is not supplied, so no fine amount, additional sanction, private plaintiff standing or per-violation counting rule is inferred.",
+      "quoted_span": "If the Board finds that a landlord is seeking to decontrol or has decontrolled an apartment unit and the tenant has vacated the unit under circumstances other than those set forth in this section, the Rent Board may rescind the decontrol of the apartment unit, and the rent shall revert to that rental on the apartment unit prior to the vacation of the apartment, and prosecute the landlord for violation of the chapter under § 155-21 .",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "The historical repeal notes do not supply the operative text of the former provisions. They do not establish a current condominium or family-owner-occupied exemption, and no such exemption is inferred.",
+      "quoted_span": "Editor's Note: Former Art. VIII, Condominiums and Family-Owner Occupied Residential Units, added 9-7-1994 by Ord. No. R-65, which consisted of §§ 155-35 through 155-36 , was repealed 12-7-1994 by Ord. No. R-91.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Execution review required for n004-vacancy-increase-cap: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Execution review required for n004-post-vacancy-base-rent: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Execution review required for n004-decontrol-vacancy-conditions: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Execution review required for n004-decontrol-certificate: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "issue": "Execution review required for n004-decontrol-frequency: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source restricts entitlement to vacancy decontrol following particular vacancy or eviction circumstances. It does not establish a general just-cause eviction requirement.",
+      "quoted_span": "The landlord shall be entitled to decontrol the apartment unit under this article only under the following circumstances:",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "No security-deposit duty is established by the supplied Article VII text, which addresses vacancy decontrol and related rent requirements.",
+      "quoted_span": "However, any additional rental increase beyond the initial rental of the new tenant shall be subject to the provisions of this chapter.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The $50 fee is a landlord's vacancy-decontrol certificate filing fee. This source establishes no tenant application or screening fee rule.",
+      "quoted_span": "When any apartment unit is decontrolled under this article, the landlord shall file a certificate, provided by the Rent Leveling Board, including a filing fee in the amount of $50, indicating the name of the vacating tenant, the existing rental, the circumstances under which the tenant vacated the apartment unit, the name of the new tenant, the new rental and the effective date of the new rental.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied text establishes conditions for vacancy decontrol, but no restriction on screening prospective tenants.",
+      "quoted_span": "The landlord shall be entitled to decontrol the apartment unit under this article only under the following circumstances:",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The supplied text regulates vacancy rent increases and subsequent rent treatment but establishes no rule concerning algorithmic rent setting.",
+      "quoted_span": "However, any additional rental increase beyond the initial rental of the new tenant shall be subject to the provisions of this chapter. For the purpose of any computations under this chapter, the initial base rent charged to the new tenant under this section shall be considered the base rent.",
+      "source_doc_id": "N004",
+      "source_url": "https://ecode360.com/15252573",
+      "retrieved_at": "2026-10-04T02:05:02.338Z"
+    }
+  ]
+}

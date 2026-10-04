@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T03-30-58-519Z-33a41309",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T03:30:58.519Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D022",
+        "source_sha256": "0699980875e6bf3d797abd8b734db7d449b295173e33668cc655e3b394c084ed",
+        "prompt_sha256": "3039b94f78a7cb80739891370df14bb3cb4df1a1d1d4d663e5294717f455d308",
+        "response_sha256": "f0f8a2004ac19cccda15b10f5b8585dbe7894797d976fba0e02c6ee045a177a3",
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 2,
+        "review_issues": 7,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T03:30:58.533Z",
+        "finished_at": "2026-10-04T03:33:00.754Z",
+        "duration_ms": 122221,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "0c313ea1caf72a079590a9e79b935da0591ab96fdb7dfebbdb04231f0c445a20",
+        "usage": {
+          "input_tokens": 15649,
+          "cached_input_tokens": 11136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2916,
+          "reasoning_output_tokens": 688
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": false,
+    "output": "artifacts/corpus-source-D022.json",
+    "lock_scope": "artifacts/corpus-source-D022.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T03:33:00.760Z",
+    "duration_ms": 122241,
+    "accepted_rule_count": 2,
+    "review_issue_count": 7,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d022-algorithm-restraint",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Common pricing algorithms used to restrain trade",
+      "requirement": "A covered person must not use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of the Cartwright Act.",
+      "key_value": null,
+      "coverage_conditions": "Applies to residential rental pricing only when the conduct falls within this general business prohibition: the actor must be a person as defined by Business and Professions Code Section 16702, excluding the end consumer of a product or service, and must use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy restraining trade or commerce in violation of the chapter. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons and using competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making the algorithm available by any means, including subscription or sale of a service. Commercial terms include level of service, availability, and output, including quantities of products or the amount or level of service. Price includes money or any other tangible or intangible thing of value expected, required, or given in payment for a product or service, including compensation for employee or independent-contractor services. The supplied source references but does not reproduce Section 16702.",
+      "exemptions": "The definition of person excludes the end consumer of a product or service.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cal. Bus. & Prof. Code § 16729(a), (d)",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "execution_review_pending": true,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d022-algorithm-coercion",
+      "jurisdiction": "CA",
+      "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Coercion to adopt algorithm-recommended prices or terms",
+      "requirement": "A covered person must not use or distribute a common pricing algorithm if that person coerces another person to set or adopt a price or commercial term recommended by the algorithm for the same or similar products or services within California.",
+      "key_value": null,
+      "coverage_conditions": "Applies to residential rental pricing only when the conduct satisfies this general business prohibition: a person uses or distributes a common pricing algorithm and coerces another person to set or adopt a recommended price or commercial term recommended by that algorithm for the same or similar products or services in California. Person has the meaning given in Business and Professions Code Section 16702 and excludes the end consumer of a product or service; this definition applies to both references to a person. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons and using competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or otherwise making the algorithm available by any means, including subscription or sale of a service. Commercial terms include level of service, availability, and output, including quantities of products or the amount or level of service. Price includes money or any other tangible or intangible thing of value expected, required, or given in payment for a product or service, including compensation for employee or independent-contractor services. The supplied source references but does not reproduce Section 16702.",
+      "exemptions": "The definition of person excludes the end consumer of a product or service.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "Cal. Bus. & Prof. Code § 16729(b), (d)",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "quoted_span": "(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "execution_review_pending": true,
+      "retrieved_at": "2026-10-01T22:35Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The source presents enacted, chaptered provisions approved and filed in 2025, supporting their treatment as in force at the 2026-10-01 assessment date. It does not state an effective date; both effective_date values remain null pending verification. The approval and filing dates are not substituted for an effective date.",
+      "quoted_span": "CHAPTER 338\nAn act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.\n[\nApproved  by\nGovernor\nOctober 06, 2025.\nFiled with\nSecretary of State\nOctober 06, 2025.\n]",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "These are general business prohibitions, not a blanket ban on residential rent-setting software. Algorithm characteristics, prohibited conduct, and actor coverage cannot be fully represented with the supplied fact vocabulary. Both rules therefore retain qualified prose coverage for execution review; Section 16702's incorporated definition is not reproduced in the source.",
+      "quoted_span": "(3) “Common pricing algorithm” means any\nmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\nterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The digest states that Cartwright Act violations are punishable as a crime and that expanding prohibited activities imposes a state-mandated local program. This separately located statement is preserved here because the rules' quoted operative subsections do not state sanctions. The capture supplies no specific sentence, fine, per-violation calculation, or private-remedy standing; none is inferred. The local-program language does not limit the prohibitions to a housing program.",
+      "quoted_span": "Because the bill would expand the scope of activities prohibited by the Cartwright Act, the violation of which is punishable as a crime, the bill would impose a state-mandated local program.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Section 16729 preserves the applicability of antitrust laws. This is an interaction for review, not a verified override or conflict.",
+      "quoted_span": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Section 16756.1 establishes a general Cartwright Act complaint pleading standard: plausible allegations of the specified agreement or conspiracy suffice, without allegations tending to exclude independent action. It is preserved for enforcement review rather than extracted as a separate residential housing duty; this passage does not establish plaintiff standing or a specific remedy.",
+      "quoted_span": "Notwithstanding any other law, in a complaint for any violation of this chapter, it is sufficient to contain factual allegations demonstrating that the existence of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce is plausible, and the complaint shall not be required to allege facts tending to exclude the possibility of independent action.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d022-algorithm-restraint: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Execution review required for d022-algorithm-coercion: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes no residential rent-increase cap or formula. Its common-pricing-algorithm prohibitions do not establish an active rent cap.",
+      "quoted_span": "(a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied source contains no residential eviction grounds, termination notice duty, or just-cause regime.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The supplied source contains no residential security-deposit limit, collection duty, or return requirement.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied source contains no residential application or screening fee limit or associated fee-handling duty.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied source contains no restriction on residential applicant screening criteria, records, or screening procedures.",
+      "quoted_span": "An act to add Sections 16729 and 16756.1 to the Business and Professions Code, relating to business regulations.",
+      "source_doc_id": "D022",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
+      "retrieved_at": "2026-10-01T22:35Z"
+    }
+  ]
+}

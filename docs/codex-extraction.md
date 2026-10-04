@@ -1,23 +1,31 @@
-# Codex CLI extraction
+# Automatic extraction and reproducible selection
 
-`scripts/compile-codex.mjs` reads captured source text, asks an authenticated Codex CLI for a structured extraction, validates the response, and writes a **separate candidate artifact**. It reuses `makeRequest`, `toolSchema` and `validateExtraction` from the [API compiler](compiler.md), followed by the application's shared rule-pack validator. It never promotes its output into the public rules or rewrites reviewed extraction files.
+LawDiff's current extraction path uses `scripts/compile-codex.mjs` (`lawdiff-codex-cli-compiler/1.3.1`). It sends captured legal text to an authenticated Codex CLI, validates structured candidates and records their provenance. The application pack is built from an **explicit selection of those unchanged automatic candidates**. Candidate generation, selection and deterministic address evaluation are separate, auditable stages.
 
-This path uses the existing Codex authentication configured on the operator's machine. A working ChatGPT-authenticated CLI was demonstrated in this environment. That observation does not establish availability on another account or machine. No API key needs to be pasted into chat, placed in a command, committed, or included in a screenshot. The separate Anthropic compiler remains a different execution path with its own authentication and provenance.
+The source of truth for the shipped selection is `data/extracted/automatic-selection.json`, its generated `automatic-reviewed.json`, and `public/data/rule-pack.json`. Do not infer current counts from this document. Read the recorded run audits, `public/data/corpus-coverage.json` and `public/data/validation.json`. There is no fallback to the earlier California/NJ/MA assisted packs and no injected organizer-only O001 rule in assembly.
 
-## Run one source
+## Current semantic contract
 
-Use Node.js 22 or later, a compatible authenticated Codex CLI, `public/data/catalog.json`, `data/schema/rule_record.schema.json`, and the current `public/engine.mjs`.
+Version 1.3.0 extracts **address-level normative scope**, separately from evidence of an actual violation. An `applies` result means the in-force rule covers an address under the available facts. It does not establish that a particular landlord used prohibited software, collected a fee, violated the law or complied with it.
 
-Start with the commands that do not launch Codex, contact a model, or write artifacts:
+- `coverage_conditions` preserves material property, owner, tenancy and program eligibility, including exceptions. Missing sample values remain unknown. Dataset membership and a mailing city do not prove occupancy, owner qualifications or legal jurisdiction.
+- `requirement` identifies the legal addressee and the conditional duty. Definitions and exclusions concerning a regulated service, product or conduct stay in the requirement and exemptions. A provider-only duty must not be attributed to a resident or landlord.
+- A complete executable condition tree can still depend on unknown input facts. That is different from a rule whose scope cannot yet be represented by the supported vocabulary.
+- Source-backed scope that cannot be represented completely is preserved as 20–10,000 characters of coverage prose with `execution_review_pending: true`. It is non-executable. An executable object must omit that flag or set it to false. User-entered property facts cannot resolve this interpretation-review state.
+- `{ "all": [] }` is allowed only when no further material address-level condition is required after jurisdiction and date. It must not conceal an exception. Missing operative text or status evidence still requires a review issue, not an invented rule.
+
+Jurisdiction, legal status and date remain independent gates. Pending, future and failed measures do not become active merely because coverage text exists. All six organizer categories are considered. Precise effective dates require source support; approval or publication dates are not silently substituted. Source-supported penalties must retain their triggers, limits, standing and proposed/enacted status. Generated conflict flags are false, conflict notes are null/absent, and override lists are empty; unverified cross-source interactions remain review items.
+
+## Inspect or run selected sources
+
+Requires Node.js 22+, the captured catalog and organizer schema, and a compatible authenticated Codex CLI. Help and dry run make no model calls or writes:
 
 ```sh
 node scripts/compile-codex.mjs --help
-node scripts/compile-codex.mjs --dry-run --source D069
+node scripts/compile-codex.mjs --dry-run --source D069 --limit 1
 ```
 
-The dry run displays source, prompt and response-schema hashes, selection limits and the requested model. It is planning evidence, not an extraction result.
-
-An actual invocation uses the current login and may consume account usage:
+A new extraction can consume account usage. This example deliberately writes a separate artifact:
 
 ```sh
 node scripts/compile-codex.mjs \
@@ -25,143 +33,124 @@ node scripts/compile-codex.mjs \
   --limit 1 \
   --max-requests 1 \
   --model gpt-6-astra \
-  --timeout-seconds 300
+  --timeout-seconds 1800 \
+  --output artifacts/new-D069.json
 ```
 
-The default binary in this macOS environment is `/Applications/ChatGPT.app/Contents/Resources/codex`. On another installation, select the executable explicitly:
+The default executable is the bundled macOS path shown by `--help`. On another installation, pass `--codex-bin codex` or the explicit executable path. The wrapper uses the existing login; it does not install a CLI or change authentication. A working login on the original development machine is not evidence of availability on another account.
 
-```sh
-node scripts/compile-codex.mjs \
-  --codex-bin codex \
-  --source D069 \
-  --limit 1 \
-  --max-requests 1
-```
-
-The wrapper does not download a CLI, change authentication or bypass an access failure. Check the selected binary's version and normal authentication locally if startup fails; do not share credentials in chat.
-
-Source IDs may be repeated or comma-separated. **The source limit still applies**: listing two IDs without raising the default limit selects only one.
-
-```sh
-node scripts/compile-codex.mjs \
-  --source D069,D066 \
-  --limit 2 \
-  --max-requests 2 \
-  --timeout-seconds 600
-```
-
-| Control | Default | Accepted range or behavior |
-|---|---:|---|
-| Selected sources, `--limit` | 1 | 1–500 |
-| New CLI model invocations, `--max-requests` | 1 | 1–100; revalidated local cache hits do not count as new model calls |
-| Per-invocation timeout, `--timeout-seconds` | 300 seconds | 1–600 seconds |
-| Model, `--model` | `gpt-6-astra` | Explicit identifier; no model substitution |
-| Captured source size | — | At most 220,000 UTF-8 bytes; larger sources require explicit context-preserving segmentation |
-| CLI stdout size | — | At most 2,000,000 bytes |
-
-There is no automatic retry. A timeout or failed validation is a review outcome, not permission to silently repeat an expensive or ambiguous call. Request and time limits are operational bounds; they are not a monetary spending ceiling.
-
-## Text-only processing and event guard
-
-The complete source, metadata, allowed facts, extraction instructions and JSON response schema are passed through stdin. Source text and metadata are explicitly treated as untrusted evidence. Embedded instructions, URLs, apparent role changes and code are not commands for the extractor.
-
-Each child runs with `exec --ephemeral --sandbox read-only --json`. Per-invocation configuration disables the shell tool, apps and web search. The CLI's SQLite runtime directory is redirected to the ignored local `data/cache/codex-runtime/` directory. This changes neither global configuration nor the existing policy rules. The wrapper does not use `--ignore-rules`, approval bypasses or a sandbox bypass.
-
-The wrapper consumes JSONL while the child runs. Only the expected thread/turn events and reasoning or agent-message items are accepted. Command execution, MCP calls, browsing, file changes, delegation and unknown item/event types are rejected. Detection triggers immediate process-group termination, with a forced termination fallback. A detected tool or untrusted event withholds candidate rules from the entire invocation. Event inspection is a detection-and-abort control, not a claim that every possible external tool was unavailable before the event arrived.
-
-Acceptance requires one completed turn, exactly one completed final agent message containing a bare JSON object, valid usage counts and successful local validation. Markdown fences, text surrounding the JSON, incomplete turns and unexpected events do not become candidate rules. Raw CLI stderr can contain internal plugin paths or service URLs; it stays in private logs and must not be published.
-
-## What gets validated
-
-The same extraction validator used by the API path checks the organizer schema, exact source ID/URL and jurisdiction, stable source-prefixed identifiers, real dates or explicit null dates, and a restricted executable condition tree. The application's `validateRulePack` checks the prepared candidates again.
-
-Rule quotations, quoted review issues and no-rule findings must occur exactly in the captured source. Allowed condition operators and fact names come from the current engine; unsupported facts belong in review. Unconditional scope is `{ "all": [] }`, which must not conceal an essential missing condition. Precise commencement dates require source support; adoption or publication dates must not be silently substituted.
-
-The prompt asks for source-supported penalties and remedies when present, preserving their triggers, limits, plaintiff scope and proposed/enacted status. The operative summary and any sanction must be supported by the exact quoted passage; separately located or unsupported details can remain quoted review items. No sanction is filled in from general legal knowledge.
-
-An accepted rule receives `extraction_method: "codex_cli_structured_extraction"` **after** validation. This label is distinct from the shipped `codex_assisted_extraction` records and from `anthropic_messages_api`. A live invocation does not retroactively change the provenance of earlier manually reviewed candidates.
-
-These checks establish structure, source identity and quotation presence. They do not certify legal interpretation, prove that every exception was extracted, or measure legal accuracy. Spanish summaries remain machine translations.
-
-## Zero rules can be a valid outcome
-
-The response has three separate collections: `rules`, unresolved `review` items and `no_rule_findings`. A source can produce zero rules with useful review items when its essential scope cannot be represented using the supplied facts, the text lacks an effective date, or the source is insufficient for the proposed rule. That is a completed conservative extraction, not automatically a transport failure.
-
-Inspect each review item before expanding the vocabulary. Add a fact only when it has a clear, source-supported meaning, preserve unknown values, and test its behavior. Do not respond to abstention by making a conditional law unconditionally applicable. A new fact changes the prompt hash and causes a different cache key even if the source text is unchanged.
-
-Exit code `0` permits completion with review items and zero accepted rules. Exit code `2` denotes a stopped or partial invocation; exit code `1` denotes an unrecovered configuration/startup failure. Always read `provenance.status` and per-source outcomes, not just the exit code or candidate count.
-
-## Artifacts, audit and cache
-
-| Location | Contents and handling |
+| Option or bound | Current behavior |
 |---|---|
-| `artifacts/codex-compiler-pack.json` | Candidate rules, review items, no-rule findings and public-suitable audit metadata for the latest selected invocation. The next run can replace this file. It is not the full reviewed corpus. |
-| `data/cache/compile-codex/<hash>.json` | Private cache of a completed CLI turn, its JSONL, hashes and original timing. Only validated results are cached. |
-| `data/cache/compile-codex/runs/` | Private CLI version output, stdout/stderr, process outcomes and audit records. Do not publish raw files. |
-| `data/cache/compile-codex/compiler.lock` | Exclusive local-run lock. Inspect a stale lock and the previous process before removing it. |
-| `data/cache/codex-runtime/` | Local CLI runtime state, separate from public artifacts. |
+| `--limit` | Default 1; maximum 500 selected sources. Also limits an explicit source list. |
+| `--max-requests` | Default 1; maximum 100 new invocations. Revalidated cache hits are not new calls. |
+| `--timeout-seconds` | Default 300; configurable from 1 to **1800 seconds per invocation**. |
+| `--source` | Repeat the flag or use comma-separated IDs; set a sufficient limit. |
+| `--output` | Default `artifacts/codex-compiler-pack.json`; only a flat `artifacts/<basename>.json` path is accepted. No traversal. |
+| `--continue-on-source-error` | Off by default; only a safe completed tool-free turn with a source-local JSON/schema validation error may continue to the next source. No retry. |
+| Captured source / CLI stdout | Maximum 220,000 UTF-8 source bytes / 2,000,000 stdout bytes. Oversized sources require explicit context-preserving segmentation. |
 
-`data/cache/` must be ignored by Git before a live run starts. Files are written with private permissions; no environment dump is created. The wrapper logs compact status messages and fixed failure codes to the console rather than raw remote errors.
+A CLI failure, timeout, unexpected tool/event, untrusted transport or invalid cache provenance always stops the run. An untrusted event withholds all candidates from that invocation. Source-local continuation records the failure and can finish as `completed_with_review_items`; it does not disguise a failed source as processed. Read per-source outcomes and `provenance.status`, not only the process exit code. Exit 0 allows review-only/zero-rule completion; exit 2 denotes a stopped or partial run; exit 1 denotes an unrecovered startup/configuration failure.
 
-A cache key binds compiler version, requested model, CLI version, source-text hash, full stdin-prompt hash and response-schema hash. A hit is labeled `cache_hit_revalidated` and retains the original run and timing. The stored event stream is checked again for forbidden events and completion; response and transport hashes are verified, and the current source/schema validator runs again. A cache hit is never counted as a new model invocation. Invalid cache provenance stops processing for review instead of silently regenerating the entry.
+Each output basename has an exclusive `data/cache/compile-codex/compiler-<basename>.lock`. Separate outputs can be used for deliberately disjoint source lists; the operator must ensure they do not overlap. A legacy `compiler.lock` blocks new runs. Do not remove a lock while its process is active. Requests and timeouts bound execution, not dollar spending.
 
-For any published execution claim, retain these audit values:
+## Evidence validation and review-quote quarantine
 
-- Compiler version and CLI version; requested model and source ID.
-- Source, full prompt, response schema, final response and JSONL transport SHA-256 hashes.
-- Start/end timestamps, duration, response outcome and whether the result was a live call or a revalidated local cache hit.
-- CLI-reported usage, accepted rule count and review-item count.
+The Codex wrapper reuses the source schema, prompt contract and validator in `scripts/compile.mjs`, then applies `validateRulePack` from the same engine used by the app and exports. Accepted records receive `extraction_method: "codex_cli_structured_extraction"` and `review_status: "machine_validated_not_legally_reviewed"`.
 
-Record the code revision as well. If the working tree has uncommitted changes, preserve the corresponding exact code hashes rather than claiming an unchanged commit produced the output:
+Rule quotations and `no_rule_findings[].quoted_span` must be exact captured-source spans. A mismatch rejects the source result. Source identity, jurisdiction, dates, schema, supported condition fields and duplicate IDs also remain strict. Finding a quotation proves correspondence to captured text, not that its interpretation is legally correct.
+
+A malformed quotation in an otherwise schema-valid **review comment** is handled differently: the quotation is discarded rather than repaired, `quoted_span` becomes null, and the unresolved model issue is retained separately with:
+
+- `issue_code: "unverified_review_quote"` and `quote_verification: "rejected_not_exact"`;
+- `rejected_quote_sha256` and the zero-based `original_review_index`;
+- `unverified_model_issue`, explicitly identified as unverified rather than source evidence.
+
+Source and run audits count rejected review quotations. They are never included in verified-quotation counts. Valid rules from the same response can survive this quarantine. The untouched model response remains in the private cache. Coverage-review workflow notes also use a null quote rather than appropriating a legal passage as evidence for an internal process.
+
+`rules`, unresolved `review` items and `no_rule_findings` stay separate. Zero candidates can be a valid review-only result. It is not proof that no relevant law exists. Prose-backed candidates can count as extracted records while remaining non-executable.
+
+## Text-only transport, caches and audit
+
+The complete source and metadata are untrusted evidence supplied through stdin. Embedded instructions, links, apparent roles and code are not commands. Child invocations use `exec --ephemeral --sandbox read-only --json`, with shell, apps and web search disabled by invocation configuration. No approval or sandbox bypass is used.
+
+A strict JSONL allowlist accepts expected thread/turn events and reasoning/final-message items. Unexpected command, MCP, browsing, file-change, delegation or other events trigger termination. Acceptance requires one completed tool-free turn, one final bare JSON object, reported usage and a successful process exit. This is detection and rejection of unexpected events, not proof that a future CLI could never attempt a tool.
+
+Private `data/cache/compile-codex/` contains caches and run logs; `data/cache/codex-runtime/` holds isolated CLI runtime state. Both remain outside Git. Raw transports, stderr, prompts and credentials are not published. The public artifact records model/CLI/compiler versions, source/prompt/schema/response/transport hashes, start/end times, usage and outcomes.
+
+Cache keys bind the compiler and CLI versions, exact requested model, source, prompt and schema. A `cache_hit_revalidated` preserves original-run provenance and is rechecked against the event guard and current validator. It does not count as a new invocation. Invalid cache evidence stops processing rather than silently triggering another model call. Usage is reported token metadata, not a monetary bill. Hashes identify artifacts; they are not signatures or legal certification.
+
+## From candidates to the running application
+
+1. **Review and record the choice.** `data/extracted/automatic-selection.json` names one artifact per source, its SHA-256, explicit rule IDs and a reason. Review here is an explicit operator/AI-assisted selection, not independent human legal review. Different sources may share a multi-source artifact.
+2. **Promote unchanged records.** `scripts/promote-candidates.mjs --selection data/extracted/automatic-selection.json` validates completed trusted compiler 1.2.1/1.3.0/1.3.1 runs, source hashes, exact quotations and source audit metadata. It writes only `data/extracted/automatic-reviewed.json`. Selected rule objects are unchanged; source review items and no-rule findings remain separate. The audit records selected/omitted IDs and each rule's hash.
+3. **Assemble with original evidence.** `scripts/assemble.mjs` reproduces the selection from the manifest and the exact original artifact bytes. It rejects any discrepancy, then copies the reviewed content into `public/data/rule-pack.json` with an assembly receipt. No old assisted-pack fallback and no injected rule are permitted.
+4. **Aggregate corpus coverage.** `scripts/aggregate-corpus.mjs` processes only explicit `--input artifacts/<basename>.json` files. All recorded attempts, including failures and unprocessed entries, remain visible. Without `--selection`, differing completed candidate sets for one source are withheld. With the pinned selection manifest, the named validated completed attempt is selected and its reason/hash/run are recorded under `source_selection`; there is no implicit newest-version preference.
+5. **Use one engine.** The loaded pack drives the app, original-sample address exports and change cases through the shared engine. Build verifies promotion hashes, the assembled intermediate, corpus catalog/source/candidate hashes, matching manifest decisions and exact identity of selected app records within the reported corpus candidates.
+
+The corpus keeps the **full** candidate set from a selected source. The manifest's `rule_ids` are the narrower app selection; they do not remove omitted candidates or historical attempts from the corpus report. Processed-source counts describe completed structural/source checks, not exhaustive interpretation or accuracy.
+
+## Reproduce the recorded pipeline from a clean clone
+
+Install Node.js 22+ and the repository dependencies first (`npm ci` may download packages). The following steps restore recorded public artifacts and do not call a model or require private CLI caches. A frozen release must include `data/extracted/recorded-runs/manifest.json`, its `.sha256` sidecar, the archived run files, the published corpus receipt and the pinned selection manifest. If one is absent or altered, restoration fails rather than inventing evidence.
 
 ```sh
-git rev-parse HEAD
-shasum -a 256 scripts/compile-codex.mjs scripts/compile.mjs \
-  public/engine.mjs data/schema/rule_record.schema.json
+npm ci
+node scripts/restore-extraction.mjs --dry-run
+node scripts/restore-extraction.mjs
+node scripts/promote-candidates.mjs --selection data/extracted/automatic-selection.json --dry-run
+node scripts/promote-candidates.mjs --selection data/extracted/automatic-selection.json
+node scripts/assemble.mjs --dry-run
+node scripts/assemble.mjs
 ```
 
-Do not edit the prompt, schema or fact vocabulary during a measured batch. Hashes support identifying the input and implementation; they are not signatures, legal certificates or a guarantee that a fresh model invocation will produce identical wording.
+Restore checks the archive manifest checksum, published coverage/selection byte hashes, every original artifact checksum and its terminal status. An existing different `artifacts/` file is refused, not overwritten. The archive is assembled by `scripts/archive-extraction.mjs` from those explicit references only; it never archives private caches.
 
-Usage fields are copied from the CLI's completed-turn event, including supported cache/reasoning counts when present. They are not converted into dollars. The wrapper makes no assertion that the run was free, that account billing follows API token prices, or that no other development costs were incurred. The deterministic application runtime separately makes no model calls.
+Re-aggregate using the **published, hash-pinned input list**, not a glob over whatever happens to be in `artifacts/`:
 
-## Recorded checkpoint: first measured batch
+```sh
+node --input-type=module <<'NODE'
+import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const receipt = JSON.parse(await readFile('public/data/corpus-coverage.json', 'utf8'));
+const args = [];
+for (const input of receipt.input_files) {
+  if (!/^artifacts\/[A-Za-z0-9][A-Za-z0-9._-]{0,119}\.json$/.test(input.path) || input.path.includes('..'))
+    throw Error('Unsafe recorded input path.');
+  if (sha(await readFile(input.path)) !== input.file_sha256)
+    throw Error(`Recorded input changed: ${input.path}`);
+  args.push('--input', input.path);
+}
+const result = spawnSync(process.execPath, [
+  'scripts/aggregate-corpus.mjs', ...args,
+  '--selection', 'data/extracted/automatic-selection.json',
+], { stdio: 'inherit' });
+if (result.error) throw result.error;
+if (result.status !== 0) throw Error('Corpus aggregation did not complete.');
+NODE
+cp artifacts/corpus-coverage.json public/data/corpus-coverage.json
+cp artifacts/corpus-candidates.json public/data/corpus-candidates.json
+node scripts/export.mjs
+npm test
+python3 -m unittest discover -s tests -p '*_test.py'
+npm run build
+```
 
-At the checkpoint before review of the second batch, the first live invocation over D069, D066 and D001 completed with **zero accepted rules and eleven review items**:
+The export reads the original sample, not browser-only property overrides. `scripts/build.mjs` checks the shared snapshot gate before rewriting validation output or `dist/`. A mismatch is a reason to inspect and rebuild the relevant upstream artifact, not to edit a hash to force acceptance.
 
-| Source | Accepted rules | Review items |
-|---|---:|---:|
-| D069 | 0 | 5 |
-| D066 | 0 | 3 |
-| D001 | 0 | 3 |
+Re-promotion, assembly and aggregation record new timestamps and aggregation IDs; complete output files are therefore not promised to be byte-identical to the published snapshot. Original archived run bytes and selected rule objects remain hash-verifiable. Restore targets the original published receipt on a clean checkout. If publishing a newly generated snapshot, re-create the archive manifest against that new receipt after validation; an old archive manifest intentionally refuses a different published receipt.
 
-The review identified limits in the precision of the available facts. Six specific fields were subsequently added to the engine: `primary_residence`, `inpatient_medical_care`, `licensed_long_term_care`, `detention_or_correctional_facility`, `fee_charger_is_landlord`, and `fee_charger_nj_real_estate_licensee`. These are vocabulary additions; no missing sample value is inferred from their existence.
+## Historical two-source checkpoint
 
-A second exploratory batch returned two structured candidates. Source review identified a missing positive actor-role condition in the fee candidate. The additional `fee_charger_is_landlord_agent` fact and a generic actor-membership instruction addressed that issue; the public 58-record pack was not replaced.
+`public/data/extraction-run.json` and `public/data/extraction-candidates.json` preserve the historical `lawdiff-codex-cli-compiler/1.1.0` run `2026-10-03T23-45-24-846Z-65c22251`: D069 produced zero candidates and five review items; D066 produced one candidate and zero review items. Two model requests completed in 180.747 seconds using the model and CLI version recorded there.
 
-## Published recorded run
+That receipt measures only those two calls. It excludes exploratory and later corpus runs, is not a full-corpus benchmark, and does not describe the current selection. Early assisted development packs and the historical actor/conduct vocabulary differ from the current 1.3.0 address-scope contract. Their provenance is retained rather than retroactively relabelled. `scripts/publish-extraction.mjs` publishes that kind of separate demonstration receipt; it is not the promotion or assembly command.
 
-The completed **lawdiff-codex-cli-compiler/1.1.0** run `2026-10-03T23-45-24-846Z-65c22251` is published in `public/data/extraction-run.json`, with its unmodified candidate output in `public/data/extraction-candidates.json`.
+Tests cover transport rejection, source semantics, prose flags, quotation quarantine, provenance, explicit selection, unchanged assembly and corpus integrity. Current test totals belong in the actual test output and release artifacts, not in an unmaintained number here. Neither passing tests nor source processing is a legal accuracy score.
 
-| Source | Structured candidates | Review items | Outcome |
-|---|---:|---:|---|
-| D069 | 0 | 5 | Full actor/conduct exclusions exceed this bounded vocabulary; retained for review |
-| D066 | 1 | 0 | Application-fee candidate with explicit actor and license conditions |
+See [the shared validator and separate Anthropic path](compiler.md) for the other transport and its cost controls.
 
-Two actual model requests completed using **gpt-6-astra**, **codex-cli 0.153.4**, in **180.747 seconds** wall time. This is a selected demonstration on two sources, not a full-corpus extraction benchmark. Earlier exploratory calls are excluded from that duration and request count. None of these runs is an independent legal review.
+## Operative dates and sunsets (1.3.1)
 
-The final D066 candidate preserves the known actor restriction, property-size exception, license exception, 2026-05-01 effective date, annual positive-CPI mechanism, and qualified penalty tiers. Source and structural validation passed. Missing actor and property facts remain unknown in the shared engine. The five D069 review findings remain visible rather than being counted as extracted executable rules.
-
-The demo and technical video contain labelled diagrams built from this real receipt, not a simulated live model console. The application's Integrity page links the same candidate artifact. Reproduce a run with the command above; after deliberate review, `node scripts/publish-extraction.mjs` publishes only a separate completed-run receipt and candidates. It does not promote them into the public rule pack.
-
-
-## Verification performed
-
-Thirty-seven additional, isolated compiler checks passed for argument limits, source inclusion, prompt/schema generation, JSON-only parsing, usage fields, rejected command/MCP/web/file/delegation events, incomplete turns, malformed responses, immediate process termination and timeouts. These fixtures made no live model calls, saved no extraction artifact and were not added to the npm test count.
-
-Separately, the main project checkpoint has **45 JavaScript tests and 10 Python geography tests**, including the added fact-behavior regression. These counts are internal engineering checks, not an organizer score, legal ground-truth benchmark or measured extraction accuracy.
-
-## References
-
-- [Codex non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode)
-- [Codex configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference)
-- [Separate Anthropic source compiler](compiler.md)
+Compiler 1.3.1 adds an optional, source-supported `end_date` and distinguishes a delayed operative date from an amendment’s earlier effective date. The start used by the evaluator is when the substantive rule operates; the end is exclusive. The source review must still verify both. Earlier recorded 1.2.1/1.3.0 runs keep their original hashes and schema; they are not relabelled or rewritten.

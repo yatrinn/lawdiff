@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T02-36-45-187Z-3efe2542",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+    "started_at": "2026-10-04T02:36:45.193Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 0,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "S006",
+        "source_sha256": "bb68b47083b5bd596173e2d8f62ca8f06146be4de1c68a04910b19e473cf941d",
+        "prompt_sha256": "ec167c5516779fd2ab30ee6a223f81ac05263e722ffbde216325848396fc60c8",
+        "response_sha256": null,
+        "schema_sha256": "3fb915293fea16401fd0a8ed95ffa8b3576bd19fc8e183369f7a257b0ffe55fc",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "rejected_requires_review",
+        "accepted_rules": 0,
+        "review_issues": 1,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T02:36:45.242Z",
+        "finished_at": "2026-10-04T02:46:45.219Z",
+        "duration_ms": 600015,
+        "model_called_this_run": true,
+        "exit_code": null,
+        "transport_sha256": "d0124cc042c4cd212e6f260f6c72bfc84a3f31652e3714281f9192a61cf860e9",
+        "failure_code": "cli_timeout"
+      },
+      {
+        "source_doc_id": "N007",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D066",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D069",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D022",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D002",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D003",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D005",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D007",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D008",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D010",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D012",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D014",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D017",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D018",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D019",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D020",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D021",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D023",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D025",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D028",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D029",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D032",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D033",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D034",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D035",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D036",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D040",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D042",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D044",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D045",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D046",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D047",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D049",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D053",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D058",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D067",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "D081",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N002",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N004",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "N008",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "S003",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      },
+      {
+        "source_doc_id": "S005",
+        "status": "not_processed_after_stop",
+        "accepted_rules": 0
+      }
+    ],
+    "status": "stopped_requires_review",
+    "continue_on_source_error": true,
+    "output": "artifacts/corpus-batch-1.json",
+    "lock_scope": "artifacts/corpus-batch-1.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T02:46:45.224Z",
+    "duration_ms": 600031,
+    "accepted_rule_count": 0,
+    "review_issue_count": 1,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 0,
+    "not_legal_review": true
+  },
+  "rules": [],
+  "review": [
+    {
+      "source_doc_id": "S006",
+      "issue": "cli_timeout"
+    }
+  ],
+  "no_rule_findings": []
+}

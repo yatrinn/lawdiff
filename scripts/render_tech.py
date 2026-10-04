@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Render the captioned technical explanation; these are diagrams, not app captures.
 
-Requires Pillow, ffmpeg, ffprobe, Node/npm, and the Python standard library.
+Requires Pillow, ffmpeg, ffprobe, Node, and the Python standard library.
 Runs the current test suites and verifies visible snapshot counts before encoding.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -80,8 +81,28 @@ def rounded(d, box, color=LIGHT, outline=None):
 
 
 def check_snapshot():
-    catalog = json.loads((ROOT / "public/data/catalog.json").read_text())
-    pack = json.loads((ROOT / "public/data/rule-pack.json").read_text())
+    # Use exactly the shared validators that gate the shipped workspace. The
+    # Python renderer neither reinterprets coverage nor promotes any candidate.
+    checker = r'''
+import { readFileSync } from 'node:fs';
+import { validateBuildSnapshot } from './scripts/validate-artifacts.mjs';
+const read = path => readFileSync(path);
+const verified = validateBuildSnapshot({
+ catalogBytes: read('public/data/catalog.json'), packBytes: read('public/data/rule-pack.json'),
+ coverageBytes: read('public/data/corpus-coverage.json'), candidatesBytes: read('public/data/corpus-candidates.json'),
+ reviewedBytes: read('data/extracted/automatic-reviewed.json'), selectionBytes: read('data/extracted/automatic-selection.json')
+});
+console.log(JSON.stringify({stats: verified.coverage.stats, generated_at: verified.coverage.generated_at,
+ aggregation_id: verified.coverage.aggregation_id, file_sha256: verified.file_sha256}));
+'''
+    verified = json.loads(run(["node", "--input-type=module", "-e", checker], "snapshot-validation.txt"))
+    captured = {}
+    for name, expected in verified["file_sha256"].items():
+        raw = (ROOT / f"public/data/{name}.json").read_bytes()
+        if hashlib.sha256(raw).hexdigest() != expected:
+            raise RuntimeError("A data artifact changed during validation; rerun with a stable snapshot.")
+        captured[name] = json.loads(raw)
+    catalog, pack = captured["catalog"], captured["rule-pack"]
     sources = {s["doc_id"]: s for s in catalog["sources"]}
     spans = 0
     for record in pack["rules"]:
@@ -95,43 +116,43 @@ def check_snapshot():
                 spans += 1
     matches = sum(bool(a.get("geography", {}).get("legal_city")) for a in catalog["addresses"])
     observed = {"records": len(pack["rules"]), "quotation_spans": spans, "addresses": len(catalog["addresses"]), "legal_city_matches": matches}
-    assert observed == {"records": 58, "quotation_spans": 193, "addresses": 500, "legal_city_matches": 475}, observed
-    node_output = run(["npm", "test"], "javascript-tests.txt")
-    assert re.search(r"tests\s+45\b", node_output) and re.search(r"pass\s+45\b", node_output)
+    # An explicit TAP reporter makes counts machine-readable across Node versions.
+    test_files = sorted(str(p.relative_to(ROOT)) for p in (ROOT / "tests").glob("*.test.mjs"))
+    node_output = run(["node", "--test", "--test-reporter=tap", *test_files], "javascript-tests.txt")
+    totals = {key: int(value) for key, value in re.findall(r"^# (tests|pass|fail|cancelled|skipped|todo) (\d+)\s*$", node_output, re.M)}
+    if not (totals.get("tests") == totals.get("pass") and totals.get("pass", 0) >= 50 and totals.get("fail") == 0):
+        raise RuntimeError(f"JavaScript tests did not all pass (minimum 50): {totals}")
+    if any(totals.get(key, 0) for key in ("cancelled", "skipped", "todo")):
+        raise RuntimeError(f"JavaScript tests include unresolved outcomes: {totals}")
     py_output = run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "*_test.py"], "geography-tests.txt")
-    assert "Ran 10 tests" in py_output and "OK" in py_output
-    observed.update(javascript_tests=45, geography_tests=10, pack_sha256=hashlib.sha256((ROOT / "public/data/rule-pack.json").read_bytes()).hexdigest())
+    py_count = re.search(r"^Ran (\d+) tests? in ", py_output, re.M)
+    if not py_count or not re.search(r"^OK\s*$", py_output, re.M) or int(py_count[1]) < 10:
+        raise RuntimeError("Geography tests did not all pass (minimum 10).")
+    observed.update(javascript_tests=totals["pass"], geography_tests=int(py_count[1]),
+                    pack_sha256=verified["file_sha256"]["rule-pack"], corpus=verified)
     (WORK / "snapshot.json").write_text(json.dumps(observed, indent=2))
-    return sources
+    return sources, observed
 
 
-def scenes(sources):
+def scenes(sources, snapshot):
     frames = []
     captions = []
-    receipt = json.loads((ROOT / "public/data/extraction-run.json").read_text())
-    candidates = json.loads((ROOT / "public/data/extraction-candidates.json").read_text())
-    assert receipt["status"] in ("completed_machine_validation", "completed_with_review_items")
-    assert receipt["requests_sent"] > 0 and receipt["accepted_rule_count"] == len(candidates["rules"]) > 0
-    successful = [s for s in receipt["sources"] if s["status"] == "validated_candidates"]
-    assert successful
-    for s in successful:
-        assert hashlib.sha256(sources[s["source_doc_id"]]["text"].encode()).hexdigest() == s["source_sha256"]
-    for r in candidates["rules"]:
-        assert r["quoted_span"] in sources[r["source_doc_id"]]["text"]
-    cap = "A recorded Codex CLI run reads source text and emits rule candidates.\nExact quotations and executable conditions are checked before review."
-    im, d = base(1, "Source in.\nChecked candidates out.", cap)
-    for x, num, title, detail in [(112, "01", "Read", ", ".join(s["source_doc_id"] for s in successful)), (728, "02", "Extract", receipt["model"]), (1344, "03", "Validate", "Schema + exact spans")]:
+    stats = snapshot["corpus"]["stats"]
+    cap = "Recorded model calls extract candidates; source review selects unchanged records.\nOne selected pack drives the workspace and all 500 submitted address lookups."
+    im, d = base(1, "From source to rule.\nFrom rule to address.", cap)
+    for x, num, title, detail in [(112, "01", "Extract", "Captured text + hash"), (728, "02", "Select", "Unchanged rule records"), (1344, "03", "Evaluate", "One shared engine")]:
         text(d, (x, 421), num, 27, BLUE, True)
         text(d, (x, 475), title, 57, INK, True)
         text(d, (x, 559), detail, 30, MUTED, max_width=464)
     arrow(d, 565, 510, 666)
     arrow(d, 1180, 510, 1287)
-    rounded(d, (112, 672, 1808, 818))
-    text(d, (151, 700), str(receipt["accepted_rule_count"]), 64, BLUE, True)
-    noun = "candidate" if receipt["accepted_rule_count"] == 1 else "candidates"
-    text(d, (255, 715), f'{noun} · {receipt["review_issue_count"]} review items', 34, INK, True)
-    text(d, (1008, 700), "Separate from the 58-record public pack.", 28, MUTED)
-    text(d, (1008, 752), "Interpretation still needs expert review.", 28, MUTED)
+    rounded(d, (112, 657, 1808, 794))
+    text(d, (151, 677), f'{stats["processed"]} / {stats["catalog_source_count"]}', 58, BLUE, True, max_width=470)
+    text(d, (151, 751), "sources processed", 27, MUTED)
+    text(d, (710, 677), str(snapshot["records"]), 58, BLUE, True, max_width=430)
+    text(d, (710, 751), "selected records", 27, MUTED)
+    text(d, (1221, 685), "Prose coverage requires\nexecution review.", 27, MUTED, max_width=530, spacing=11)
+    text(d, (112, 819), "Missing, rejected and unprocessed sources remain visible in the audit.", 27, MUTED, max_width=1696)
     frames.append(im); captions.append(cap)
 
     cap = "Captured files carry hashes. Primary and supplemental quotations\nmust occur verbatim in their referenced source texts."
@@ -144,10 +165,12 @@ def scenes(sources):
     arrow(d, 565, 510, 666)
     arrow(d, 1180, 510, 1287)
     rounded(d, (112, 672, 1808, 818))
-    text(d, (151, 708), "193", 62, BLUE, True)
+    text(d, (151, 708), str(snapshot["quotation_spans"]), 62, BLUE, True, max_width=140)
     text(d, (297, 721), "checked quotation spans", 36, INK, True)
-    sha = sources["D069"]["download_sha256"]
-    text(d, (1025, 701), "D069 · captured file SHA-256", 25, MUTED)
+    sample = sources.get("D069") or next(s for s in sources.values() if s.get("text"))
+    sha = sample.get("download_sha256") or hashlib.sha256(sample["text"].encode()).hexdigest()
+    kind = "captured file" if sample.get("download_sha256") else "source text"
+    text(d, (1025, 701), f'{sample["doc_id"]} · {kind} SHA-256', 25, MUTED)
     text(d, (1025, 745), sha[:28] + "…", 28, INK)
     frames.append(im); captions.append(cap)
 
@@ -180,9 +203,9 @@ def scenes(sources):
 
     cap = "Regression tests challenge source tampering, jurisdiction mismatches,\nmalformed conditions, calendar boundaries and geographic provenance."
     im, d = base(5, "Test the\nfailure cases.", cap)
-    text(d, (112, 412), "45", 116, INK, True)
+    text(d, (112, 412), str(snapshot["javascript_tests"]), 116, INK, True, max_width=420)
     text(d, (112, 566), "JavaScript tests passed", 33, MUTED)
-    text(d, (569, 412), "10", 116, INK, True)
+    text(d, (569, 412), str(snapshot["geography_tests"]), 116, INK, True, max_width=420)
     text(d, (569, 566), "Geography tests passed", 33, MUTED)
     for y, item in [(442, "Altered quotation"), (544, "Wrong source jurisdiction"), (646, "Malformed condition")]:
         text(d, (1080, y), item, 31, INK, True)
@@ -190,11 +213,13 @@ def scenes(sources):
     text(d, (112, 773), "Internal regression checks. No official accuracy score is claimed.", 29, MUTED)
     frames.append(im); captions.append(cap)
 
-    cap = "475 sample addresses have matched legal cities; 25 remain unresolved.\nExact quotations support review. They do not prove legal interpretation."
+    matches, total = snapshot["legal_city_matches"], snapshot["addresses"]
+    unresolved = total - matches
+    cap = f"{matches} sample addresses have matched legal cities; {unresolved} remain unresolved.\nExact quotations support review. They do not prove legal interpretation."
     im, d = base(6, "Traceable\nis not certified.", cap)
-    text(d, (105, 412), "475 / 500", 124, BLUE, True)
+    text(d, (105, 412), f"{matches} / {total}", 124, BLUE, True, max_width=1000)
     text(d, (112, 584), "Sample addresses with matched legal cities", 34, MUTED)
-    text(d, (1163, 422), "25", 107, INK, True)
+    text(d, (1163, 422), str(unresolved), 107, INK, True, max_width=600)
     text(d, (1167, 576), "City matches unresolved", 34, MUTED)
     rule(d, 683)
     text(d, (112, 737), "Expert legal review remains necessary.", 44, INK, True)
@@ -215,13 +240,33 @@ def write_srt(captions, durations):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--preview", type=int, choices=range(1, 7),
+                        help="Validate the current snapshot and tests, then write one layout PNG under work only.")
+    parser.add_argument("--check", action="store_true",
+                        help="Validate the current corpus, workspace pack and test counts without writing media.")
+    args = parser.parse_args()
     WORK.mkdir(parents=True, exist_ok=True)
-    MEDIA.mkdir(parents=True, exist_ok=True)
-    for binary in ("ffmpeg", "ffprobe", "npm"):
+    dependencies = ["node"] if args.preview or args.check else ["ffmpeg", "ffprobe", "node"]
+    for binary in dependencies:
         if not shutil.which(binary):
             raise RuntimeError(f"Missing dependency: {binary}")
-    sources = check_snapshot()
-    frames, captions = scenes(sources)
+    sources, snapshot = check_snapshot()
+    if args.check:
+        print(json.dumps(snapshot, indent=2))
+        return
+    frames, captions = scenes(sources, snapshot)
+    if args.preview:
+        output = WORK / f"corpus-preview-{args.preview:02}.png"
+        frames[args.preview - 1].save(output)
+        print(json.dumps({"preview": str(output), "corpus_generated_at": snapshot["corpus"]["generated_at"],
+                          "javascript_tests": snapshot["javascript_tests"], "geography_tests": snapshot["geography_tests"],
+                          "media_written": False}, indent=2))
+        return
+    MEDIA.mkdir(parents=True, exist_ok=True)
+    for name, expected in snapshot["corpus"]["file_sha256"].items():
+        if hashlib.sha256((ROOT / f"public/data/{name}.json").read_bytes()).hexdigest() != expected:
+            raise RuntimeError("The validated data snapshot changed; rerun before writing media.")
     durations = [9, 9, 10, 10, 10, 8]
     write_srt(captions, durations)
     concat = []
@@ -233,12 +278,14 @@ def main():
     manifest = WORK / "timeline.ffconcat"
     manifest.write_text("\n".join(concat) + "\n")
     output = MEDIA / "lawdiff-tech.mp4"
-    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough · Captioned", "-metadata", "comment=Technical diagrams with verified automatic extraction receipt; build snapshot 2026-10-04; no legal accuracy claim.", str(output)], "ffmpeg.log")
+    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough · Captioned", "-metadata", "comment=Technical diagrams of automatic extraction, unchanged selection and shared evaluation, with a validated corpus receipt; no legal completeness or accuracy claim.", str(output)], "ffmpeg.log")
     probe = json.loads(run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(output)]))
     video = next(s for s in probe["streams"] if s["codec_type"] == "video")
     assert video["codec_name"] == "h264" and video["width"] == WIDTH and video["height"] == HEIGHT
     assert float(probe["format"]["duration"]) == 56.0
     assert video["nb_frames"] == "1680"
+    assert video["avg_frame_rate"] == "30/1" and video["pix_fmt"] == "yuv420p"
+    assert not any(s["codec_type"] == "audio" for s in probe["streams"])
     (WORK / "ffprobe.json").write_text(json.dumps(probe, indent=2))
     (WORK / "captions.json").write_text(json.dumps([{"duration": duration, "caption": cap} for duration, cap in zip(durations, captions)], indent=2))
     print(json.dumps({"file": str(output), "duration_seconds": 56, "width": WIDTH, "height": HEIGHT, "frames": 1680, "audio": False, "bytes": output.stat().st_size}, indent=2))
