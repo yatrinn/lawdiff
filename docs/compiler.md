@@ -104,3 +104,7 @@ Current counts belong to the selection manifest, rule pack, corpus coverage and 
 ## Operative dates and sunsets (1.3.1)
 
 Compiler 1.3.1 adds an optional, source-supported `end_date` and distinguishes a delayed operative date from an amendment’s earlier effective date. The start used by the evaluator is when the substantive rule operates; the end is exclusive. The source review must still verify both. Earlier recorded 1.2.1/1.3.0 runs keep their original hashes and schema; they are not relabelled or rewritten.
+
+## Source jurisdiction boundary (1.3.2)
+
+The shared prompt now explicitly separates a source’s own jurisdiction from independently governed law discussed on that page. Cross-jurisdiction duties belong in review for the appropriate source; they are not silently relabelled as local rules. Incorporated definitions or procedures may qualify a genuine local duty. This strengthens the prompt while preserving the existing exact-jurisdiction validator, and the version hash requires a new extraction.

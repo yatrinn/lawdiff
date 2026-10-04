@@ -8,7 +8,7 @@ Ziel: 2:45–2:55 einschließlich Klickpausen. Kein Sieg-/Kunden-/Genauigkeitsve
 |---|---|---|
 | 0:00–0:25 | Folie 1 | Regeländerung erzeugt Arbeit für konkrete Gebäude. |
 | 0:25–1:25 | App: T3 → After → Explore an address → Source → Change desk → Review brief | 140 Adressen brauchen Fakten; Originalpassage und nächste Prüfung; CSV. Keine bestätigte Anwendbarkeit behaupten. |
-| 1:25–2:10 | Integrity, dann Folie 2 | Automatische Herkunft → unveränderte Auswahl → eine Engine; 89/13/76 offen erklären. |
+| 1:25–2:10 | Integrity, dann Folie 2 | Automatische Herkunft → unveränderte Auswahl → eine Engine; 133/22/111 offen erklären. |
 | 2:10–2:50 | Folie 2 | Käufer, enger Pilot, Messgrößen, Grenzen und Ziel. |
 
 ## Englischer Sprechtext
@@ -17,7 +17,7 @@ When a housing law changes, someone has to turn it into work. Which buildings ne
 
 LawDiff connects those questions.
 
-Here is New Jersey's FAIR Act before its operative date. Move past July first, twenty twenty-seven. One hundred forty supplied addresses now need a scope review. We do not assume that an apartment record proves every legal exception.
+Here is New Jersey's FAIR Act before its operative date. Move past July first, twenty twenty-seven. 140 supplied addresses now need a scope review. We do not assume that an apartment record proves every legal exception.
 
 Open one building. The requirement, date and captured passage are linked. The trace identifies the missing primary-residence and institutional-use facts. A source quotation makes the interpretation inspectable; it does not certify it.
 
@@ -25,13 +25,13 @@ Now create a review brief. Every listed address gets its status, evidence and ne
 
 The technical foundation is one traceable pipeline. Recorded model calls extract candidates. An explicit review selects unchanged records. One deterministic engine serves the interface and submission files, without a model call at query time.
 
-The selected pack contains eighty-nine records. Thirteen have executable conditions; seventy-six retain narrative coverage that needs interpretation review. Missing sources and rejected runs remain visible. That is our current boundary, not a claim of complete legal coverage.
+The selected pack contains 133 unchanged automatic records. 22 have executable conditions; 111 retain narrative coverage that needs interpretation review. Census evidence establishes a legal city for 491 of 500 addresses. Missing sources and rejected runs remain visible. That is our current boundary, not a claim of complete legal coverage.
 
 Our first buyer hypothesis is a residential portfolio's compliance lead, working with a legal reviewer. The next step is a paid, thirty-day pilot in one jurisdiction, compared with today's process and existing software. We would measure review time, missed cases, unnecessary alerts and whether the team keeps using it.
 
 We have no paid customers or validated savings yet. The ambition is a reliable review workflow that grows without growing expert effort at the same rate.
 
-LawDiff. When the law changes, see what needs review—and why.
+LawDiff. When the law changes, see what needs review, and why.
 
 ## Live-Demo vorbereiten
 

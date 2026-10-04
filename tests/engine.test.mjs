@@ -63,6 +63,25 @@ test('residential use does not infer a primary residence or a fee collector lice
   assert.equal(evaluateCondition(actorScope, {fee_charger_is_landlord: false, fee_charger_is_landlord_agent: false, fee_charger_nj_real_estate_licensee: false}).value, false);
 });
 
+test('explicit assessor apartment descriptions supply residential use without inventing occupancy or exceptions', () => {
+  for (const use_description of ['Five or more apartments', 'Apartment 5 to 14 Units', 'APT 7-30 UNITS', '4-8-UNIT-APT', 'Flat & Store 5 to 14 units']) {
+    const facts = factsFor({...address, use_description}, {}, '2026-10-01');
+    assert.equal(facts.residential, true);
+    for (const missing of ['primary_residence', 'institutional_housing_exemption', 'owner_type', 'sf_rent_control_exempt']) assert.equal(facts[missing], undefined);
+  }
+  for (const use_description of [undefined, '3SB', 'Commercial only', 'Former apartments', 'Non-residential apartment office', 'Proposed apartments', 'Vacant apartment site', 'Flat roof warehouse', 'Office building with flat roof', 'Apartment leasing office']) {
+    assert.equal(factsFor({...address, use_description}).residential, undefined);
+  }
+  assert.equal(factsFor({...address,use_description:'Five or more apartments'}, {residential:false}).residential, false);
+  const scoped=rule({coverage_conditions:{all:[{field:'residential',op:'eq',value:true},{field:'owner_occupied',op:'eq',value:false}]}});
+  const result=evaluateRule(scoped,{...address,use_description:'Five or more apartments'},'2026-10-01');
+  assert.equal(result.result,'unknown');
+  assert.deepEqual(result.missing,['owner_occupied']);
+  assert.match(result.explanation,/Owner occupied/);
+  const simple=rule({coverage_conditions:{field:'residential',op:'eq',value:true}});
+  assert.match(evaluateRule(simple,{...address,use_description:'Five or more apartments'},'2026-10-01').explanation,/assessor description/);
+});
+
 test('condition validation rejects arbitrary operators, unknown fields and unbounded trees', () => {
   assert.throws(() => validateCondition({ field: 'units', op: 'eval', value: 'process.exit()' }));
   assert.throws(() => validateCondition({ field: '__proto__', op: 'eq', value: true }));

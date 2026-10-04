@@ -12,6 +12,7 @@ import csv
 import datetime as dt
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import urllib.parse
@@ -69,6 +70,27 @@ def normalize(row, payload, requested_at, url, raw_sha, metadata=None):
         if metadata and key in metadata:
             record['provenance'][key] = metadata[key]
     record['match_count'] = len(matches)
+    if len(matches) > 1:
+        # An ambiguous address point can still have an unambiguous legal city:
+        # require EVERY Census candidate to establish the same official codes.
+        # Never filter candidates by the expected city, ZIP, or desired answer.
+        candidates = [normalize(row, {'result': {**result, 'addressMatches': [match]}},
+                                requested_at, url, raw_sha)
+                      for match in matches]
+        keys = [_jurisdiction_key(candidate, row['state']) for candidate in candidates]
+        record['provenance']['candidate_geographies'] = [
+            _candidate_evidence(candidate) for candidate in candidates]
+        if all(keys) and len(set(keys)) == 1:
+            first = candidates[0]
+            for key in ('legal_city', 'legal_city_geoid', 'legal_city_layer', 'county', 'county_geoid', 'postal_city_differs'):
+                record[key] = first[key]
+            record.update(status='matched', match_quality='multiple_matches_same_legal_jurisdiction',
+                          coordinates=None, coordinate_status='not_selected_multiple_address_matches',
+                          matched_addresses=[candidate.get('matched_address') for candidate in candidates],
+                          reason='Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.')
+            record['provenance']['method'] = 'Consensus of all Census address candidates and their official TIGER legal-geography codes'
+            record['provenance']['limitation'] = 'Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.'
+            return record
     if len(matches) != 1:
         record['reason'] = 'No Census address match.' if not matches else 'Multiple Census matches; no jurisdiction selected.'
         record['match_quality'] = 'no_match' if not matches else 'ambiguous'
@@ -117,6 +139,132 @@ def normalize(row, payload, requested_at, url, raw_sha, metadata=None):
         record['postal_city_differs'] = row['postal_city'].casefold() != record['legal_city'].casefold()
     else:
         record['reason'] = 'Address matched, but no unique legal municipality was established; do not assume the postal city.'
+    return record
+
+
+def _jurisdiction_key(record, state):
+    """Strict official-code identity for consensus, never a municipality-name guess."""
+    prefix = {'CA': '06', 'NJ': '34', 'MA': '25'}.get(state)
+    county = record.get('county_geoid')
+    city = record.get('legal_city_geoid')
+    layer = record.get('legal_city_layer')
+    if (not prefix or record.get('status') != 'matched' or not record.get('coordinates')
+            or not isinstance(county, str) or not re.fullmatch(r'\d{5}', county)
+            or not county.startswith(prefix) or not isinstance(city, str)):
+        return None
+    if layer == 'Incorporated Places':
+        if not re.fullmatch(r'\d{7}', city) or not city.startswith(prefix):
+            return None
+    elif layer == 'County Subdivisions' and state in ('NJ', 'MA'):
+        if not re.fullmatch(r'\d{10}', city) or not city.startswith(county):
+            return None
+    else:
+        return None
+    return state, county, layer, city
+
+
+def _candidate_evidence(record):
+    return {key: record.get(key) for key in (
+        'status', 'matched_address', 'matched_postal_city', 'matched_zip',
+        'county', 'county_geoid', 'legal_city', 'legal_city_geoid',
+        'legal_city_layer', 'coordinates')}
+
+
+def normalize_components(row, components):
+    """Resolve a slash-separated address only when ALL literal components agree.
+
+    Each component supplies its unmodified street text, original Census payload,
+    request URL, retrieval timestamp and raw-response hash. A street suffix or
+    number is never invented; the original row remains unchanged in the result.
+    """
+    original_parts = [part.strip() for part in row['street_address'].split('/')]
+    if (len(original_parts) < 2 or len(components) != len(original_parts)
+            or [item.get('street_address') for item in components] != original_parts
+            or any(not re.match(r'^\d+\s+\S', part) for part in original_parts)):
+        raise ValueError('Components must preserve every complete literal slash-separated street address.')
+    records = []
+    for item in components:
+        parsed = urllib.parse.urlparse(item['request_url'])
+        query = urllib.parse.parse_qs(parsed.query)
+        if (parsed.scheme != 'https' or parsed.netloc != 'geocoding.geo.census.gov'
+                or parsed.path != '/geocoder/geographies/address'
+                or query.get('street') != [item['street_address']]
+                or query.get('state') != [row['state']]
+                or not re.fullmatch(r'[a-f0-9]{64}', item['response_sha256'])):
+            raise ValueError('Component provenance must identify the exact official Census street/state query.')
+        component_row = {**row, 'street_address': item['street_address']}
+        records.append(normalize(component_row, item['payload'], item['retrieved_at'],
+                                 item['request_url'], item['response_sha256']))
+    record = empty_record(row, 'Literal component queries did not establish one shared legal jurisdiction.')
+    record['match_quality'] = 'component_jurisdiction_unresolved'
+    record['provenance'].update({
+        'method': 'Separate literal components of the supplied slash-separated address, then require all official Census legal-geography codes to agree',
+        'query_strategy': 'literal_slash_components',
+        'limitation': 'No parcel identity or single coordinate is inferred for the compound input. All original street components must agree.',
+        'components': [{key: item[key] for key in ('street_address', 'request_url', 'retrieved_at', 'response_sha256')}
+                       | {'candidate_geography': _candidate_evidence(candidate)}
+                       for item, candidate in zip(components, records)],
+    })
+    keys = [_jurisdiction_key(candidate, row['state']) for candidate in records]
+    if all(keys) and len(set(keys)) == 1:
+        for key in ('legal_city', 'legal_city_geoid', 'legal_city_layer', 'county', 'county_geoid', 'postal_city_differs'):
+            record[key] = records[0][key]
+        record.update(status='matched', match_quality='literal_components_same_legal_jurisdiction',
+                      match_count=sum(candidate['match_count'] for candidate in records),
+                      coordinates=None, coordinate_status='not_selected_compound_address',
+                      matched_addresses=[candidate.get('matched_address') for candidate in records],
+                      reason='Every literal street-address component matched the same official Census state, county and legal-municipality codes. The original compound address is unchanged.')
+    return record
+
+
+def ordinal_street(street):
+    """Remove only padding zeros from an ordinal street-name token, never house numbers."""
+    parts = street.split(maxsplit=1)
+    if len(parts) != 2 or not re.fullmatch(r'\d+[A-Za-z]?', parts[0]):
+        return street
+    name = re.sub(r'(?<!\w)0+(\d+(?:ST|ND|RD|TH))(?!\w)', r'\1', parts[1], flags=re.IGNORECASE)
+    return parts[0] + ' ' + name
+
+
+def normalize_refinement(row, evidence, strategy):
+    """Replay exact public response bytes for a narrowly defined address clarification."""
+    components = []
+    for item in evidence:
+        raw = item.get('raw_response_text')
+        if not isinstance(raw, str) or hashlib.sha256(raw.encode('utf8')).hexdigest() != item.get('response_sha256'):
+            raise ValueError('Refinement response bytes do not match their recorded hash.')
+        component = {**item, 'payload': json.loads(raw)}
+        parsed = urllib.parse.urlparse(item['request_url'])
+        query = urllib.parse.parse_qs(parsed.query)
+        if (parsed.scheme != 'https' or parsed.netloc != 'geocoding.geo.census.gov'
+                or parsed.path != '/geocoder/geographies/address'
+                or query.get('street') != [item['street_address']]
+                or query.get('state') != [row['state']]
+                or query.get('city') != [row['postal_city']]):
+            raise ValueError('Refinement query is not the documented official street/city/state request.')
+        supplied = component['payload'].get('result', {}).get('input', {}).get('address', {})
+        if (supplied.get('street') != item['street_address'] or supplied.get('state') != row['state']
+                or supplied.get('city') != row['postal_city']):
+            raise ValueError('Response input does not match its documented clarification query.')
+        components.append(component)
+    if strategy == 'literal_slash_components':
+        record = normalize_components(row, components)
+    elif strategy == 'ordinal_padding_only':
+        if (len(components) != 1 or ordinal_street(row['street_address']) == row['street_address']
+                or components[0]['street_address'] != ordinal_street(row['street_address'])):
+            raise ValueError('Only padding-zero removal from the supplied ordinal street name is permitted.')
+        item = components[0]
+        record = normalize(row, item['payload'], item['retrieved_at'], item['request_url'],
+                           item['response_sha256'], {'query_strategy': strategy,
+                           'note': 'Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.'})
+        # New evidence is embedded below, not mislabelled as an older cached reply.
+        record['provenance'].pop('raw_response', None)
+    else:
+        raise ValueError('Unknown refinement strategy.')
+    record['provenance']['query_strategy'] = strategy
+    record['provenance']['replay_evidence'] = [{key: item[key] for key in
+        ('street_address', 'request_url', 'retrieved_at', 'response_sha256', 'raw_response_text')}
+        for item in evidence]
     return record
 
 
@@ -180,7 +328,13 @@ def main():
     for row in rows:
         aid = row['address_id']
         cached = CACHE / (aid + '.json')
-        if cached.exists():
+        old_provenance = old.get(aid, {}).get('provenance', {})
+        if old_provenance.get('replay_evidence'):
+            # Original no-match caches must not silently replace a later,
+            # byte-verifiable official clarification on an offline replay.
+            records[aid] = normalize_refinement(row, old_provenance['replay_evidence'],
+                                                old_provenance['query_strategy'])
+        elif cached.exists():
             raw = cached.read_bytes()
             meta_path = cached.with_suffix('.meta.json')
             metadata = json.loads(meta_path.read_text()) if meta_path.exists() else {}

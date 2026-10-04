@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "aggregation_id": "3902f962-cff1-43d3-b472-31c3c925aaf9",
+  "aggregation_id": "1a817d34-83a1-4823-bbc8-a3bc022e5b8d",
   "aggregator_version": "lawdiff-corpus-aggregator/1.2.0",
-  "generated_at": "2026-10-04T10:31:27.373Z",
+  "generated_at": "2026-10-04T11:31:05.981Z",
   "as_of": "2026-10-01",
-  "catalog_file_sha256": "c57399cb93251f87e0114b1e1d8e6d34cd282c2a796a8a9d3785c1cdc332f69b",
+  "catalog_file_sha256": "e1c7f531238eb0c8b814b1e903fdaca5977211fa417e5a7ed66253ee7ad530a1",
   "input_files": [
     {
       "path": "artifacts/corpus-batch-1.json",
@@ -185,12 +185,52 @@
       "path": "artifacts/corpus-batch-4.json",
       "file_sha256": "d90e8963f3187ef0706c519d1d6223e713924fe64dc131973bc6efc6b70cbb58",
       "run_id": "2026-10-04T02-51-53-030Z-67a31803"
+    },
+    {
+      "path": "artifacts/final-ca-probe-D081.json",
+      "file_sha256": "3656b960a6e080d77f704a5f8c513bd7efc2297ae6ce453caaf9ecd099540ae7",
+      "run_id": "2026-10-04T11-07-33-446Z-7e3153a4"
+    },
+    {
+      "path": "artifacts/final-ca-probe-D081-root.json",
+      "file_sha256": "0c9d234c6e9bcbbb5a9b9fd0729dcb89f2b413af31e236fdc1840db430402657",
+      "run_id": "2026-10-04T11-11-34-476Z-a3b2ce92"
+    },
+    {
+      "path": "artifacts/final-ca-probe-D081-authorized.json",
+      "file_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+      "run_id": "2026-10-04T11-12-20-257Z-f9a0e445"
+    },
+    {
+      "path": "artifacts/final-ca-sf.json",
+      "file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19"
+    },
+    {
+      "path": "artifacts/final-ca-la.json",
+      "file_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69"
+    },
+    {
+      "path": "artifacts/final-ca-sd.json",
+      "file_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+      "run_id": "2026-10-04T11-13-38-927Z-38e24bdc"
+    },
+    {
+      "path": "artifacts/final-ca-screening.json",
+      "file_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+      "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5"
+    },
+    {
+      "path": "artifacts/final-ca-la-D040-v132.json",
+      "file_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+      "run_id": "2026-10-04T11-25-31-316Z-7cd379f3"
     }
   ],
   "coverage_report": "artifacts/corpus-coverage.json",
   "source_selection": {
     "manifest_path": "data/extracted/automatic-selection.json",
-    "manifest_file_sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31",
+    "manifest_file_sha256": "752ee6828ec778bb0a3c5c0ad03843ee5aa4424a472bb101e11e163038541d5b",
     "decisions": [
       {
         "source_doc_id": "N004",
@@ -450,22 +490,136 @@
           "d024-rent-cap-remedies",
           "d024-rights-nonwaivable"
         ]
+      },
+      {
+        "source_doc_id": "D081",
+        "artifact": "artifacts/final-ca-probe-D081-authorized.json",
+        "artifact_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+        "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+        "selected_attempt_id": "2026-10-04T11-12-20-257Z-f9a0e445:D081",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Official Rent Board source expressly gives October 14, 2024 commencement. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d081-algorithmic-rent-devices"
+        ]
+      },
+      {
+        "source_doc_id": "D080",
+        "artifact": "artifacts/final-ca-sf.json",
+        "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+        "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+        "selected_attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D080",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Source explicitly limits the 1.6% annual allowable increase to rent-controlled units and March 1, 2026–February 28, 2027. AST requires established local rent control; no address is assumed covered. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d080-annual-rent-increase-2026"
+        ]
+      },
+      {
+        "source_doc_id": "D079",
+        "artifact": "artifacts/final-ca-sf.json",
+        "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+        "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+        "selected_attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D079",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Three unchanged summaries preserve the source-defined just-cause grounds, dominant motive, housing-service exception and immediate reoccupancy after temporary work. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d079-just-cause-eviction",
+          "d079-housing-services-just-cause",
+          "d079-reoccupancy-after-work"
+        ]
+      },
+      {
+        "source_doc_id": "D026",
+        "artifact": "artifacts/final-ca-screening.json",
+        "artifact_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+        "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+        "selected_attempt_id": "2026-10-04T11-15-42-624Z-77b4e7c5:D026",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. All six executable records use the residential property predicate while preserving landlord/agent and transaction triggers in requirement/exemptions. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d026-screening-fee-cap",
+          "d026-unit-availability",
+          "d026-permitted-screening-process",
+          "d026-itemized-fee-receipt",
+          "d026-unused-fee-refund",
+          "d026-credit-report-copy"
+        ]
+      },
+      {
+        "source_doc_id": "D041",
+        "artifact": "artifacts/final-ca-la.json",
+        "artifact_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+        "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+        "selected_attempt_id": "2026-10-04T11-13-37-285Z-bbaeef69:D041",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Thirteen unchanged local summaries preserve annual-increase frequency, February 2026 utilities/dependent changes, additional-tenant limits, qualified market reset, qualified pass-throughs, approved programs and eviction/notice duties. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d041-annual-increase-frequency",
+          "d041-utility-increase-prohibition",
+          "d041-dependent-increase-prohibition",
+          "d041-additional-tenant-increase",
+          "d041-market-rate-reset",
+          "d041-code-enforcement-fee-pass-through",
+          "d041-detector-surcharge",
+          "d041-program-increase-approval",
+          "d041-eviction-grounds",
+          "d041-termination-notice-filing",
+          "d041-no-fault-relocation",
+          "d041-no-fault-declaration",
+          "d041-right-to-counsel-notice"
+        ]
+      },
+      {
+        "source_doc_id": "D073",
+        "artifact": "artifacts/final-ca-sd.json",
+        "artifact_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+        "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+        "selected_attempt_id": "2026-10-04T11-13-38-927Z-38e24bdc:D073",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fourteen unchanged records cover qualified just cause, owner occupancy, limited post-termination rent, remodeling, notices, relocation/reoffer, screening disclosure, separate security return, buyouts, retaliation and remedies. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d073-just-cause",
+          "d073-owner-occupancy",
+          "d073-owner-termination-rent",
+          "d073-demolition-remodel",
+          "d073-protection-notice",
+          "d073-curable-violation-notice",
+          "d073-no-fault-notice-relocation",
+          "d073-displaced-tenant-reoffer",
+          "d073-reoffer-screening",
+          "d073-deposit-separate-relocation",
+          "d073-buyout-disclosure",
+          "d073-buyout-agreement",
+          "d073-no-retaliation",
+          "d073-enforcement-remedies"
+        ]
+      },
+      {
+        "source_doc_id": "D040",
+        "artifact": "artifacts/final-ca-la-D040-v132.json",
+        "artifact_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+        "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+        "selected_attempt_id": "2026-10-04T11-25-31-316Z-7cd379f3:D040",
+        "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fresh compiler 1.3.2 extraction succeeded after the prior 1.3.1 source attempt was rejected; no failed candidate was edited or reused. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+        "app_rule_ids": [
+          "d040-jco-just-cause",
+          "d040-no-fault-relocation",
+          "d040-right-to-counsel-notice",
+          "d040-renters-protections-notice",
+          "d040-nonpayment-eviction-threshold",
+          "d040-eviction-notice-filing"
+        ]
       }
     ]
   },
   "stats": {
     "catalog_source_count": 110,
-    "processed": 21,
+    "processed": 28,
     "missing_text": 37,
-    "rejected": 44,
-    "unprocessed": 8,
-    "accepted_rule_count": 94,
-    "execution_review_count": 81,
+    "rejected": 38,
+    "unprocessed": 7,
+    "accepted_rule_count": 138,
+    "execution_review_count": 116,
     "rejected_review_quotes": 1,
-    "no_rule_finding_count": 92,
-    "run_count": 36,
-    "attempt_count": 248,
-    "model_calls_count": 72
+    "no_rule_finding_count": 115,
+    "run_count": 44,
+    "attempt_count": 258,
+    "model_calls_count": 82
   },
   "limitations": [
     "Processed means that one completed candidate extraction passed the recorded structural/source checks, not that the source was fully interpreted or that its legal interpretation is correct.",
@@ -971,17 +1125,21 @@
       "jurisdiction": "CA",
       "catalog_declared_sha256": "b749f447673b318960fed3651b887c31c8ca301905cf308c9936ca50fcc178c3",
       "catalog_text_sha256": "35ec54ef926471876977b9cad3f0db7ff5b77393bd0baad03ed30125949f8e7a",
-      "status": "rejected",
-      "accepted_rule_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 6,
       "execution_review_count": 0,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 5,
+      "selected_attempt_id": "2026-10-04T11-15-42-624Z-77b4e7c5:D026",
       "attempt_ids": [
         "2026-10-04T02-36-47-159Z-52453bcf:D026",
-        "2026-10-04T02-51-53-030Z-67a31803:D026"
+        "2026-10-04T02-51-53-030Z-67a31803:D026",
+        "2026-10-04T11-15-42-624Z-77b4e7c5:D026"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D027",
@@ -1227,18 +1385,23 @@
       "jurisdiction": "Los Angeles, CA",
       "catalog_declared_sha256": "6633b8bd769d3795ac08c7599324beb392631f044d3f3ad5c73248fbc09e48c7",
       "catalog_text_sha256": "13f9d54597199b73e23ad12dcc38626d53bb30bd53d89a63b6a7f55ecc570425",
-      "status": "rejected",
-      "accepted_rule_count": 0,
-      "execution_review_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 6,
+      "execution_review_count": 5,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 1,
+      "selected_attempt_id": "2026-10-04T11-25-31-316Z-7cd379f3:D040",
       "attempt_ids": [
         "2026-10-04T02-36-45-187Z-3efe2542:D040",
         "2026-10-04T02-51-47-940Z-dd9f5b72:D040",
-        "2026-10-04T03-33-47-766Z-98cb72e2:D040"
+        "2026-10-04T03-33-47-766Z-98cb72e2:D040",
+        "2026-10-04T11-13-37-285Z-bbaeef69:D040",
+        "2026-10-04T11-25-31-316Z-7cd379f3:D040"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D041",
@@ -1246,17 +1409,21 @@
       "jurisdiction": "Los Angeles, CA",
       "catalog_declared_sha256": "5d2e79094fcb8c09aa51120208725b130b1932bceb848b3641dd82f0a6b3656b",
       "catalog_text_sha256": "4d8837313d514bde68624c37ab37622dd950c542bdc74942702641519eae3ece",
-      "status": "rejected",
-      "accepted_rule_count": 0,
-      "execution_review_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 13,
+      "execution_review_count": 13,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 5,
+      "selected_attempt_id": "2026-10-04T11-13-37-285Z-bbaeef69:D041",
       "attempt_ids": [
         "2026-10-04T02-36-47-159Z-52453bcf:D041",
-        "2026-10-04T02-51-53-030Z-67a31803:D041"
+        "2026-10-04T02-51-53-030Z-67a31803:D041",
+        "2026-10-04T11-13-37-285Z-bbaeef69:D041"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D042",
@@ -1837,17 +2004,20 @@
       "jurisdiction": "San Diego, CA",
       "catalog_declared_sha256": "9b30d1ef437a88840dcc15bfab72dee1952e183e9b7584786224c98214cf4905",
       "catalog_text_sha256": "d1d4b9874a7c4b51a97cb81809e9ece2658f0f9e52898d904f90d48f3c1a140b",
-      "status": "unprocessed",
-      "accepted_rule_count": 0,
-      "execution_review_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 14,
+      "execution_review_count": 14,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 2,
+      "selected_attempt_id": "2026-10-04T11-13-38-927Z-38e24bdc:D073",
       "attempt_ids": [
         "2026-10-04T02-36-47-159Z-52453bcf:D073",
-        "2026-10-04T02-51-53-030Z-67a31803:D073"
+        "2026-10-04T02-51-53-030Z-67a31803:D073",
+        "2026-10-04T11-13-38-927Z-38e24bdc:D073"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review."
+      ]
     },
     {
       "source_doc_id": "D074",
@@ -1945,17 +2115,21 @@
       "jurisdiction": "San Francisco, CA",
       "catalog_declared_sha256": "adeded646ba7b0ca6d9daceca173f072948928df492872febafafd487e4d04d1",
       "catalog_text_sha256": "51f9490227bafc8a6f458c7e417f41bce3af07c1416fae77f281b987d97ef793",
-      "status": "rejected",
-      "accepted_rule_count": 0,
-      "execution_review_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 3,
+      "execution_review_count": 3,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 5,
+      "selected_attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D079",
       "attempt_ids": [
         "2026-10-04T02-36-47-159Z-52453bcf:D079",
-        "2026-10-04T02-51-53-030Z-67a31803:D079"
+        "2026-10-04T02-51-53-030Z-67a31803:D079",
+        "2026-10-04T11-13-38-979Z-19f2ad19:D079"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D080",
@@ -1963,17 +2137,21 @@
       "jurisdiction": "San Francisco, CA",
       "catalog_declared_sha256": "e864d1c6a213ef38e925160f5c3c3532bf59230be3f13b51e43d7ba12d688cae",
       "catalog_text_sha256": "924783981b92aabf2a5200517290879d008fd1e8c579969bdddaa28ff6f9fd7d",
-      "status": "rejected",
-      "accepted_rule_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 1,
       "execution_review_count": 0,
       "rejected_review_quotes": 0,
       "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "selected_attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D080",
       "attempt_ids": [
         "2026-10-04T02-36-47-159Z-52453bcf:D080",
-        "2026-10-04T02-51-53-030Z-67a31803:D080"
+        "2026-10-04T02-51-53-030Z-67a31803:D080",
+        "2026-10-04T11-13-38-979Z-19f2ad19:D080"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D081",
@@ -1981,17 +2159,23 @@
       "jurisdiction": "San Francisco, CA",
       "catalog_declared_sha256": "c77c6ddad9b2a6c7dda9a5f0c37660eac4c2e4765f677e81dccd517555aad7c1",
       "catalog_text_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
-      "status": "rejected",
-      "accepted_rule_count": 0,
+      "status": "processed",
+      "accepted_rule_count": 1,
       "execution_review_count": 0,
       "rejected_review_quotes": 0,
-      "no_rule_finding_count": 0,
-      "selected_attempt_id": null,
+      "no_rule_finding_count": 5,
+      "selected_attempt_id": "2026-10-04T11-12-20-257Z-f9a0e445:D081",
       "attempt_ids": [
         "2026-10-04T02-36-45-187Z-3efe2542:D081",
-        "2026-10-04T02-51-47-940Z-dd9f5b72:D081"
+        "2026-10-04T02-51-47-940Z-dd9f5b72:D081",
+        "2026-10-04T11-07-33-446Z-7e3153a4:D081",
+        "2026-10-04T11-11-34-476Z-a3b2ce92:D081",
+        "2026-10-04T11-12-20-257Z-f9a0e445:D081"
       ],
-      "notes": []
+      "notes": [
+        "An explicit hash-pinned manifest selected this complete source candidate set. Other attempts remain recorded; no rules were edited or mixed, and this is not independent legal review.",
+        "A separate rejected attempt remains recorded; it was not merged into the selected candidates."
+      ]
     },
     {
       "source_doc_id": "D082",
@@ -3268,6 +3452,166 @@
       "review_issue_count": 265,
       "rejected_review_quote_count": 0,
       "no_rule_finding_count": 0
+    },
+    {
+      "input_path": "artifacts/final-ca-probe-D081.json",
+      "input_file_sha256": "3656b960a6e080d77f704a5f8c513bd7efc2297ae6ce453caaf9ecd099540ae7",
+      "run_id": "2026-10-04T11-07-33-446Z-7e3153a4",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "stopped_requires_review",
+      "started_at": "2026-10-04T11:07:33.452Z",
+      "finished_at": "2026-10-04T11:07:33.598Z",
+      "duration_ms": 146,
+      "requests_sent": 1,
+      "model_turns_completed": 0,
+      "cache_hits": 0,
+      "accepted_rule_count": 0,
+      "review_issue_count": 1,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 0
+    },
+    {
+      "input_path": "artifacts/final-ca-probe-D081-root.json",
+      "input_file_sha256": "0c9d234c6e9bcbbb5a9b9fd0729dcb89f2b413af31e236fdc1840db430402657",
+      "run_id": "2026-10-04T11-11-34-476Z-a3b2ce92",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "stopped_requires_review",
+      "started_at": "2026-10-04T11:11:34.485Z",
+      "finished_at": "2026-10-04T11:11:34.801Z",
+      "duration_ms": 316,
+      "requests_sent": 1,
+      "model_turns_completed": 0,
+      "cache_hits": 0,
+      "accepted_rule_count": 0,
+      "review_issue_count": 1,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 0
+    },
+    {
+      "input_path": "artifacts/final-ca-probe-D081-authorized.json",
+      "input_file_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+      "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_machine_validation",
+      "started_at": "2026-10-04T11:12:20.263Z",
+      "finished_at": "2026-10-04T11:13:03.164Z",
+      "duration_ms": 42901,
+      "requests_sent": 1,
+      "model_turns_completed": 1,
+      "cache_hits": 0,
+      "accepted_rule_count": 1,
+      "review_issue_count": 0,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 5
+    },
+    {
+      "input_path": "artifacts/final-ca-sf.json",
+      "input_file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_with_review_items",
+      "started_at": "2026-10-04T11:13:38.980Z",
+      "finished_at": "2026-10-04T11:16:47.008Z",
+      "duration_ms": 188028,
+      "requests_sent": 2,
+      "model_turns_completed": 2,
+      "cache_hits": 0,
+      "accepted_rule_count": 4,
+      "review_issue_count": 10,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 5
+    },
+    {
+      "input_path": "artifacts/final-ca-la.json",
+      "input_file_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_with_review_items",
+      "started_at": "2026-10-04T11:13:37.292Z",
+      "finished_at": "2026-10-04T11:21:02.598Z",
+      "duration_ms": 445306,
+      "requests_sent": 2,
+      "model_turns_completed": 2,
+      "cache_hits": 0,
+      "accepted_rule_count": 13,
+      "review_issue_count": 27,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 5
+    },
+    {
+      "input_path": "artifacts/final-ca-sd.json",
+      "input_file_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+      "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_with_review_items",
+      "started_at": "2026-10-04T11:13:38.928Z",
+      "finished_at": "2026-10-04T11:26:08.530Z",
+      "duration_ms": 749602,
+      "requests_sent": 1,
+      "model_turns_completed": 1,
+      "cache_hits": 0,
+      "accepted_rule_count": 14,
+      "review_issue_count": 31,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 2
+    },
+    {
+      "input_path": "artifacts/final-ca-screening.json",
+      "input_file_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+      "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_with_review_items",
+      "started_at": "2026-10-04T11:15:42.628Z",
+      "finished_at": "2026-10-04T11:18:21.656Z",
+      "duration_ms": 159028,
+      "requests_sent": 1,
+      "model_turns_completed": 1,
+      "cache_hits": 0,
+      "accepted_rule_count": 6,
+      "review_issue_count": 3,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 5
+    },
+    {
+      "input_path": "artifacts/final-ca-la-D040-v132.json",
+      "input_file_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+      "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.2",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "as_of": "2026-10-01",
+      "status": "completed_with_review_items",
+      "started_at": "2026-10-04T11:25:31.318Z",
+      "finished_at": "2026-10-04T11:28:41.556Z",
+      "duration_ms": 190238,
+      "requests_sent": 1,
+      "model_turns_completed": 1,
+      "cache_hits": 0,
+      "accepted_rule_count": 6,
+      "review_issue_count": 13,
+      "rejected_review_quote_count": 0,
+      "no_rule_finding_count": 1
     }
   ],
   "attempts": [
@@ -10150,6 +10494,361 @@
         "finished_at",
         "usage"
       ]
+    },
+    {
+      "attempt_id": "2026-10-04T11-07-33-446Z-7e3153a4:D081",
+      "source_doc_id": "D081",
+      "run_id": "2026-10-04T11-07-33-446Z-7e3153a4",
+      "input_path": "artifacts/final-ca-probe-D081.json",
+      "input_file_sha256": "3656b960a6e080d77f704a5f8c513bd7efc2297ae6ce453caaf9ecd099540ae7",
+      "original_status": "rejected_requires_review",
+      "run_started_at": "2026-10-04T11:07:33.452Z",
+      "run_finished_at": "2026-10-04T11:07:33.598Z",
+      "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+      "prompt_sha256": "fea665fdadbf3d4f569dac2fb6f20a8675e2babb49aaae6f2c25025a5e0f8d29",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": null,
+      "transport_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:07:33.505Z",
+      "finished_at": "2026-10-04T11:07:33.597Z",
+      "duration_ms": 93,
+      "model_called_this_run": true,
+      "exit_code": 1,
+      "failure_code": "cli_nonzero_exit",
+      "accepted_rules": 0,
+      "review_issues": 1,
+      "no_rule_findings": 0,
+      "rejected_review_quote_count": 0,
+      "usage": null,
+      "validation_status": "rejected",
+      "validation_issues": [],
+      "missing_metadata": [
+        "usage"
+      ]
+    },
+    {
+      "attempt_id": "2026-10-04T11-11-34-476Z-a3b2ce92:D081",
+      "source_doc_id": "D081",
+      "run_id": "2026-10-04T11-11-34-476Z-a3b2ce92",
+      "input_path": "artifacts/final-ca-probe-D081-root.json",
+      "input_file_sha256": "0c9d234c6e9bcbbb5a9b9fd0729dcb89f2b413af31e236fdc1840db430402657",
+      "original_status": "rejected_requires_review",
+      "run_started_at": "2026-10-04T11:11:34.485Z",
+      "run_finished_at": "2026-10-04T11:11:34.801Z",
+      "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+      "prompt_sha256": "fea665fdadbf3d4f569dac2fb6f20a8675e2babb49aaae6f2c25025a5e0f8d29",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": null,
+      "transport_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:11:34.513Z",
+      "finished_at": "2026-10-04T11:11:34.799Z",
+      "duration_ms": 287,
+      "model_called_this_run": true,
+      "exit_code": 1,
+      "failure_code": "cli_nonzero_exit",
+      "accepted_rules": 0,
+      "review_issues": 1,
+      "no_rule_findings": 0,
+      "rejected_review_quote_count": 0,
+      "usage": null,
+      "validation_status": "rejected",
+      "validation_issues": [],
+      "missing_metadata": [
+        "usage"
+      ]
+    },
+    {
+      "attempt_id": "2026-10-04T11-12-20-257Z-f9a0e445:D081",
+      "source_doc_id": "D081",
+      "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+      "input_path": "artifacts/final-ca-probe-D081-authorized.json",
+      "input_file_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:12:20.263Z",
+      "run_finished_at": "2026-10-04T11:13:03.164Z",
+      "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+      "prompt_sha256": "fea665fdadbf3d4f569dac2fb6f20a8675e2babb49aaae6f2c25025a5e0f8d29",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "a18112a00a1c3b14126224e815239c26cd7ac693a9cd85860ffe677dcb633c43",
+      "transport_sha256": "1277626946295f9547b28bd8ac57b8b3686780d71e6068d683e40e0b26269b69",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:12:20.280Z",
+      "finished_at": "2026-10-04T11:13:03.135Z",
+      "duration_ms": 42859,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 1,
+      "review_issues": 0,
+      "no_rule_findings": 5,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 15082,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1169,
+        "reasoning_output_tokens": 336
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "267b8fe2aa45952bcedab108132523d92494ff3e740e88a4da2f711a4b596516"
+    },
+    {
+      "attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D080",
+      "source_doc_id": "D080",
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "input_path": "artifacts/final-ca-sf.json",
+      "input_file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:13:38.980Z",
+      "run_finished_at": "2026-10-04T11:16:47.008Z",
+      "source_sha256": "924783981b92aabf2a5200517290879d008fd1e8c579969bdddaa28ff6f9fd7d",
+      "prompt_sha256": "064737fe0bdbd814452cd656cfc301851b0c06b28d717542590871b1f2d0fecc",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "a3fdcaeb81b608dbefff1f21e5c62e75b4a035318cda594f9f970143bd4693de",
+      "transport_sha256": "3f6d421994e465aceb4e4e2b3c470423727c86e169586d835a139d16cfd5961e",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:13:39.000Z",
+      "finished_at": "2026-10-04T11:14:10.534Z",
+      "duration_ms": 31535,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 1,
+      "review_issues": 2,
+      "no_rule_findings": 0,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 15150,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 844,
+        "reasoning_output_tokens": 214
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "4e912adc1842711495f0683ec7f8b1bc961185af3276d0951d6e24c8e298c9a9"
+    },
+    {
+      "attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D079",
+      "source_doc_id": "D079",
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "input_path": "artifacts/final-ca-sf.json",
+      "input_file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:13:38.980Z",
+      "run_finished_at": "2026-10-04T11:16:47.008Z",
+      "source_sha256": "51f9490227bafc8a6f458c7e417f41bce3af07c1416fae77f281b987d97ef793",
+      "prompt_sha256": "1ab5b1dc319e6cef9897828f068b01bd2bd13aa443192b0c6e5809cd8bb1e495",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "53ed3f263a933a493ea993143f45ee391bd7844eef975f86f6f081ae7163935f",
+      "transport_sha256": "7383c92ee3fddd684be7d9d9e2615fa87c85e7da7bd3be955bbc331ac3f03dba",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:14:10.543Z",
+      "finished_at": "2026-10-04T11:16:47.002Z",
+      "duration_ms": 156460,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 3,
+      "review_issues": 8,
+      "no_rule_findings": 5,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 15944,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5003,
+        "reasoning_output_tokens": 1027
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "5ccbcdc05d368eda097758c5a8316952bc856547ef1e328a8026d0235f210f87"
+    },
+    {
+      "attempt_id": "2026-10-04T11-13-37-285Z-bbaeef69:D041",
+      "source_doc_id": "D041",
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+      "input_path": "artifacts/final-ca-la.json",
+      "input_file_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:13:37.292Z",
+      "run_finished_at": "2026-10-04T11:21:02.598Z",
+      "source_sha256": "4d8837313d514bde68624c37ab37622dd950c542bdc74942702641519eae3ece",
+      "prompt_sha256": "cda863bbb4174f7e1142aad1003f5b258611ad1d65ae81fe0c86a33926b18c3f",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "111ccb76eede4d1661f780eeb6c3aadc15c2f2eea2b0549359a1e562ff3ff3b6",
+      "transport_sha256": "d61e6b53e1cbbe6a5325c768c8b8246cf198397eca918dca624add16c54dd591",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:13:37.337Z",
+      "finished_at": "2026-10-04T11:18:56.800Z",
+      "duration_ms": 319466,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 13,
+      "review_issues": 26,
+      "no_rule_findings": 5,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 17241,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10433,
+        "reasoning_output_tokens": 1552
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "e27d0a95a16ef113c8bc022b9bf6d5f0c4e5f62f7302c451fc32112737393b8a"
+    },
+    {
+      "attempt_id": "2026-10-04T11-13-37-285Z-bbaeef69:D040",
+      "source_doc_id": "D040",
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+      "input_path": "artifacts/final-ca-la.json",
+      "input_file_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "original_status": "rejected_requires_review",
+      "run_started_at": "2026-10-04T11:13:37.292Z",
+      "run_finished_at": "2026-10-04T11:21:02.598Z",
+      "source_sha256": "13f9d54597199b73e23ad12dcc38626d53bb30bd53d89a63b6a7f55ecc570425",
+      "prompt_sha256": "10a5a1526cecb4ce445f5fa907fc286b23f1b448880cfb6e9007fa2ef97a9cd0",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "b901bbfdd5461b02de75ffc8448960f87df6069dbb8c63032493d000f54fa205",
+      "transport_sha256": "7bdb2d75f901ea32610d1f0b2fce61ce2688e6d07be804c6fec4cf1ccf7f618d",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:18:56.812Z",
+      "finished_at": "2026-10-04T11:21:02.587Z",
+      "duration_ms": 125776,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "failure_code": "extraction_validation_failed",
+      "source_error_continued": true,
+      "accepted_rules": 0,
+      "review_issues": 1,
+      "no_rule_findings": 0,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 17111,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5947,
+        "reasoning_output_tokens": 1034
+      },
+      "validation_status": "rejected",
+      "validation_issues": []
+    },
+    {
+      "attempt_id": "2026-10-04T11-13-38-927Z-38e24bdc:D073",
+      "source_doc_id": "D073",
+      "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+      "input_path": "artifacts/final-ca-sd.json",
+      "input_file_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:13:38.928Z",
+      "run_finished_at": "2026-10-04T11:26:08.530Z",
+      "source_sha256": "d1d4b9874a7c4b51a97cb81809e9ece2658f0f9e52898d904f90d48f3c1a140b",
+      "prompt_sha256": "8084324e8bc9a3465895aec7f75d35c1e01a02942ef8539ff37c56a10b98bd9e",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "8c4b9889a2e83b8692a444d9c3e904b8e9ba8a44f4acb87701ef4d1ef38d1cbd",
+      "transport_sha256": "f0458cfd72f3bdf01ac742c1eb04c2f9cc4207ab5f5bd58813cde659fa2514a9",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:13:38.942Z",
+      "finished_at": "2026-10-04T11:26:08.514Z",
+      "duration_ms": 749577,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 14,
+      "review_issues": 31,
+      "no_rule_findings": 2,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 24791,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 24725,
+        "reasoning_output_tokens": 2517
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "a26ba6b0458e8f9b3b169a731e17b67e9d1078abbd7a3a2493537b9fb547f64b"
+    },
+    {
+      "attempt_id": "2026-10-04T11-15-42-624Z-77b4e7c5:D026",
+      "source_doc_id": "D026",
+      "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+      "input_path": "artifacts/final-ca-screening.json",
+      "input_file_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:15:42.628Z",
+      "run_finished_at": "2026-10-04T11:18:21.656Z",
+      "source_sha256": "35ec54ef926471876977b9cad3f0db7ff5b77393bd0baad03ed30125949f8e7a",
+      "prompt_sha256": "abf8e187a30e833647c98214a1788dbbe9e1278d2fd9f9798cdf62ad6e69672a",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "2e5b2bcf4a7943cacec16c3359095f8f2803e0de505ba0aee620a75f2a7ebaef",
+      "transport_sha256": "b5bea767af13ab2e1526fc05a0c848fe7098d468523bea607c0ecfd9cafae6b9",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:15:42.644Z",
+      "finished_at": "2026-10-04T11:18:21.647Z",
+      "duration_ms": 159004,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 6,
+      "review_issues": 3,
+      "no_rule_findings": 5,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 16537,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5117,
+        "reasoning_output_tokens": 433
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "64680169215b6d78d984cb3f9855098985640e2bbda51491c5a70b56a8028088"
+    },
+    {
+      "attempt_id": "2026-10-04T11-25-31-316Z-7cd379f3:D040",
+      "source_doc_id": "D040",
+      "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+      "input_path": "artifacts/final-ca-la-D040-v132.json",
+      "input_file_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+      "original_status": "validated_candidates",
+      "run_started_at": "2026-10-04T11:25:31.318Z",
+      "run_finished_at": "2026-10-04T11:28:41.556Z",
+      "source_sha256": "13f9d54597199b73e23ad12dcc38626d53bb30bd53d89a63b6a7f55ecc570425",
+      "prompt_sha256": "9200a54868ce9d405c9ca47b372c3c607b855ecaa5a73f25c88ab045bd0d0bf1",
+      "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+      "response_sha256": "369fca1ce6cf98f1bfa084eaac1cca3c0b6291e75e959920effa5d155b9b1b61",
+      "transport_sha256": "f03ad7ffcd5d4d114b253fb44ff034bc1da674f072fc98c18cdaea446fd9ceec",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "started_at": "2026-10-04T11:25:31.347Z",
+      "finished_at": "2026-10-04T11:28:41.521Z",
+      "duration_ms": 190177,
+      "model_called_this_run": true,
+      "exit_code": 0,
+      "accepted_rules": 6,
+      "review_issues": 13,
+      "no_rule_findings": 1,
+      "rejected_review_quote_count": 0,
+      "usage": {
+        "input_tokens": 17215,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6157,
+        "reasoning_output_tokens": 999
+      },
+      "validation_status": "processed",
+      "validation_issues": [],
+      "candidate_set_sha256": "491f4343b4809d35882cdcb346efc03ad62233391264e375bd6b108ac183cdfc"
     }
   ]
 }

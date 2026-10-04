@@ -106,7 +106,7 @@ def scene_filter(index: int, scene: dict, work: Path, regular: Path, bold: Path)
         "chapter": scene["chapter"],
         "title": scene["title"],
         "caption": scene["caption"],
-        "capture_note": "Actual interface captures\n· edited walkthrough",
+        "capture_note": "Actual interface captures\n· edited walkthrough\nSynthetic narration",
         "number": f"{index:02d} / 06",
         "closing": "From legal change\nto the next review step.",
     }

@@ -9,7 +9,7 @@ import { makeRequest, toolSchema, validateExtraction } from './compile.mjs';
 import { validateRulePack } from '../public/engine.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-export const VERSION = 'lawdiff-codex-cli-compiler/1.3.1';
+export const VERSION = 'lawdiff-codex-cli-compiler/1.3.2';
 const CACHE = join(ROOT, 'data/cache/compile-codex');
 const RUNTIME = join(ROOT, 'data/cache/codex-runtime');
 const DEFAULT_OUTPUT = 'artifacts/codex-compiler-pack.json';

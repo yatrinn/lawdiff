@@ -1,14 +1,14 @@
 # LawDiff — release verification, October 4, 2026
 
-This is a bounded technical and artifact review, not independent legal validation, exhaustive security certification or an official jury score. The final snapshot contains 89 unchanged automatic records from 17 sources; 13 have executable coverage and 76 require interpretation review.
+This is a bounded technical and artifact review, not independent legal validation, exhaustive security certification or an official jury score. The final snapshot contains 133 unchanged automatic records from 24 sources; 22 have executable coverage and 111 require interpretation review.
 
 ## Verified release behavior
 
-- **93 JavaScript tests pass**, with no failures, skips or cancelled tests. They cover the engine, original-data exports, condition/date/jurisdiction failures, narrative-coverage gating, strict compiler events, exact quotations, selection and corpus hash integrity, and the review handoff.
-- **10 geography tests pass**. The sample contains 500 unique addresses; 475 have recorded legal-city matches and 25 remain unresolved. Match counts are not measured geographic or legal accuracy.
-- All **89 submitted records pass the supplied Draft 2020-12 rule schema**. Primary quotations occur verbatim in the identified captured source; this does not establish their interpretation.
+- **95 JavaScript tests pass**, with no failures, skips or cancelled tests. They cover the engine, original-data exports, condition/date/jurisdiction failures, narrative-coverage gating, strict compiler events, exact quotations, selection and corpus hash integrity, and the review handoff.
+- **15 geography tests pass**. The sample contains 500 unique addresses; 491 have recorded legal-city matches and 9 remain unresolved. The 491 matches comprise 481 individual address interpolations and 10 legal-jurisdiction consensus records without a selected coordinate. Match counts are not measured geographic or legal accuracy.
+- All **133 submitted records pass the supplied Draft 2020-12 rule schema**, rerun for this freeze with zero schema errors. All 133 primary quotations occur verbatim in the identified captured source; this does not establish their interpretation.
 - The three submission JSONs are generated from the same selected pack. Browser evidence and simulations are excluded. The audit now includes the selected provenance, assembly, source reviews and no-rule findings; the earlier two-source test is explicitly historical.
-- A clean isolated checkout, without private caches, pre-existing artifacts or credentials, restored all **36 recorded public runs**, passed all 93 JavaScript tests and built the static site. Build/hosting commands restore the pinned archive before validation.
+- The final archive contains **44 recorded public runs**. Restoration and the static build completed for the frozen release. Build/hosting commands restore the pinned archive before validation. An earlier checkpoint was additionally reproduced in an isolated checkout; that historical check is not presented as a fresh isolated-checkout test of this release.
 - The actual qualitative scenario report gives **T1 PASS, T2 PARTIAL, T3 PARTIAL, T4 PASS, T5 PARTIAL**. It retains missing facts and missing conflict/status evidence rather than counting these as correct answers.
 
 ## Browser checks
@@ -19,7 +19,7 @@ Mobile at 390 × 844: light/dark appearances, pending and failed change cases, s
 
 ## Media and documents
 
-Demo and tech files are both 56 seconds, 1920 × 1080, H.264, 30 fps, 1,680 frames, without audio. All seven demo states and six technical scenes were inspected from the final encoded files. The demo explicitly identifies its real UI stills as an edited walkthrough. The technical renderer validates the actual frozen artifacts and reruns both test suites. No live model-run footage is claimed.
+FFprobe verified both final MP4 files at 56 seconds, 1920 × 1080, H.264 and 1,680 video frames, with an AAC audio stream. The render rate is 30 fps. Both films disclose their English synthetic narration in the picture: Leslie preset, generated through Runway with Eleven Multilingual v2, without voice cloning. The recorded chapter texts and audio hashes are in `media/narration/demo.json` and `tech.json`. Demo chapters are 8/9/10/10/10/9 seconds; technical chapters are 12/7/10/9/7/11 seconds. The demo identifies its real UI stills as an edited walkthrough. The technical picture renderer validates the frozen artifacts and reruns both test suites; a separate narration step verifies the audio inputs and final encoding. A render receipt is not a substitute for viewing and listening to the final files. No live model-run footage is claimed.
 
 The one-page method PDF was rendered and visually reviewed. The two-slide editable PowerPoint passed structural, layout, font-policy and embedded-chart checks and was reimported/rendered. Its matching PDF was generated from those final rendered slides. Native Microsoft PowerPoint execution was not tested. Counts, missing-fact states and buyer hypotheses agree with the shipped pack.
 
@@ -29,6 +29,6 @@ Source/jurisdiction substitution and mixed condition-tree bypasses are rejected.
 
 ## Remaining limits
 
-The 110-source catalog contains 73 texts. The final corpus receipt counts 21 successfully processed, 37 text-missing, 44 rejected/withheld and 8 unprocessed sources. Failed batch outputs remain withheld; intermediate candidates are not promoted. Coverage, penalties, state/local interactions and property facts are not complete. Automatic provenance is a completed mechanism, not proof of complete legal coverage. A qualified review and a measured customer pilot remain necessary.
+The 110-source catalog contains 73 texts. The final corpus receipt counts 28 successfully processed, 37 text-missing, 38 rejected/withheld and 7 unprocessed sources. Failed batch outputs remain withheld; intermediate candidates are not promoted. Coverage, penalties, state/local interactions and property facts are not complete. Automatic provenance is a completed mechanism, not proof of complete legal coverage. A qualified review and a measured customer pilot remain necessary.
 
 Yannik's authentic team video and photograph, and both final hackathon submissions, remain outstanding. The repository/hosting publication and anonymous links are checked separately after deployment. Do not infer an event submission from a Git commit or deployment.

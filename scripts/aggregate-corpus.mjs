@@ -8,7 +8,7 @@ import { CATEGORIES, validateRulePack } from '../public/engine.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const VERSION = 'lawdiff-corpus-aggregator/1.2.0';
-export const SUPPORTED_COMPILER_VERSIONS = Object.freeze(['lawdiff-codex-cli-compiler/1.2.1', 'lawdiff-codex-cli-compiler/1.3.0', 'lawdiff-codex-cli-compiler/1.3.1']);
+export const SUPPORTED_COMPILER_VERSIONS = Object.freeze(['lawdiff-codex-cli-compiler/1.2.1', 'lawdiff-codex-cli-compiler/1.3.0', 'lawdiff-codex-cli-compiler/1.3.1', 'lawdiff-codex-cli-compiler/1.3.2']);
 const OUTPUT = 'artifacts/corpus-candidates.json';
 const COVERAGE = 'artifacts/corpus-coverage.json';
 const SELECTION = 'data/extracted/automatic-selection.json';

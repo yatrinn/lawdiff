@@ -1,6 +1,6 @@
 {
   "method": "explicit_selection_of_automatic_candidates",
-  "generated_at": "2026-10-04T10:26:14.083Z",
+  "generated_at": "2026-10-04T11:30:49.301Z",
   "legal_review": false,
   "audit": [
     {
@@ -1829,13 +1829,829 @@
         "unresolved_review_items_preserved": true,
         "independent_legal_review": false
       }
+    },
+    {
+      "artifact": "artifacts/final-ca-probe-D081-authorized.json",
+      "artifact_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D081",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Official Rent Board source expressly gives October 14, 2024 commencement. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d081-algorithmic-rent-devices"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:12:20.263Z",
+      "run_finished_at": "2026-10-04T11:13:03.164Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-12-20-257Z-f9a0e445:D081",
+        "source_doc_id": "D081",
+        "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+        "input_path": "artifacts/final-ca-probe-D081-authorized.json",
+        "input_file_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:12:20.263Z",
+        "run_finished_at": "2026-10-04T11:13:03.164Z",
+        "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+        "prompt_sha256": "fea665fdadbf3d4f569dac2fb6f20a8675e2babb49aaae6f2c25025a5e0f8d29",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "a18112a00a1c3b14126224e815239c26cd7ac693a9cd85860ffe677dcb633c43",
+        "transport_sha256": "1277626946295f9547b28bd8ac57b8b3686780d71e6068d683e40e0b26269b69",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:12:20.280Z",
+        "finished_at": "2026-10-04T11:13:03.135Z",
+        "duration_ms": 42859,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 1,
+        "review_issues": 0,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 15082,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1169,
+          "reasoning_output_tokens": 336
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "267b8fe2aa45952bcedab108132523d92494ff3e740e88a4da2f711a4b596516"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d081-algorithmic-rent-devices",
+          "rule_sha256": "0113fa4226e55b22845183bbda2cb1c0e5350864be974f78b695a4aa442ca833",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 0,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": false,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-sf.json",
+      "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D080",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Source explicitly limits the 1.6% annual allowable increase to rent-controlled units and March 1, 2026–February 28, 2027. AST requires established local rent control; no address is assumed covered. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d080-annual-rent-increase-2026"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:13:38.980Z",
+      "run_finished_at": "2026-10-04T11:16:47.008Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D080",
+        "source_doc_id": "D080",
+        "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+        "input_path": "artifacts/final-ca-sf.json",
+        "input_file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:13:38.980Z",
+        "run_finished_at": "2026-10-04T11:16:47.008Z",
+        "source_sha256": "924783981b92aabf2a5200517290879d008fd1e8c579969bdddaa28ff6f9fd7d",
+        "prompt_sha256": "064737fe0bdbd814452cd656cfc301851b0c06b28d717542590871b1f2d0fecc",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "a3fdcaeb81b608dbefff1f21e5c62e75b4a035318cda594f9f970143bd4693de",
+        "transport_sha256": "3f6d421994e465aceb4e4e2b3c470423727c86e169586d835a139d16cfd5961e",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:13:39.000Z",
+        "finished_at": "2026-10-04T11:14:10.534Z",
+        "duration_ms": 31535,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 1,
+        "review_issues": 2,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 15150,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 844,
+          "reasoning_output_tokens": 214
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "4e912adc1842711495f0683ec7f8b1bc961185af3276d0951d6e24c8e298c9a9"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d080-annual-rent-increase-2026",
+          "rule_sha256": "119e4a6fba8db9b1724f622ab5f1ff7d4cdb9f7aaf6e5dc6d479c1e76fe2fc45",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 2,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-sf.json",
+      "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D079",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Three unchanged summaries preserve the source-defined just-cause grounds, dominant motive, housing-service exception and immediate reoccupancy after temporary work. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d079-just-cause-eviction",
+        "d079-housing-services-just-cause",
+        "d079-reoccupancy-after-work"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:13:38.980Z",
+      "run_finished_at": "2026-10-04T11:16:47.008Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-13-38-979Z-19f2ad19:D079",
+        "source_doc_id": "D079",
+        "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+        "input_path": "artifacts/final-ca-sf.json",
+        "input_file_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:13:38.980Z",
+        "run_finished_at": "2026-10-04T11:16:47.008Z",
+        "source_sha256": "51f9490227bafc8a6f458c7e417f41bce3af07c1416fae77f281b987d97ef793",
+        "prompt_sha256": "1ab5b1dc319e6cef9897828f068b01bd2bd13aa443192b0c6e5809cd8bb1e495",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "53ed3f263a933a493ea993143f45ee391bd7844eef975f86f6f081ae7163935f",
+        "transport_sha256": "7383c92ee3fddd684be7d9d9e2615fa87c85e7da7bd3be955bbc331ac3f03dba",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:14:10.543Z",
+        "finished_at": "2026-10-04T11:16:47.002Z",
+        "duration_ms": 156460,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 3,
+        "review_issues": 8,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 15944,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5003,
+          "reasoning_output_tokens": 1027
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "5ccbcdc05d368eda097758c5a8316952bc856547ef1e328a8026d0235f210f87"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d079-just-cause-eviction",
+          "rule_sha256": "ce9baa8a552049226e9202733115e45937047a8969a56b2b545511c52c3aa970",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d079-housing-services-just-cause",
+          "rule_sha256": "d4d271533418221b456cace0cff1d82ff2218b0fb7371202fa120bfdde1a6695",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d079-reoccupancy-after-work",
+          "rule_sha256": "b7cd9da3b608563118d3996cc85d83617798eeb3e96fe2fd99a9d5866964626e",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 8,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-screening.json",
+      "artifact_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D026",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. All six executable records use the residential property predicate while preserving landlord/agent and transaction triggers in requirement/exemptions. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d026-screening-fee-cap",
+        "d026-unit-availability",
+        "d026-permitted-screening-process",
+        "d026-itemized-fee-receipt",
+        "d026-unused-fee-refund",
+        "d026-credit-report-copy"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:15:42.628Z",
+      "run_finished_at": "2026-10-04T11:18:21.656Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-15-42-624Z-77b4e7c5:D026",
+        "source_doc_id": "D026",
+        "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+        "input_path": "artifacts/final-ca-screening.json",
+        "input_file_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:15:42.628Z",
+        "run_finished_at": "2026-10-04T11:18:21.656Z",
+        "source_sha256": "35ec54ef926471876977b9cad3f0db7ff5b77393bd0baad03ed30125949f8e7a",
+        "prompt_sha256": "abf8e187a30e833647c98214a1788dbbe9e1278d2fd9f9798cdf62ad6e69672a",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "2e5b2bcf4a7943cacec16c3359095f8f2803e0de505ba0aee620a75f2a7ebaef",
+        "transport_sha256": "b5bea767af13ab2e1526fc05a0c848fe7098d468523bea607c0ecfd9cafae6b9",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:15:42.644Z",
+        "finished_at": "2026-10-04T11:18:21.647Z",
+        "duration_ms": 159004,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 6,
+        "review_issues": 3,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 16537,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5117,
+          "reasoning_output_tokens": 433
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "64680169215b6d78d984cb3f9855098985640e2bbda51491c5a70b56a8028088"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d026-screening-fee-cap",
+          "rule_sha256": "18f389d52bcc1890545600ee2e7f408a1c6f849511fce02d09aa5af703264a59",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d026-unit-availability",
+          "rule_sha256": "00bcf5ee3bb69ccde94e5311bf1db7192e44d492662ef955de99473d9ce86732",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d026-permitted-screening-process",
+          "rule_sha256": "7faea3916c43837b7bef1ddc640abda5b0190bf0b3a03d679114f9fb9e7b7bbe",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d026-itemized-fee-receipt",
+          "rule_sha256": "bbdcce66f944347fee4ab788c2421e2c5873fb07d8689dd74129c8d176aace0b",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d026-unused-fee-refund",
+          "rule_sha256": "e9504445fc942945ae5321d31cf5fcb3f08f7f199539208eb449f50af0a84b94",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d026-credit-report-copy",
+          "rule_sha256": "afdcef712887f60d650f1ba40a356ebf1c5ddd88ccf35d014c9b50c04a2a650f",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 3,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-la.json",
+      "artifact_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D041",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Thirteen unchanged local summaries preserve annual-increase frequency, February 2026 utilities/dependent changes, additional-tenant limits, qualified market reset, qualified pass-throughs, approved programs and eviction/notice duties. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d041-annual-increase-frequency",
+        "d041-utility-increase-prohibition",
+        "d041-dependent-increase-prohibition",
+        "d041-additional-tenant-increase",
+        "d041-market-rate-reset",
+        "d041-code-enforcement-fee-pass-through",
+        "d041-detector-surcharge",
+        "d041-program-increase-approval",
+        "d041-eviction-grounds",
+        "d041-termination-notice-filing",
+        "d041-no-fault-relocation",
+        "d041-no-fault-declaration",
+        "d041-right-to-counsel-notice"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:13:37.292Z",
+      "run_finished_at": "2026-10-04T11:21:02.598Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-13-37-285Z-bbaeef69:D041",
+        "source_doc_id": "D041",
+        "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+        "input_path": "artifacts/final-ca-la.json",
+        "input_file_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:13:37.292Z",
+        "run_finished_at": "2026-10-04T11:21:02.598Z",
+        "source_sha256": "4d8837313d514bde68624c37ab37622dd950c542bdc74942702641519eae3ece",
+        "prompt_sha256": "cda863bbb4174f7e1142aad1003f5b258611ad1d65ae81fe0c86a33926b18c3f",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "111ccb76eede4d1661f780eeb6c3aadc15c2f2eea2b0549359a1e562ff3ff3b6",
+        "transport_sha256": "d61e6b53e1cbbe6a5325c768c8b8246cf198397eca918dca624add16c54dd591",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:13:37.337Z",
+        "finished_at": "2026-10-04T11:18:56.800Z",
+        "duration_ms": 319466,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 13,
+        "review_issues": 26,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 17241,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 10433,
+          "reasoning_output_tokens": 1552
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "e27d0a95a16ef113c8bc022b9bf6d5f0c4e5f62f7302c451fc32112737393b8a"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d041-annual-increase-frequency",
+          "rule_sha256": "4e62a8dcb74ddbc5980397eefef309ab03469a2f66a5915aa42c53f674cdeba7",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-utility-increase-prohibition",
+          "rule_sha256": "23fd0d69ef5f9f3fad7825d70dfa0721e8f187148c075fc1632b766c3e8486f8",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-dependent-increase-prohibition",
+          "rule_sha256": "7cfb5cdab74a3521b266a505999f3473026f73a5640b95748fd36e0faef53bf5",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-additional-tenant-increase",
+          "rule_sha256": "9844b2a26d0992ddb1e26836f35edca548011df4b284991b17d909d82cacfd7a",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-market-rate-reset",
+          "rule_sha256": "0f2dc082d3d7120a70992c331748eb6c9ba3afbec84bc2a47f98bcfeb117c695",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-code-enforcement-fee-pass-through",
+          "rule_sha256": "57fb7ee55c811f04afdbb0037a8365dd9dfcec4dcd54da11583a9410db977242",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-detector-surcharge",
+          "rule_sha256": "107b35dfdeee7fc97fda03e6781190c559e40d128934cac0560e6efed02b53a3",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-program-increase-approval",
+          "rule_sha256": "766c45ed093b6d2dbb8656a9bec62a017953b07e2f408724e6705070f7a55080",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-eviction-grounds",
+          "rule_sha256": "c52be939a7493213167bc333b52291aa942f69232760df9e174fbbba19729221",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-termination-notice-filing",
+          "rule_sha256": "f19db63a3ee3fb95f4a325aeac38353fbbb0d9fa27d198260741d868da952d53",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-no-fault-relocation",
+          "rule_sha256": "0eb57ef06572254e7701456ad98dced12519c94f6a4e38bbb42053fbd3c3d207",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-no-fault-declaration",
+          "rule_sha256": "73a20cadc8c375a57b7dd0a729a8ebb720301e8300faaf0dddfb13a05f71fe79",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d041-right-to-counsel-notice",
+          "rule_sha256": "c8df0e3c40f6b133c78660eab4de155f8c3e1dcfb86df9b6e1554e2e28cc3dc5",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 26,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-sd.json",
+      "artifact_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D073",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fourteen unchanged records cover qualified just cause, owner occupancy, limited post-termination rent, remodeling, notices, relocation/reoffer, screening disclosure, separate security return, buyouts, retaliation and remedies. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d073-just-cause",
+        "d073-owner-occupancy",
+        "d073-owner-termination-rent",
+        "d073-demolition-remodel",
+        "d073-protection-notice",
+        "d073-curable-violation-notice",
+        "d073-no-fault-notice-relocation",
+        "d073-displaced-tenant-reoffer",
+        "d073-reoffer-screening",
+        "d073-deposit-separate-relocation",
+        "d073-buyout-disclosure",
+        "d073-buyout-agreement",
+        "d073-no-retaliation",
+        "d073-enforcement-remedies"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:13:38.928Z",
+      "run_finished_at": "2026-10-04T11:26:08.530Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-13-38-927Z-38e24bdc:D073",
+        "source_doc_id": "D073",
+        "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+        "input_path": "artifacts/final-ca-sd.json",
+        "input_file_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:13:38.928Z",
+        "run_finished_at": "2026-10-04T11:26:08.530Z",
+        "source_sha256": "d1d4b9874a7c4b51a97cb81809e9ece2658f0f9e52898d904f90d48f3c1a140b",
+        "prompt_sha256": "8084324e8bc9a3465895aec7f75d35c1e01a02942ef8539ff37c56a10b98bd9e",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "8c4b9889a2e83b8692a444d9c3e904b8e9ba8a44f4acb87701ef4d1ef38d1cbd",
+        "transport_sha256": "f0458cfd72f3bdf01ac742c1eb04c2f9cc4207ab5f5bd58813cde659fa2514a9",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:13:38.942Z",
+        "finished_at": "2026-10-04T11:26:08.514Z",
+        "duration_ms": 749577,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 14,
+        "review_issues": 31,
+        "no_rule_findings": 2,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 24791,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 24725,
+          "reasoning_output_tokens": 2517
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "a26ba6b0458e8f9b3b169a731e17b67e9d1078abbd7a3a2493537b9fb547f64b"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d073-just-cause",
+          "rule_sha256": "78d97cf6039912018005701c4812204b24ec3036935331a8bd413136fbd324ca",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-owner-occupancy",
+          "rule_sha256": "57aa436886da0135da714249d951362d9beb61e950ccf0df9bdc007c04768e2b",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-owner-termination-rent",
+          "rule_sha256": "5ec06b693fefc0a88d5fc4d8e072a05581dfd2c3fec8ecb8b16c1d61b91ebad2",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-demolition-remodel",
+          "rule_sha256": "393d78a8936ce40180ce19ad494a396f1416c7b7334507b1fdd8c05659619c16",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-protection-notice",
+          "rule_sha256": "217860262613f9dfbc0d40203046a40c31bd042cc296c1cab13830e98ae36aef",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-curable-violation-notice",
+          "rule_sha256": "b10af2558e6c6ec039a600d30e1ef12b14cd6224f1f0df83c89365927814fa17",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-no-fault-notice-relocation",
+          "rule_sha256": "30da1f8f5d5796d0f4c34497e85091ca91c0da8922800a05868951c07a4e0d36",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-displaced-tenant-reoffer",
+          "rule_sha256": "ef8e6157a86109bb3fbd8fdf92b321a433c49834e4d53c046cc61e840038dd01",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-reoffer-screening",
+          "rule_sha256": "36d294f7824d8a35216d7bb91aae60ac040fd17e211d3762fc6e44d93c624923",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-deposit-separate-relocation",
+          "rule_sha256": "8c29c1ec0cc3b76cdcb483a181f7f0a545034a9e78bb4425f6f0407e3fab9db1",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-buyout-disclosure",
+          "rule_sha256": "4102290eb55cd72d5f55074460a9e0a1b2cf4104ba480bad472fcbb1bc7c5078",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-buyout-agreement",
+          "rule_sha256": "7418cec03c98babbf1d794044b9a298cc09c926cbb393da28f5d1f48fa00bff5",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-no-retaliation",
+          "rule_sha256": "60c7303354a7b17c6a1ad4900acc696f387d20ca23a73d7d21c3a71b046d354a",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d073-enforcement-remedies",
+          "rule_sha256": "a9ae2c1122302cc37b8b5381796ec39f66af677162cce6f5d262cae8f1e5c7cc",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 31,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
+    },
+    {
+      "artifact": "artifacts/final-ca-la-D040-v132.json",
+      "artifact_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+      "artifact_hash_pinned_in_selection": true,
+      "source_doc_id": "D040",
+      "selection_reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fresh compiler 1.3.2 extraction succeeded after the prior 1.3.1 source attempt was rejected; no failed candidate was edited or reused. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "selected_rule_ids": [
+        "d040-jco-just-cause",
+        "d040-no-fault-relocation",
+        "d040-right-to-counsel-notice",
+        "d040-renters-protections-notice",
+        "d040-nonpayment-eviction-threshold",
+        "d040-eviction-notice-filing"
+      ],
+      "omitted_rule_ids": [],
+      "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.2",
+      "model": "gpt-6-astra",
+      "cli_version": "codex-cli 0.153.4",
+      "run_started_at": "2026-10-04T11:25:31.318Z",
+      "run_finished_at": "2026-10-04T11:28:41.556Z",
+      "source_attempt": {
+        "attempt_id": "2026-10-04T11-25-31-316Z-7cd379f3:D040",
+        "source_doc_id": "D040",
+        "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+        "input_path": "artifacts/final-ca-la-D040-v132.json",
+        "input_file_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+        "original_status": "validated_candidates",
+        "run_started_at": "2026-10-04T11:25:31.318Z",
+        "run_finished_at": "2026-10-04T11:28:41.556Z",
+        "source_sha256": "13f9d54597199b73e23ad12dcc38626d53bb30bd53d89a63b6a7f55ecc570425",
+        "prompt_sha256": "9200a54868ce9d405c9ca47b372c3c607b855ecaa5a73f25c88ab045bd0d0bf1",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "response_sha256": "369fca1ce6cf98f1bfa084eaac1cca3c0b6291e75e959920effa5d155b9b1b61",
+        "transport_sha256": "f03ad7ffcd5d4d114b253fb44ff034bc1da674f072fc98c18cdaea446fd9ceec",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "started_at": "2026-10-04T11:25:31.347Z",
+        "finished_at": "2026-10-04T11:28:41.521Z",
+        "duration_ms": 190177,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "accepted_rules": 6,
+        "review_issues": 13,
+        "no_rule_findings": 1,
+        "rejected_review_quote_count": 0,
+        "usage": {
+          "input_tokens": 17215,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6157,
+          "reasoning_output_tokens": 999
+        },
+        "validation_status": "processed",
+        "validation_issues": [],
+        "candidate_set_sha256": "491f4343b4809d35882cdcb346efc03ad62233391264e375bd6b108ac183cdfc"
+      },
+      "rules": [
+        {
+          "team_rule_id": "d040-jco-just-cause",
+          "rule_sha256": "660650c0903dfbd25f25973c030cdc23343404a6552ddff6ab37e387f8bac384",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d040-no-fault-relocation",
+          "rule_sha256": "4a91799b2894ee93a84ce1482cc035074c24f2c7180bfbade41f0d529ccdd530",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d040-right-to-counsel-notice",
+          "rule_sha256": "4c7a5ca10c0c57f2cc091fa9342bbfe41ad66db1a670fa66d4eb60188768d139",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": false,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d040-renters-protections-notice",
+          "rule_sha256": "26b0d7f98323b9c74166bf602f9e8575473a62fbed9987c13ba4c1c39709faca",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d040-nonpayment-eviction-threshold",
+          "rule_sha256": "ad5571571f658364e13fbcad7fe08bf883d40bdaebdabc56845c6e85b45242c5",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        },
+        {
+          "team_rule_id": "d040-eviction-notice-filing",
+          "rule_sha256": "937cafa740217cffa451f3ea08e3609c4331c49114ea64ae18784468d2029f2f",
+          "extraction_method": "codex_cli_structured_extraction",
+          "review_status": "machine_validated_not_legally_reviewed",
+          "execution_review_pending": true,
+          "independent_legal_review": false
+        }
+      ],
+      "source_review_flags": {
+        "source_review_item_count": 13,
+        "rejected_review_quote_count": 0,
+        "unresolved_review_items_preserved": true,
+        "independent_legal_review": false
+      }
     }
   ],
   "provenance": {
     "selector_version": "lawdiff-explicit-candidate-selection/1.0.0",
     "selection_path": "data/extracted/automatic-selection.json",
-    "selection_file_sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31",
-    "catalog_file_sha256": "c57399cb93251f87e0114b1e1d8e6d34cd282c2a796a8a9d3785c1cdc332f69b",
+    "selection_file_sha256": "752ee6828ec778bb0a3c5c0ad03843ee5aa4424a472bb101e11e163038541d5b",
+    "catalog_file_sha256": "e1c7f531238eb0c8b814b1e903fdaca5977211fa417e5a7ed66253ee7ad530a1",
     "as_of": "2026-10-01",
     "input_files": [
       {
@@ -1921,11 +2737,47 @@
         "artifact_sha256": "00f4ec440182a15f58052a416d9d3036ea4a2d96c32f89cb90384977d54176b1",
         "run_id": "2026-10-04T03-50-37-546Z-76e03c1b",
         "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-probe-D081-authorized.json",
+        "artifact_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+        "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-sf.json",
+        "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+        "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-screening.json",
+        "artifact_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+        "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-la.json",
+        "artifact_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+        "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-sd.json",
+        "artifact_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+        "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.1"
+      },
+      {
+        "artifact": "artifacts/final-ca-la-D040-v132.json",
+        "artifact_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+        "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+        "compiler_version": "lawdiff-codex-cli-compiler/1.3.2"
       }
     ],
-    "source_count": 17,
-    "selected_rule_count": 89,
-    "execution_review_count": 76,
+    "source_count": 24,
+    "selected_rule_count": 133,
+    "execution_review_count": 111,
     "no_model_calls": true,
     "mainpack_modified": false,
     "independent_legal_review": false,
@@ -1941,12 +2793,12 @@
   },
   "assembly": {
     "assembler_version": "lawdiff-automatic-assembly/1.0.0",
-    "assembled_at": "2026-10-04T10:26:14.221Z",
+    "assembled_at": "2026-10-04T11:30:49.466Z",
     "source_path": "data/extracted/automatic-reviewed.json",
-    "source_file_sha256": "edf6ac6b64c9dca4e8d0cf23b5f2e3e794b781d4836cd98270d5cd3825384859",
-    "source_content_sha256": "4991ad6f3adcb16848c7fb57f16bdc76758bf102b4279d875b7718b10f6dc5a1",
-    "catalog_file_sha256": "c57399cb93251f87e0114b1e1d8e6d34cd282c2a796a8a9d3785c1cdc332f69b",
-    "selection_file_sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31",
+    "source_file_sha256": "4630407620c2dfbf431d8aaa4501dd15254edb6781acb5d58718b174a6615cd0",
+    "source_content_sha256": "4d04edd9c0b2a6820ea9d79c8937000623d84e44ceaf2d87a74c754578bd9d01",
+    "catalog_file_sha256": "e1c7f531238eb0c8b814b1e903fdaca5977211fa417e5a7ed66253ee7ad530a1",
+    "selection_file_sha256": "752ee6828ec778bb0a3c5c0ad03843ee5aa4424a472bb101e11e163038541d5b",
     "original_artifacts_revalidated": true,
     "rules_modified": false,
     "independent_legal_review": false
@@ -3286,6 +4138,587 @@
       "source_doc_id": "D024",
       "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
       "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The prior 1.4% annual allowable increase ended before the as-of date and is not extracted as a current rule.",
+      "quoted_span": "The annual allowable increase amount effective March 1, 2025 through February 28, 2026 is 1.4%.",
+      "source_doc_id": "D080",
+      "source_url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "This announcement supplies no operative duties for just_cause_eviction, security_deposits, application_screening_fees, screening_restrictions, or algorithmic_rent_setting. No rules are extracted for those categories; this does not establish that no such rules exist.",
+      "quoted_span": null,
+      "source_doc_id": "D080",
+      "source_url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source presents these duties as current, supporting in_force treatment as of 2026-10-01, but supplies no precise effective date for any extracted rule. All effective_date values remain null.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Complete address-level coverage cannot be established from this overview. It does not enumerate eviction exemptions or identify which tenancies regulated by another government agency are protected. Rent-control exemption must not be treated as eviction exemption, and dataset membership supplies no missing eligibility facts.",
+      "quoted_span": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The overview summarizes eviction grounds without providing all referenced legal requirements. In particular, it does not identify the limited circumstances permitting immediate-family occupancy; the extracted list must not be treated as a complete authorization to evict.",
+      "quoted_span": "Owner-occupancy\nor, in limited circumstances, occupancy by a member of the landlord's immediate family;",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source does not reproduce Section 37.2(r)'s requirements or fully define the services eligible for temporary removal. It also does not expressly resolve whether housing-service removal has address-level coverage qualifications beyond the surrounding eviction discussion.",
+      "quoted_span": "However, a landlord who has complied with the requirements of Ordinance Section 37.2(r) may\ntemporarily remove certain housing services\n, including parking and storage spaces, in order to perform mandatory soft-story seismic retrofit work required by\nthe Building Code\n.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source states possible substantial civil and/or criminal liability for unlawful eviction or attempted eviction, but supplies no amounts, plaintiff-standing rules, per-violation counting, or further liability standards. It does not separately establish sanctions for housing-service removal or denial of reoccupancy.",
+      "quoted_span": "If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-just-cause-eviction: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-housing-services-just-cause: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-reoccupancy-after-work: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source permits annual CPI adjustments but does not supply an adjusted dollar ceiling for October 1, 2026 or sufficient index details to calculate one. The extracted cap therefore preserves the statutory formula without asserting a current dollar amount.",
+      "quoted_span": "The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "Subdivision (l) preserves federal and state housing-assistance deposit and fee provisions; it does not expressly exempt assisted properties from this section. Any additional program requirements or precedence must be reviewed using the applicable program text, which is not supplied.",
+      "quoted_span": "(l) This section is not intended\nto preempt any provisions or regulations that govern the collection of deposits and fees under federal or state housing assistance programs.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "The source permits reusable screening reports pursuant to Section 1950.1, but that section is not supplied. No additional duties or exemptions under that cross-reference are inferred.",
+      "quoted_span": "(g) Nothing in this section prevents a landlord from accepting a reusable screening report pursuant to Section 1950.1.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "issue": "All extracted rules require scope review. The overview describes RSO coverage only generally; the allowed facts cannot fully express the listed property types, replacement-unit status, same-parcel dwelling configuration, exact construction cutoff, hotel occupancy in consecutive days, or condominium/townhome tenancy commencement cutoff. Missing address values alone are not the reason for prose coverage.",
+      "quoted_span": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under\nLAMC Section 151.28\nand if any of the following:\nApartment\nCondominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nTownhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nDuplex\nTwo or more single-family dwelling units on the same parcel\nRooms in a hotel, motel, rooming house, or boarding house occupied by the same tenant for more than 30 consecutive days\nResidential unit(s) attached to a commercial building\nAccessory Dwelling Unit (ADU)\nJunior Accessory Dwelling Unit (JADU)\nMobile homes\nand recreational vehicles in mobile home parks are also covered under the RSO.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The luxury exemption is materially incomplete: the source supplies a historical rent date but omits the qualifying amount or other completed criterion. Do not infer exemption eligibility or its effect on particular RSO protections.",
+      "quoted_span": "Luxury Exemption\n: A landlord can apply for an exemption from the RSO if they can establish the monthly rent charged on or before May 31, 1978,*.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Temporary exemptions are referenced without their eligibility criteria or substantive reach. Their effect on address-level coverage cannot be determined from this source.",
+      "quoted_span": "All units rented or offered for rent must be\nregistered annually\nwith LAHD. New property owners have 45 days to register their rental property and if applicable, file\nTemporary exemptions\n.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The current allowable annual percentage is contained in an uncaptured linked PDF. The overview supports the 12-month frequency rule but does not establish a numeric annual cap.",
+      "quoted_span": "Rent may be increased once every 12 months by the allowable rent increase percentage (click here to\nview the allowable rent increase PDF\n).",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Precise operative start dates are not supplied for d041-annual-increase-frequency, d041-additional-tenant-increase, d041-market-rate-reset, d041-detector-surcharge, d041-program-increase-approval, d041-eviction-grounds, d041-termination-notice-filing, d041-no-fault-relocation or d041-no-fault-declaration. Their effective_date values remain null; the webpage's modification date is not an effective date.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "February 2, 2026 expressly dates the dependent-increase prohibition. It does not unambiguously establish when the continuing allowance for additional nondependent tenants began. The treatment of unauthorized occupants from March 2020 through December 2023 includes a past notice deadline that must not be converted into a current notice opportunity.",
+      "quoted_span": "Effective February 2, 2026, an additonal 10% increase for an additional dependent added to the tenancy is no longer permitted. However, a 10% for an additional tenant is allowed (not a dependent) if moves into a rental unit: Landlords can increase the rent within 60 days of learning about the additional tenant. Rent increases for unauthorized additional tenants who moved between March 2020 and December 2023 must be provided an advance written notice of rental increase on or before March 1, 2024.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The registration-fee passage calls both $1.61 monthly and $38.75 a surcharge, while also allowing a 50% fee pass-through. The relationship among the annual fee, surcharge and current amount is not clear enough to extract a faithful monetary rule. The stated 30-day notice is tied to collecting the $1.61 surcharge.",
+      "quoted_span": "A $1.61 monthly surcharge may be collected by the landlord as the tenant’s portion of the\nRegistration\nfee. Effective January 1, 2020, the surcharge is $38.75. The landlord may pass through 50% of the fee to the tenant every month rather than once a year.  A 30-day notice must be given to the tenant to collect a rental surcharge of $1.61.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The Systematic Code Enforcement Fee passage provides a January 1, 2022 operative date, distinct from the ordinance's August 6, 2021 effective date. Its independent assessment coverage and applicability to units excluded from rent-amount regulation are not established here.",
+      "quoted_span": "Effective January 1, 2022, a landlord may collect 1/12 of 50% of the annual Systematic Code Enforcement Fee from the tenant of the rental unit per month. (Added by Ord. No. 187,108, Eff. 8/6/21.)",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The overview does not explain how market-rate resets, ordinary annual increases, additional-tenant increases, detector surcharges, fee pass-throughs and approved program increases interact. No precedence or conflict relationship is established.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The no-fault notice checklist says '30-day and 60-day' and mentions 120-day notices or an extension of up to one year without identifying the applicable eviction types or tenant qualifications. A faithful conditional notice-period rule cannot be extracted.",
+      "quoted_span": "Give the tenant a 30-day and 60-day written notice (some evictions require 120-day notice or up to a 1-year extension).",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Relocation assistance is expressly required for no-fault evictions, but its amount, payment timing and any further eligibility qualifications are not supplied. The source does not establish an additional penalty or damages remedy.",
+      "quoted_span": "No-fault evictions require the payment of\nrelocation assistance\n.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The Right to Counsel notice duty appears in the RSO registration and notification section, while its operative sentence refers generally to landlords. Broader address coverage cannot be resolved from this passage.",
+      "quoted_span": "Required Registration and Posted Notification of RSO Rental Units\nAll Properties with RSO rental units must post a notification. Click here to download the\nNotice\n.\nA landlord must serve a tenant with an\nannual registration statement (Certificate).\nBeginning August 20, 2025, landlords must post the\nNotice of Right to Counsel\nand provide it to the tenant at the start of the tenancy. The Notice must also be attached to a copy of any eviction notice or termination of a rental subsidy.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The source states that the Just Cause Ordinance creates rights and responsibilities outside RSO coverage, but supplies no operative grounds, exemptions, dates or procedures for that separate regime. Do not extend the extracted RSO rules to all non-RSO properties.",
+      "quoted_span": "If My Property is Not Rent Stabilized\nEven if your property is not covered under the Rent Stabilization Ordinance, you and your tenants have rights and responsibilities under the\nJust Cause Ordinance\n.",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-annual-increase-frequency: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-utility-increase-prohibition: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-dependent-increase-prohibition: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-additional-tenant-increase: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-market-rate-reset: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-code-enforcement-fee-pass-through: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-detector-surcharge: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-program-increase-approval: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-eviction-grounds: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-termination-notice-filing: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-no-fault-relocation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-no-fault-declaration: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d041-right-to-counsel-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "All records require execution review because the allowed facts cannot faithfully represent every material Division exemption, including specific institutional categories, the exact landlord-principal-residence configurations, occupancy from tenancy commencement, corporate LLC membership, and the prescribed exemption-notice and lease-date conditions. Do not infer any exemption's presence or absence from the research dataset. The following contiguous passage supplies the shared exemption evidence.",
+      "quoted_span": "§98.0703 Exemptions \nThis Division shall not apply to the following types of residential rental properties or \nresidential circumstances: \n(a) transient and tourist hotel occupancy as defined in California Civil Code \nsection 1940(b), as may be amended; \n(b) short-term residential occupancy, as defined in and subject to Chapter 5, \nArticle 10, Division 1 of this Code, as may be amended;  \n \n(c) housing restricted by deed, regulatory restriction contained in an agreement \nwith a government agency, or other document as affordable housing for \npersons and families of very low, low, or moderate income, as defined in \nCalifornia Health and Safety Code section 50093, as may be amended;  \n(d)  housing subject to an agreement that provides housing subsidies for affordable \nhousing for persons and families of very low, low, or moderate income, as \ndefined in California Health and Safety Code section 50093, as may be \namended, or comparable federal statutes. This exemption shall not include \nSection 8;  \nCh. Art. Div.  \n9 8 7 4 \n \nSan Diego Municipal Code Chapter 9:  Building, Housing and Sign Regulations   \n(3-2024) \n \n \n \n(e) mobilehomes subject to the Mobilehome Residency Law (California Civil \nCode sections 798-799.11), as may be amended;  \n \n(f) housing accommodations in a nonprofit hospital, religious facility, extended \ncare facility, licensed residential care facility for the elderly, as defined in \nCalifornia Health and Safety Code section 1569.2, as may be amended, an \nadult residential facility, as defined in Title 22, Division 6, Chapter 6 of the \nManual of Policies and Procedures published by the California Department of \nSocial Services, as may be amended, or non- profit transitional housing; \n(g) dormitories owned and operated by an institution of higher education or an \ninstitution offering instruction to any grade from kindergarten through 12; \n(h) residential rental property in which the tenant shares bathroom or kitchen \nfacilities with the landlord who maintains their principal residence at the \nresidential rental property;  \n \n(i) single-family residence occupied by the landlord as the landlord’s principal \nplace of residence, including both of the following:  \n \n(1) a residence in which the landlord-occupant rents or leases no more \nthan two bedrooms, two accessory dwelling units, or two junior \naccessory dwelling units, as defined in section 113.0103; and  \n \n(2) a mobilehome. \n(j) a property containing two separate dwelling units within a single structure in \nwhich the landlord occupies one of the dwelling units as the landlord’s \nprincipal place of residence at the beginning of the tenancy, so long as the \nlandlord continues in occupancy;  \n \n(k) housing that has been issued a certificate of occupancy within the previous \n15 years, unless the housing is a mobilehome; and \n(l) residential rental property, including a mobilehome, that is alienable separate \nfrom the title to any other dwelling unit, provided that both of the following \napply: \n(1) The landlord is not any of the following: \n(A) a real estate investment trust, as defined in California Internal \nRevenue Code section 856, as may be amended; \nCh. Art. Div.  \n9 8 7 5 \n \nSan Diego Municipal Code Chapter 9:  Building, Housing and Sign Regulations   \n(3-2024) \n \n \n \n(B) a corporation; \n(C) a limited liability company in which at least one member is a \ncorporation; or  \n \n(D) management of a mobilehome park, as defined in California \nCivil Code section 798.2, as may be amended. \n(2) The tenants have been provided written notice that the residential \nrental property is exempt from this Division using the following \nstatement: \nThis property is not subject to the just cause requirements of \nChapter 9, Article 8, Division 7 of the San Diego Municipal \nCode. This property meets the requirements of San Diego \nMunicipal Code section 98.0703(l) and the landlord is not any \nof the following: (1) a real estate investment trust, as defined \nby California Internal Revenue Code section 856; (2) a \ncorporation; (3) a limited liability company in which at least \none member is a corporation; or (4) management of a \nmobilehome park, as defined in California Civil Code \nsection 798.2.  \n \nFor a tenancy existing before January 1, 2024, the notice required \nabove may be provided in the lease. For a tenancy commenced or \nrenewed on or after January 1, 2024, the notice required above shall be \nprovided in the lease. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Shared residential, ownership, institutional, and retaliation definitions must govern the rules. The supplied text incorporates the dwelling-unit definition externally and contains potentially consequential interaction between its natural-person and owner definitions for LLC or partnership interests; do not substitute a generic owner_type value without resolving those qualifications.",
+      "quoted_span": "Dwelling unit has the same meaning as in San Diego Municipal Code \nsection 113.0103, as may be amended.  \n \nFamily trust means a revocable living trust or irrevocable trust in which the settlors \nand beneficiaries of the trust are persons who are related to each other as sibling, \nspouse, domestic partner, child (by blood or adoption), parent, grandparent, or \ngrandchild (by blood or adoption). \n \nLandlord means an owner and any person, acting as principal or through an agent, \nwho has the right to offer residential rental property for rent, and includes a \npredecessor in interest to the landlord. \n \nLease means any lease, sublease, or agreement, written or oral, for the use and \noccupancy of residential rental property. \nNatural person includes a natural person who is a settlor or beneficiary of a family \ntrust; or if the residential rental property is owned by a limited liability company or \npartnership, a natural person with a 25 percent ownership in the residential rental \nproperty. \nNon-profit transitional housing means temporary housing operated by a non-profit \norganization for up to 24 months with supportive services to individuals and families \nwith the goal of interim stability and support to successfully move to and maintain \npermanent housing, which may cover housing costs and accompanying supportive \nservices for program participants. \nOwner means a natural person that has at least a 25 percent recorded ownership \ninterest in the residential rental property; a natural person who has any recorded \nownership interest in the residential rental property if 100 percent of the recorded \nownership is divided among owners who are related to each other as sibling, spouse, \ndomestic partner, child (by blood or adoption), parent, grandparent, or grandchild (by \nblood or adoption); or a natural person whose recorded interest in the residential \nrental property is owned through a limited liability company or partnership. \nResidential rental property means any dwelling or unit that is intended for human \nhabitation, including any dwelling or unit in a mobilehome park. \nRetaliation means any threat or any other adverse action against a tenant for \nexercising or attempting to exercise any right guaranteed under this Division. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The tenancy definition is based on lawful entitlement, not merely elapsed occupancy. Preserve the more-than-30-day requirement and the fixed-term exclusion, including its extension/renewal wording, without replacing them with a generic tenant_months test; also preserve the Section 8 exception and the age threshold for enhanced relocation.",
+      "quoted_span": "Section 8 means residential rental property in which the tenant receives tenant-based \nhousing assistance under Section 8 of the United States Housing Act of 1937, also \nknown as the Housing Choice Voucher Program.  \n \nSenior means any person 62 years old or older. \nTenancy means the lawful right or entitlement of a tenant to continuously use or \noccupy a residential rental property for more than 30 days. A tenancy does not \ninclude a lease for a fixed-term of three months or less, including any extensions or \nrenewals of that lease for a fixed-term of three months or less. \nTenant means a tenant, subtenant, lessee, sublessee, or any other natural person \nentitled to lease any residential rental property. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The disability qualification affecting enhanced relocation incorporates an external definition not reproduced in this source. The allowed vocabulary has no complete representation of this tenant eligibility condition.",
+      "quoted_span": "Disabled means any person with a disability as defined in California Government \nCode section 12955.3, as may be amended.  ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The enumerated at-fault grounds qualify the overarching just-cause rule and are not findings about any tenant. Several grounds incorporate external statutory definitions or entry rights whose full text is absent.",
+      "quoted_span": "(a) At-Fault Just Cause. At-fault just cause is any of the following: \n(1) a default in the payment of rent; \n(2) a breach of a material term of the lease, as described in California \nCode of Civil Procedure section 1161(3), as may be amended, \nincluding violation of a provision of the lease after being issued a \nwritten notice to correct the violation; \nCh. Art. Div.  \n9 8 7 6 \n \nSan Diego Municipal Code Chapter 9:  Building, Housing and Sign Regulations   \n(3-2024) \n \n \n \n(3) the maintaining, committing, or permitting the maintenance or \ncommission of a nuisance as described in California Code of Civil \nProcedure section 1161(4), as may be amended;  \n \n(4) the committing of waste as described in California Code of Civil \nProcedure section 1161(4), as may be amended; \n(5) where the tenant has a written lease that terminated on or after \nJune 24, 2023 and after receiving a written request or demand from the \nlandlord, the tenant refused to execute a written extension or renewal \nof the lease for a substantially similar duration and with substantially \nsimilar provisions, provided the terms of the extension or renewal do \nnot violate this Division or any other provision of law; \n(6) criminal activity by the tenant on the residential rental property, \nincluding any common areas associated with the residential rental \nproperty; \n(7) a criminal threat, as defined in California Penal Code section 422(a), \nas may be amended, by the tenant regardless of where made directed \nat the tenant’s landlord or any other tenant of the residential rental \nproperty;  \n \n(8) the tenant’s assignment or sublet of the residential rental property in \nviolation of the tenant’s lease, as described in California Code of Civil \nProcedure section 1161(4), as may be amended;  \n \n(9) the tenant’s refusal to allow the landlord to enter the residential rental \nproperty as authorized by California Civil Code sections 1101.5 and \n1954, as may be amended, and California Health and Safety Code \nsections 13113.7 and 17926.1, as may be amended; \n(10) the tenant’s use of the residential rental property for an unlawful \npurpose as described in California Code of Civil Procedure \nsection 1161(4), as may be amended; \n(11) where the tenant is an employee, agent, or licensee of the landlord and \nthe tenant fails to vacate the residential rental property after their \ntermination as an employee, agent, or licensee as described in \nCalifornia Code of Civil Procedure section 1161(1), as may be \namended; and  \nCh. Art. Div.  \n9 8 7 7 \n \nSan Diego Municipal Code Chapter 9:  Building, Housing and Sign Regulations   \n(3-2024) \n \n \n \n(12) when the tenant fails to deliver possession of the residential rental \nproperty after providing the landlord written notice as provided in \nCalifornia Civil Code section 1946, as may be amended, of the \ntenant’s intention to terminate the tenancy, or the tenant makes a \nwritten offer to surrender the residential rental property that is \naccepted in writing by the landlord, but fails to deliver possession at \nthe time specified in that written notice as described in California \nCode of Civil Procedure section 1161(5), as may be amended. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Preserve withdrawal and government-order no-fault grounds, the minimum 30-day habitability-order vacancy, and the adjudicated tenant-fault exclusion from relocation. The reference to possible state or federal relocation benefits does not establish those external duties or their amounts.",
+      "quoted_span": "(2) The landlord seeks to recover possession to withdraw the residential \nrental property from the rental market. \n(3) The landlord seeks to recover possession to comply with any of the \nfollowing:  \n(A) an order issued by a government agency or court relating to \nhabitability that requires vacating the residential rental \nproperty for at least 30 days. An order issued by a government \nagency or court relating to habitability that requires vacating \nthe residential rental property for fewer than 30 days is not \ngrounds to terminate a tenancy for just cause and a landlord \nmay be required by applicable state or federal law to provide \ntenant relocation benefits; \n(B) an order issued by a government agency or court to vacate the \nresidential rental property; or  \n(C) a local ordinance that requires vacating the residential rental \nproperty.  \nIf any government agency or court determines that the tenant is at fault \nfor the condition or conditions triggering the order or need to vacate \nunder section 98.0704(b)(3), the tenant shall not be entitled to any \nrelocation assistance provided in section 98.0706(c). ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Do not assign the at-fault Commission-reporting duty an operative status or use June 24, 2023 as its operative start. The landlord's three-business-day reporting duty begins only 30 days after the Commission establishes a submission portal and publicly announces it; this source supplies neither event date nor evidence that the delay elapsed by October 1, 2026.",
+      "quoted_span": "(2) Notice to Commission. The landlord shall provide written notice to the \nCommission of the at-fault just cause termination of tenancy under \nsection 98.0704(a) no later than three business days after the date the \nlandlord provided the required notice to tenant. Section 98.0706(a)(2) \nshall not apply until 30 days after the Commission establishes a \nsubmission portal and provides the public notice of its creation.  ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The no-fault Commission-reporting duty has the same unestablished delayed-operation trigger. Its operative date and status cannot be determined from this source alone; no active reporting record is created.",
+      "quoted_span": "(2) Notice to Commission. The landlord shall provide written notice to the \nCommission of the no-fault just cause termination of tenancy under \nsection 98.0704(b) no later than three business days after the date the \nlandlord provided the required notice to tenant. Section 98.0706(b)(2) \nshall not apply until 30 days after the Commission establishes a \nsubmission portal and provides the public notice of its creation.   ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Strict compliance with section 98.0706 is independently tied to invalidity of its required termination notices. This separately located remedy accompanies its notice, relocation, and reoffer duties; section 98.0710 states the broader Division-wide invalidity rule.",
+      "quoted_span": "(e) In addition to other remedies applicable to landlord’s failure to comply with \nthis Division, a landlord's failure to strictly comply with section 98.0706 shall \nrender void any notice of termination required by section 98.0706. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Preserve the buyout definitions, including the exclusion for settlement of a pending unlawful-detainer action and the rule that a tenant counteroffer does not end buyout discussions. These are transaction qualifications, not property-use facts.",
+      "quoted_span": "Buyout agreement means an agreement where the landlord pays the tenant money or \nother consideration to vacate the residential rental property. A buyout agreement \ndoes not include an agreement to settle a pending unlawful detainer action. \n \nBuyout offer means any discussion or bargaining, whether oral or written, between a \ntenant and a landlord regarding the possibility of entering into a buyout agreement. A \ncounteroffer by the tenant does not end discussion or bargaining of a buyout offer. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Section 98.0707(d) requires an amount greater than available relocation assistance but expressly declares agreements for less than assistance owed void. Preserve both formulations without inventing an equality exception or resolving the consequence of an exactly equal payment.",
+      "quoted_span": "(d) Void Buyout Agreements. Buyout agreements must be for an amount that is \ngreater than the amount of relocation assistance available to the tenant in \nsection 98.0706(c). A buyout agreement for less than the amount of relocation \nassistance owed to the tenant violates this Division and is void. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source references Civil Code section 1947.12 but does not reproduce its cap formula, eligibility, or exceptions. No general state or city annual rent cap is inferred; the extracted rent restriction is confined to the owner-occupancy termination context.",
+      "quoted_span": "California law limits the amount your rent can be increased. See \nCalifornia Civil Code section 1947.12 for more information. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Unresolved interactions belong in review: the source describes local protections as additional to state and federal rights, but this single-source extraction does not establish precedence, verified overrides, or conflicts with external law.",
+      "quoted_span": "The rights conferred by \nthis Division are in addition to any existing rights provided to tenants by state or \nfederal law.  ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The relocation-credit instruction is preserved, but the source does not identify or quantify any other relocation program. Do not create a verified override relationship or infer which external payment is available for an address.",
+      "quoted_span": "(4) Any relocation assistance required by this Division shall be credited \nagainst any other relocation assistance required by any federal, state, \nor other local law. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The owner-occupancy rent restriction cross-references multiple periods rather than stating a single end date. Do not turn the 90-day move-in deadline and 12-month occupancy requirement into an invented fixed sunset or decide the death exception's effect on rent without review.",
+      "quoted_span": "(H) For a new tenancy commenced during the time periods in \nsection 98.0704(b)(1)(E), the residential rental property shall \nbe offered and rented or leased at the lawful rent in effect at the \ntime any written notice of terminating a tenancy is served.  ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source supports March 28, 2024 for the supplied amended version of section 98.0704, distinct from its original June 24, 2023 effective date. Earlier-dated sections remain subject to the supplied amended definitions; these records do not reconstruct historical versions.",
+      "quoted_span": "(“Just Cause Required for Termination of Tenancy” added 5-25-2023 by \nO-21647 N.S.; effective 6-24-2023.) \n(Amended 2-27-2024 by O-21769 N.S.; effective 3-28-2024.) ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The grammatical reach of the relocation-damages multiplier is unresolved. The extraction preserves the statutory formulation and does not choose between tripling only required assistance or also tripling actual economic damages.",
+      "quoted_span": "(e) Any landlord who fails to provide relocation assistance as required by \nsection 98.0706(c) shall be liable to the tenant in a civil action for not less \nthan three times the required relocation assistance and actual economic \ndamages. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-just-cause: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-owner-occupancy: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-owner-termination-rent: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-demolition-remodel: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-protection-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-curable-violation-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-no-fault-notice-relocation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-displaced-tenant-reoffer: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-reoffer-screening: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-deposit-separate-relocation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-buyout-disclosure: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-buyout-agreement: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-no-retaliation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d073-enforcement-remedies: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The JCO coverage exceptions are expressly nonexhaustive, and several are only partially described. Complete executable coverage cannot be established from this capture; do not infer that an address lacks an exemption.",
+      "quoted_span": "In order to apply to a tenancy, it requires that the tenant either has lived in the same unit for at least six months or that their original lease expired, whichever comes first.  There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The source describes the JCO just-cause and relocation duties as current but supplies no precise effective date for them. Their effective_date values remain null; the page publication and modification dates are not enactment or effective dates.",
+      "quoted_span": "(JCO).  It prohibits terminations of tenancies without just cause and requires relocation assistance for no-fault evictions.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The relocation discussion does not provide amounts, deadlines, or the full conditions distinguishing no-fault evictions that require assistance from those that do not. No payment amount or universal entitlement for every listed no-fault ground is established.",
+      "quoted_span": "Situations in which the property owner wishes to regain the use of the rental unit, as the result of a personal or business decision, and\nnot the\ntenant’s fault, may be cause for eviction, but the property owner may have to pay the tenant\nrelocation assistance\n.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Annual registration, registration fees, completion of the Rent Registry, and displaying or serving the Registration Certificate are supported administrative duties, but do not independently fit the six allowed categories. Their effective dates and detailed registration scope are not established here.",
+      "quoted_span": "All properties rented or offered for rent must be\nregistered annually\n. In addition to paying the annual registration fee, landlords are required to complete the\nRent Registry\nform. Once registration is complete, the landlord will receive a Registration Certificate (Statement) which must be displayed in a conspicuous place on the property or served to the tenant.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The filing duty has no precise effective date in the capture. Its opening property-level scope and the JCO's tenancy-level waiting period require review before treating that waiting period as a filing exemption.",
+      "quoted_span": "Applies to all JCO & RSO rental properties – All eviction notices issued to tenants in the City of Los Angeles must be filed with LAHD within three (3) business days of service on the tenant.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The supplied AB 1482 discussion concerns independently governed California law and must be extracted from an appropriate state source. Do not relabel it as a Los Angeles ordinance; the quoted percentage periods also precede the as-of date and do not establish a current percentage.",
+      "quoted_span": "When Can Rent Be Increased Under State Law AB1482\nThe JCO does not regulate rent increases, however, state law\nAB 1482, the California Tenant Protection Act of 2019\n,\nmay regulate the rent amount in buildings that are older than 15 years old.\nEffective August 1, 2024 to July 31, 2025, the maximum allowable increase is\n8.9%\n.\nPreviously, from August 1, 2023 to July 31, 2024 the maximum annual increase for units subject to AB 1482 was 8.8%\n.\n(\nA\nnnual rent increases are limited to no more than 5% plus the percentage change in the cost of living for the region in which the property is located, or 10% whichever is lower).",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The AB 1482 property, affordability, dormitory, owner-occupancy, ownership, notice, separate-sale and RSO exceptions belong to the state-law discussion. They must not be imported as JCO exemptions; the source expressly distinguishes single-family homes and condominiums from JCO exemption.",
+      "quoted_span": "Properties\nnot\ncovered under AB 1482:\n-Units that were constructed within the last 15 years (this applies on a rolling basis – i.e.. a unit constructed on January 1, 2006 is not covered as of January, 1 2020, but is covered on and after January 1, 2021).\n-Units restricted by a deed, regulatory restrictions, or other recorded document limiting the affordability to low or moderate-income households.\n-Certain dormitories.\n-A two-unit property, provided the second unit was occupied by an owner of the property for the entire period of the tenancy.\n-Single-family homes and condominiums are only exempt from state law but not the JCO if both\n(A)\nand\n(B)\napply:\n(A)\nthe property is\nnot\nowned by one of the following:\n(i) a real estate trust, or\n(ii) a corporation, or\n(iii) an LLC with at least one corporate member.\n—–AND—-\n(B)\nThe landlord notified the tenant\nin writing\nthat the tenancy is not subject to the “just cause” and rent increase limitations as specifically described in Civil Code Sections 1946.2(e)(8)(B)(i) and 1947.12(d)(5)(B)(i).\n-The limited exemption for single-family homes does not apply where there is more than one dwelling unit on the same lot, or any second residential unit in the building that cannot be sold separately from the subject unit (such as an in-law unit).\n-Units that are already subject to the City’s RSO.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "The source supplies no operative duties or affirmative no-rule findings for security_deposits, application_screening_fees, screening_restrictions, or algorithmic_rent_setting. Its silence does not establish the absence of applicable law in those categories.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d040-jco-just-cause: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d040-no-fault-relocation: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d040-renters-protections-notice: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d040-nonpayment-eviction-threshold: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "issue": "Execution review required for d040-eviction-notice-filing: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
     }
   ],
   "no_rule_findings": [
@@ -3960,6 +5393,190 @@
       "source_doc_id": "D024",
       "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
       "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes a prohibition on defined algorithmic devices, but supplies no rent-increase cap or formula.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source supplies no just-cause eviction requirement; its reference to managing occupancy levels concerns defined algorithmic devices.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This source supplies no security-deposit rule.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This source supplies no application or screening-fee rule.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This source supplies no tenant-screening restriction; its device definition concerns rental pricing recommendations.",
+      "quoted_span": "The term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "The source distinguishes rent increase exemptions from eviction coverage but supplies no operative rent cap, increase formula, or complete rent-limit eligibility rule.",
+      "quoted_span": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This eviction overview supplies no security-deposit duty or limit; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This eviction overview supplies no application or screening-fee duty or limit; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This eviction overview supplies no applicant-screening restriction; its eviction grounds do not establish screening rules.",
+      "quoted_span": "The 17 just cause reasons for eviction under\nOrdinance Section 37.9(a)\nare summarized below:",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This eviction overview supplies no rule governing algorithmic rent setting or pricing services; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source limits application screening fees, not rent increases. It supplies no rent-increase cap.",
+      "quoted_span": "In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "The supplied section regulates rental applications and screening fees; it establishes no just-cause eviction duty.",
+      "quoted_span": "(a) Notwithstanding Section 1950.5, when a landlord or their agent receives a request to rent a residential property from an applicant, the landlord or their agent may charge, pursuant to subdivision (c), that applicant an application screening fee to cover the costs of obtaining information about the applicant.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The section expressly excludes application screening fees from security under Section 1950.5 and supplies no security-deposit limit or return rule.",
+      "quoted_span": "(k) The application screening fee shall not be considered an “advance fee” as that term is used in Section 10026 of the Business and Professions Code, and shall not be considered “security” as that term is used in Section 1950.5.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The screening-order, criteria-disclosure and first-qualified-approval duties are one alternative condition for charging a screening fee and are preserved in d026-permitted-screening-process. This source does not make that alternative a universal screening requirement or independently prohibit particular applicant information.",
+      "quoted_span": "(2) A landlord or their agent may charge an applicant an application screening fee only if the landlord or their agent, at the time the application screening fee is collected, offers any of the following:\n(A) An application screening process that complies with all of the following:\n(i) Completed applications are considered, as provided for in the landlord’s established screening criteria, in the order in which the completed applications were received. The landlord’s screening criteria shall be provided to the applicant in writing together with the application form.\n(ii) The first applicant who meets the landlord’s established screening criteria is approved for tenancy.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This source regulates application screening payments and processes; it supplies no algorithmic rent-setting restriction.",
+      "quoted_span": "(i) As used in\nthis section, “application screening fee” means any nonrefundable payment of money charged by a landlord or their agent to an applicant, the purpose of which is to purchase a consumer credit report and to validate, review, or otherwise process an application for the rent or lease of residential rental property.",
+      "source_doc_id": "D026",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+      "retrieved_at": "2026-10-01T22:35Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "The quoted rent-increase freeze ended January 31, 2024 and is not an active freeze as of October 1, 2026. It is not extracted as a current cap.",
+      "quoted_span": "Effective March 30, 2020, through January 31, 2024, rent increases are prohibited for rental units subject to the Rent Stabilization Ordinance (RSO).",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "The source lists security-deposit interest as an RSO topic but supplies no operative payment duty, rate, timing or qualifications sufficient for a rule.",
+      "quoted_span": "Interest Payments on Security Deposits",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied overview establishes no application or screening fee rule. Its registration and code-enforcement fee passages concern different charges; this finding does not establish that no application-fee law exists.",
+      "quoted_span": "What the RSO Covers\nAllowable rent increases\nRegistration of rental units\nLegal reasons for eviction\nTypes of evictions requiring payment of tenant relocation assistance\nRSO disclosure notice for all\n“Cash for Keys” or Buyout Agreements\nInterest Payments on Security Deposits",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "The supplied overview establishes no tenant-screening restriction. This is a finding about the supplied evidence, not the absence of applicable screening law.",
+      "quoted_span": "What the RSO Covers\nAllowable rent increases\nRegistration of rental units\nLegal reasons for eviction\nTypes of evictions requiring payment of tenant relocation assistance\nRSO disclosure notice for all\n“Cash for Keys” or Buyout Agreements\nInterest Payments on Security Deposits",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "The supplied overview establishes no algorithmic rent-setting rule or regulated pricing-service definition. No such prohibition can be extracted from its rent-increase provisions.",
+      "quoted_span": "What the RSO Covers\nAllowable rent increases\nRegistration of rental units\nLegal reasons for eviction\nTypes of evictions requiring payment of tenant relocation assistance\nRSO disclosure notice for all\n“Cash for Keys” or Buyout Agreements\nInterest Payments on Security Deposits",
+      "source_doc_id": "D041",
+      "source_url": "https://housing.lacity.gov/residents/rso-overview",
+      "retrieved_at": "2026-10-01T22:36Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "The supplied Division establishes no application or screening fee amount, cap, refund rule, or fee prohibition. Its limited displaced-tenant screening provision addresses methods and disclosure of minimum criteria, without specifying fees.",
+      "quoted_span": "The landlord shall have the right to screen the tenant using industry accepted \nmethods and shall communicate the minimum screening criteria in the written \noffer for the new tenancy. The tenant shall have 30 days from the date of \nreceipt of the offer to accept. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "No algorithmic rent-setting, pricing-software, or pricing-service duty or prohibition is stated in the supplied source. This is a source-limited finding, not a conclusion about other San Diego law.",
+      "quoted_span": "This \nDivision protects the rights of tenants by requiring just cause for termination of a \ntenancy consistent with California Civil Code section 1946.2, limiting the grounds for \ntermination of a tenancy, requiring greater tenant relocation assistance in specified \ncircumstances, and providing additional tenant protections. ",
+      "source_doc_id": "D073",
+      "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division07.pdf",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "rent_increase_limits",
+      "finding": "The JCO itself does not regulate rent increases. This is not a finding that Los Angeles rental properties lack rent limits under the RSO or state law.",
+      "quoted_span": "The JCO does not regulate rent increases, however, state law\nAB 1482, the California Tenant Protection Act of 2019\n,\nmay regulate the rent amount in buildings that are older than 15 years old.",
+      "source_doc_id": "D040",
+      "source_url": "https://housing.lacity.gov/residents/just-cause-for-eviction-ordinance-jco",
+      "retrieved_at": "2026-10-01T22:36Z"
     }
   ],
   "historical_pipeline_test": {

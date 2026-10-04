@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+    "started_at": "2026-10-04T11:12:20.263Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 1,
+    "model_turns_completed": 1,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D081",
+        "source_sha256": "e3437f99eae3882641b5052fd7006f2a0304abd2033e1b721a8c32324be2afab",
+        "prompt_sha256": "fea665fdadbf3d4f569dac2fb6f20a8675e2babb49aaae6f2c25025a5e0f8d29",
+        "response_sha256": "a18112a00a1c3b14126224e815239c26cd7ac693a9cd85860ffe677dcb633c43",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 0,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T11:12:20.280Z",
+        "finished_at": "2026-10-04T11:13:03.135Z",
+        "duration_ms": 42859,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "1277626946295f9547b28bd8ac57b8b3686780d71e6068d683e40e0b26269b69",
+        "usage": {
+          "input_tokens": 15082,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1169,
+          "reasoning_output_tokens": 336
+        }
+      }
+    ],
+    "status": "completed_machine_validation",
+    "continue_on_source_error": false,
+    "output": "artifacts/final-ca-probe-D081-authorized.json",
+    "lock_scope": "artifacts/final-ca-probe-D081-authorized.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T11:13:03.164Z",
+    "duration_ms": 42901,
+    "accepted_rule_count": 1,
+    "review_issue_count": 0,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d081-algorithmic-rent-devices",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "algorithmic_rent_setting",
+      "status": "in_force",
+      "title": "Prohibition on selling or using defined algorithmic rental devices",
+      "requirement": "Entities may not sell or use defined algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco. A tenant or the City Attorney may bring a civil action if they believe an entity violates the law.",
+      "key_value": null,
+      "coverage_conditions": {
+        "field": "residential",
+        "op": "eq",
+        "value": true
+      },
+      "exemptions": "The regulated term “algorithmic device” means a device, such as a software program, that uses algorithms to analyze nonpublic competitor rental data for the purpose of providing a landlord recommendations on what rent to charge for a vacant unit.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2024-10-14",
+      "citation": "San Francisco Rent Ordinance § 37.10C",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "quoted_span": "Legislation\nadding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.\nThe term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit. The law prohibits the sale or use of such algorithmic devices and allows a tenant or the City Attorney to bring a civil action if they believe an entity is in violation of the law.",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "This source establishes a prohibition on defined algorithmic devices, but supplies no rent-increase cap or formula.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "just_cause_eviction",
+      "finding": "This source supplies no just-cause eviction requirement; its reference to managing occupancy levels concerns defined algorithmic devices.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This source supplies no security-deposit rule.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This source supplies no application or screening-fee rule.",
+      "quoted_span": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This source supplies no tenant-screening restriction; its device definition concerns rental pricing recommendations.",
+      "quoted_span": "The term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit.",
+      "source_doc_id": "D081",
+      "source_url": "https://www.sf.gov/news/new-law-prohibits-algorithmic-devices-used-set-rents-san-francisco",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ]
+}

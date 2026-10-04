@@ -67,7 +67,7 @@ def base(index, headline, caption):
     im = Image.new("RGB", (WIDTH, HEIGHT), WHITE)
     d = ImageDraw.Draw(im)
     text(d, (112, 58), "LawDiff", 39, BLUE, True)
-    text(d, (1057, 66), "Technical walkthrough · Captioned", 27, MUTED, max_width=751)
+    text(d, (1017, 66), "Technical walkthrough · Synthetic narration", 23, MUTED, max_width=791)
     text(d, (112, 161), headline, 78, bold=True, max_width=1696, spacing=13)
     rule(d, 866)
     text(d, (112, 903), caption, 34, INK, max_width=1696, spacing=14)
@@ -138,7 +138,7 @@ def scenes(sources, snapshot):
     frames = []
     captions = []
     stats = snapshot["corpus"]["stats"]
-    cap = "Recorded model calls extract candidates; source review selects unchanged records.\nOne selected pack drives the workspace and all 500 submitted address lookups."
+    cap = "Recorded model calls extract rule candidates. Source review selects unchanged records.\nOne selected pack drives the workspace and all 500 submitted address lookups."
     im, d = base(1, "From source to rule.\nFrom rule to address.", cap)
     for x, num, title, detail in [(112, "01", "Extract", "Captured text + hash"), (728, "02", "Select", "Unchanged rule records"), (1344, "03", "Evaluate", "One shared engine")]:
         text(d, (x, 421), num, 27, BLUE, True)
@@ -155,7 +155,7 @@ def scenes(sources, snapshot):
     text(d, (112, 819), "Missing, rejected and unprocessed sources remain visible in the audit.", 27, MUTED, max_width=1696)
     frames.append(im); captions.append(cap)
 
-    cap = "Captured files carry hashes. Primary and supplemental quotations\nmust occur verbatim in their referenced source texts."
+    cap = "Captured files carry hashes. Source quotations must occur\nverbatim in their referenced text."
     im, d = base(2, "Keep the chain\nof evidence.", cap)
     columns = [(112, "01", "Capture", "Source identity + file hash"), (728, "02", "Link", "Record + exact passage"), (1344, "03", "Check", "Verbatim source match")]
     for x, n, title, sub in columns:
@@ -174,7 +174,7 @@ def scenes(sources, snapshot):
     text(d, (1025, 745), sha[:28] + "…", 28, INK)
     frames.append(im); captions.append(cap)
 
-    cap = "One JavaScript engine serves browser answers and submission exports.\nIt evaluates a restricted rule language. Runtime makes no model calls."
+    cap = "One JavaScript engine serves browser answers and submission exports.\nIt evaluates explicit conditions, without model calls at query time."
     im, d = base(3, "One engine.\nTwo outputs.", cap)
     rounded(d, (112, 421, 635, 710))
     text(d, (151, 463), "Restricted conditions", 38, INK, True)
@@ -191,7 +191,7 @@ def scenes(sources, snapshot):
     text(d, (112, 770), "User simulations stay separate from original sample exports.", 29, MUTED)
     frames.append(im); captions.append(cap)
 
-    cap = "Missing evidence remains unknown unless another condition decides it.\nCalendar checks distinguish effective dates from pending proposals."
+    cap = "Missing evidence remains unknown unless another condition decides it.\nCalendar checks distinguish effective laws from pending proposals."
     im, d = base(4, "Missing facts\nstay missing.", cap)
     for x, title, sub, fill in [(112, "TRUE", "Condition satisfied", LIGHT), (695, "FALSE", "Condition excluded", LIGHT), (1278, "UNKNOWN", "Evidence still needed", "#EAF0FF")]:
         rounded(d, (x, 428, x + 530, 654), fill)
@@ -201,7 +201,7 @@ def scenes(sources, snapshot):
     text(d, (112, 789), "Advancing the date never makes a pending bill active.", 29, MUTED)
     frames.append(im); captions.append(cap)
 
-    cap = "Regression tests challenge source tampering, jurisdiction mismatches,\nmalformed conditions, calendar boundaries and geographic provenance."
+    cap = "Regression tests cover source tampering, jurisdiction mismatches,\nmissing facts and calendar boundaries."
     im, d = base(5, "Test the\nfailure cases.", cap)
     text(d, (112, 412), str(snapshot["javascript_tests"]), 116, INK, True, max_width=420)
     text(d, (112, 566), "JavaScript tests passed", 33, MUTED)
@@ -215,7 +215,7 @@ def scenes(sources, snapshot):
 
     matches, total = snapshot["legal_city_matches"], snapshot["addresses"]
     unresolved = total - matches
-    cap = f"{matches} sample addresses have matched legal cities; {unresolved} remain unresolved.\nExact quotations support review. They do not prove legal interpretation."
+    cap = "Official geographic evidence identifies legal cities. Unresolved addresses stay visible.\nExact quotations support review, but do not prove legal interpretation."
     im, d = base(6, "Traceable\nis not certified.", cap)
     text(d, (105, 412), f"{matches} / {total}", 124, BLUE, True, max_width=1000)
     text(d, (112, 584), "Sample addresses with matched legal cities", 34, MUTED)
@@ -267,7 +267,7 @@ def main():
     for name, expected in snapshot["corpus"]["file_sha256"].items():
         if hashlib.sha256((ROOT / f"public/data/{name}.json").read_bytes()).hexdigest() != expected:
             raise RuntimeError("The validated data snapshot changed; rerun before writing media.")
-    durations = [9, 9, 10, 10, 10, 8]
+    durations = [12, 7, 10, 9, 7, 11]
     write_srt(captions, durations)
     concat = []
     for i, (im, duration) in enumerate(zip(frames, durations), 1):
@@ -278,7 +278,7 @@ def main():
     manifest = WORK / "timeline.ffconcat"
     manifest.write_text("\n".join(concat) + "\n")
     output = MEDIA / "lawdiff-tech.mp4"
-    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough · Captioned", "-metadata", "comment=Technical diagrams of automatic extraction, unchanged selection and shared evaluation, with a validated corpus receipt; no legal completeness or accuracy claim.", str(output)], "ffmpeg.log")
+    run(["ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0", "-i", str(manifest), "-vf", f"fps={FPS},format=yuv420p", "-t", "56", "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", "-an", "-metadata", "title=LawDiff — Technical walkthrough", "-metadata", "comment=Technical diagrams of automatic extraction, unchanged selection and shared evaluation, with a validated corpus receipt; no legal completeness or accuracy claim.", str(output)], "ffmpeg.log")
     probe = json.loads(run(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(output)]))
     video = next(s for s in probe["streams"] if s["codec_type"] == "video")
     assert video["codec_name"] == "h264" and video["width"] == WIDTH and video["height"] == HEIGHT

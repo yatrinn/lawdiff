@@ -23,9 +23,11 @@ test('review handoff keeps future requirements, active scope and local interacti
 test('review handoff does not turn unresolved city boundaries, pending or failed proposals into active obligations', () => {
   const local=reviewBriefFor(catalog,pack,'T2','2026-10-01');
   assert.equal(local.counts.applies,0);
-  assert.equal(local.counts.unknown,93);
+  // Census consensus resolves A0168, A0279, A0400 and A0428 without
+  // choosing a coordinate; only A0352 still has conflicting city evidence.
+  assert.equal(local.counts.unknown,91);
   const unresolved = local.records.filter(r=>!r.legal_city);
-  assert.equal(unresolved.length,5);
+  assert.deepEqual(unresolved.map(r=>r.address_id),['A0352']);
   assert(unresolved.every(r=>r.status==='unknown' && r.missing.includes('legal jurisdiction')));
   assert(local.records.filter(r=>r.legal_city).every(r=>r.missing.length>0));
   const pending=reviewBriefFor(catalog,pack,'T4','2028-12-31');

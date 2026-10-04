@@ -1,15 +1,15 @@
 {
   "version": 1,
   "format": "lawdiff-recorded-runs/1.0.0",
-  "generated_at": "2026-10-04T10:31:27.510Z",
+  "generated_at": "2026-10-04T11:31:06.355Z",
   "inputs": [
     {
       "path": "public/data/corpus-coverage.json",
-      "sha256": "d6cadcbec4e249b26ee05588fa3437abcddc031a9b62db254ad0d8561ae04b30"
+      "sha256": "dca1ebab2ec96da51273234491e59366115081f707f3f12ea8597daf9a8b31e6"
     },
     {
       "path": "data/extracted/automatic-selection.json",
-      "sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31"
+      "sha256": "752ee6828ec778bb0a3c5c0ad03843ee5aa4424a472bb101e11e163038541d5b"
     }
   ],
   "files": [
@@ -393,6 +393,108 @@
       ],
       "byte_length": 5253,
       "compiler_version": "lawdiff-codex-cli-compiler/1.2.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-la-D040-v132.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-la-D040-v132.json",
+      "sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be",
+      "run_id": "2026-10-04T11-25-31-316Z-7cd379f3",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 31159,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.2",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-la.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-la.json",
+      "sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe",
+      "run_id": "2026-10-04T11-13-37-285Z-bbaeef69",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 54837,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-probe-D081-authorized.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-probe-D081-authorized.json",
+      "sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962",
+      "run_id": "2026-10-04T11-12-20-257Z-f9a0e445",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 7332,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "completed_machine_validation"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-probe-D081-root.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-probe-D081-root.json",
+      "sha256": "0c9d234c6e9bcbbb5a9b9fd0729dcb89f2b413af31e236fdc1840db430402657",
+      "run_id": "2026-10-04T11-11-34-476Z-a3b2ce92",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2298,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-probe-D081.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-probe-D081.json",
+      "sha256": "3656b960a6e080d77f704a5f8c513bd7efc2297ae6ce453caaf9ecd099540ae7",
+      "run_id": "2026-10-04T11-07-33-446Z-7e3153a4",
+      "referenced_by": [
+        "corpus_coverage"
+      ],
+      "byte_length": 2287,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "stopped_requires_review"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-screening.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-screening.json",
+      "sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e",
+      "run_id": "2026-10-04T11-15-42-624Z-77b4e7c5",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 27400,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-sd.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-sd.json",
+      "sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0",
+      "run_id": "2026-10-04T11-13-38-927Z-38e24bdc",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 117242,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+      "status": "completed_with_review_items"
+    },
+    {
+      "artifact_path": "artifacts/final-ca-sf.json",
+      "archive_path": "data/extracted/recorded-runs/final-ca-sf.json",
+      "sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5",
+      "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+      "referenced_by": [
+        "corpus_coverage",
+        "automatic_selection"
+      ],
+      "byte_length": 29043,
+      "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
       "status": "completed_with_review_items"
     },
     {

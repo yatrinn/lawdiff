@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "provenance": {
+    "run_id": "2026-10-04T11-13-38-979Z-19f2ad19",
+    "compiler_version": "lawdiff-codex-cli-compiler/1.3.1",
+    "started_at": "2026-10-04T11:13:38.980Z",
+    "model": "gpt-6-astra",
+    "cli_version": "codex-cli 0.153.4",
+    "as_of": "2026-10-01",
+    "requests_sent": 2,
+    "model_turns_completed": 2,
+    "cache_hits": 0,
+    "sources": [
+      {
+        "source_doc_id": "D080",
+        "source_sha256": "924783981b92aabf2a5200517290879d008fd1e8c579969bdddaa28ff6f9fd7d",
+        "prompt_sha256": "064737fe0bdbd814452cd656cfc301851b0c06b28d717542590871b1f2d0fecc",
+        "response_sha256": "a3fdcaeb81b608dbefff1f21e5c62e75b4a035318cda594f9f970143bd4693de",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 1,
+        "review_issues": 2,
+        "no_rule_findings": 0,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T11:13:39.000Z",
+        "finished_at": "2026-10-04T11:14:10.534Z",
+        "duration_ms": 31535,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "3f6d421994e465aceb4e4e2b3c470423727c86e169586d835a139d16cfd5961e",
+        "usage": {
+          "input_tokens": 15150,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 844,
+          "reasoning_output_tokens": 214
+        }
+      },
+      {
+        "source_doc_id": "D079",
+        "source_sha256": "51f9490227bafc8a6f458c7e417f41bce3af07c1416fae77f281b987d97ef793",
+        "prompt_sha256": "1ab5b1dc319e6cef9897828f068b01bd2bd13aa443192b0c6e5809cd8bb1e495",
+        "response_sha256": "53ed3f263a933a493ea993143f45ee391bd7844eef975f86f6f081ae7163935f",
+        "schema_sha256": "3291a1424472e62a494839111e43a983dddb987ea5675083280e7a9da895718b",
+        "model": "gpt-6-astra",
+        "cli_version": "codex-cli 0.153.4",
+        "status": "validated_candidates",
+        "accepted_rules": 3,
+        "review_issues": 8,
+        "no_rule_findings": 5,
+        "rejected_review_quote_count": 0,
+        "started_at": "2026-10-04T11:14:10.543Z",
+        "finished_at": "2026-10-04T11:16:47.002Z",
+        "duration_ms": 156460,
+        "model_called_this_run": true,
+        "exit_code": 0,
+        "transport_sha256": "7383c92ee3fddd684be7d9d9e2615fa87c85e7da7bd3be955bbc331ac3f03dba",
+        "usage": {
+          "input_tokens": 15944,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5003,
+          "reasoning_output_tokens": 1027
+        }
+      }
+    ],
+    "status": "completed_with_review_items",
+    "continue_on_source_error": true,
+    "output": "artifacts/final-ca-sf.json",
+    "lock_scope": "artifacts/final-ca-sf.json",
+    "scope": "Only sources selected for this invocation; not a replacement for the public or reviewed rule pack.",
+    "limitations": [
+      "Structural and exact-source checks are not legal validation.",
+      "CLI token usage is not a monetary cost or accuracy claim.",
+      "Existing CLI authentication/security configuration is preserved; any detected tool event rejects the turn."
+    ],
+    "finished_at": "2026-10-04T11:16:47.008Z",
+    "duration_ms": 188028,
+    "accepted_rule_count": 4,
+    "review_issue_count": 10,
+    "rejected_review_quote_count": 0,
+    "no_rule_finding_count": 5,
+    "not_legal_review": true
+  },
+  "rules": [
+    {
+      "team_rule_id": "d080-annual-rent-increase-2026",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Annual allowable rent increase for March 2026–February 2027",
+      "requirement": "For rent-controlled units, landlords must use an annual allowable increase of 1.6% of the tenant's base rent for March 1, 2026 through February 28, 2027.",
+      "key_value": "1.6% of tenant's base rent",
+      "coverage_conditions": {
+        "field": "local_rent_control_applies",
+        "op": "eq",
+        "value": true
+      },
+      "exemptions": "Limited to rent-controlled units; the announcement does not define which units are rent-controlled.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2026-03-01",
+      "end_date": "2027-03-01",
+      "citation": "San Francisco Rent Board, Annual Rent Increase for 3/1/26 - 2/28/27 Announced, January 14, 2026",
+      "source_doc_id": "D080",
+      "source_url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+      "quoted_span": "For\nrent-controlled units\n, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.\nTo calculate the dollar amount of the 1.6% annual rent increase, multiply the tenant's base rent by .016. For example, if the tenant's base rent is $2,000.00, the annual increase would be calculated as follows: $2,000.00 x .016 = $32.00. The tenant's new base rent would be $2,032.00 ($2,000.00 + $32.00).",
+      "confidence": null,
+      "conflict_flag": false,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d079-just-cause-eviction",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Just cause must be the dominant eviction motive",
+      "requirement": "A landlord evicting a tenant covered by the Rent Ordinance's eviction provisions must have one of the 17 specified just-cause reasons as the dominant motive; mere expiration of a rental agreement or a change in ownership does not suffice. A landlord who unlawfully evicts or attempts to evict a tenant may face substantial civil and/or criminal liability.",
+      "key_value": "17 specified just-cause grounds",
+      "coverage_conditions": "Applies to rental tenancies covered by the San Francisco Rent Ordinance's eviction provisions. Coverage includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies eligible for a rent increase under the Costa-Hawkins Rental Housing Act, and some tenancies whose rent is regulated by another government agency, even when exempt from the Ordinance's rent increase limitations. The source does not fully define covered rental tenancies, enumerate eviction exemptions, or identify which tenancies regulated by another government agency are included; those address-level eligibility questions require review.",
+      "execution_review_pending": true,
+      "exemptions": "The summarized grounds are: nonpayment, habitual late payment, or frequent bounced checks; failure to cure a substantial lease breach; nuisance or substantial interference with the landlord's or other tenants' comfort, safety, or enjoyment that is severe, continuing, or reoccurring; illegal use, excluding mere occupancy of an unwarranted unit and a single Chapter 41A short-term rental violation cured within 30 days of the landlord's written notice; refusal after written request to renew an expired agreement for a like term on materially the same terms; refusal after written notice to cease to permit legally required landlord access; an unapproved subtenant being the only tenant remaining at the agreement's end, with approval potentially oral or implied by the landlord's conduct; owner occupancy or, in limited circumstances, occupancy by immediate family; good-faith recovery to sell pursuant to an approved condominium conversion; demolition or permanent removal of an individual unit from housing use; capital improvements or rehabilitation temporarily making the unit uninhabitable, with immediate reoccupancy after completion; substantial rehabilitation of an essentially uninhabitable building at least 50 years old, with proposed work costing at least 75% of new construction; withdrawal of all building rental units under the Ellis Act; lead remediation or abatement required by Health Code Articles 11 or 26; demolition or permanent removal pursuant to a City development agreement under Administrative Code Chapter 56; expiration of a Good Samaritan occupancy agreement with eviction notice served within 60 days after expiration, where the tenancy provides a reduced-rent temporary replacement unit to a tenant displaced by emergency or disaster; and completion of a development project requiring demolition under Planning Code Section 317. The source does not detail the limited circumstances permitting immediate-family occupancy or all requirements of the referenced grounds. Exemption from rent increase limitations does not itself establish exemption from eviction protections.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "San Francisco Rent Ordinance, Section 37.9(a)",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction. Note that the mere expiration of a rental agreement or a change in ownership does not constitute \"just cause\" for eviction.\nThe 17 just cause reasons for eviction under\nOrdinance Section 37.9(a)\nare summarized below:\nNon-payment of rent, habitual late payment of rent, or frequent bounced checks;\nFailure to cure a substantial breach of a rental agreement or lease;\nNuisance or substantial interference with the comfort, safety, or enjoyment of the landlord or other tenants in the building, the nature of which must be severe, continuing or reoccurring in nature;\nIllegal use of a rental unit, not including (a) the mere occupancy of an unwarranted rental unit or (b) a single violation of San Francisco’s short-term rental law (Chapter 41A) that is cured by the tenant within 30 days of written notice by the landlord;\nThe tenant has refused, after written request by the landlord, to execute a written extension or renewal of an expired rental agreement for a further term of like duration and under terms that are materially the same as the previous agreement;\nThe tenant has refused, after written notice to cease, to allow the\nlandlord access to the rental unit\nas required by state or local law;\nThe only tenant residing in the unit at the end of the term of the rental agreement is a subtenant not approved by the landlord. (Note that approval need not be in writing and may be implied from the landlord’s conduct);\nOwner-occupancy\nor, in limited circumstances, occupancy by a member of the landlord's immediate family;\nThe landlord seeks to recover possession in good faith in order to sell the unit in accordance with a condominium conversion approved under the San Francisco subdivision ordinance;\nTo\ndemolish or to otherwise permanently remove an individual rental unit\nfrom housing use;\nTo perform capital improvements or rehabilitation work\nthat will make the unit temporarily uninhabitable while the work is performed – the tenant must be allowed to reoccupy the unit immediately after the work is completed;\nTo perform substantial rehabilitation\nof a building that is at least 50 years old and essentially uninhabitable, provided that the cost of the proposed work is at least 75% of the cost of new construction;\nTo withdraw all rental units in a building from the rental market under the state\nEllis Act;\nTo perform lead remediation/abatement work required by San Francisco Health Code Articles 11 or 26;\nTo demolish or to otherwise permanently remove the rental unit from housing use in accordance with the terms of a development agreement entered into by the City under Chapter 56 of the San Francisco Administrative Code;\nWhere the tenant’s “\nGood Samaritan\n” occupancy agreement has expired, and the landlord served an eviction notice within 60 days after expiration of the agreement. A “Good Samaritan” tenancy occurs when a tenant is displaced from a rental unit due to an emergency or disaster and the landlord agrees to provide the tenant a temporary replacement unit at a reduced rent; and\nTo complete a development project that will require the existing property to be demolished under Section 317 of the Planning Code.\nThe landlord also needs a \"just cause“ reason to take away or remove access to certain\nhousing services\n, including but not limited to garage facilities, parking facilities, driveways, storage spaces, and laundry rooms. However, a landlord who has complied with the requirements of Ordinance Section 37.2(r) may\ntemporarily remove certain housing services\n, including parking and storage spaces, in order to perform mandatory soft-story seismic retrofit work required by\nthe Building Code\n.\nSome tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.\nSince evictions are complex proceedings, landlords should proceed with caution and seek the advice of an attorney before asking a tenant to move or attempting an eviction. If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d079-housing-services-just-cause",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Just cause for removal of housing services",
+      "requirement": "A landlord must have a just-cause reason to take away or remove access to covered housing services, including garage facilities, parking facilities, driveways, storage spaces, and laundry rooms. A landlord complying with Ordinance Section 37.2(r) may temporarily remove certain services, including parking and storage, to perform mandatory soft-story seismic retrofit work required by the Building Code.",
+      "key_value": null,
+      "coverage_conditions": "Applies within the source's discussion of rental tenancies covered by the San Francisco Rent Ordinance's eviction provisions. Those protections can include newly constructed units first receiving a Certificate of Occupancy after June 13, 1979, tenancies eligible for Costa-Hawkins rent increases, and some tenancies with rent regulated by another government agency despite exemption from rent increase limits. The source does not fully specify tenancy coverage or exemptions, identify the included government-regulated tenancies, or establish whether the housing-services provision has any additional address-level limitations. These eligibility questions require review.",
+      "execution_review_pending": true,
+      "exemptions": "The service list is nonexclusive. Temporary removal of certain housing services for mandatory Building Code soft-story seismic retrofit work is permitted only when the landlord has complied with Ordinance Section 37.2(r); the source does not reproduce those requirements or fully identify the services eligible for this exception.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "San Francisco Rent Ordinance; Section 37.2(r)",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "quoted_span": "The landlord also needs a \"just cause“ reason to take away or remove access to certain\nhousing services\n, including but not limited to garage facilities, parking facilities, driveways, storage spaces, and laundry rooms. However, a landlord who has complied with the requirements of Ordinance Section 37.2(r) may\ntemporarily remove certain housing services\n, including parking and storage spaces, in order to perform mandatory soft-story seismic retrofit work required by\nthe Building Code\n.\nSome tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    },
+    {
+      "team_rule_id": "d079-reoccupancy-after-work",
+      "jurisdiction": "San Francisco, CA",
+      "level": "city",
+      "category": "just_cause_eviction",
+      "status": "in_force",
+      "title": "Immediate reoccupancy after temporary displacement for work",
+      "requirement": "When a landlord recovers possession for capital improvements or rehabilitation work that makes a covered rental unit temporarily uninhabitable, the landlord must allow the tenant to reoccupy the unit immediately after the work is completed.",
+      "key_value": "Immediately after work is completed",
+      "coverage_conditions": "Applies to rental tenancies covered by the San Francisco Rent Ordinance's eviction provisions. The source includes newly constructed units first receiving a Certificate of Occupancy after June 13, 1979, tenancies eligible for Costa-Hawkins rent increases, and some tenancies with rent regulated by another government agency despite exemption from rent increase limits. It does not fully define tenancy coverage, enumerate eviction exemptions, or identify the included government-regulated tenancies; those address-level eligibility questions require review.",
+      "execution_review_pending": true,
+      "exemptions": "This reoccupancy duty is stated for capital improvements or rehabilitation that temporarily makes the unit uninhabitable. The source separately lists substantial rehabilitation of an essentially uninhabitable building at least 50 years old with proposed work costing at least 75% of new construction; it does not expressly extend this reoccupancy duty to that separate ground or to permanent removal from housing use.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": null,
+      "citation": "San Francisco Rent Ordinance, Section 37.9(a)",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "quoted_span": "To perform capital improvements or rehabilitation work\nthat will make the unit temporarily uninhabitable while the work is performed – the tenant must be allowed to reoccupy the unit immediately after the work is completed;\nTo perform substantial rehabilitation\nof a building that is at least 50 years old and essentially uninhabitable, provided that the cost of the proposed work is at least 75% of the cost of new construction;",
+      "confidence": null,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "retrieved_at": "2026-10-01T22:37Z",
+      "extraction_method": "codex_cli_structured_extraction",
+      "review_status": "machine_validated_not_legally_reviewed"
+    }
+  ],
+  "review": [
+    {
+      "issue": "The prior 1.4% annual allowable increase ended before the as-of date and is not extracted as a current rule.",
+      "quoted_span": "The annual allowable increase amount effective March 1, 2025 through February 28, 2026 is 1.4%.",
+      "source_doc_id": "D080",
+      "source_url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "This announcement supplies no operative duties for just_cause_eviction, security_deposits, application_screening_fees, screening_restrictions, or algorithmic_rent_setting. No rules are extracted for those categories; this does not establish that no such rules exist.",
+      "quoted_span": null,
+      "source_doc_id": "D080",
+      "source_url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source presents these duties as current, supporting in_force treatment as of 2026-10-01, but supplies no precise effective date for any extracted rule. All effective_date values remain null.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Complete address-level coverage cannot be established from this overview. It does not enumerate eviction exemptions or identify which tenancies regulated by another government agency are protected. Rent-control exemption must not be treated as eviction exemption, and dataset membership supplies no missing eligibility facts.",
+      "quoted_span": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The overview summarizes eviction grounds without providing all referenced legal requirements. In particular, it does not identify the limited circumstances permitting immediate-family occupancy; the extracted list must not be treated as a complete authorization to evict.",
+      "quoted_span": "Owner-occupancy\nor, in limited circumstances, occupancy by a member of the landlord's immediate family;",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source does not reproduce Section 37.2(r)'s requirements or fully define the services eligible for temporary removal. It also does not expressly resolve whether housing-service removal has address-level coverage qualifications beyond the surrounding eviction discussion.",
+      "quoted_span": "However, a landlord who has complied with the requirements of Ordinance Section 37.2(r) may\ntemporarily remove certain housing services\n, including parking and storage spaces, in order to perform mandatory soft-story seismic retrofit work required by\nthe Building Code\n.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "The source states possible substantial civil and/or criminal liability for unlawful eviction or attempted eviction, but supplies no amounts, plaintiff-standing rules, per-violation counting, or further liability standards. It does not separately establish sanctions for housing-service removal or denial of reoccupancy.",
+      "quoted_span": "If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-just-cause-eviction: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-housing-services-just-cause: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "issue": "Execution review required for d079-reoccupancy-after-work: source-backed coverage is preserved in prose. Do not apply this rule to properties until all material conditions and exceptions are represented and reviewed.",
+      "quoted_span": null,
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ],
+  "no_rule_findings": [
+    {
+      "category": "rent_increase_limits",
+      "finding": "The source distinguishes rent increase exemptions from eviction coverage but supplies no operative rent cap, increase formula, or complete rent-limit eligibility rule.",
+      "quoted_span": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "security_deposits",
+      "finding": "This eviction overview supplies no security-deposit duty or limit; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "application_screening_fees",
+      "finding": "This eviction overview supplies no application or screening-fee duty or limit; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "screening_restrictions",
+      "finding": "This eviction overview supplies no applicant-screening restriction; its eviction grounds do not establish screening rules.",
+      "quoted_span": "The 17 just cause reasons for eviction under\nOrdinance Section 37.9(a)\nare summarized below:",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    },
+    {
+      "category": "algorithmic_rent_setting",
+      "finding": "This eviction overview supplies no rule governing algorithmic rent setting or pricing services; this is not a finding that no such law exists.",
+      "quoted_span": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+      "source_doc_id": "D079",
+      "source_url": "https://sf.gov/information/overview-just-cause-evictions",
+      "retrieved_at": "2026-10-01T22:37Z"
+    }
+  ]
+}

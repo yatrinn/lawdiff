@@ -22,6 +22,11 @@ for name in ("lawdiff-demo.mp4", "lawdiff-tech.mp4", "VIDEO_NOTES.md", "TECH_VID
     files[f"media/{name}"] = root / "media" / name
 for path in (root / "media").glob("lawdiff-*.srt"):
     files[f"media/{path.name}"] = path
+for path in (root / "media").glob("lawdiff-*.probe.json"):
+    files[f"media/{path.name}"] = path
+for path in (root / "media/narration").iterdir():
+    if path.suffix in (".json", ".mp3"):
+        files[f"media/narration/{path.name}"] = path
 for path in (root / "presentation").iterdir():
     if path.suffix in (".pdf", ".pptx"):
         files[f"presentation/{path.name}"] = path
@@ -44,8 +49,9 @@ intro = """LAWD IFF / HACK-NATION 7 / REALPAGE
 Vollständiger Quellcode: https://github.com/yatrinn/lawdiff
 
 Die drei Challenge-Dateien und die einseitige Methodennotiz liegen direkt hier.
-media/ enthält den Demo- und Technikfilm (je 56 Sekunden, englische Einblendungen,
-ohne Ton). presentation/ enthält den Pitch als PDF und bearbeitbare PowerPoint.
+media/ enthält den Demo- und Technikfilm (je 56 Sekunden, englische Einblendungen
+und eine als synthetisch gekennzeichnete englische Sprecherstimme).
+presentation/ enthält den Pitch als PDF und bearbeitbare PowerPoint.
 docs/submission-guide.md führt durch beide erforderlichen Abgaben.
 docs/video-scripts.md enthält deinen englischen Text für das persönliche Teamvideo.
 

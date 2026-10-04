@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-04T11:00:00.303Z",
-  "rules": 89,
-  "executable_rules": 13,
-  "coverage_review_records": 76,
-  "primary_quotes": 89,
+  "generated_at": "2026-10-04T11:36:27.130Z",
+  "rules": 133,
+  "executable_rules": 22,
+  "coverage_review_records": 111,
+  "primary_quotes": 133,
   "supplemental_quotes": 0,
   "addresses": 500,
-  "geocoded": 475,
+  "geocoded": 491,
   "source_texts": 73,
   "official_score": null,
   "legal_review": false,
-  "pack_sha256": "d17411015bdfe1b4102b322c12d6f75a38dd8a81e4442375dd574deb2a8e2f5d",
+  "pack_sha256": "a1f226751ee1f3efb5edf47bddee6e8c7a1c8f3c523126487b25fda859ca516c",
   "corpus_file_sha256": {
-    "catalog": "c57399cb93251f87e0114b1e1d8e6d34cd282c2a796a8a9d3785c1cdc332f69b",
-    "corpus-coverage": "d6cadcbec4e249b26ee05588fa3437abcddc031a9b62db254ad0d8561ae04b30",
-    "corpus-candidates": "7eb05fb53649009f7310e22583c3103b7a667ffb63f405c6b3d0f701b26caae5",
-    "rule-pack": "853774902cd29c92855db5e54d91ec1bc5cd10a494ad47844e85f355846d7d38"
+    "catalog": "e1c7f531238eb0c8b814b1e903fdaca5977211fa417e5a7ed66253ee7ad530a1",
+    "corpus-coverage": "dca1ebab2ec96da51273234491e59366115081f707f3f12ea8597daf9a8b31e6",
+    "corpus-candidates": "04b6c187086b59317fe0da85a6cf98e6f4358436e7651ec4d656b6659af18e72",
+    "rule-pack": "4c93ef351b09c99e4528407904a30e5d3ae11f16d96488867b03b8e8a7ab77b3"
   },
   "automatic_selection": {
-    "source_file_sha256": "edf6ac6b64c9dca4e8d0cf23b5f2e3e794b781d4836cd98270d5cd3825384859",
-    "selection_file_sha256": "169bfc039dd1f932ea98d2088b186d0b153f8008ebf6cf4e53eec78331319a31",
+    "source_file_sha256": "4630407620c2dfbf431d8aaa4501dd15254edb6781acb5d58718b174a6615cd0",
+    "selection_file_sha256": "752ee6828ec778bb0a3c5c0ad03843ee5aa4424a472bb101e11e163038541d5b",
     "original_artifacts_revalidated": true,
     "rules_modified": false,
     "independent_legal_review": false

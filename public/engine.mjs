@@ -198,9 +198,15 @@ export function evaluateCondition(node, facts) {
   ]);
 }
 export function factsFor(address, overrides = {}, asOf) {
+  // Use explicit assessor descriptions, never membership in the sample or a
+  // mailing-city label. Residential use does not prove a primary residence,
+  // the absence of an exemption, ownership, or current tenancy.
+  const useDescription = String(address.use_description ?? "").trim();
+  const explicitResidential = /^(?:five or more apartments|apartment (?:5 to 14 units|15 units or more)|apt 7-30 units|luxury apartment|(?:mxd )?(?:4-8-unit-apt|>8-unit-apt)|flats? (?:& store )?5 to 14 units)$/i.test(useDescription);
   const facts = {
     year_built: address.year_built,
     units: address.units,
+    ...(explicitResidential ? { residential: true } : {}),
     ...overrides,
   };
   if (
@@ -321,15 +327,17 @@ export function evaluateRule(rule, address, asOf, overrides = {}) {
       result: "unknown",
       missing: c.missing,
       explanation:
-        coverageReview ? "This source-supported rule has documented coverage and exceptions that still require specialist review before address applicability can be determined."
-          : "The outcome depends on evidence missing from the supplied building record.",
+        coverageReview
+          ? `Unknown: executable scope interpretation requires specialist review${rule.citation ? ` (${rule.citation})` : ""}. Scope to review: ${rule.coverage_conditions.length > 360 ? rule.coverage_conditions.slice(0, 357) + "…" : rule.coverage_conditions}`
+          : `Unknown: ${c.missing.map(f => FACTS[f] || f).join("; ")} not established by the supplied record${rule.citation ? ` (${rule.citation})` : ""}. Verify relevant evidence; a decisive condition may resolve the result before every missing fact is known.`,
     };
   return {
     ...base,
     trace: c.trace,
     result: "applies",
     conflict_flag: !!rule.conflict_flag,
-    explanation: rule.requirement,
+    explanation: rule.requirement + (c.trace.some(t => t.field === "residential") && !Object.hasOwn(overrides, "residential") && factsFor(address, {}, asOf).residential === true
+      ? ` Residential-use evidence: supplied assessor description “${address.use_description}”. This does not establish a primary residence or the absence of exemptions.` : ""),
   };
 }
 export function evaluateAddress(rules, address, asOf, overrides = {}) {

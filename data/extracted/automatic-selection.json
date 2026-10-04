@@ -225,6 +225,106 @@
       ],
       "reason": "Selected unchanged after AI-assisted comparison with the complete captured statute. The operative date is April 1, 2024, and repeal boundary January 1, 2030. All material exemptions remain narrative and require interpretation review; no address is declared covered on incomplete facts. This is not independent legal validation.",
       "artifact_sha256": "00f4ec440182a15f58052a416d9d3036ea4a2d96c32f89cb90384977d54176b1"
+    },
+    {
+      "artifact": "artifacts/final-ca-probe-D081-authorized.json",
+      "source_doc_id": "D081",
+      "rule_ids": [
+        "d081-algorithmic-rent-devices"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Official Rent Board source expressly gives October 14, 2024 commencement. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "04048fe8d0ce7550db68597c38e365660729a46022724c2ed04ed6804d27e962"
+    },
+    {
+      "artifact": "artifacts/final-ca-sf.json",
+      "source_doc_id": "D080",
+      "rule_ids": [
+        "d080-annual-rent-increase-2026"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Source explicitly limits the 1.6% annual allowable increase to rent-controlled units and March 1, 2026\u2013February 28, 2027. AST requires established local rent control; no address is assumed covered. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5"
+    },
+    {
+      "artifact": "artifacts/final-ca-sf.json",
+      "source_doc_id": "D079",
+      "rule_ids": [
+        "d079-just-cause-eviction",
+        "d079-housing-services-just-cause",
+        "d079-reoccupancy-after-work"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Three unchanged summaries preserve the source-defined just-cause grounds, dominant motive, housing-service exception and immediate reoccupancy after temporary work. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "4dc0d58049b4833b88b521c626d24effbd4416d83a23aa1a60736e38d473dac5"
+    },
+    {
+      "artifact": "artifacts/final-ca-screening.json",
+      "source_doc_id": "D026",
+      "rule_ids": [
+        "d026-screening-fee-cap",
+        "d026-unit-availability",
+        "d026-permitted-screening-process",
+        "d026-itemized-fee-receipt",
+        "d026-unused-fee-refund",
+        "d026-credit-report-copy"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. All six executable records use the residential property predicate while preserving landlord/agent and transaction triggers in requirement/exemptions. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "7e48b931c7199accb9a2d155f2b58d8736ceb3325fcd640fd9a5f6eaeefc188e"
+    },
+    {
+      "artifact": "artifacts/final-ca-la.json",
+      "source_doc_id": "D041",
+      "rule_ids": [
+        "d041-annual-increase-frequency",
+        "d041-utility-increase-prohibition",
+        "d041-dependent-increase-prohibition",
+        "d041-additional-tenant-increase",
+        "d041-market-rate-reset",
+        "d041-code-enforcement-fee-pass-through",
+        "d041-detector-surcharge",
+        "d041-program-increase-approval",
+        "d041-eviction-grounds",
+        "d041-termination-notice-filing",
+        "d041-no-fault-relocation",
+        "d041-no-fault-declaration",
+        "d041-right-to-counsel-notice"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Thirteen unchanged local summaries preserve annual-increase frequency, February 2026 utilities/dependent changes, additional-tenant limits, qualified market reset, qualified pass-throughs, approved programs and eviction/notice duties. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "b586c095613987d9d81546e7741787ede464134dae1585212c68bcb2dbfabcfe"
+    },
+    {
+      "artifact": "artifacts/final-ca-sd.json",
+      "source_doc_id": "D073",
+      "rule_ids": [
+        "d073-just-cause",
+        "d073-owner-occupancy",
+        "d073-owner-termination-rent",
+        "d073-demolition-remodel",
+        "d073-protection-notice",
+        "d073-curable-violation-notice",
+        "d073-no-fault-notice-relocation",
+        "d073-displaced-tenant-reoffer",
+        "d073-reoffer-screening",
+        "d073-deposit-separate-relocation",
+        "d073-buyout-disclosure",
+        "d073-buyout-agreement",
+        "d073-no-retaliation",
+        "d073-enforcement-remedies"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fourteen unchanged records cover qualified just cause, owner occupancy, limited post-termination rent, remodeling, notices, relocation/reoffer, screening disclosure, separate security return, buyouts, retaliation and remedies. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "ded12bc8074f53b7cf7447429141c39014144e9f64ed9ad8717bea07dcb473f0"
+    },
+    {
+      "artifact": "artifacts/final-ca-la-D040-v132.json",
+      "source_doc_id": "D040",
+      "rule_ids": [
+        "d040-jco-just-cause",
+        "d040-no-fault-relocation",
+        "d040-right-to-counsel-notice",
+        "d040-renters-protections-notice",
+        "d040-nonpayment-eviction-threshold",
+        "d040-eviction-notice-filing"
+      ],
+      "reason": "Unchanged fresh automatic candidates selected after AI-assisted source review. Fresh compiler 1.3.2 extraction succeeded after the prior 1.3.1 source attempt was rejected; no failed candidate was edited or reused. Missing facts and interpretation-review flags remain intact; not independent legal validation.",
+      "artifact_sha256": "c94eed772d3a4b71d4909ab7060887a0f4f9759c8f93b49bcd9e1961fcf612be"
     }
   ]
 }

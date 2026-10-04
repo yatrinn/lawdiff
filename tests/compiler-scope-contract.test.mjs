@@ -39,8 +39,8 @@ test('both compiler transports share one versioned scope contract and non-eviden
   const originalSchema = structuredClone(schema);
   const api = makeRequest(source, { model: 'test-model', maxOutputTokens: 8000 }, schema, asOf);
   const cli = makePrompt(source, { model: 'test-model' }, schema, asOf);
-  assert.equal(COMPILER_VERSION, 'lawdiff-source-compiler/1.3.1');
-  assert.equal(VERSION, 'lawdiff-codex-cli-compiler/1.3.1');
+  assert.equal(COMPILER_VERSION, 'lawdiff-source-compiler/1.3.2');
+  assert.equal(VERSION, 'lawdiff-codex-cli-compiler/1.3.2');
   for (const prompt of [api.request.system, cli.prompt]) {
     assert.equal(prompt.split(ADDRESS_SCOPE_CONTRACT).length, 2, 'The shared contract occurs exactly once.');
     assert.match(prompt, /not property-specific evidence of primary residence/);
@@ -67,6 +67,16 @@ test('prompt and schema fingerprints are reproducible and bind source/context/ve
   assert.notEqual(a.promptHash, hash(a.prompt.replace(COMPILER_VERSION, 'lawdiff-source-compiler/1.2.1')));
   assert.notEqual(a.promptHash, hash(a.prompt.replace(ORGANIZER_SCOPE_CONTEXT, 'Different research context.')));
   assert.notEqual(a.promptHash, makePrompt({ ...source, text: source.text + '\nAdditional evidence.' }, { model: 'test-model' }, schema, asOf).promptHash);
+});
+
+test('a city guidance source cannot silently emit or relabel a statewide rule', () => {
+  const citySource = { ...source, jurisdictions: 'Example City, NJ' };
+  assert.throws(() => validateExtraction(extraction(rule), citySource, schema), /Jurisdiction differs from source manifest/);
+  const prompt = makePrompt(citySource, { model: 'test-model' }, schema, asOf).prompt;
+  assert.match(prompt, /do not emit a different-jurisdiction record or relabel that statewide statute as a city ordinance/);
+  const reviewed = validateExtraction({ rules: [], review: [{ issue: 'The page describes a statewide statute; extract that duty from the statewide source.', quoted_span: quote }], no_rule_findings: [] }, citySource, schema);
+  assert.equal(reviewed.rules.length, 0);
+  assert.equal(reviewed.review[0].source_doc_id, citySource.doc_id);
 });
 
 test('automatic records preserve operative start and exclusive statutory sunset through evaluation', () => {

@@ -1,50 +1,200 @@
 {
-  "programs": [],
-  "stream_groups": [],
   "streams": [
     {
+      "index": 0,
       "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
       "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
       "width": 1920,
       "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1080,
+      "closed_captions": 0,
+      "film_grain": 0,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
       "pix_fmt": "yuv420p",
+      "level": 41,
+      "color_range": "tv",
+      "color_space": "bt470bg",
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "refs": 1,
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "30/1",
       "avg_frame_rate": "30/1",
-      "nb_frames": "1680"
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 860160,
+      "duration": "56.000000",
+      "bit_rate": "246051",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "1680",
+      "extradata_size": 51,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "vendor_id": "[0][0][0][0]",
+        "encoder": "Lavc61.19.101 libx264"
+      }
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "sample_fmt": "fltp",
+      "sample_rate": "48000",
+      "channels": 1,
+      "channel_layout": "mono",
+      "bits_per_sample": 0,
+      "initial_padding": 0,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 2688000,
+      "duration": "56.000000",
+      "bit_rate": "131272",
+      "nb_frames": "2623",
+      "extradata_size": 5,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "SoundHandler",
+        "vendor_id": "[0][0][0][0]"
+      }
     }
   ],
   "format": {
+    "filename": "/Users/Notebook/Documents/Codex/2026-10-03/skip-to-workspace-https-app-hack/outputs/lawdiff/media/lawdiff-demo.mp4",
+    "nb_streams": 2,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "format_long_name": "QuickTime / MOV",
+    "start_time": "0.000000",
     "duration": "56.000000",
-    "size": "1720336"
+    "size": "2704900",
+    "bit_rate": "386414",
+    "probe_score": 100,
+    "tags": {
+      "major_brand": "isom",
+      "minor_version": "512",
+      "compatible_brands": "isomiso2avc1mp41",
+      "title": "LawDiff \u2014 demo walkthrough",
+      "encoder": "Lavf61.7.100",
+      "comment": "Edited walkthrough with English captions and a synthetic preset narrator. No voice cloning or live-model-run claim."
+    }
   },
-  "composition": {
-    "kind": "actual_interface_captures_edited_walkthrough",
-    "scene_seconds": [
-      8,
-      9,
-      10,
-      10,
-      10,
-      9
+  "narration": {
+    "synthetic": true,
+    "preset_voice": "Leslie, preset synthetic voice",
+    "provider": "Runway speech generation",
+    "chapters": [
+      {
+        "chapter": 1,
+        "start_seconds": 0.3,
+        "source_seconds": 7.000816,
+        "tempo": 1,
+        "file": "demo-1.mp3",
+        "sha256": "2fefe7ccc44efa9798c39422179f0edd6f98a5ad3177437951e423df35d8448f"
+      },
+      {
+        "chapter": 2,
+        "start_seconds": 8.3,
+        "source_seconds": 7.340408,
+        "tempo": 1,
+        "file": "demo-2.mp3",
+        "sha256": "f1d34e350e0d2ab793e24517f217ae383e6b6185356759238fa03e6ca1fd1196"
+      },
+      {
+        "chapter": 3,
+        "start_seconds": 17.3,
+        "source_seconds": 6.582857,
+        "tempo": 1,
+        "file": "demo-3.mp3",
+        "sha256": "198f822a05bcef8962090d209274ce47fb0aa0ac555e7cd8de887e0cfc9a88fc"
+      },
+      {
+        "chapter": 4,
+        "start_seconds": 27.3,
+        "source_seconds": 6.817959,
+        "tempo": 1,
+        "file": "demo-4.mp3",
+        "sha256": "da9a885841a9deac2f8c75dd45996d7e0cde972a9aa50a43d8efd401cc5fed29"
+      },
+      {
+        "chapter": 5,
+        "start_seconds": 37.3,
+        "source_seconds": 6.164898,
+        "tempo": 1,
+        "file": "demo-5.mp3",
+        "sha256": "7c0f69e47257a6f8aeb79355ec6f0238bcb80de25776a413fe716b61d0b9122c"
+      },
+      {
+        "chapter": 6,
+        "start_seconds": 47.3,
+        "source_seconds": 9.560816,
+        "tempo": 1.145007904191617,
+        "file": "demo-6.mp3",
+        "sha256": "bc82e38991cce99c5fc22aed47af55f8b30230a4a98f198a4836968a22fe1312"
+      }
     ],
-    "scene_three_seconds": {
-      "review-demo-03-address.png": 4,
-      "review-demo-03.png": 6
-    },
-    "caption_word_count": 102,
-    "source_sha256": {
-      "review-demo-01.png": "a34c402768f4956bfa260ca04e81a222e1a6aea70d440d30dac0cad17358bd71",
-      "review-demo-02.png": "12b7f2f3d34f606a80fa9e40ffad2e61356c11b6954d26437f4013b599246ea2",
-      "review-demo-03.png": "b5dba222b56317c4b487f25e946f73f6af63149f525e76df8eea7037a67468d2",
-      "review-demo-04.png": "a53151a28baf92c1ae4715be82ed0147d5c1c077b25c875bcfb31566700d6b4a",
-      "review-demo-05.png": "903e1c0f6cdcffafd9a7be225491699e949f775d78d12d1d32cbf206f9736bac",
-      "review-demo-06.png": "15cd6c5954b637f6c93c133c78aff9f61b0d4d178711d02d545d138da8be3b24",
-      "review-demo-03-address.png": "4a65363dbf821df05c002afa6aa4a7f2120d46e57650e379d2b93b1ee8bdeb05"
-    },
-    "source_capture_dimensions": [
-      1440,
-      1000
-    ],
-    "source_files_modified": false,
-    "audio": false
+    "voice_cloning": false,
+    "speech_truncated": false
   }
 }

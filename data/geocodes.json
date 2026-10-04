@@ -5396,12 +5396,12 @@
     "postal_city_differs": true
   },
   "A0094": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "San Diego",
+    "county": "San Diego County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "1371 27TH ST",
       "postal_city": "San Diego",
@@ -5428,8 +5428,8 @@
       },
       "response_sha256": "c2a2de8da7699705c16a3e7c3544bb0fe44d47567ba49ad34cd0a8044663afe4",
       "raw_response": "data/geocode-cache/A0094.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -5439,9 +5439,58 @@
           "match_count": 2,
           "response_sha256": "c2a2de8da7699705c16a3e7c3544bb0fe44d47567ba49ad34cd0a8044663afe4"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "1371 27TH ST, SAN DIEGO, CA, 92102",
+          "matched_postal_city": "SAN DIEGO",
+          "matched_zip": "92102",
+          "county": "San Diego County",
+          "county_geoid": "06073",
+          "legal_city": "San Diego",
+          "legal_city_geoid": "0666000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -117.136004249222,
+            "latitude": 32.7192843818,
+            "lon": -117.136004249222,
+            "lat": 32.7192843818,
+            "x": -117.136004249222,
+            "y": 32.7192843818
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "1371 27TH ST, SAN DIEGO, CA, 92154",
+          "matched_postal_city": "SAN DIEGO",
+          "matched_zip": "92154",
+          "county": "San Diego County",
+          "county_geoid": "06073",
+          "legal_city": "San Diego",
+          "legal_city_geoid": "0666000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -117.075371141803,
+            "latitude": 32.571862077109,
+            "lon": -117.075371141803,
+            "lat": 32.571862077109,
+            "x": -117.075371141803,
+            "y": 32.571862077109
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "0666000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "06073",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "1371 27TH ST, SAN DIEGO, CA, 92102",
+      "1371 27TH ST, SAN DIEGO, CA, 92154"
+    ]
   },
   "A0095": {
     "status": "matched",
@@ -5898,12 +5947,12 @@
     "postal_city_differs": false
   },
   "A0103": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Berkeley",
+    "county": "Alameda County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "2161 ALLSTON WAY",
       "postal_city": "Berkeley",
@@ -5930,8 +5979,8 @@
       },
       "response_sha256": "5cf23d4ebbeabae96da479d729c8f5857bc31503b7322e5b64d2330d010d223c",
       "raw_response": "data/geocode-cache/A0103.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -5941,9 +5990,58 @@
           "match_count": 2,
           "response_sha256": "5cf23d4ebbeabae96da479d729c8f5857bc31503b7322e5b64d2330d010d223c"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "2161 ALLSTON WAY, BERKELEY, CA, 94702",
+          "matched_postal_city": "BERKELEY",
+          "matched_zip": "94702",
+          "county": "Alameda County",
+          "county_geoid": "06001",
+          "legal_city": "Berkeley",
+          "legal_city_geoid": "0606000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -122.286786162925,
+            "latitude": 37.867049555225,
+            "lon": -122.286786162925,
+            "lat": 37.867049555225,
+            "x": -122.286786162925,
+            "y": 37.867049555225
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "2161 ALLSTON WAY, BERKELEY, CA, 94704",
+          "matched_postal_city": "BERKELEY",
+          "matched_zip": "94704",
+          "county": "Alameda County",
+          "county_geoid": "06001",
+          "legal_city": "Berkeley",
+          "legal_city_geoid": "0606000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -122.266218694007,
+            "latitude": 37.869701586713,
+            "lon": -122.266218694007,
+            "lat": 37.869701586713,
+            "x": -122.266218694007,
+            "y": 37.869701586713
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "0606000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "06001",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "2161 ALLSTON WAY, BERKELEY, CA, 94702",
+      "2161 ALLSTON WAY, BERKELEY, CA, 94704"
+    ]
   },
   "A0104": {
     "status": "matched",
@@ -6607,12 +6705,19 @@
     "postal_city_differs": false
   },
   "A0115": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.46329611176,
+      "latitude": 37.78123618708,
+      "lon": -122.46329611176,
+      "lat": 37.78123618708,
+      "x": -122.46329611176,
+      "y": 37.78123618708
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "397 05TH AV",
       "postal_city": "San Francisco",
@@ -6623,8 +6728,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=397+05TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:53+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=397+5TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.555944+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -6637,22 +6742,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "a6f13d0e5c25c6bd4d0bd70dfb3ed3d58a4d9036c4ea555538f44f490c00258a",
-      "raw_response": "data/geocode-cache/A0115.json",
+      "response_sha256": "4a64535f3f8cc8db06a346fcf20b67d1fca74db51a6548cec7a1cbe5f319f178",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "R",
+        "tigerLineId": "192281868"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=397+05TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:53+00:00",
-          "match_count": 0,
-          "response_sha256": "a6f13d0e5c25c6bd4d0bd70dfb3ed3d58a4d9036c4ea555538f44f490c00258a"
+          "street_address": "397 5TH AV",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=397+5TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.555944+00:00",
+          "response_sha256": "4a64535f3f8cc8db06a346fcf20b67d1fca74db51a6548cec7a1cbe5f319f178",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"397 5TH AV\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"192281868\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"92605\",\"GEOID\":\"0607592605\",\"CENTLAT\":\"+37.7981221\",\"AREAWATER\":26703830,\"STATE\":\"06\",\"BASENAME\":\"Richmond-Presidio-Marina\",\"OID\":\"2769015925627463\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7984438\",\"NAME\":\"Richmond-Presidio-Marina CCD\",\"OBJECTID\":15161,\"CENTLON\":\"-122.4809947\",\"COUSUBCC\":\"Z5\",\"AREALAND\":24381265,\"INTPTLON\":\"-122.4803138\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804911\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06019\",\"CENTLAT\":\"+37.7371970\",\"SLDL\":\"019\",\"AREAWATER\":380022018,\"STATE\":\"06\",\"BASENAME\":\"19\",\"OID\":\"2139042393385517\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Assembly District 19\",\"OBJECTID\":1192,\"CENTLON\":\"-122.7847964\",\"LSY\":\"2026\",\"AREALAND\":103511407,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750401003004\",\"CENTLAT\":\"+37.7820431\",\"BLOCK\":\"3004\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"3004\",\"OID\":\"210701000434845\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7820431\",\"NAME\":\"Block 3004\",\"OBJECTID\":7277593,\"TRACT\":\"040100\",\"CENTLON\":\"-122.4638197\",\"BLKGRP\":\"3\",\"AREALAND\":19378,\"INTPTLON\":\"-122.4638197\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075040100\",\"CENTLAT\":\"+37.7851587\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"401\",\"OID\":\"20790355758568\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7851587\",\"NAME\":\"Census Tract 401\",\"OBJECTID\":48720,\"TRACT\":\"040100\",\"CENTLON\":\"-122.4618150\",\"AREALAND\":419129,\"INTPTLON\":\"-122.4618150\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.46329611176,\"y\":37.78123618708},\"addressComponents\":{\"zip\":\"94118\",\"streetName\":\"5TH\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"301\",\"state\":\"CA\",\"suffixType\":\"AVE\",\"toAddress\":\"399\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"397 5TH AVE, SAN FRANCISCO, CA, 94118\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "397 5TH AVE, SAN FRANCISCO, CA, 94118",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94118",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0116": {
     "status": "matched",
@@ -8967,12 +9084,12 @@
     "postal_city_differs": true
   },
   "A0156": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "290 GREEN ST",
       "postal_city": "San Francisco",
@@ -8999,8 +9116,8 @@
       },
       "response_sha256": "cf0bf3b1cfd8f2d00a5b678239af3672057c032cd59af8386ce77cdd3b4e6d8e",
       "raw_response": "data/geocode-cache/A0156.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -9010,9 +9127,58 @@
           "match_count": 2,
           "response_sha256": "cf0bf3b1cfd8f2d00a5b678239af3672057c032cd59af8386ce77cdd3b4e6d8e"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "290 GREEN ST, SAN FRANCISCO, CA, 94111",
+          "matched_postal_city": "SAN FRANCISCO",
+          "matched_zip": "94111",
+          "county": "San Francisco County",
+          "county_geoid": "06075",
+          "legal_city": "San Francisco",
+          "legal_city_geoid": "0667000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -122.402990211203,
+            "latitude": 37.80031526334,
+            "lon": -122.402990211203,
+            "lat": 37.80031526334,
+            "x": -122.402990211203,
+            "y": 37.80031526334
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "290 GREEN ST, SAN FRANCISCO, CA, 94133",
+          "matched_postal_city": "SAN FRANCISCO",
+          "matched_zip": "94133",
+          "county": "San Francisco County",
+          "county_geoid": "06075",
+          "legal_city": "San Francisco",
+          "legal_city_geoid": "0667000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -122.404147947697,
+            "latitude": 37.800173035609,
+            "lon": -122.404147947697,
+            "lat": 37.800173035609,
+            "x": -122.404147947697,
+            "y": 37.800173035609
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "06075",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "290 GREEN ST, SAN FRANCISCO, CA, 94111",
+      "290 GREEN ST, SAN FRANCISCO, CA, 94133"
+    ]
   },
   "A0157": {
     "status": "matched",
@@ -9642,12 +9808,12 @@
     "postal_city_differs": false
   },
   "A0168": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Hoboken",
+    "county": "Hudson County",
     "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "match_quality": "literal_components_same_legal_jurisdiction",
+    "reason": "Every literal street-address component matched the same official Census state, county and legal-municipality codes. The original compound address is unchanged.",
     "input": {
       "street_address": "600 JACKSON/601 HARRISON",
       "postal_city": "Hoboken",
@@ -9658,43 +9824,88 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=600+JACKSON%2F601+HARRISON&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json&zip=07030",
-      "retrieved_at": "2026-10-03T20:09:52+00:00",
-      "benchmark": {
-        "isDefault": true,
-        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
-        "id": "4",
-        "benchmarkName": "Public_AR_Current"
-      },
-      "vintage": {
-        "isDefault": true,
-        "id": "4",
-        "vintageName": "Current_Current",
-        "vintageDescription": "Current Vintage - Current Benchmark"
-      },
-      "response_sha256": "cbea9fcd8a08e382141153e4a02050ebdc544bd8fc1bcacace5c217067b5d03b",
-      "raw_response": "data/geocode-cache/A0168.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_zip_state",
-      "attempts": [
+      "method": "Separate literal components of the supplied slash-separated address, then require all official Census legal-geography codes to agree",
+      "query_strategy": "literal_slash_components",
+      "limitation": "No parcel identity or single coordinate is inferred for the compound input. All original street components must agree.",
+      "components": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=600+JACKSON%2F601+HARRISON&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=Hoboken",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:51+00:00",
-          "match_count": 0,
-          "response_sha256": "a66f5d159d30dbc737c8e97d45aa34865cdfacce1e85b1ce890e3d5fdfe9619e"
+          "street_address": "600 JACKSON",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=600+JACKSON&city=Hoboken&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:08:51.207462+00:00",
+          "response_sha256": "434ea41aa3c1f0b3b6204a5592b4c5bdfbd5dfa0bb733f963463fd49782dd8cd",
+          "candidate_geography": {
+            "status": "matched",
+            "matched_address": "600 JACKSON ST, HOBOKEN, NJ, 07030",
+            "matched_postal_city": "HOBOKEN",
+            "matched_zip": "07030",
+            "county": "Hudson County",
+            "county_geoid": "34017",
+            "legal_city": "Hoboken",
+            "legal_city_geoid": "3432250",
+            "legal_city_layer": "Incorporated Places",
+            "coordinates": {
+              "longitude": -74.039281685445,
+              "latitude": 40.745283626731,
+              "lon": -74.039281685445,
+              "lat": 40.745283626731,
+              "x": -74.039281685445,
+              "y": 40.745283626731
+            }
+          }
         },
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=600+JACKSON%2F601+HARRISON&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json&zip=07030",
-          "query_strategy": "street_zip_state",
-          "retrieved_at": "2026-10-03T20:09:52+00:00",
-          "match_count": 0,
-          "response_sha256": "cbea9fcd8a08e382141153e4a02050ebdc544bd8fc1bcacace5c217067b5d03b"
+          "street_address": "601 HARRISON",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=601+HARRISON&city=Hoboken&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:08:51.204332+00:00",
+          "response_sha256": "0395609cc5de434a44ebf10b381fe0d2fe207308782ad8bbb3ad3e3003302111",
+          "candidate_geography": {
+            "status": "matched",
+            "matched_address": "601 HARRISON ST, HOBOKEN, NJ, 07030",
+            "matched_postal_city": "HOBOKEN",
+            "matched_zip": "07030",
+            "county": "Hudson County",
+            "county_geoid": "34017",
+            "legal_city": "Hoboken",
+            "legal_city_geoid": "3432250",
+            "legal_city_layer": "Incorporated Places",
+            "coordinates": {
+              "longitude": -74.040013327188,
+              "latitude": 40.745465335007,
+              "lon": -74.040013327188,
+              "lat": 40.745465335007,
+              "x": -74.040013327188,
+              "y": 40.745465335007
+            }
+          }
+        }
+      ],
+      "replay_evidence": [
+        {
+          "street_address": "600 JACKSON",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=600+JACKSON&city=Hoboken&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:08:51.207462+00:00",
+          "response_sha256": "434ea41aa3c1f0b3b6204a5592b4c5bdfbd5dfa0bb733f963463fd49782dd8cd",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"Hoboken\",\"street\":\"600 JACKSON\",\"state\":\"NJ\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"L\",\"tigerLineId\":\"59605363\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779795\",\"GEOID\":\"34\",\"CENTLAT\":\"+40.1048602\",\"AREAWATER\":3533153027,\"STATE\":\"34\",\"BASENAME\":\"New Jersey\",\"STUSAB\":\"NJ\",\"OID\":\"27490286138606\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.1072744\",\"DIVISION\":\"2\",\"NAME\":\"New Jersey\",\"REGION\":\"1\",\"OBJECTID\":7,\"CENTLON\":\"-074.6583832\",\"AREALAND\":19049451361,\"INTPTLON\":\"-074.6652012\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"408\",\"CENTLAT\":\"+41.0491309\",\"AREAWATER\":7424870228,\"BASENAME\":\"New York-Newark, NY-NJ-CT-PA\",\"OID\":\"2619034687908093\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+41.0492719\",\"NAME\":\"New York-Newark, NY-NJ-CT-PA CSA\",\"OBJECTID\":8,\"CSA\":\"408\",\"CENTLON\":\"-073.9734379\",\"INTPTLON\":\"-073.9729499\",\"AREALAND\":29218858152,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"32250\",\"GEOID\":\"3401732250\",\"CENTLAT\":\"+40.7452057\",\"AREAWATER\":1865282,\"STATE\":\"34\",\"BASENAME\":\"Hoboken\",\"OID\":\"27690460493603\",\"LSADC\":\"25\",\"FUNCSTAT\":\"F\",\"INTPTLAT\":\"+40.7452508\",\"NAME\":\"Hoboken city\",\"OBJECTID\":20923,\"CENTLON\":\"-074.0281109\",\"COUSUBCC\":\"C5\",\"AREALAND\":3238029,\"INTPTLON\":\"-074.0279257\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"00885257\",\"COUNTY\":\"017\"}],\"Urban Areas\":[{\"GEOID\":\"63217\",\"CENTLAT\":\"+40.7122566\",\"AREAWATER\":548360036,\"BASENAME\":\"New York--Jersey City--Newark, NY--NJ\",\"OID\":\"27021287355931\",\"UA\":\"63217\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7121519\",\"NAME\":\"New York--Jersey City--Newark, NY--NJ Urban Area\",\"OBJECTID\":1720,\"CENTLON\":\"-073.9495548\",\"AREALAND\":8412412468,\"INTPTLON\":\"-073.9501839\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":8899909.2984946836,\"NECTAPCI\":\"N\",\"GEOID\":\"3432250\",\"CENTLAT\":\"+40.7452057\",\"AREAWATER\":1865282,\"BASENAME\":\"Hoboken\",\"STATE\":\"34\",\"OID\":\"27890460497357\",\"LSADC\":\"25\",\"PLACE\":\"32250\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.7452508\",\"NAME\":\"Hoboken city\",\"OBJECTID\":13565,\"PLACECC\":\"C5\",\"CENTLON\":\"-074.0281109\",\"STGEOMETRY_Length\":12905.137318915515,\"CBSAPCI\":\"N\",\"AREALAND\":3238029,\"INTPTLON\":\"-074.0279257\",\"PLACENS\":\"00885257\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"34017\",\"CENTLAT\":\"+40.7307309\",\"AREAWATER\":41839266,\"STATE\":\"34\",\"BASENAME\":\"Hudson\",\"OID\":\"27590460489405\",\"LSADC\":\"06\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.7313751\",\"NAME\":\"Hudson County\",\"OBJECTID\":774,\"CENTLON\":\"-074.0761989\",\"COUNTYCC\":\"H1\",\"COUNTYNS\":\"00882278\",\"AREALAND\":119638037,\"INTPTLON\":\"-074.0786014\",\"MTFCC\":\"G4020\",\"COUNTY\":\"017\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"34032\",\"CENTLAT\":\"+40.7383834\",\"AREAWATER\":4236510,\"STATE\":\"34\",\"BASENAME\":\"32\",\"OID\":\"2129042413061561\",\"SLDU\":\"032\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7382245\",\"NAME\":\"State Senate District 32\",\"OBJECTID\":904,\"CENTLON\":\"-074.0487934\",\"LSY\":\"2026\",\"AREALAND\":19635429,\"INTPTLON\":\"-074.0492723\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":301452186.94795179,\"CD120\":\"08\",\"GEOID\":\"3408\",\"CENTLAT\":\"+40.7147678\",\"CDSESSN\":\"120\",\"AREAWATER\":41889567,\"STATE\":\"34\",\"BASENAME\":\"8\",\"OID\":\"2119042393278306\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7276857\",\"NAME\":\"Congressional District 8\",\"OBJECTID\":245,\"CENTLON\":\"-074.1049100\",\"STGEOMETRY_Length\":188234.77559795402,\"AREALAND\":131123021,\"INTPTLON\":\"-074.1213958\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"34032\",\"CENTLAT\":\"+40.7383834\",\"SLDL\":\"032\",\"AREAWATER\":4236510,\"STATE\":\"34\",\"BASENAME\":\"32\",\"OID\":\"2139042416179622\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7382245\",\"NAME\":\"Assembly District 32\",\"OBJECTID\":1521,\"CENTLON\":\"-074.0487934\",\"LSY\":\"2026\",\"AREALAND\":19635429,\"INTPTLON\":\"-074.0492723\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"340170189002003\",\"CENTLAT\":\"+40.7459582\",\"BLOCK\":\"2003\",\"AREAWATER\":0,\"STATE\":\"34\",\"BASENAME\":\"2003\",\"OID\":\"210701005875992\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7459582\",\"NAME\":\"Block 2003\",\"OBJECTID\":3376806,\"TRACT\":\"018900\",\"CENTLON\":\"-074.0394720\",\"BLKGRP\":\"2\",\"AREALAND\":11559,\"INTPTLON\":\"-074.0394720\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"017\"}],\"Census Tracts\":[{\"GEOID\":\"34017018900\",\"CENTLAT\":\"+40.7445621\",\"AREAWATER\":0,\"STATE\":\"34\",\"BASENAME\":\"189\",\"OID\":\"20790460505025\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7445621\",\"NAME\":\"Census Tract 189\",\"OBJECTID\":22759,\"TRACT\":\"018900\",\"CENTLON\":\"-074.0360765\",\"AREALAND\":196889,\"INTPTLON\":\"-074.0360765\",\"MTFCC\":\"G5020\",\"COUNTY\":\"017\"}]},\"coordinates\":{\"x\":-74.039281685445,\"y\":40.745283626731},\"addressComponents\":{\"zip\":\"07030\",\"streetName\":\"JACKSON\",\"preType\":\"\",\"city\":\"HOBOKEN\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"600\",\"state\":\"NJ\",\"suffixType\":\"ST\",\"toAddress\":\"998\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"600 JACKSON ST, HOBOKEN, NJ, 07030\"}]}}"
+        },
+        {
+          "street_address": "601 HARRISON",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=601+HARRISON&city=Hoboken&state=NJ&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:08:51.204332+00:00",
+          "response_sha256": "0395609cc5de434a44ebf10b381fe0d2fe207308782ad8bbb3ad3e3003302111",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"Hoboken\",\"street\":\"601 HARRISON\",\"state\":\"NJ\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"59610625\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779795\",\"GEOID\":\"34\",\"CENTLAT\":\"+40.1048602\",\"AREAWATER\":3533153027,\"STATE\":\"34\",\"BASENAME\":\"New Jersey\",\"STUSAB\":\"NJ\",\"OID\":\"27490286138606\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.1072744\",\"DIVISION\":\"2\",\"NAME\":\"New Jersey\",\"REGION\":\"1\",\"OBJECTID\":7,\"CENTLON\":\"-074.6583832\",\"AREALAND\":19049451361,\"INTPTLON\":\"-074.6652012\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"408\",\"CENTLAT\":\"+41.0491309\",\"AREAWATER\":7424870228,\"BASENAME\":\"New York-Newark, NY-NJ-CT-PA\",\"OID\":\"2619034687908093\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+41.0492719\",\"NAME\":\"New York-Newark, NY-NJ-CT-PA CSA\",\"OBJECTID\":8,\"CSA\":\"408\",\"CENTLON\":\"-073.9734379\",\"INTPTLON\":\"-073.9729499\",\"AREALAND\":29218858152,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"32250\",\"GEOID\":\"3401732250\",\"CENTLAT\":\"+40.7452057\",\"AREAWATER\":1865282,\"STATE\":\"34\",\"BASENAME\":\"Hoboken\",\"OID\":\"27690460493603\",\"LSADC\":\"25\",\"FUNCSTAT\":\"F\",\"INTPTLAT\":\"+40.7452508\",\"NAME\":\"Hoboken city\",\"OBJECTID\":20923,\"CENTLON\":\"-074.0281109\",\"COUSUBCC\":\"C5\",\"AREALAND\":3238029,\"INTPTLON\":\"-074.0279257\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"00885257\",\"COUNTY\":\"017\"}],\"Urban Areas\":[{\"GEOID\":\"63217\",\"CENTLAT\":\"+40.7122566\",\"AREAWATER\":548360036,\"BASENAME\":\"New York--Jersey City--Newark, NY--NJ\",\"OID\":\"27021287355931\",\"UA\":\"63217\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7121519\",\"NAME\":\"New York--Jersey City--Newark, NY--NJ Urban Area\",\"OBJECTID\":1720,\"CENTLON\":\"-073.9495548\",\"AREALAND\":8412412468,\"INTPTLON\":\"-073.9501839\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":8899909.2984946836,\"NECTAPCI\":\"N\",\"GEOID\":\"3432250\",\"CENTLAT\":\"+40.7452057\",\"AREAWATER\":1865282,\"BASENAME\":\"Hoboken\",\"STATE\":\"34\",\"OID\":\"27890460497357\",\"LSADC\":\"25\",\"PLACE\":\"32250\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.7452508\",\"NAME\":\"Hoboken city\",\"OBJECTID\":13565,\"PLACECC\":\"C5\",\"CENTLON\":\"-074.0281109\",\"STGEOMETRY_Length\":12905.137318915515,\"CBSAPCI\":\"N\",\"AREALAND\":3238029,\"INTPTLON\":\"-074.0279257\",\"PLACENS\":\"00885257\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"34017\",\"CENTLAT\":\"+40.7307309\",\"AREAWATER\":41839266,\"STATE\":\"34\",\"BASENAME\":\"Hudson\",\"OID\":\"27590460489405\",\"LSADC\":\"06\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+40.7313751\",\"NAME\":\"Hudson County\",\"OBJECTID\":774,\"CENTLON\":\"-074.0761989\",\"COUNTYCC\":\"H1\",\"COUNTYNS\":\"00882278\",\"AREALAND\":119638037,\"INTPTLON\":\"-074.0786014\",\"MTFCC\":\"G4020\",\"COUNTY\":\"017\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"34032\",\"CENTLAT\":\"+40.7383834\",\"AREAWATER\":4236510,\"STATE\":\"34\",\"BASENAME\":\"32\",\"OID\":\"2129042413061561\",\"SLDU\":\"032\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7382245\",\"NAME\":\"State Senate District 32\",\"OBJECTID\":904,\"CENTLON\":\"-074.0487934\",\"LSY\":\"2026\",\"AREALAND\":19635429,\"INTPTLON\":\"-074.0492723\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":301452186.94795179,\"CD120\":\"08\",\"GEOID\":\"3408\",\"CENTLAT\":\"+40.7147678\",\"CDSESSN\":\"120\",\"AREAWATER\":41889567,\"STATE\":\"34\",\"BASENAME\":\"8\",\"OID\":\"2119042393278306\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7276857\",\"NAME\":\"Congressional District 8\",\"OBJECTID\":245,\"CENTLON\":\"-074.1049100\",\"STGEOMETRY_Length\":188234.77559795402,\"AREALAND\":131123021,\"INTPTLON\":\"-074.1213958\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"34032\",\"CENTLAT\":\"+40.7383834\",\"SLDL\":\"032\",\"AREAWATER\":4236510,\"STATE\":\"34\",\"BASENAME\":\"32\",\"OID\":\"2139042416179622\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+40.7382245\",\"NAME\":\"Assembly District 32\",\"OBJECTID\":1521,\"CENTLON\":\"-074.0487934\",\"LSY\":\"2026\",\"AREALAND\":19635429,\"INTPTLON\":\"-074.0492723\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"340170189002003\",\"CENTLAT\":\"+40.7459582\",\"BLOCK\":\"2003\",\"AREAWATER\":0,\"STATE\":\"34\",\"BASENAME\":\"2003\",\"OID\":\"210701005875992\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7459582\",\"NAME\":\"Block 2003\",\"OBJECTID\":3376806,\"TRACT\":\"018900\",\"CENTLON\":\"-074.0394720\",\"BLKGRP\":\"2\",\"AREALAND\":11559,\"INTPTLON\":\"-074.0394720\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"017\"}],\"Census Tracts\":[{\"GEOID\":\"34017018900\",\"CENTLAT\":\"+40.7445621\",\"AREAWATER\":0,\"STATE\":\"34\",\"BASENAME\":\"189\",\"OID\":\"20790460505025\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+40.7445621\",\"NAME\":\"Census Tract 189\",\"OBJECTID\":22759,\"TRACT\":\"018900\",\"CENTLON\":\"-074.0360765\",\"AREALAND\":196889,\"INTPTLON\":\"-074.0360765\",\"MTFCC\":\"G5020\",\"COUNTY\":\"017\"}]},\"coordinates\":{\"x\":-74.040013327188,\"y\":40.745465335007},\"addressComponents\":{\"zip\":\"07030\",\"streetName\":\"HARRISON\",\"preType\":\"\",\"city\":\"HOBOKEN\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"601\",\"state\":\"NJ\",\"suffixType\":\"ST\",\"toAddress\":\"699\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"601 HARRISON ST, HOBOKEN, NJ, 07030\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "legal_city_geoid": "3432250",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "34017",
+    "postal_city_differs": false,
+    "match_count": 2,
+    "coordinate_status": "not_selected_compound_address",
+    "matched_addresses": [
+      "600 JACKSON ST, HOBOKEN, NJ, 07030",
+      "601 HARRISON ST, HOBOKEN, NJ, 07030"
+    ]
   },
   "A0169": {
     "status": "matched",
@@ -13236,12 +13447,19 @@
     "postal_city_differs": false
   },
   "A0229": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.392090570269,
+      "latitude": 37.731288264664,
+      "lon": -122.392090570269,
+      "lat": 37.731288264664,
+      "x": -122.392090570269,
+      "y": 37.731288264664
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "5164 03RD ST",
       "postal_city": "San Francisco",
@@ -13252,8 +13470,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=5164+03RD+ST&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:55+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=5164+3RD+ST&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.604256+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -13266,22 +13484,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "18440f9db2f887ad2d3847800accf6b9c08f17f89411eedd5f2261f43702ef95",
-      "raw_response": "data/geocode-cache/A0229.json",
+      "response_sha256": "b1b57479eaf60b8584f929be9c6a4843cc5599fd7f677bf536bfc11af6ec8abb",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "R",
+        "tigerLineId": "192290952"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=5164+03RD+ST&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:55+00:00",
-          "match_count": 0,
-          "response_sha256": "18440f9db2f887ad2d3847800accf6b9c08f17f89411eedd5f2261f43702ef95"
+          "street_address": "5164 3RD ST",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=5164+3RD+ST&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.604256+00:00",
+          "response_sha256": "b1b57479eaf60b8584f929be9c6a4843cc5599fd7f677bf536bfc11af6ec8abb",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"5164 3RD ST\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"192290952\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"90195\",\"GEOID\":\"0607590195\",\"CENTLAT\":\"+37.7290744\",\"AREAWATER\":3656200,\"STATE\":\"06\",\"BASENAME\":\"Bayview\",\"OID\":\"2769015925627466\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7288947\",\"NAME\":\"Bayview CCD\",\"OBJECTID\":15177,\"CENTLON\":\"-122.3827016\",\"COUSUBCC\":\"Z5\",\"AREALAND\":13432950,\"INTPTLON\":\"-122.3827787\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804907\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06017\",\"CENTLAT\":\"+37.7859416\",\"SLDL\":\"017\",\"AREAWATER\":130532630,\"STATE\":\"06\",\"BASENAME\":\"17\",\"OID\":\"2139042393385452\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7860679\",\"NAME\":\"Assembly District 17\",\"OBJECTID\":1257,\"CENTLON\":\"-122.3859153\",\"LSY\":\"2026\",\"AREALAND\":62987629,\"INTPTLON\":\"-122.3863351\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750230031004\",\"CENTLAT\":\"+37.7316097\",\"BLOCK\":\"1004\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"1004\",\"OID\":\"210701000435485\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7316097\",\"NAME\":\"Block 1004\",\"OBJECTID\":6370364,\"TRACT\":\"023003\",\"CENTLON\":\"-122.3922334\",\"BLKGRP\":\"1\",\"AREALAND\":11146,\"INTPTLON\":\"-122.3922334\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075023003\",\"CENTLAT\":\"+37.7326749\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"230.03\",\"OID\":\"20790355759062\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7326749\",\"NAME\":\"Census Tract 230.03\",\"OBJECTID\":31970,\"TRACT\":\"023003\",\"CENTLON\":\"-122.3958349\",\"AREALAND\":409147,\"INTPTLON\":\"-122.3958349\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.392090570269,\"y\":37.731288264664},\"addressComponents\":{\"zip\":\"94124\",\"streetName\":\"3RD\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"5138\",\"state\":\"CA\",\"suffixType\":\"ST\",\"toAddress\":\"5188\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"5164 3RD ST, SAN FRANCISCO, CA, 94124\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "5164 3RD ST, SAN FRANCISCO, CA, 94124",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94124",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0230": {
     "status": "matched",
@@ -16111,12 +16341,12 @@
     "postal_city_differs": false
   },
   "A0279": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Jersey City",
+    "county": "Hudson County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "90 KENSINGTON AVE.",
       "postal_city": "Jersey City",
@@ -16143,8 +16373,8 @@
       },
       "response_sha256": "a484cad9bcd8fe1e61f093e7c675046cefb53e990b5907f723d94ddf8f36a4cc",
       "raw_response": "data/geocode-cache/A0279.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -16154,9 +16384,58 @@
           "match_count": 2,
           "response_sha256": "a484cad9bcd8fe1e61f093e7c675046cefb53e990b5907f723d94ddf8f36a4cc"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "90 KENSINGTON AVE, JERSEY CITY, NJ, 07304",
+          "matched_postal_city": "JERSEY CITY",
+          "matched_zip": "07304",
+          "county": "Hudson County",
+          "county_geoid": "34017",
+          "legal_city": "Jersey City",
+          "legal_city_geoid": "3436000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.075287274906,
+            "latitude": 40.723144945194,
+            "lon": -74.075287274906,
+            "lat": 40.723144945194,
+            "x": -74.075287274906,
+            "y": 40.723144945194
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "90 KENSINGTON AVE, JERSEY CITY, NJ, 07306",
+          "matched_postal_city": "JERSEY CITY",
+          "matched_zip": "07306",
+          "county": "Hudson County",
+          "county_geoid": "34017",
+          "legal_city": "Jersey City",
+          "legal_city_geoid": "3436000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.0786679641,
+            "latitude": 40.724803794028,
+            "lon": -74.0786679641,
+            "lat": 40.724803794028,
+            "x": -74.0786679641,
+            "y": 40.724803794028
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "3436000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "34017",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "90 KENSINGTON AVE, JERSEY CITY, NJ, 07304",
+      "90 KENSINGTON AVE, JERSEY CITY, NJ, 07306"
+    ]
   },
   "A0280": {
     "status": "matched",
@@ -16803,12 +17082,12 @@
     "postal_city_differs": false
   },
   "A0291": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Cambridge",
+    "county": "Middlesex County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "165 Cambridgepark Dr",
       "postal_city": "Cambridge",
@@ -16835,8 +17114,8 @@
       },
       "response_sha256": "342ce3920172c618acfc0b082e8e4bfa12de19d16b601de272ea85d260b0b670",
       "raw_response": "data/geocode-cache/A0291.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -16846,9 +17125,58 @@
           "match_count": 2,
           "response_sha256": "342ce3920172c618acfc0b082e8e4bfa12de19d16b601de272ea85d260b0b670"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "165 CAMBRIDGEPARK DR, CAMBRIDGE, MA, 02140",
+          "matched_postal_city": "CAMBRIDGE",
+          "matched_zip": "02140",
+          "county": "Middlesex County",
+          "county_geoid": "25017",
+          "legal_city": "Cambridge",
+          "legal_city_geoid": "2511000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.146981411789,
+            "latitude": 42.395099011822,
+            "lon": -71.146981411789,
+            "lat": 42.395099011822,
+            "x": -71.146981411789,
+            "y": 42.395099011822
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "165 CAMBRIDGE PARK DR, CAMBRIDGE, MA, 02140",
+          "matched_postal_city": "CAMBRIDGE",
+          "matched_zip": "02140",
+          "county": "Middlesex County",
+          "county_geoid": "25017",
+          "legal_city": "Cambridge",
+          "legal_city_geoid": "2511000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.146981411789,
+            "latitude": 42.395099011822,
+            "lon": -71.146981411789,
+            "lat": 42.395099011822,
+            "x": -71.146981411789,
+            "y": 42.395099011822
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "2511000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "25017",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "165 CAMBRIDGEPARK DR, CAMBRIDGE, MA, 02140",
+      "165 CAMBRIDGE PARK DR, CAMBRIDGE, MA, 02140"
+    ]
   },
   "A0292": {
     "status": "matched",
@@ -18918,12 +19246,19 @@
     "postal_city_differs": false
   },
   "A0328": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.464604457855,
+      "latitude": 37.753910517548,
+      "lon": -122.464604457855,
+      "lat": 37.753910517548,
+      "x": -122.464604457855,
+      "y": 37.753910517548
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "1845 08TH AV",
       "postal_city": "San Francisco",
@@ -18934,8 +19269,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1845+08TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:56+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1845+8TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.565017+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -18948,22 +19283,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "28e29175387ddb180c7f938970a1b438aff5546c5a69566b77f2726f0dfe5aa4",
-      "raw_response": "data/geocode-cache/A0328.json",
+      "response_sha256": "28fe82f16d12b4ebca2d09839caea94195e199293aa3a7f30ca43eb1f9f6bb28",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "R",
+        "tigerLineId": "192282554"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1845+08TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:56+00:00",
-          "match_count": 0,
-          "response_sha256": "28e29175387ddb180c7f938970a1b438aff5546c5a69566b77f2726f0dfe5aa4"
+          "street_address": "1845 8TH AV",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1845+8TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.565017+00:00",
+          "response_sha256": "28fe82f16d12b4ebca2d09839caea94195e199293aa3a7f30ca43eb1f9f6bb28",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"1845 8TH AV\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"192282554\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"93267\",\"GEOID\":\"0607593267\",\"CENTLAT\":\"+37.7405887\",\"AREAWATER\":319784791,\"STATE\":\"06\",\"BASENAME\":\"Sunset\",\"OID\":\"2769015925627462\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Sunset CCD\",\"OBJECTID\":14408,\"CENTLON\":\"-122.9151655\",\"COUSUBCC\":\"Z5\",\"AREALAND\":17867142,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804913\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06019\",\"CENTLAT\":\"+37.7371970\",\"SLDL\":\"019\",\"AREAWATER\":380022018,\"STATE\":\"06\",\"BASENAME\":\"19\",\"OID\":\"2139042393385517\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Assembly District 19\",\"OBJECTID\":1192,\"CENTLON\":\"-122.7847964\",\"LSY\":\"2026\",\"AREALAND\":103511407,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750303013008\",\"CENTLAT\":\"+37.7538026\",\"BLOCK\":\"3008\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"3008\",\"OID\":\"210701000437569\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7538026\",\"NAME\":\"Block 3008\",\"OBJECTID\":8134991,\"TRACT\":\"030301\",\"CENTLON\":\"-122.4650620\",\"BLKGRP\":\"3\",\"AREALAND\":19498,\"INTPTLON\":\"-122.4650620\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075030301\",\"CENTLAT\":\"+37.7569391\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"303.01\",\"OID\":\"20790355757999\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7569391\",\"NAME\":\"Census Tract 303.01\",\"OBJECTID\":14219,\"TRACT\":\"030301\",\"CENTLON\":\"-122.4692332\",\"AREALAND\":753790,\"INTPTLON\":\"-122.4692332\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.464604457855,\"y\":37.753910517548},\"addressComponents\":{\"zip\":\"94122\",\"streetName\":\"8TH\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"1801\",\"state\":\"CA\",\"suffixType\":\"AVE\",\"toAddress\":\"1899\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"1845 8TH AVE, SAN FRANCISCO, CA, 94122\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "1845 8TH AVE, SAN FRANCISCO, CA, 94122",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94122",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0329": {
     "status": "matched",
@@ -20602,12 +20949,19 @@
     "postal_city_differs": true
   },
   "A0357": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.409540179118,
+      "latitude": 37.778180361844,
+      "lon": -122.409540179118,
+      "lat": 37.778180361844,
+      "x": -122.409540179118,
+      "y": 37.778180361844
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "173 07TH ST",
       "postal_city": "San Francisco",
@@ -20618,8 +20972,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=173+07TH+ST&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:57+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=173+7TH+ST&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.575921+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -20632,22 +20986,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "1b0c606a1e114d6d6ae49e251f541a173201c595b891c20ddeca004e710bd193",
-      "raw_response": "data/geocode-cache/A0357.json",
+      "response_sha256": "3b940d4b98aca05d7a70f610e1e3cf1ebc958e6d01a95598b85bd2e960a78edf",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "L",
+        "tigerLineId": "192287400"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=173+07TH+ST&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:57+00:00",
-          "match_count": 0,
-          "response_sha256": "1b0c606a1e114d6d6ae49e251f541a173201c595b891c20ddeca004e710bd193"
+          "street_address": "173 7TH ST",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=173+7TH+ST&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.575921+00:00",
+          "response_sha256": "3b940d4b98aca05d7a70f610e1e3cf1ebc958e6d01a95598b85bd2e960a78edf",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"173 7TH ST\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"L\",\"tigerLineId\":\"192287400\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"90734\",\"GEOID\":\"0607590734\",\"CENTLAT\":\"+37.8046095\",\"AREAWATER\":125090024,\"STATE\":\"06\",\"BASENAME\":\"Downtown-Northeast Neighborhoods-Treasure Island\",\"OID\":\"2769015925627468\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.8620462\",\"NAME\":\"Downtown-Northeast Neighborhoods-Treasure Island CCD\",\"OBJECTID\":15193,\"CENTLON\":\"-122.3752490\",\"COUSUBCC\":\"Z5\",\"AREALAND\":9981940,\"INTPTLON\":\"-122.4195821\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804908\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06017\",\"CENTLAT\":\"+37.7859416\",\"SLDL\":\"017\",\"AREAWATER\":130532630,\"STATE\":\"06\",\"BASENAME\":\"17\",\"OID\":\"2139042393385452\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7860679\",\"NAME\":\"Assembly District 17\",\"OBJECTID\":1257,\"CENTLON\":\"-122.3859153\",\"LSY\":\"2026\",\"AREALAND\":62987629,\"INTPTLON\":\"-122.3863351\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750176021003\",\"CENTLAT\":\"+37.7786376\",\"BLOCK\":\"1003\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"1003\",\"OID\":\"210701000437950\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7786376\",\"NAME\":\"Block 1003\",\"OBJECTID\":7745119,\"TRACT\":\"017602\",\"CENTLON\":\"-122.4091003\",\"BLKGRP\":\"1\",\"AREALAND\":9519,\"INTPTLON\":\"-122.4091003\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075017602\",\"CENTLAT\":\"+37.7821241\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"176.02\",\"OID\":\"2079015859039281\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7821241\",\"NAME\":\"Census Tract 176.02\",\"OBJECTID\":85293,\"TRACT\":\"017602\",\"CENTLON\":\"-122.4070181\",\"AREALAND\":273225,\"INTPTLON\":\"-122.4070181\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.409540179118,\"y\":37.778180361844},\"addressComponents\":{\"zip\":\"94103\",\"streetName\":\"7TH\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"123\",\"state\":\"CA\",\"suffixType\":\"ST\",\"toAddress\":\"199\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"173 7TH ST, SAN FRANCISCO, CA, 94103\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "173 7TH ST, SAN FRANCISCO, CA, 94103",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94103",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0358": {
     "status": "matched",
@@ -20992,12 +21358,19 @@
     "postal_city_differs": false
   },
   "A0364": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.461516266857,
+      "latitude": 37.786437508473,
+      "lon": -122.461516266857,
+      "lat": 37.786437508473,
+      "x": -122.461516266857,
+      "y": 37.786437508473
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "125 03RD AV",
       "postal_city": "San Francisco",
@@ -21008,8 +21381,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=125+03RD+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:57+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=125+3RD+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.574508+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -21022,22 +21395,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "b024f02a32504e3a3bb83bfbd212c3ea37b7bace9f574cb468e25cb5b48333c2",
-      "raw_response": "data/geocode-cache/A0364.json",
+      "response_sha256": "7ccef319234e8670d4d277bd2ece3a3ef519ef44c8788c2d6c744cf7f23c1d80",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "R",
+        "tigerLineId": "192278986"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=125+03RD+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:57+00:00",
-          "match_count": 0,
-          "response_sha256": "b024f02a32504e3a3bb83bfbd212c3ea37b7bace9f574cb468e25cb5b48333c2"
+          "street_address": "125 3RD AV",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=125+3RD+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.574508+00:00",
+          "response_sha256": "7ccef319234e8670d4d277bd2ece3a3ef519ef44c8788c2d6c744cf7f23c1d80",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"125 3RD AV\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"192278986\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"92605\",\"GEOID\":\"0607592605\",\"CENTLAT\":\"+37.7981221\",\"AREAWATER\":26703830,\"STATE\":\"06\",\"BASENAME\":\"Richmond-Presidio-Marina\",\"OID\":\"2769015925627463\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7984438\",\"NAME\":\"Richmond-Presidio-Marina CCD\",\"OBJECTID\":15161,\"CENTLON\":\"-122.4809947\",\"COUSUBCC\":\"Z5\",\"AREALAND\":24381265,\"INTPTLON\":\"-122.4803138\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804911\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06019\",\"CENTLAT\":\"+37.7371970\",\"SLDL\":\"019\",\"AREAWATER\":380022018,\"STATE\":\"06\",\"BASENAME\":\"19\",\"OID\":\"2139042393385517\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Assembly District 19\",\"OBJECTID\":1192,\"CENTLON\":\"-122.7847964\",\"LSY\":\"2026\",\"AREALAND\":103511407,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750401001002\",\"CENTLAT\":\"+37.7860625\",\"BLOCK\":\"1002\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"1002\",\"OID\":\"210701000436715\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7860625\",\"NAME\":\"Block 1002\",\"OBJECTID\":2459244,\"TRACT\":\"040100\",\"CENTLON\":\"-122.4619624\",\"BLKGRP\":\"1\",\"AREALAND\":15399,\"INTPTLON\":\"-122.4619624\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075040100\",\"CENTLAT\":\"+37.7851587\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"401\",\"OID\":\"20790355758568\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7851587\",\"NAME\":\"Census Tract 401\",\"OBJECTID\":48720,\"TRACT\":\"040100\",\"CENTLON\":\"-122.4618150\",\"AREALAND\":419129,\"INTPTLON\":\"-122.4618150\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.461516266857,\"y\":37.786437508473},\"addressComponents\":{\"zip\":\"94118\",\"streetName\":\"3RD\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"101\",\"state\":\"CA\",\"suffixType\":\"AVE\",\"toAddress\":\"199\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"125 3RD AVE, SAN FRANCISCO, CA, 94118\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "125 3RD AVE, SAN FRANCISCO, CA, 94118",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94118",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0365": {
     "status": "matched",
@@ -23022,12 +23407,12 @@
     "postal_city_differs": false
   },
   "A0400": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Newark",
+    "county": "Essex County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "174 MT PROSPECT AVE",
       "postal_city": "Newark",
@@ -23054,8 +23439,8 @@
       },
       "response_sha256": "1fc0b1237654d3c388cb73a72b7da91c22d4e693f88fdd6a2de4d4d8ad1f3b2e",
       "raw_response": "data/geocode-cache/A0400.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -23065,9 +23450,58 @@
           "match_count": 2,
           "response_sha256": "1fc0b1237654d3c388cb73a72b7da91c22d4e693f88fdd6a2de4d4d8ad1f3b2e"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "174 MT PROSPECT AVE, NEWARK, NJ, 07104",
+          "matched_postal_city": "NEWARK",
+          "matched_zip": "07104",
+          "county": "Essex County",
+          "county_geoid": "34013",
+          "legal_city": "Newark",
+          "legal_city_geoid": "3451000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.17546726324,
+            "latitude": 40.757731471944,
+            "lon": -74.17546726324,
+            "lat": 40.757731471944,
+            "x": -74.17546726324,
+            "y": 40.757731471944
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "174 MOUNT PROSPECT AVE, NEWARK, NJ, 07104",
+          "matched_postal_city": "NEWARK",
+          "matched_zip": "07104",
+          "county": "Essex County",
+          "county_geoid": "34013",
+          "legal_city": "Newark",
+          "legal_city_geoid": "3451000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.17546726324,
+            "latitude": 40.757731471944,
+            "lon": -74.17546726324,
+            "lat": 40.757731471944,
+            "x": -74.17546726324,
+            "y": 40.757731471944
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "3451000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "34013",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "174 MT PROSPECT AVE, NEWARK, NJ, 07104",
+      "174 MOUNT PROSPECT AVE, NEWARK, NJ, 07104"
+    ]
   },
   "A0401": {
     "status": "matched",
@@ -23184,12 +23618,12 @@
     "postal_city_differs": false
   },
   "A0403": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Boston",
+    "county": "Suffolk County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "45 Myrtle ST",
       "postal_city": "Boston",
@@ -23216,8 +23650,8 @@
       },
       "response_sha256": "5831bf09ae3e408a17f36aa5c5f0fd4db41519b7e004a569dc9cffa913c8f000",
       "raw_response": "data/geocode-cache/A0403.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -23227,9 +23661,58 @@
           "match_count": 2,
           "response_sha256": "5831bf09ae3e408a17f36aa5c5f0fd4db41519b7e004a569dc9cffa913c8f000"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "45 MYRTLE ST, BOSTON, MA, 02114",
+          "matched_postal_city": "BOSTON",
+          "matched_zip": "02114",
+          "county": "Suffolk County",
+          "county_geoid": "25025",
+          "legal_city": "Boston",
+          "legal_city_geoid": "2507000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.066075463637,
+            "latitude": 42.359416672345,
+            "lon": -71.066075463637,
+            "lat": 42.359416672345,
+            "x": -71.066075463637,
+            "y": 42.359416672345
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "45 MYRTLE ST, BOSTON, MA, 02130",
+          "matched_postal_city": "BOSTON",
+          "matched_zip": "02130",
+          "county": "Suffolk County",
+          "county_geoid": "25025",
+          "legal_city": "Boston",
+          "legal_city_geoid": "2507000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.116105660192,
+            "latitude": 42.31406162401,
+            "lon": -71.116105660192,
+            "lat": 42.31406162401,
+            "x": -71.116105660192,
+            "y": 42.31406162401
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "2507000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "25025",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "45 MYRTLE ST, BOSTON, MA, 02114",
+      "45 MYRTLE ST, BOSTON, MA, 02130"
+    ]
   },
   "A0404": {
     "status": "matched",
@@ -24685,12 +25168,12 @@
     "postal_city_differs": false
   },
   "A0428": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Newark",
+    "county": "Essex County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "312-314 MT PROSPECT AVE",
       "postal_city": "Newark",
@@ -24717,8 +25200,8 @@
       },
       "response_sha256": "6b7b6f53e741002c2673d6643786ea5971317d7f0c303630b18960674ccab9f5",
       "raw_response": "data/geocode-cache/A0428.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -24728,9 +25211,58 @@
           "match_count": 2,
           "response_sha256": "6b7b6f53e741002c2673d6643786ea5971317d7f0c303630b18960674ccab9f5"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "314 MT PROSPECT AVE, NEWARK, NJ, 07104",
+          "matched_postal_city": "NEWARK",
+          "matched_zip": "07104",
+          "county": "Essex County",
+          "county_geoid": "34013",
+          "legal_city": "Newark",
+          "legal_city_geoid": "3451000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.172382340313,
+            "latitude": 40.762317125202,
+            "lon": -74.172382340313,
+            "lat": 40.762317125202,
+            "x": -74.172382340313,
+            "y": 40.762317125202
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "314 MOUNT PROSPECT AVE, NEWARK, NJ, 07104",
+          "matched_postal_city": "NEWARK",
+          "matched_zip": "07104",
+          "county": "Essex County",
+          "county_geoid": "34013",
+          "legal_city": "Newark",
+          "legal_city_geoid": "3451000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -74.172382340313,
+            "latitude": 40.762317125202,
+            "lon": -74.172382340313,
+            "lat": 40.762317125202,
+            "x": -74.172382340313,
+            "y": 40.762317125202
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "3451000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "34013",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "314 MT PROSPECT AVE, NEWARK, NJ, 07104",
+      "314 MOUNT PROSPECT AVE, NEWARK, NJ, 07104"
+    ]
   },
   "A0429": {
     "status": "matched",
@@ -27953,12 +28485,19 @@
     "postal_city_differs": false
   },
   "A0484": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
-    "coordinates": null,
-    "match_quality": "no_match",
-    "reason": "No Census address match.",
+    "status": "matched",
+    "legal_city": "San Francisco",
+    "county": "San Francisco County",
+    "coordinates": {
+      "longitude": -122.464658373009,
+      "latitude": 37.754690646826,
+      "lon": -122.464658373009,
+      "lat": 37.754690646826,
+      "x": -122.464658373009,
+      "y": 37.754690646826
+    },
+    "match_quality": "single_interpolated_address_match",
+    "reason": "Legal municipality comes from the Census geography layer, not the postal city.",
     "input": {
       "street_address": "1801 08TH AV",
       "postal_city": "San Francisco",
@@ -27969,8 +28508,8 @@
       "provider": "U.S. Census Bureau",
       "documentation_url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
       "postal_city_is_evidence": false,
-      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1801+08TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-      "retrieved_at": "2026-10-03T20:09:59+00:00",
+      "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1801+8TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+      "retrieved_at": "2026-10-04T11:11:35.574449+00:00",
       "benchmark": {
         "isDefault": true,
         "benchmarkDescription": "Public Address Ranges - Current Benchmark",
@@ -27983,22 +28522,34 @@
         "vintageName": "Current_Current",
         "vintageDescription": "Current Vintage - Current Benchmark"
       },
-      "response_sha256": "67e01eff4bbaee94972a8b4a4dfc7c34de4bf50868c20fdeac4eaa822bb1994f",
-      "raw_response": "data/geocode-cache/A0484.json",
+      "response_sha256": "359ef7723819399a80cb2d2318ff046d114ac693d5cfe3926fda8a09a4e66b40",
       "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
       "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
-      "query_strategy": "street_city_state",
-      "attempts": [
+      "query_strategy": "ordinal_padding_only",
+      "note": "Query removes only a leading zero from an ordinal street-name token; original address remains unchanged.",
+      "tiger_line": {
+        "side": "R",
+        "tigerLineId": "192282554"
+      },
+      "replay_evidence": [
         {
-          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1801+08TH+AV&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json&city=San+Francisco",
-          "query_strategy": "street_city_state",
-          "retrieved_at": "2026-10-03T20:09:59+00:00",
-          "match_count": 0,
-          "response_sha256": "67e01eff4bbaee94972a8b4a4dfc7c34de4bf50868c20fdeac4eaa822bb1994f"
+          "street_address": "1801 8TH AV",
+          "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/address?street=1801+8TH+AV&city=San+Francisco&state=CA&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-04T11:11:35.574449+00:00",
+          "response_sha256": "359ef7723819399a80cb2d2318ff046d114ac693d5cfe3926fda8a09a4e66b40",
+          "raw_response_text": "{\"result\":{\"input\":{\"address\":{\"city\":\"San Francisco\",\"street\":\"1801 8TH AV\",\"state\":\"CA\"},\"vintage\":{\"isDefault\":true,\"id\":\"4\",\"vintageName\":\"Current_Current\",\"vintageDescription\":\"Current Vintage - Current Benchmark\"},\"benchmark\":{\"isDefault\":true,\"benchmarkDescription\":\"Public Address Ranges - Current Benchmark\",\"id\":\"4\",\"benchmarkName\":\"Public_AR_Current\"}},\"addressMatches\":[{\"tigerLine\":{\"side\":\"R\",\"tigerLineId\":\"192282554\"},\"geographies\":{\"States\":[{\"STATENS\":\"01779778\",\"GEOID\":\"06\",\"CENTLAT\":\"+37.1547616\",\"AREAWATER\":20288534055,\"STATE\":\"06\",\"BASENAME\":\"California\",\"STUSAB\":\"CA\",\"OID\":\"2749018475066\",\"LSADC\":\"00\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.1626642\",\"DIVISION\":\"9\",\"NAME\":\"California\",\"REGION\":\"4\",\"OBJECTID\":6,\"CENTLON\":\"-119.5277735\",\"AREALAND\":403676534536,\"INTPTLON\":\"-119.5713456\",\"MTFCC\":\"G4000\"}],\"Combined Statistical Areas\":[{\"POP100\":\"\",\"GEOID\":\"488\",\"CENTLAT\":\"+37.5500108\",\"AREAWATER\":3498492869,\"BASENAME\":\"San Jose-San Francisco-Oakland, CA\",\"OID\":\"2619034687908125\",\"LSADC\":\"M0\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.5199375\",\"NAME\":\"San Jose-San Francisco-Oakland, CA CSA\",\"OBJECTID\":69,\"CSA\":\"488\",\"CENTLON\":\"-121.5762227\",\"INTPTLON\":\"-121.5755749\",\"AREALAND\":31066455166,\"HU100\":\"\",\"MTFCC\":\"G3100\"}],\"County Subdivisions\":[{\"COUSUB\":\"93267\",\"GEOID\":\"0607593267\",\"CENTLAT\":\"+37.7405887\",\"AREAWATER\":319784791,\"STATE\":\"06\",\"BASENAME\":\"Sunset\",\"OID\":\"2769015925627462\",\"LSADC\":\"22\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Sunset CCD\",\"OBJECTID\":14408,\"CENTLON\":\"-122.9151655\",\"COUSUBCC\":\"Z5\",\"AREALAND\":17867142,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4040\",\"COUSUBNS\":\"02804913\",\"COUNTY\":\"075\"}],\"Urban Areas\":[{\"GEOID\":\"78904\",\"CENTLAT\":\"+37.7442567\",\"AREAWATER\":31792944,\"BASENAME\":\"San Francisco--Oakland, CA\",\"OID\":\"27021141325051\",\"UA\":\"78904\",\"LSADC\":\"67\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7849693\",\"NAME\":\"San Francisco--Oakland, CA Urban Area\",\"OBJECTID\":105,\"CENTLON\":\"-122.2913733\",\"AREALAND\":1330135792,\"INTPTLON\":\"-122.2701107\",\"MTFCC\":\"G3500\"}],\"Incorporated Places\":[{\"DISP_CLR\":4,\"STGEOMETRY_Area\":962575373.57204199,\"NECTAPCI\":\"N\",\"GEOID\":\"0667000\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"BASENAME\":\"San Francisco\",\"STATE\":\"06\",\"OID\":\"27890355730719\",\"LSADC\":\"25\",\"PLACE\":\"67000\",\"FUNCSTAT\":\"A\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco city\",\"OBJECTID\":32302,\"PLACECC\":\"C1\",\"CENTLON\":\"-122.6941393\",\"STGEOMETRY_Length\":205688.61291983497,\"CBSAPCI\":\"Y\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"PLACENS\":\"02411786\",\"MTFCC\":\"G4110\"}],\"Counties\":[{\"GEOID\":\"06075\",\"CENTLAT\":\"+37.7600883\",\"AREAWATER\":479701779,\"STATE\":\"06\",\"BASENAME\":\"San Francisco\",\"OID\":\"27590355701186\",\"LSADC\":\"06\",\"FUNCSTAT\":\"C\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"San Francisco County\",\"OBJECTID\":1652,\"CENTLON\":\"-122.6941393\",\"COUNTYCC\":\"H6\",\"COUNTYNS\":\"00277302\",\"AREALAND\":120913761,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G4020\",\"COUNTY\":\"075\"}],\"2026 State Legislative Districts - Upper\":[{\"GEOID\":\"06011\",\"CENTLAT\":\"+37.7512734\",\"AREAWATER\":510554648,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2129042393385072\",\"SLDU\":\"011\",\"LSADC\":\"LU\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7046374\",\"NAME\":\"State Senate District 11\",\"OBJECTID\":1562,\"CENTLON\":\"-122.6708513\",\"LSY\":\"2026\",\"AREALAND\":166462350,\"INTPTLON\":\"-122.4998106\",\"MTFCC\":\"G5210\",\"LDTYP\":\"O\"}],\"120th Congressional Districts\":[{\"STGEOMETRY_Area\":940632026.97449553,\"CD120\":\"11\",\"GEOID\":\"0611\",\"CENTLAT\":\"+37.7610466\",\"CDSESSN\":\"120\",\"AREAWATER\":479610902,\"STATE\":\"06\",\"BASENAME\":\"11\",\"OID\":\"2119042393002049\",\"LSADC\":\"C2\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Congressional District 11\",\"OBJECTID\":266,\"CENTLON\":\"-122.7003196\",\"STGEOMETRY_Length\":210705.60664996534,\"AREALAND\":107297587,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5200\"}],\"2026 State Legislative Districts - Lower\":[{\"GEOID\":\"06019\",\"CENTLAT\":\"+37.7371970\",\"SLDL\":\"019\",\"AREAWATER\":380022018,\"STATE\":\"06\",\"BASENAME\":\"19\",\"OID\":\"2139042393385517\",\"LSADC\":\"L3\",\"FUNCSTAT\":\"N\",\"INTPTLAT\":\"+37.7272391\",\"NAME\":\"Assembly District 19\",\"OBJECTID\":1192,\"CENTLON\":\"-122.7847964\",\"LSY\":\"2026\",\"AREALAND\":103511407,\"INTPTLON\":\"-123.0322294\",\"MTFCC\":\"G5220\",\"LDTYP\":\"O\"}],\"2020 Census Blocks\":[{\"SUFFIX\":\"\",\"GEOID\":\"060750303013008\",\"CENTLAT\":\"+37.7538026\",\"BLOCK\":\"3008\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"3008\",\"OID\":\"210701000437569\",\"LSADC\":\"BK\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7538026\",\"NAME\":\"Block 3008\",\"OBJECTID\":8134991,\"TRACT\":\"030301\",\"CENTLON\":\"-122.4650620\",\"BLKGRP\":\"3\",\"AREALAND\":19498,\"INTPTLON\":\"-122.4650620\",\"MTFCC\":\"G5040\",\"LWBLKTYP\":\"L\",\"UR\":\"U\",\"COUNTY\":\"075\"}],\"Census Tracts\":[{\"GEOID\":\"06075030301\",\"CENTLAT\":\"+37.7569391\",\"AREAWATER\":0,\"STATE\":\"06\",\"BASENAME\":\"303.01\",\"OID\":\"20790355757999\",\"LSADC\":\"CT\",\"FUNCSTAT\":\"S\",\"INTPTLAT\":\"+37.7569391\",\"NAME\":\"Census Tract 303.01\",\"OBJECTID\":14219,\"TRACT\":\"030301\",\"CENTLON\":\"-122.4692332\",\"AREALAND\":753790,\"INTPTLON\":\"-122.4692332\",\"MTFCC\":\"G5020\",\"COUNTY\":\"075\"}]},\"coordinates\":{\"x\":-122.464658373009,\"y\":37.754690646826},\"addressComponents\":{\"zip\":\"94122\",\"streetName\":\"8TH\",\"preType\":\"\",\"city\":\"SAN FRANCISCO\",\"preDirection\":\"\",\"suffixDirection\":\"\",\"fromAddress\":\"1801\",\"state\":\"CA\",\"suffixType\":\"AVE\",\"toAddress\":\"1899\",\"suffixQualifier\":\"\",\"preQualifier\":\"\"},\"matchedAddress\":\"1801 8TH AVE, SAN FRANCISCO, CA, 94122\"}]}}"
         }
       ]
     },
-    "match_count": 0
+    "match_count": 1,
+    "matched_address": "1801 8TH AVE, SAN FRANCISCO, CA, 94122",
+    "county_geoid": "06075",
+    "matched_postal_city": "SAN FRANCISCO",
+    "matched_zip": "94122",
+    "zip_differs": false,
+    "legal_city_geoid": "0667000",
+    "legal_city_layer": "Incorporated Places",
+    "postal_city_differs": false
   },
   "A0485": {
     "status": "matched",
@@ -28172,12 +28723,12 @@
     "postal_city_differs": false
   },
   "A0488": {
-    "status": "unresolved",
-    "legal_city": null,
-    "county": null,
+    "status": "matched",
+    "legal_city": "Boston",
+    "county": "Suffolk County",
     "coordinates": null,
-    "match_quality": "ambiguous",
-    "reason": "Multiple Census matches; no jurisdiction selected.",
+    "match_quality": "multiple_matches_same_legal_jurisdiction",
+    "reason": "Every reported Census address candidate has the same official state, county and legal-municipality codes. No single location was selected.",
     "input": {
       "street_address": "197 BEACON ST",
       "postal_city": "Boston",
@@ -28204,8 +28755,8 @@
       },
       "response_sha256": "aa351ee6fa19c697ca01477030668b2c888a025e4e1057c1209bf25b2652d231",
       "raw_response": "data/geocode-cache/A0488.json",
-      "method": "Census interpolated address coordinate, then official TIGER geographic lookup",
-      "limitation": "Address-range interpolation; not a parcel-survey or independent boundary validation.",
+      "method": "Consensus of all Census address candidates and their official TIGER legal-geography codes",
+      "limitation": "Legal jurisdiction consensus only; the address point remains ambiguous. Postal city and ZIP did not select a candidate.",
       "query_strategy": "street_city_state",
       "attempts": [
         {
@@ -28215,9 +28766,58 @@
           "match_count": 2,
           "response_sha256": "aa351ee6fa19c697ca01477030668b2c888a025e4e1057c1209bf25b2652d231"
         }
+      ],
+      "candidate_geographies": [
+        {
+          "status": "matched",
+          "matched_address": "197 BEACON ST, BOSTON, MA, 02116",
+          "matched_postal_city": "BOSTON",
+          "matched_zip": "02116",
+          "county": "Suffolk County",
+          "county_geoid": "25025",
+          "legal_city": "Boston",
+          "legal_city_geoid": "2507000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.076768182377,
+            "latitude": 42.354230756113,
+            "lon": -71.076768182377,
+            "lat": 42.354230756113,
+            "x": -71.076768182377,
+            "y": 42.354230756113
+          }
+        },
+        {
+          "status": "matched",
+          "matched_address": "197 BEACON ST, BOSTON, MA, 02136",
+          "matched_postal_city": "BOSTON",
+          "matched_zip": "02136",
+          "county": "Suffolk County",
+          "county_geoid": "25025",
+          "legal_city": "Boston",
+          "legal_city_geoid": "2507000",
+          "legal_city_layer": "Incorporated Places",
+          "coordinates": {
+            "longitude": -71.11088413111,
+            "latitude": 42.256570340315,
+            "lon": -71.11088413111,
+            "lat": 42.256570340315,
+            "x": -71.11088413111,
+            "y": 42.256570340315
+          }
+        }
       ]
     },
-    "match_count": 2
+    "match_count": 2,
+    "legal_city_geoid": "2507000",
+    "legal_city_layer": "Incorporated Places",
+    "county_geoid": "25025",
+    "postal_city_differs": false,
+    "coordinate_status": "not_selected_multiple_address_matches",
+    "matched_addresses": [
+      "197 BEACON ST, BOSTON, MA, 02116",
+      "197 BEACON ST, BOSTON, MA, 02136"
+    ]
   },
   "A0489": {
     "status": "matched",

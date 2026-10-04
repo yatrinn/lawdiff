@@ -6,6 +6,8 @@
 
 A source-grounded housing-law change desk for the RealPage challenge at Hack-Nation 7. Explore the supplied 500-address sample, move through five change cases, inspect executable coverage conditions and exact source quotations, and share an English/Spanish rights card.
 
+The demo and technical films each run for **56 seconds**, with English captions and disclosed synthetic narration (Leslie preset, Runway / Eleven Multilingual v2; no voice cloning). The participant's authentic team video, photograph and both final event submissions remain outstanding. See the [submission checklist](docs/submission-guide.md).
+
 ## Run
 
 Node.js 22 or newer. The app runs without API keys.
@@ -37,7 +39,7 @@ The shipped pack is an **explicit selection of unchanged automatic Codex CLI out
 
 A single JavaScript rule engine powers the browser and submission export. It uses three-valued coverage logic: missing evidence remains unknown unless another condition already decides the result. It checks legal jurisdiction, effective dates, explicit precedence and possible conflicts. Runtime evaluation makes no model calls. Determinism does not prove that an extracted interpretation is legally correct.
 
-`public/data/catalog.json` includes the supplied source collection and address records, plus clearly identified supplemental sources and geographic provenance when available. `public/data/rule-pack.json` contains 89 selected records: 13 executable coverage definitions and 76 narrative records awaiting interpretation review, with extraction provenance. `public/data/validation.json` records source-span and structural checks. Unit tests cover independent boundary and failure cases.
+`public/data/catalog.json` includes the supplied source collection and address records, plus clearly identified supplemental sources and geographic provenance when available. `public/data/rule-pack.json` contains 133 selected records from 24 sources: 22 executable coverage definitions and 111 narrative records awaiting interpretation review, with extraction provenance. `public/data/validation.json` records source-span and structural checks. Unit tests cover independent boundary and failure cases.
 
 ## Reproduce the deliverables
 
@@ -53,7 +55,7 @@ To reimport the original organizer files, place the unchanged starter package in
 
 - Source capture is incomplete; missing texts and source gaps are visible. Lack of an extracted rule does not prove lack of legal protection.
 - Ownership, occupancy certificates, unit counts and exemption facts are often absent. Some city assignments may remain unresolved.
-- Geographic matches are address interpolation, not parcel-level legal determinations or reconstructed historical boundaries.
+- Geographic matches use the recorded official evidence described in [geocoding notes](docs/geocoding.md). They are not parcel-level legal determinations or reconstructed historical boundaries.
 - Old rate notices expire; pending bills never become active simply by advancing time.
 - Possible state/local conflicts are review flags, not legal preemption determinations.
 - Public sample data supports this prototype. It is not legal advice or a production compliance determination.

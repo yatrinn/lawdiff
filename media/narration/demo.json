@@ -1,0 +1,48 @@
+{
+  "provider": "Runway speech generation",
+  "voice": "Leslie, preset synthetic voice",
+  "chapters": [
+    {
+      "file": "demo-1.mp3",
+      "sha256": "2fefe7ccc44efa9798c39422179f0edd6f98a5ad3177437951e423df35d8448f",
+      "seconds": 8,
+      "text": "A new housing law lands on your desk. Which buildings need your attention? This is LawDiff.",
+      "generation_task_id": "3fa5eaa8-4b61-40cd-8825-8026dcc5b727"
+    },
+    {
+      "file": "demo-2.mp3",
+      "sha256": "f1d34e350e0d2ab793e24517f217ae383e6b6185356759238fa03e6ca1fd1196",
+      "seconds": 9,
+      "text": "Move New Jersey\u2019s FAIR Act past its effective date. The workspace reveals where missing property facts need a closer look.",
+      "generation_task_id": "ce2841f9-a7d4-4889-aff2-fc31307c8b80"
+    },
+    {
+      "file": "demo-3.mp3",
+      "sha256": "198f822a05bcef8962090d209274ce47fb0aa0ac555e7cd8de887e0cfc9a88fc",
+      "seconds": 10,
+      "text": "Open one address. See the requirement, its timing, and the original passage behind the interpretation.",
+      "generation_task_id": "a65367a6-1840-4fe9-a338-3d64f2462623"
+    },
+    {
+      "file": "demo-4.mp3",
+      "sha256": "da9a885841a9deac2f8c75dd45996d7e0cde972a9aa50a43d8efd401cc5fed29",
+      "seconds": 10,
+      "text": "Now turn that finding into a review brief. Listed addresses get their status, source, and next check.",
+      "generation_task_id": "d81c20f7-38ab-4990-91f4-20b0129fb3b3"
+    },
+    {
+      "file": "demo-5.mp3",
+      "sha256": "7c0f69e47257a6f8aeb79355ec6f0238bcb80de25776a413fe716b61d0b9122c",
+      "seconds": 10,
+      "text": "Export the list for your compliance team: original address data, source wording, and what to review next.",
+      "generation_task_id": "c3cccdcb-9629-42aa-ae28-90191d515d71"
+    },
+    {
+      "file": "demo-6.mp3",
+      "sha256": "bc82e38991cce99c5fc22aed47af55f8b30230a4a98f198a4836968a22fe1312",
+      "seconds": 9,
+      "text": "Rules extracted automatically. Selected records unchanged. One traceable pack powers the workspace and submission. Inspect the chain.",
+      "generation_task_id": "1faa1779-178e-4dcf-9f41-a146d25450ba"
+    }
+  ]
+}
